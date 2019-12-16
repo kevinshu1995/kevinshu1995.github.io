@@ -80,7 +80,7 @@ color:#fff;background-color:#333;
 .link h5 i {margin-left:5px;}
 .link button {cursor: pointer;}
 .contact {padding:.1em 4em;background-color:#ad3156;color:#fff;border-radius:15px;float:left;margin-right:20px;}
-.linkSocial{display:none;}
+a.linkSocial{display:none;}
 /* header__btn====================================== */
 #btnBar,#btnTop{font-size: 22px;position: fixed;cursor: pointer;z-index:999;}
 #btnTop{color:#ad3156;left: 0; bottom: 0;width: 45px;height:35px;border-radius:0 20px 0 0;}
