@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio of KevinHsu</title>
+    <link rel="stylesheet" href="css/indexlayout.css" media="only screen">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:500,900|Noto+Serif:400,700&display=swap&subset=chinese-traditional" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/indexlayoutPc.css" media="only screen and (min-width:1023px)">
+    <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" media="only screen">
+    <link rel="stylesheet" href="fontawesome-free-5.11.2-web/css/all.min.css" media="only screen">
+    <linkrel="preload" as="style" href="css/font.css" media="only screen">
+</head>
+<body>
+    <!-- 側邊欄============================================  -->
+    <div id="loader" class="center"></div>
+    <header id="home">
+        <nav id="pcNav" class="txt-pcContent">
+            <ul class="navWrapper">
+                <li><a href="#sec1" data-scroll="#sec1" title="Industrial Disign">工業<br>設計</a></li>
+                <li><a href="#sec2" data-scroll="#sec2" title="Graphic Disign">平面<br>設計</a></li>
+                <li><a href="#sec4" data-scroll="#sec4" title="Photograph">攝影<br>作品</a></li>
+                <li><a href="#sec5" data-scroll="#sec5" title="Experience">個人<br>經歷</a></li>
+                <li><a href="#sec6" data-scroll="#sec6" title="Skills">軟體<br>技能</a></li>
+            </ul>
+        </nav>
+        <div class="wrapper">
+            <div class="headerTxt">
+                <h1 class="txt-SecBig-Mobile">許文修</h1>
+                <h1 class="txt-Content">Wen-Shiu Hsu</h1><br>
+                <h3 class="txt-small">新北市汐止區 / Jun.1995.</h3>
+                <h2 class="txt-SecBig-Mobile">平面設計、<br>網頁設計、攝影<br>是我看世界的方式</h2>
+            </div>
+            <div class="link">
+                <a href="mailto:kevinshu1995@gmail.com"><button class="contact">聯絡我 !</button></a>
+                <a class="linkSocial" href="facebook.com/wenshiu.hsu" target="_blank" title="臉書_Facebook"><i class="fab fa-facebook-square fontsize20"></i><p>Hsu Wen-Shiu</p></a>
+                <a class="linkSocial" href="https://www.instagram.com/kevinshu/" target="_blank" title="Instagram"><i class="fab fa-instagram fontsize20"></i><p>@kevinshu</p></a>
+                <a class="linkSocial" href="mailto:kevinshu1995@gmail.com" target="_blank" title="聯絡我_Sent E-mail"><i class="far fa-envelope fontsize20"></i><p>kevinshu1995@gmail.com</p></a>
+            </div>
+            <div class="link">
+                <a href="images/resume.jpg" target="_blank" title="我的履歷_My Resume"><h5 class="txt-small">我的履歷 <i class="fas fa-arrow-right"></i></h5></a>
+                <a href="images/profolio.pdf" target="_blank" title="我的履歷_My Portfolio"><h5 class="txt-small">作品集 <i class="fas fa-arrow-right"></i></h5></a>
+            </div>
+        </div>
+         <!-- nav============================================  -->
+        <nav id="asidepage">
+            <div class="wrapper positionRelative">
+                <a href="#home" class="txt-small navToHome"><i class="fas fa-home"></i> HOME </a>
+                <div class="navLink txt-SecBig-Mobile">
+                    <a href="#sec1" data-scroll="#sec1" title="Industrial Disign"><h3>工業設計</h3></a>
+                    <a href="#sec2" data-scroll="#sec2" title="Graphic Disign_Brand Manual"><h3><p class="txt-small">品牌手冊</p>平面設計</h3></a>
+                    <a href="#sec3" data-scroll="#sec3" title="Graphic Disign_SocilMedia & Direct mail"><h3><p class="txt-small">社群與傳單</p>平面設計</h3></a>
+                    <a href="#sec4" data-scroll="#sec4" title="Photograph"><h3>攝影作品</h3></a>
+                    <a href="#sec5" data-scroll="#sec5" title="Experience"><h3>個人經歷</h3></a>
+                    <a href="#sec6" data-scroll="#sec6" title="Skills"><h3>軟體技能</h3></a>
+                </div>
+                <div class="container">
+                    <div class="navName txt-small">
+                        <h2>許文修</h2>
+                        <h2>Wen-Shiu Hsu</h2>
+                        <h2><a href="images/resume.jpg" target="_blank" title="我的履歷_My Resume">我的履歷</a></h2>
+                        <h2><a href="images/profolio.pdf" target="_blank" title="我的履歷_My Portfolio">我的作品集</a></h2>
+                    </div>
+                    <div class="social txt-small">
+                        <a href="facebook.com/wenshiu.hsu" target="_blank" title="臉書_Facebook">
+                            <i class="fab fa-facebook-square fontsize20"></i>
+                            <h3>Wen-Shiu Hsu</h3>
+                        </a>
+                    </div>
+                    <div class="social txt-small">
+                        <a href="https://www.instagram.com/kevinshu/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram fontsize20"></i>
+                            <h3>@kevinshu</h3>
+                        </a>
+                    </div>
+                    <div class="social txt-small">
+                        <a href="mailto:kevinshu1995@gmail.com" target="_blank" title="聯絡我_Sent E-mail">
+                                <i class="far fa-envelope fontsize20"></i>
+                            <h3>kevinshu1995@gmail.com</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <button id="btnBar"><i class="fas fa-bars "></i></button>
+        <button id="btnTop"><a href="#home" title="Go top"><i class="fas fa-chevron-up"></i></a></button>
+    </header>
+    <a id="inline" href="#data"></a>
+    <div style="display:none"></div>
+    <!-- 工業設計============================================  -->
+    <div id="sec1" class="scrollspy" >
+        <div class="wrapper colorfff">
+            <div class="secTitle">
+                <h2 class="txt-small ">工業設計 INDUSTRIAL DESIGN</h2>
+                <h3 class="txt-SecBig-Mobile">輕量、組裝、火爐</h3>
+                <h3 class="txt-small">FireFold</h3>
+            </div>
+            <img src="images/index-firefold.jpg" alt="Firefold_Industrial Design" title="Firefold_Industrial Design">
+            <div class="footNote txt-small">
+                <p>工業設計 | 畢業設計作品 | 2017.05</p>
+                <p>01</p>
+            </div>
+        </div>
+    </div>
+    <!-- 平面設計1============================================  -->
+    <div id="sec2" class="scrollspy">
+        <div class="wrapper colorfff">
+            <div class="secTitle">
+                <h2 class="txt-small">平面設計 GRAPHIC DESIGN</h2>
+                <h3 class="txt-SecBig-Mobile">品牌手冊設計</h3>
+                <h3 class="txt-small">SwingSwing 搖擺酸酸</h3>
+            </div>
+            <img src="images/brand.jpg" alt="Brand Manual_Graphic Design"title="Brand Manual_Graphic Design">
+            <div class="footNote txt-small">
+                <p>平面設計 | 2019.04</p>
+                <p>02</p>
+            </div>
+        </div>
+    </div>
+    <!-- 平面設計2============================================  -->
+    <div id="sec3" class="scrollspy">
+        <div class="wrapper colorfff">
+            <div class="secTitle">
+                <h2 class="txt-small">平面設計 GRAPHIC DESIGN</h2>
+                <h3 class="txt-SecBig-Mobile">社群貼文與傳單設計</h3>
+                <h3 class="txt-small">SwingSwing 搖擺酸酸</h3>
+            </div>
+            <img data-src="images/social-media.jpg" alt="SocilMedia & Direct mail_Graphic Disign"title="SocilMedia & Direct mail_Graphic Disign"class="lazy">
+            <div class="footNote txt-small">
+                <p>平面設計 | 2019.03</p>
+                <p>03</p>
+            </div>
+        </div>
+    </div>
+    <!-- 攝影作品============================================  -->
+    <div id="sec4" class="scrollspy">
+        <div class="wrapper colorfff">
+            <div class="secTitle">
+                <h2 class="txt-small">PHOTOGRAPHIC</h2>
+                <h3 class="txt-SecBig-Mobile">攝影作品</h3>
+            </div>
+            <div class="imgContainer">
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (1).jpg" title="photo in Taipei MRT with iphone SE on Dec.2018"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (1).jpg" alt="Photograph"class="lazy"title="photo in Taipei MRT with iphone SE on Dec.2018"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (2).jpg" title="photo in Nanggang with iphone SE on July.2019"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (2).jpg" alt="Photograph"class="lazy"title="photo in Nanggang with iphone SE on July.2019"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhotoR (3).jpg"title="photo in NTU with Canon 70D on Aug.2019"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (3).jpg" alt="Photograph"class="lazy"title="photo in NTU with Canon 70D on Aug.2019"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (4).jpg" title="photo in Penghu with Canon 400D on May.2015"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (4).jpg" alt="Photograph"class="lazy"title="photo in Penghu with Canon 400D on May.2015"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (5).jpg" title="photo in Yunlin with Canon 400D on Feb.2015"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (5).jpg" alt="Photograph"class="lazy"title="photo in Yunlin with Canon 400D on Feb.2015"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (6).jpg" title="photo in Jinshan with iphone SE on July.2018"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (6).jpg" alt="Photograph"class="lazy"title="photo in Jinshan with iphone SE on July.2018"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (7).jpg" title="photo in Nanggang with iphone SE on Aug.2018"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (7).jpg" alt="Photograph"class="lazy"title="photo in Nanggang with iphone SE on Aug.2018"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (8).jpg" title="photo in Ruifang with iphone SE on Sep.2018"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (8).jpg" alt="Photograph"class="lazy"title="photo in Ruifang with iphone SE on Sep.2018"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (9).jpg" title="photo in Chiayi with iphone SE on Feb.2019"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (9).jpg" alt="Photograph"class="lazy"title="photo in Chiayi with iphone SE on Feb.2019"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (10).jpg"title="photo in Changhua with iphone SE on Dec.2017"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (10).jpg"alt="Photograph"class="lazy"title="photo in Changhua with iphone SE on Dec.2017"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (11).jpg"title="photo in Qidu with iphone SE on Aug.2017"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (11).jpg"alt="Photograph"class="lazy"title="photo in Qidu with iphone SE on Aug.2017"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (12).jpg"title="photo in Taipei with iphone SE on Jan.2019"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (12).jpg"alt="Photograph"class="lazy"title="photo in Taipei with iphone SE on Jan.2019"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (13).jpg"title="photo in Taipei with iphone SE on Jan.2019"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (13).jpg"alt="Photograph"class="lazy"title="photo in Taipei with iphone SE on Jan.2019"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (14).jpg"title="photo in Osaka with iphone SE on Jun.2017"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (14).jpg"alt="Photograph"class="lazy"title="photo in Osaka with iphone SE on Jun.2017"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (15).jpg"title="photo in Okinawa with Canon 50D on Jun.2017"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (15).jpg"alt="Photograph"class="lazy"title="photo in Okinawa with Canon 50D on Jun.2017"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (16).jpg"title="photo in Okinawa with Canon 50D on Jun.2017"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (16).jpg"alt="Photograph"class="lazy"title="photo in Okinawa with Canon 50D on Jun.2017"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (17).jpg"title="photo in Osaka with Canon 50D on Jun.2017"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (17).jpg"alt="Photograph"class="lazy"title="photo in Osaka with Canon 50D on Jun.2017"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (18).jpg"title="photo in Kyoto with Canon 50D on Jun.2017"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (18).jpg"alt="Photograph"class="lazy"title="photo in Kyoto with Canon 50D on Jun.2017"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (19).jpg"title="photo in Changhua with iphone SE on Aug.2017"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (19).jpg"alt="Photograph"class="lazy"title="photo in Changhua with iphone SE on Aug.2017"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (20).jpg"title="photo in Jinshan with iphone SE on Sep.2018"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (20).jpg"alt="Photograph"class="lazy"title="photo in Jinshan with iphone SE on Sep.2018"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (21).jpg"title="photo in Nanggang with Canon 50D on Aug.2019"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (21).jpg"alt="Photograph"class="lazy"title="photo in Nanggang with Canon 50D on Aug.2019"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (22).jpg"title="photo in Xinzhuang with iphone SE on Dec.2018"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (22).jpg"alt="Photograph"class="lazy"title="photo in Xinzhuang with iphone SE on Dec.2018"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (23).jpg"title="photo in Shongshan with iphone SE on Sep.2018"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (23).jpg"alt="Photograph"class="lazy"title="photo in Shongshan with iphone SE on Sep.2018"></a></div>
+                <div class="imgBox"><a class="single_image" href="images/indexPhoto/indexPhoto (24).jpg"title="photo in Hualien with iphone SE on Sep.2018"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B (24).jpg"alt="Photograph"class="lazy"title="photo in Hualien with iphone SE on Sep.2018"></a></div>
+            </div>
+            <div class="footNote txt-small">
+                <p>攝影 | 街頭攝影</p>
+                <p>05</p>
+            </div>
+        </div>
+    </div>
+    <!-- 個人經歷============================================  -->
+    <div id="sec5" class="scrollspy">
+        <div class="wrapper">
+            <div class="secTitle">
+                <h2 class="txt-small">EXPERIENCE</h2>
+                <h3 class="txt-SecBig-Mobile">個人經歷</h3>
+            </div>
+            <div class="contentTitle">
+                <h4 class="txt-Content">平面設計</h4>
+                <h5 class="txt-small">2015 Sep.- 2016 Jun.</h5>
+            </div>
+            <div class="txtBox">
+                <h4 class="txt txt-btnLine txt-small">SwingSwing搖擺酸酸</h4>
+                <div class="txt txt-small">
+                    <h5>設計端</h5>
+                    <p>品牌手冊設計、店面規劃設定、店面活動廣宣、活動DM、菜單、產品圖片編修。</p>
+                    <h5>行銷端</h5>
+                    <p>籌備店面行銷活動、網路行銷，Facebook,Instagram, line@, 官方網站...等管理與維護。</p>
+                    <h5>春季加盟展</h5>
+                    <p>擔任對外窗口，負責參展設備、流程管理、視覺設計、展覽製作物設計、活動企劃等。</p>
+                </div>
+            </div>
+            <div class="contentTitle">
+                <h4 class="txt-Content">開版設計</h4>
+                <h5 class="txt-small">2014 May.- 2016 Jun.</h5>
+            </div>
+            <div class="txtBox">
+                <h4 class="txt txt-btnLine txt-small">郁巧貿易公司設計實習</h4>
+                <div class="txt txt-small">
+                    <p>製作商品開版圖、商品外觀平面設計。</p>
+                    <p>公司商品以布類家飾產品為主，了解工廠製作限制，製圖能同時兼顧視覺與限制。</p>
+                    <p>後因受到主管青睞，跟隨業務外派至明尼蘇達州兩周，協助業務開會與市場調查，而見識美式風格與文化薰陶，也了解產品背後深厚的文化背景。</p>
+                </div>
+            </div>
+            <div class="contentTitle">
+                <h4 class="txt-Content">東海大學</h4>
+                <h5 class="txt-small">2013 Sep.- 2017 Jun.</h5>
+            </div>
+            <div class="txtBox">
+                <h4 class="txt txt-btnLine txt-small">工業設計學系</h4>
+                <div class="txt txt-small">
+                    <p>在學期間除學業外，亦參加社團、營隊、住宿學習計畫、棟長，明白團隊合作的重要性，並學習如何獨立思考與有條不紊的執行工作。</p>
+                </div>
+            </div>
+            <div class="footNote txt-small">
+                <p>個人經歷 | 2019.06</p>
+            </div>
+        </div>
+    </div>
+    <!-- 技能============================================  -->
+    <div id="sec6" class="scrollspy">
+        <div class="wrapper">
+            <div class="secTitle">
+                <h2 class="txt-small">SKILLS</h2>
+                <h3 class="txt-SecBig-Mobile">軟體技能</h3>
+            </div>
+            <div class="contentTitle">
+                <h4 class="txt-Content">平面軟體</h4>
+            </div>
+            <div class="txtBox txt-small">
+                <div class="skillBox">
+                    <div class="skillContent">
+                        <h5>Photoshop</h5>
+                        <div class="skillLvl"><div class="skillLvlEach skillLvlPS"></div></div>
+                    </div>
+                    <div class="skillContent">
+                        <h5>Illustrator</h5>
+                        <div class="skillLvl"><div class="skillLvlEach skillLvlAI"></div></div>
+                    </div>
+                    <div class="skillContent">
+                        <h5>Lightroom</h5>
+                        <div class="skillLvl"><div class="skillLvlEach skillLvlLR"></div></div>
+                    </div>
+                </div>
+                <p class="txt txt-small">擅用平面設計軟體，曾設計飲料店品牌手冊、社群貼文素材、店面菜單、活動DM 、社團海報、商品開版圖、社團團服設計。</p>
+            </div>
+            <div class="contentTitle">
+                <h4 class="txt-Content">多媒體設計</h4>
+            </div>
+            <div class="txtBox txt-small">
+                <div class="skillBox">
+                    <div class="skillContent">
+                        <h5>Premiere</h5>
+                        <div class="skillLvl"><div class="skillLvlEach skillLvlPR"></div></div>
+                    </div>
+                    <div class="skillContent">
+                        <h5>After Effect</h5>
+                        <div class="skillLvl"><div class="skillLvlEach skillLvlAE"></div></div>
+                    </div>
+                </div>
+                <p class="txt txt-small">因為喜歡攝影，所以也曾涉獵影像剪輯，對影片產出有基礎的了解，除了課程作業之外，也曾用AE設計音樂會影片 intro 動畫。</p>
+            </div>
+            <div class="contentTitle">
+                <h4 class="txt-Content">網頁與介面設計</h4>
+            </div>
+            <div class="txtBox txt-small">
+                <div class="skillBox">
+                    <div class="skillContent">
+                        <h5>Html5 + CSS3</h5>
+                        <div class="skillLvl"><div class="skillLvlEach skillLvlWEB"></div></div>
+                    </div>
+                    <div class="skillContent">
+                        <h5>JQuery</h5>
+                        <div class="skillLvl"><div class="skillLvlEach skillLvlJQ"></div></div>
+                    </div>
+                    <div class="skillContent">
+                        <h5>Adobe XD</h5>
+                        <div class="skillLvl"><div class="skillLvlEach skillLvlXD"></div></div>
+                    </div>
+                </div>
+                <p class="txt txt-small">自學Adobe XD 與UI設計，並且持續學習網頁設計，了解如何切版、套用框架、基礎的 JQuery動畫，目標朝前端工程師發展。</p>
+            </div>
+            <div class="footNote txt-small">
+                <p>軟體技能 | 2019.06</p>
+            </div>
+        </div>
+    </div>
+    <footer class="txt-small colorfff"><h6>&copy;2019 Wen-Shiu Hsu.</h6></footer>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/lazyload.min.js"></script>
+    <script src="js/smartScroll.js"></script>
+    <script src="js/jquery.easing-1.3.pack.js"></script>
+    <script src="js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
