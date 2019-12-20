@@ -2,30 +2,36 @@
 document.onreadystatechange = function() { 
     if (document.readyState !== "complete") { 
         document.querySelector( 
-          "body").style.visibility = "hidden"; 
+          "body").style.visibility = "hidden";
+        document.querySelector( 
+          "body").style.overflow="hidden";
         document.querySelector( 
           "#loader").style.visibility = "visible"; 
     } else { 
         document.querySelector( 
           "#loader").style.display = "none"; 
         document.querySelector( 
-          "body").style.visibility = "visible"; 
+          "body").style.visibility = "visible";
+        document.querySelector( 
+          "body").style.overflow="auto";
     } 
 };
 var menuSelected = null;
 $(document).ready(function(){
     
     $.fancybox(
-        '<div class="starter"><div class="startTxt" id="data"><h2>嗨，我是許文修!</h2><p>此個人網頁主要展示個人資訊，更詳細的內容請點選<a href="images/profolio.pdf">作品集</a>或<a href="images/resume.jpg">履歷</a>查看，謝謝。</p><button class="starterClose">關閉此頁面</button></div>',
+        '<div class="starter"><div class="startTxt" id="data"><h2>嗨，我是許文修!</h2><p>此網頁主要展示個人資訊，更詳細內容請點選<a href="images/profolio.pdf">作品集</a>或<a href="images/resume.jpg">履歷</a>，謝謝。</p><p class="starterP2">使用Chorme瀏覽器電腦版以獲得最佳觀賞體驗。</p><button class="starterClose">關閉此頁面</button></div>',
         {
             'padding'               :  '0',
             'margin'                :  '15',
             'autoScale'             :  true,
-            'overlayOpacity'		:  1,
+            'overlayOpacity'		:  0.9,
             'overlayColor'		    : '#111',
             'showCloseButton'       :  false,
             'hideOnOverlayClick'    :  false,
-            'centerOnScroll'        :  true
+            // 'centerOnScroll'        :  true,
+            'onComplete'            : function(){$('body').addClass('navScrollDisable');$('#fancybox-outer').addClass('starterBorderRadius');},
+            'onClosed'              : function(){$('body').removeClass('navScrollDisable');$('#fancybox-outer').removeClass('starterBorderRadius');}
         }
     );
     $('.starterClose').click(function(){
@@ -76,15 +82,15 @@ $(document).ready(function(){
         $('#btnBar').click(function(){
             $('#asidepage,#btnTop').slideToggle(300);
             $("#btnBar>i").toggleClass('fa-times','fa-bars');
-            $("#btnBar").toggleClass('btnBarAni');
+            $("#btnBar").toggleClass('btnBarBg');
             $('body').toggleClass('navScrollDisable');
         });
         $(window).resize(function(){
             if( $('#btnBar').is(':hidden') ){
                 $('#asidepage').hide();
             }else{
-                if($('#btnBar').hasClass('btnBarAni')){
-                    $('#btnBar').removeClass('btnBarAni');
+                if($('#btnBar').hasClass('btnBarBg')){
+                    $('#btnBar').removeClass('btnBarBg');
                     $("#btnBar>i").addClass('fa-bars');
                     $("#btnBar>i").removeClass('fa-times');
                     $('#asidepage').hide();
@@ -120,14 +126,25 @@ $(document).ready(function(){
             }else{$('#sec1 .secTitle h2,#sec1 .secTitle,#sec2 .secTitle h2,#sec2 .secTitle').addClass('secTxtAni')}
         });
         $(window).trigger('scroll');
+    // tab
+        $('.tabBtn').click(function(){
+            if($(this).not('.tabBtnActive')){
+                var btnIndex = $(this).index();
+                var tabContent = $(this).parent('.tabBtnBox').next('.tabContentBox').children('.tabContentInsideBox').eq(btnIndex); 
+                tabContent.addClass('tabContentActive');
+                tabContent.siblings().removeClass('tabContentActive');
+                $(this).addClass('tabBtnActive');
+                $(this).siblings().removeClass('tabBtnActive');
+            };
+        });
     // hover 換圖
-        // $('.imgContainer img').hover(function(){
-        //     var imgIndex = $(this).parents('.imgBox').index() +1
-        //     $(this).attr("src","images/indexPhoto/indexPhoto500/indexPhoto500-"+ imgIndex +".jpg");
-        // },function(){
-        //     var imgIndex = $(this).parents('.imgBox').index() +1
-        //     $(this).attr("src","images/indexPhoto/indexPhoto500B/indexPhoto500B ("+ imgIndex +").jpg")
-        // });
+        $('.imgContainer img').hover(function(){
+            var imgIndex = $(this).parents('.imgBox').index() +1
+            $(this).attr("src","images/indexPhoto/indexPhoto500/indexPhoto500-"+ imgIndex +".jpg");
+        },function(){
+            var imgIndex = $(this).parents('.imgBox').index() +1
+            $(this).attr("src","images/indexPhoto/indexPhoto500B/indexPhoto500B ("+ imgIndex +").jpg")
+        });
 });
 //scrollspy
 (function ($) {
