@@ -181,7 +181,7 @@ dd {margin-inline-start:0;}
 /* ======tab-sec3 */
 .tabImgBox,.sec3ImgMT8 {display:block;width:100%;font-size:0;}
 .tabImgMT24 {margin-top:24px;}
-.tabImgMT8 {margin-top:8px}
+.tabImgMB8 {margin-bottom:8px}
 .sec3ImgInsidePc50Mo100 {display:inline-block;width:100%;margin-bottom:8px;}
 .sec3ImgInsidePc50Mo100 img {width:100%;}
 .sec3ImgMo100PcAuto {width:100%;display:inline-block;}
@@ -243,6 +243,7 @@ from{left:-50px;opacity:0;}to{left:0;opacity:1;}
     .sec3ImgMo100PcAuto {float:left;}
     .sec3ImgPc60{width:60%;}
     .sec3ImgPc40{width:37%;margin-right:2%;}
+    .sec3ImgInsidePc50Mo100{width:49%;margin-right:1%;}
 }
 /* hover */
 .link h5 {transition:.3s;}
