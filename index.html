@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- 側邊欄============================================  -->
-    <div id="loader" class="center"></div>
+    <div id="loader" class="center"><div class="loader"></div><p class="loaderTxt">LOADING...</p></div></div>
     <header id="home">
         <nav id="pcNav" class="txt-pcContent">
             <ul class="navWrapper">
@@ -93,15 +93,86 @@
         <div class="wrapper colorfff">
             <div class="secTitle">
                 <h2 class="txt-small ">工業設計 INDUSTRIAL DESIGN</h2>
-                <h3 class="txt-SecBig-Mobile">輕量、組裝、火爐</h3>
+                <h3 class="txt-SecBig-Mobile">輕量、快速組合火爐</h3>
                 <h3 class="txt-small">FireFold</h3>
             </div>
-            <img src="images/index-firefold.jpg" alt="Firefold_Industrial Design" title="Firefold_Industrial Design">
+            <img id="wrapperImg" src="images/index-firefold.jpg" alt="Firefold_Industrial Design" title="Firefold_Industrial Design">
+            <div class="tab">
+                <h3>設計背景</h3>
+                <p class="tabTtitleP">裝飾性簡易壁爐讓居住大廈的人們依然可以簡單塑造過節氣氛</p>
+                <div class="tabBtnBox">
+                    <button class="tabBtn tabBtnActive">1.聖誕節傳統價值</button>
+                    <button class="tabBtn">2.價值與現實的衝突</button>
+                </div>
+                <div class="tabContentBox">
+                    <div class="tabContentInsideBox tabContentActive">
+                        <p>
+                            正值寒冬的聖誕節是一年之中最重要一天，趁佳節假期待在家裡圍爐取暖，一起看電視、聚餐......等等的家庭活動幾乎是每一個美國家庭的傳統。
+                        </p>
+                    </div>
+                    <div class="tabContentInsideBox">
+                        <p>
+                            然而近年來越來越多的年輕人因為<mark>收入、交通、婚姻狀況</mark>等的考慮，選擇租借在市區的公寓大廈裡，而這些公寓大廈不會有壁爐設計，取而代之的是暖氣，不過傳統的”圍爐”依然深植美國人心。
+                        </p>
+                    </div>
+                </div>
+                <h3>特色說明</h3>
+                <div class="tabBtnBox">
+                    <button class="tabBtn tabBtnActive">1.材料選擇-瓦楞紙</button>
+                    <button class="tabBtn">2.環境音偵測</button>
+                    <button class="tabBtn">3.外觀客製化</button>
+                </div>
+                <div class="tabContentBox">
+                    <div class="tabContentInsideBox tabContentActive">
+                        <p>
+                            為了簡易提升氣氛，材料選擇瓦楞紙板，透過其<mark>便宜、重量輕、加工簡單</mark>的特色，使消費者可以花少少的錢，直接從貨架上拿走包裝好的紙壁爐，只需要花費五分鐘，一個人就可以組裝完成。
+                        </p>
+                        <div class="tabImgBox tabImgMT24">
+                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-1.jpg" alt="">
+                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-2.jpg" alt="">
+                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-3.jpg" alt="">
+                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="tabContentInsideBox">
+                        <p>
+                            為仿造傳統壁爐的火光，使用Arduino板<mark>偵測環境聲音大小</mark>來改變LED燈亮度的變化，讓人在寒冬中彷彿置身在真實的壁爐邊，與家人享受天倫之樂。
+                        </p>
+                        <div class="tabImgBox tabImgMT24">
+                            <img class="tab100Img" src="images/firefold/firefold-arduino.jpg" alt="arduino photo" title="Photo by Harrison Broadbent on Unsplash">
+                        </div>
+                    </div>
+                    <div class="tabContentInsideBox">
+                        <p>
+                            也因為瓦楞紙的印刷技術成熟，能根據不同消費族群提供多種外觀風格，甚至<mark>個人化設計。</mark>
+                        </p>
+                    </div>
+                </div>
+                <h3>背景研究</h3>
+                <div class="tabBtnBox">
+                    <button class="tabBtn tabBtnActive">1.年輕族群租房率高</button>
+                    <button class="tabBtn">2.一般公寓沒有壁爐</button>
+                </div>
+                <div class="tabContentBox">
+                    <div class="tabContentInsideBox tabContentActive">
+                        <img class="sec1TabImg" src="images/firefoldChart (1).png" alt="出租公寓家戶成長率/FireFold Chart-2" title="出租公寓家戶成長率/FireFold Chart-2">
+                        <p id="tabPwithImg">
+                            「美國房地産網站Trulia提供的分析數據顯示，<mark>26至34歲群體的租房率接近60%</mark>，相比於2006年上漲11個百分點。Bankrate高級分析師HoldenLewis 表示，年輕人對置業不感興趣並不奇怪，租房可以讓他們的生活更為靈活自由。」
+                        </p>
+                    </div>
+                    <div class="tabContentInsideBox">
+                        <img class="sec1TabImg" src="images/firefoldChart (2).png" alt="選擇租屋考慮因素/FireFold Chart-2" title="選擇租屋考慮因素/FireFold Chart-2">
+                        <p id="tabPwithImg">
+                            居住在城市的租用公寓裡的人數正在增長，這些人的特性是年輕、剛出社會、未婚、在城市工作，他們不會拿錢來買一棟平房，因為<mark>收入、交通、婚姻狀況</mark>等的考慮。<br>這些公寓大樓除非是高級大樓，否則一般未婚年輕人租房的大樓不會有壁爐（電壁爐或瓦斯壁爐），而是設置簡單的暖氣為主。而這些年輕人正是這個瓦楞壁爐的<mark>目標族群</mark>。
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="footNote txt-small">
                 <p>工業設計 | 畢業設計作品 | 2017.05</p>
                 <p>01</p>
             </div>
-        </div>
+        </div class="sec1Tab2-a">
     </div>
     <!-- 平面設計1============================================  -->
     <div id="sec2" class="scrollspy">
@@ -111,7 +182,69 @@
                 <h3 class="txt-SecBig-Mobile">品牌手冊設計</h3>
                 <h3 class="txt-small">SwingSwing 搖擺酸酸</h3>
             </div>
-            <img src="images/brand.jpg" alt="Brand Manual_Graphic Design"title="Brand Manual_Graphic Design">
+            <img id="wrapperImg" src="images/brand.jpg" alt="Brand Manual_Graphic Design"title="Brand Manual_Graphic Design">
+            <div class="tab">
+                <h3>搖擺酸酸</h3>
+                <p class="tabTtitleP">協助規劃品牌手冊內容、並負責設計與內文編排。</p>
+                <div class="tabBtnBox">
+                    <button class="tabBtn tabBtnActive">1.品牌特色簡介</button>
+                    <button class="tabBtn">2.品牌風格</button>
+                </div>
+                <div class="tabContentBox">
+                    <div class="tabContentInsideBox tabContentActive">
+                        <p>
+                            主打酸甜口感檸檬調飲與療癒口味奶昔的手搖飲店。<br>品牌宗旨<mark>人生太苦、飲料太甜、酸甜青澀、盡情搖擺</mark>
+                        </p>
+                    </div>
+                    <div class="tabContentInsideBox">
+                        <p>
+                            客群主推年輕女生。<mark>風格走向歐美設計，清新活潑而極簡</mark>，能夠與市場上手搖品牌有區隔性，顏色以代表檸檬的粉黃色與粉綠色為主色。
+                        </p>
+                    </div>
+                </div>
+                <h3>品牌手冊規劃</h3>
+                <p class="tabTtitleP">手冊用於業務推廣，因此電子檔為主要表現方式，規劃頁面方式與簡報相似。<mark>排版與顏色規劃依據品牌特色偏向極簡風</mark>，希望讀者可以著重內容的描述。</p>
+                <div class="tabBtnBox">
+                    <button class="tabBtn tabBtnActive">1.顏色</button>
+                    <button class="tabBtn">2.字型</button>
+                </div>
+                <div class="tabContentBox">
+                    <div class="tabContentInsideBox tabContentActive">
+                        <div class="brandColorBox">
+                            <div class="brandColor brandColorY"></div>
+                            <p>Pantone 108U霧面<br>Pantone 109C亮面<br>C0 M0 Y100 K10<br>WEB FFF100</p>
+                        </div>
+                        <div class="brandColorBox">
+                            <div class="brandColor brandColorG"></div>
+                            <p>Pantone 389U霧面<br>Pantone 389C亮面<br>C40 M0 Y80 K0<br>WEB A9CF52</p>
+                        </div>
+                        <div class="brandColorBox">
+                            <div class="brandColor brandColorB"></div>
+                            <p>#333333</p>
+                        </div>
+                        <div class="brandColorBox">
+                            <div class="brandColor brandColorW"></div>
+                            <p>#FFFFFF</p>
+                        </div>
+                    </div>
+                    <div class="tabContentInsideBox">
+                        <div class="brandTxt">
+                            <p>中文字型｜Adobe 繁黑體 Std B</p>
+                            <img src="images/brandTxt (1).png" alt="">
+                        </div>
+                        <div class="brandTxt">
+                            <p>英文字型｜Franklin Gothic Demi</p>
+                            <img src="images/brandTxt (2).png" alt="">
+                        </div>
+                    </div>
+                    <div class="tabContentBox tabNone">
+                        <div class="tabContentInsideBox tabContentImg tabContentActive">
+                            <div class="tabImgBg"><a href="images/profolio.pdf" class="tabPortBtn">去作品集看其他作品 <i class="fas fa-arrow-right tabPortBtnArrow"></i></a></div>
+                            <img class="tab100Img" src="images/swingswing/brand (2).jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="footNote txt-small">
                 <p>平面設計 | 2019.04</p>
                 <p>02</p>
@@ -126,7 +259,84 @@
                 <h3 class="txt-SecBig-Mobile">社群貼文與傳單設計</h3>
                 <h3 class="txt-small">SwingSwing 搖擺酸酸</h3>
             </div>
-            <img data-src="images/social-media.jpg" alt="SocilMedia & Direct mail_Graphic Disign"title="SocilMedia & Direct mail_Graphic Disign"class="lazy">
+            <img id="wrapperImg" data-src="images/social-media.jpg" alt="SocilMedia & Direct mail_Graphic Disign"title="SocilMedia & Direct mail_Graphic Disign"class="lazy">
+            <div class="tab">
+                <h3>搖擺酸酸</h3>
+                <p class="tabTtitleP">協助規劃品牌手冊內容、並負責設計與內文編排。</p>
+                <div class="tabBtnBox">
+                    <button class="tabBtn tabBtnActive">1.品牌特色簡介</button>
+                    <button class="tabBtn">2.品牌風格</button>
+                </div>
+                <div class="tabContentBox">
+                    <div class="tabContentInsideBox tabContentActive">
+                        <p>
+                            主打酸甜口感檸檬調飲與療癒口味奶昔的手搖飲店。<br>品牌宗旨<mark>人生太苦、飲料太甜、酸甜青澀、盡情搖擺</mark>
+                        </p>
+                    </div>
+                    <div class="tabContentInsideBox">
+                        <p>
+                            客群主推年輕女生。<mark>風格走向歐美設計，清新活潑而極簡</mark>，能夠與市場上手搖品牌有區隔性，顏色以代表檸檬的粉黃色與粉綠色為主色。
+                        </p>
+                    </div>
+                </div>
+                <h3>社群貼文設計</h3>
+                <div class="tabBtnBox">
+                    <button class="tabBtn tabBtnActive">1.配色</button>
+                    <button class="tabBtn">2.文案</button>
+                    <button class="tabBtn">3.特殊貼文編排</button>
+                </div>
+                <div class="tabContentBox">
+                    <div class="tabContentInsideBox tabContentActive">
+                        <p>
+                            以豐富顏色的飲料為主體，配色除了<mark>黃色的品牌色</mark>之外，因為客群多為上班族女性，也會<mark>選用較亮的粉色與大量的留白</mark>。畫面使用與產品系列相關的元素搭配，例如氣泡飲品背景使用泡泡作點綴，能夠與產品做相呼應的效果。
+                        </p>
+                        <img class="tabImgBox tabImgMT24" src="images/swingswing/social (4).png" alt="社群貼文設計" title="Facebook 社群貼文設計">
+                    </div>
+                    <div class="tabContentInsideBox">
+                        <p>
+                            <mark>文案內容多以產品本身發想，或以時事話題出發</mark>。圖中可以看到一個品牌IP，個性設定用賤話來砥礪人心。因此會加入此IP的形象，並添加一些逗趣的文字，增加"笑"果。
+                        </p>
+                        <div class="tabImgBox tabImgMT24">
+                        <a class="sec3ImgInsidePc50Mo100" href="https://www.facebook.com/swingswing.cc/posts/372150116712066" target="_blank">
+                            <img src="images/swingswing/swingswingPost (1).png" alt="社群貼文設計連結" title="Facebook 社群貼文設計連結">
+                        </a>
+                        <a class="sec3ImgInsidePc50Mo100" href="https://www.facebook.com/swingswing.cc/posts/405940849999659" target="_blank">
+                            <img src="images/swingswing/swingswingPost (2).png" alt="社群貼文設計連結" title="Facebook 社群貼文設計連結">
+                        </a>
+                        </div>
+                    </div>
+                    <div class="tabContentInsideBox">
+                        <p>
+                            利用<mark> Facebook 圖文編排樣版版面固定的特性</mark>，使消費者第一眼看到的圖片文字內容充滿正面能量，但點擊圖片後的內文是反面的意思，試圖讓貼文更有趣味感。
+                        </p>
+                        <div class="tabImgBox tabImgMT24">
+                            <a href="https://www.facebook.com/swingswing.cc/posts/399741067286304" target="_blank" class="sec3ImgMo100PcAuto sec3ImgPc40">
+                                <img class="tabImgBox sec3ImgMT8" src="images/swingswing/socialPost.jpg" alt="特殊貼文編排展示" title="特殊貼文編排展示">
+                            </a>
+                            <div class="sec3ImgMo100PcAuto sec3ImgPc60">
+                                <a href="https://www.facebook.com/swingswing.cc/posts/399741067286304" target="_blank">
+                                    <img class="tabImgBox sec3ImgMT8" src="images/swingswing/socialPost-1.jpg" alt="貼文展開示意圖-1" title="貼文展開示意圖-1">
+                                </a>
+                                <a href="https://www.facebook.com/swingswing.cc/posts/399741067286304" target="_blank">
+                                    <img class="tabImgBox sec3ImgMT8" src="images/swingswing/socialPost-2.jpg" alt="貼文展開示意圖-2" title="貼文展開示意圖-2">
+                                </a>
+                                <a href="https://www.facebook.com/swingswing.cc/posts/399741067286304" target="_blank">
+                                    <img class="tabImgBox sec3ImgMT8" src="images/swingswing/socialPost-3.jpg" alt="貼文展開示意圖-3" title="貼文展開示意圖-3">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>菜單設計</h3>
+                <div class="tabContentBox tabNone">
+                    <div class="tabContentInsideBox tabContentActive">
+                        <p>
+                            根據品牌色<mark>粉黃、粉綠、粉紫作為主色</mark>，漸層色塊做標題，讓消費者可以明確了解主從關係，用品牌LOGO標註推薦品項，再<mark>加入品牌IP作點綴增加趣味感</mark>。<br>菜單設計包含店面電視螢幕菜單、酷卡菜單、燈片菜單。
+                        </p>
+                        <img class="tabImgBox tabImgMT24" src="images/swingswing/menu.png" alt="社群貼文設計" title="Facebook 社群貼文設計">
+                    </div>
+                </div>
+            </div>
             <div class="footNote txt-small">
                 <p>平面設計 | 2019.03</p>
                 <p>03</p>
@@ -186,11 +396,11 @@
             <div class="txtBox">
                 <h4 class="txt txt-btnLine txt-small">SwingSwing搖擺酸酸</h4>
                 <div class="txt txt-small">
-                    <h5>設計端</h5>
+                    <h5><mark>設計端</mark></h5>
                     <p>品牌手冊設計、店面規劃設定、店面活動廣宣、活動DM、菜單、產品圖片編修。</p>
-                    <h5>行銷端</h5>
+                    <h5><mark>行銷端</mark></h5>
                     <p>籌備店面行銷活動、網路行銷，Facebook,Instagram, line@, 官方網站...等管理與維護。</p>
-                    <h5>春季加盟展</h5>
+                    <h5><mark>春季加盟展</mark></h5>
                     <p>擔任對外窗口，負責參展設備、流程管理、視覺設計、展覽製作物設計、活動企劃等。</p>
                 </div>
             </div>
@@ -201,9 +411,9 @@
             <div class="txtBox">
                 <h4 class="txt txt-btnLine txt-small">郁巧貿易公司設計實習</h4>
                 <div class="txt txt-small">
-                    <p>製作商品開版圖、商品外觀平面設計。</p>
-                    <p>公司商品以布類家飾產品為主，了解工廠製作限制，製圖能同時兼顧視覺與限制。</p>
-                    <p>後因受到主管青睞，跟隨業務外派至明尼蘇達州兩周，協助業務開會與市場調查，而見識美式風格與文化薰陶，也了解產品背後深厚的文化背景。</p>
+                    <p>製作商品<mark>開版圖、商品外觀平面設計</mark>。</p>
+                    <p>公司商品以布類家飾產品為主，<mark>了解工廠製作限制，製圖能同時兼顧視覺與限制</mark>。</p>
+                    <p>後因受到主管青睞，<mark>跟隨業務外派至明尼蘇達州</mark>兩周，協助業務開會與市場調查，而見識美式風格與文化薰陶，也了解產品背後深厚的文化背景。</p>
                 </div>
             </div>
             <div class="contentTitle">
@@ -213,7 +423,7 @@
             <div class="txtBox">
                 <h4 class="txt txt-btnLine txt-small">工業設計學系</h4>
                 <div class="txt txt-small">
-                    <p>在學期間除學業外，亦參加社團、營隊、住宿學習計畫、棟長，明白團隊合作的重要性，並學習如何獨立思考與有條不紊的執行工作。</p>
+                    <p>在學期間除學業外，亦參加社團、營隊、住宿學習計畫、棟長，<mark>明白團隊合作的重要性，並學習如何獨立思考與有條不紊的執行工作。</mark></p>
                 </div>
             </div>
             <div class="footNote txt-small">
