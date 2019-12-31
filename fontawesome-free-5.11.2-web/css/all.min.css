@@ -27,6 +27,8 @@
   font-family: 'Font Awesome 5 Brands'; }
 .fa-facebook-square:before {
   content: "\f082"; }
+.fa-line:before {
+  content: "\f3c0"; }
 .fa-instagram:before {
   content: "\f16d"; }
 .far {
