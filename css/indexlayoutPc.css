@@ -23,7 +23,7 @@
     /* 整體調整 */
         .headerWrapper {padding:17vh 37px;}
         .wrapper {padding:130px 0 70px;}
-        .headerTxt ,.link,.navWrapper {margin:auto;max-width:350px;}
+        .headerTxt ,.link{margin:auto;max-width:350px;}
         #sec1 .wrapper,#sec2 .wrapper,#sec3 .wrapper,#sec4 .wrapper,#sec5 .wrapper,#sec6 .wrapper,footer{padding-left:42%;padding-right:6%;}
         
         /* header */
@@ -32,6 +32,7 @@
         .headerTxt h3 {background:linear-gradient(30deg,#825EB2,#368CC4);border:none;color:#fff;} 
         .link {margin:2vh auto;}
         .link h5 {line-height:25px;padding:0 .3em;transition:.3s;text-align:left;}
+        .link a {overflow: hidden;margin:0;}
         .fontsize25 {font-size:25px;}
         .fontsize20 {font-size:20px;margin-right:0.25em;}
         .contactDisplay,.contact {display:none!important;}
@@ -40,23 +41,32 @@
         .footNote p:nth-of-type(2) {font-size:76px;font-weight:900;line-height:1em;position:absolute;right:0;top:-140px;}
         #sec4 .footNote p:nth-of-type(2) {display:none;}
         #btnBar {display:none;}
-        #btnTop {left:auto;right:20px;bottom:20px;border-radius:50%;height:45px;box-shadow:0 0 5px rgba(51,51,51,.3);}
+        #btnTop {left:auto;right:20px;bottom:20px;border-radius:50%;height:45px;line-height:45px;padding:0;background:linear-gradient(30deg,#825EB2,#368CC4);}
+        #btnTop i{color:#fff;}
         #wrapperImg{max-width: 80%;}
     /* nav */
-    #pcNav {display:block;padding:0 37px;overflow:hidden;}
+    #pcNav {display:block;margin:0 auto;overflow:hidden;background-color:transparent;width:100%;}
     #pcNav a{position: relative;z-index:1;transition:.3s;}
     #pcNav a:after {
         content:'';position:absolute;top:-15px;left:-25%;width:150%;height:0;z-index:-1;
         background:linear-gradient(30deg,#825EB2,#368CC4);border-radius:5px;
         transition:.3s;
     }
-    .navWrapper li{float: left;}
-    .navWrapper li + li{margin-left:10.5%;}
-    .navWrapper a{color:#777;display:block;padding-top:15px;padding-bottom:5px;border-top:5px solid transparent;line-height:1.2em;}
+    .navWrapper {overflow: hidden;width:70%;margin:0 auto;}
+    .navWrapper li{float: left;width:20%;}
+    /* .navWrapper li + li{margin-left:10.5%;} */
+    .navWrapper a{
+        color:#777;line-height:1.2em;margin:0 auto;
+        width:35px;text-align:center;padding:15px 0 5px;
+        display:block;border-top:5px solid transparent;
+    }
     
     .link a {display:block;clear:both;padding:12px 0;color:#777;width:100%;transition:.5s;}
     .link i {transition:.3s;}
-    a.headerLink {float:left;display:block;width:40%;clear: none;margin-right:3%;position: relative;padding:0;margin:12px 3% 12px 0;}
+    .link a.linkSocial {padding-left:24px;}
+    a.headerLink {float:left;width:50%;clear: none;position: relative;padding:0;margin:12px 0 12px;}
+    a.headerLink i{padding-left:.7em;}
+    a.headerLink h5 {text-align:center;}
     a.headerLink:after {
         content:'';position:absolute;width:0;height:100%;left:0;top:0;background-color: #368CC4;
     }
@@ -66,11 +76,11 @@
     
     /* tab */
     .tab {width:80%;}
-    .tabBtnBox {border-top:1px solid rgba(200, 200, 200, 0.5);border-bottom:1px solid rgba(200, 200, 200, 0.5);}
-    .tabBtn {display:inline-block;width:auto;text-align:center;padding:.3em 1em;box-shadow:none;}
+    .tabBtnBox {border-top:1px solid rgba(200, 200, 200, 0.5);}
+    .tabBtn {display:inline-block;width:auto;text-align:center;padding:.3em 0;}
     .tabBtn3    {width:33.3%;}
     .tabBtn2    {width:50%;}
-    .tabBtnActive {margin:0;padding:.3em 1em;position: relative;background-color:transparent;}
+    .tabBtnActive {margin:0 auto;padding:.3em 1em;}
     
     .tabContentBox {border-bottom:none;}
     .brandColorBox  {width:140px;float: left;}
@@ -124,6 +134,8 @@
 
 
     /* hover */
+    .link a.linkSocial:hover {background:linear-gradient(30deg,#825EB2,#368CC4);transition:.3s;color:#fff;padding-left:48px;}
+    .link a:hover i {color:#fff;}
     .headerLink:hover:after{width:100%;transition:.3s;z-index:-1;}
     .headerLink:hover {color:#fff;}
     .headerLink:hover i{padding-left:.7em;transition:.3s;}
