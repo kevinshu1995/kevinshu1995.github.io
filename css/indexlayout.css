@@ -61,7 +61,7 @@ height:120px;
 }
 .loader{
 border: 7px solid #f3f3f3; 
-border-top: 7px solid #ad3156;  
+border-top: 7px solid #0B7EBE;  
 border-radius: 50%; 
 animation: spin 1s linear infinite;
 width:60px; 
