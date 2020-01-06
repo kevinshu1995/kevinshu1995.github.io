@@ -60,37 +60,17 @@ header .link i,.social a,.social h3{color: #777;}
     height:120px; 
     }
     .loader{
-    border:1px solid #fff;
-    width:72px; 
-    height:72px;
+    border: 7px solid rgba(255, 255, 255,.3); 
+    border-top: 7px solid rgba(54, 139, 196, 0.9);
+    animation: spin .7s ease-out infinite;
+    width:60px; 
+    height:60px;
     margin:20px 30px;
-    background:linear-gradient(30deg,#825EB2,#368CC4);
-    position: relative;z-index:-1;
     border-radius:50%;
     }
-    .loader::before,.loader::after{
-        content:'';position:absolute;border-radius:50%;
-    }
-    .loader::before{
-        left:-1px;top:-1px;
-        border: 7px solid rgba(255, 255, 255); 
-        border-top: 7px solid rgba(255, 255, 255, 0.3);
-        animation: spin .7s ease-out infinite;
-        width:60px; 
-        height:60px;
-        z-index:0;
-    }
-    .loader::after{
-        left:5px;top:5px;
-        width:62px;height:62px;
-        background-color: #fff;
-        z-index:-1;
-    }
     @keyframes spin { 
-        100% { 
-            transform: rotate(360deg); 
-        } 
-        }
+        100% {transform: rotate(360deg);}
+    }
     .loaderTxt {
     width:100%;
     text-align:center;
