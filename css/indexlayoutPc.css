@@ -80,8 +80,6 @@
     .tabBtn {display:inline-block;width:auto;text-align:center;padding:.3em 0;}
     .tabBtn3    {width:33.3%;}
     .tabBtn2    {width:50%;}
-    .tabBtnActive {margin:0 auto;padding:.3em 1em;}
-    
     .tabContentBox {border-bottom:none;}
     .brandColorBox  {width:140px;float: left;}
     .brandTxt       {width:100%;}
