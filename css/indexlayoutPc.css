@@ -92,7 +92,9 @@
     .sec3ImgMo100PcAuto {float:left;}
     .sec3ImgPc60{width:60%;}
     .sec3ImgPc40{width:37%;margin-right:2%;}
-    /* .sec1TabImg {padding:0 5%;} */
+    .sec1TabImg,#tabPwithImg {width:100%;margin-right:0;clear:both;}
+    
+
     /* #sec4 */
     .imgContainer .imgBox{width:24%;margin:0 1% 1% 0;}
 
@@ -156,6 +158,8 @@
     }
     #sec5::after{content:'EXPERIENCE';}
     #sec6::after{content:'SKILLS';}
+    .sec1TabImg     {width:50%;margin-right:2%;float:left;clear: none;}
+    #tabPwithImg    {width:48%;margin:0;padding:0;float: left;clear: none;}
 }
 @media (min-width:1600px){
     .headerTxt h2{font-size:36px;line-height:1.5em;}

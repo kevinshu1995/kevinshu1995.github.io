@@ -388,6 +388,7 @@ from{left:-50px;opacity:0;}to{left:0;opacity:1;}
     .brandColorBox  {float: left;width:45%;margin:8px 2.5% 0;}
     .brandTxt       {width:45%;min-width:360px;margin-right:2.5%;}
     .tabImgPc25Mo50 {width:24%;margin-right:1%;}
+    
     .sec3ImgInsidePc100Mo50 {display:inline-block;width:48%;margin-right:1%;}
     .sec3ImgInsidePc33Mo50 {width:32%;margin:0 1.5% 1% 0;}
     .sec3ImgMo100PcAuto {float:left;}
@@ -398,6 +399,8 @@ from{left:-50px;opacity:0;}to{left:0;opacity:1;}
 }
 @media(min-width:767px){
     .headerTxt h2 {font-size:6vw;}
+    .sec1TabImg {width:50%;margin-right:16px;}
+    #tabPwithImg {padding-top:8px;float: left;width:47%;}
     .tab h4{
         padding:.1em 3em;
     }
@@ -420,4 +423,5 @@ from{left:-50px;opacity:0;}to{left:0;opacity:1;}
     .skillContent{
         overflow: hidden;margin-top:0;
     }
+    
 }
