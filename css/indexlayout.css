@@ -93,7 +93,7 @@ header {
     width:100vw;
     height:100vh;
     background-image: url(../images/headerBg.jpg);
-    background-position:center;
+    background-position:center 25%;
     background-repeat:no-repeat;
     background-size: cover;
 }
@@ -384,12 +384,14 @@ from{left:-50px;opacity:0;}to{left:0;opacity:1;}
 #sec6 .contentTitle h4{
     background:linear-gradient(30deg,#825EB2,#368CC4);
 }
-/* tab media */
 @media(max-width:320px){
     .headerTxt h2 {font-size:28px;}
     .link h5      {font-size:12px;}
     .contact      {font-size:16px;}
+    .link h5      {font-size:3.5vw;height:1.5em;width:100%;}
+    .contact {padding:.1em 0;width:50%;font-size:5vw;bottom:80px;}
 }
+/* tab media */
 @media(min-width:500px){
     .brandColorBox  {float: left;width:45%;margin:8px 2.5% 0;}
     .brandTxt       {width:45%;min-width:360px;margin-right:2.5%;}
@@ -403,7 +405,17 @@ from{left:-50px;opacity:0;}to{left:0;opacity:1;}
     .sec3ImgInsidePc50Mo100{width:49%;margin-right:2%;}
     .paddingBottom8 {padding-bottom:8px;}
 }
-@media(min-width:767px){
+@media screen and (orientation: landscape) and (max-width:1023px) {
+    .headerTxt    {top:10vh;bottom:auto;}
+    .headerTxt h1 {font-size:5vh;}
+    .headerTxt h2 {font-size:8vh;}
+    .headerTxt h3 {margin:.5em 0;}
+    .link         {width:60%;margin:auto;}
+    a.headerLink   {margin:5vh;}
+    .headerLink h5{font-size:4vh;}
+    .contact      {font-size:5vh;bottom:8vh;width:70vh;}
+}
+@media screen and (orientation: orientation) and (min-width:767px){
     .headerTxt h2 {font-size:6vw;}
     .contact {font-size:3vw;}
     .link h5 {font-size:2vh;}
@@ -431,5 +443,4 @@ from{left:-50px;opacity:0;}to{left:0;opacity:1;}
     .skillContent{
         overflow: hidden;margin-top:0;
     }
-    
 }
