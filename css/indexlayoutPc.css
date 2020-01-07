@@ -24,6 +24,7 @@
         .headerWrapper {padding:17vh 37px;}
         .wrapper {padding:130px 0 70px;}
         .headerTxt ,.link{margin:auto;max-width:350px;}
+        .headerTxt {position: absolute;top:0;bottom:0;left:0;right:0;height:50vh;width:80%;}
         #sec1 .wrapper,#sec2 .wrapper,#sec3 .wrapper,#sec4 .wrapper,#sec5 .wrapper,#sec6 .wrapper,footer{padding-left:42%;padding-right:6%;}
         
         /* header */
