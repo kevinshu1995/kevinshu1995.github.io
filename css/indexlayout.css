@@ -328,7 +328,7 @@ from{left:-50px;opacity:0;}to{left:0;opacity:1;}
 .contentSecTitle1::after,.contentSecTitle2::after,.contentSecTitle3::after{
     height:0px;width:60px;top:-55px;left:0;position: absolute;
     text-align:right;font-size:80px;z-index:9;line-height:1em;
-    color:rgba(51, 51, 51, 0.1);
+    color:rgba(51, 51, 51, 0.1);font-family:'Noto Serif TC','微軟正黑體','Noto Serif',serif;
 }
 #sec5 .contentSecTitle1::after,#sec5 .contentSecTitle2::after,#sec5 .contentSecTitle3::after{
     top:-45px;left:60px;
