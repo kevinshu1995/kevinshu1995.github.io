@@ -6,7 +6,7 @@
     #pcNav {letter-spacing:0.48px;}
     .txt-pcTitle,h3.txt-SecBig-Mobile{
         font-size:36px;line-height:1.5em;font-weight:900;}
-    .txt-pcSecTitle,.headerTxt h1{
+    .txt-pcSecTitle,.h1C,.h1E{
         font-size:24px;line-height:1.5em;font-weight:normal;}
     .txt-pcSecTitleBold,.contentTitle h4,.tab h3,.loaderTxt{
         font-size:24px;line-height:1.5em;font-weight:900;}
@@ -15,8 +15,8 @@
     .txt-pcSmall,.footNote p{
         font-size:12px;line-height:1.5em;font-weight:normal;}
     .headerTxt h1:nth-last-of-type(1) {font-size:16px;}
-
-    .headerTxt h2{font-size:2.4vw;line-height:1.5em;}
+    .h1C{font-weight:900;}
+    .h1E{font-size:2.4vw;line-height:1.5em;}
 
 
 /* 版面調整 */
@@ -29,10 +29,9 @@
         
         /* header */
         header {position: fixed;height:100%;width:36%;box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.16);}
-        .headerTxt h2 {letter-spacing:.1em;} 
-        .headerTxt h3 {background:linear-gradient(30deg,#825EB2,#368CC4);border:none;color:#fff;} 
+        .headerTxt h2 {letter-spacing:.1em;font-size:2.4vw;}
         .link {margin:2vh auto;}
-        .link h5 {line-height:25px;padding:0 .3em;transition:.3s;text-align:left;}
+        .link h5 {line-height:1.8em;height:1.8em;margin:0;transition:.3s;text-align:left;}
         .link a {overflow: hidden;margin:0;}
         .fontsize25 {font-size:25px;}
         .fontsize20 {font-size:20px;margin-right:0.25em;}
@@ -50,7 +49,7 @@
     #pcNav a{position: relative;z-index:1;transition:.3s;}
     #pcNav a:after {
         content:'';position:absolute;top:-15px;left:-25%;width:150%;height:0;z-index:-1;
-        background:linear-gradient(30deg,#825EB2,#368CC4);border-radius:5px;
+        background:linear-gradient(30deg,#825EB2,#368CC4);
         transition:.3s;
     }
     .navWrapper {overflow: hidden;width:70%;margin:0 auto;}
@@ -61,11 +60,11 @@
         width:35px;text-align:center;padding:15px 0 5px;
         display:block;border-top:5px solid transparent;
     }
-    
+    .link h5 i,.link h5 {color:#fff;}
     .link a {display:block;clear:both;padding:12px 0;color:#777;width:100%;transition:.5s;}
     .link i {transition:.3s;}
     .link a.linkSocial {padding-left:24px;}
-    a.headerLink {float:left;width:50%;clear: none;position: relative;padding:0;margin:12px 0 12px;}
+    a.headerLink {float:left;clear:none;position:relative;width:45%;padding:0;margin:12px 5% 0 0;border:none;background:linear-gradient(30deg,#825EB2,#368CC4);border-radius:5px 15px 15px 5px;}
     a.headerLink i{padding-left:.7em;}
     a.headerLink h5 {text-align:center;}
     a.headerLink:after {
@@ -147,7 +146,7 @@
     #sec1::after,#sec2::after,#sec3::after,#sec4::after,#sec5::after,#sec6::after{
         text-align:right;position:absolute;width:45%;height:46px;line-height:.7em;
         right:0;top:110px;z-index:0;
-        font-family:'Noto Serif TC','微軟正黑體','Noto Serif',serif;font-weight:bolder;
+        font-family:'Noto Serif TC','微軟正黑體','Noto Serif',serif;font-weight:700;
         font-size:60px;letter-spacing:-.05em;padding-right:10px;
         color:rgba(11, 127, 190, 0.1);border-right:60px solid rgba(11, 127, 190, 0.1);
     }
