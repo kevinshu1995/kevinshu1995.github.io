@@ -17,7 +17,7 @@
     .headerTxt h1:nth-last-of-type(1) {font-size:16px;}
     .h1C{font-weight:900;}
     .h1E{font-size:2.4vw;line-height:1.5em;}
-
+    /* .txt h5{font-weight:700;} */
 
 /* 版面調整 */
     /* 整體調整 */
@@ -42,7 +42,7 @@
         #sec4 .footNote p:nth-of-type(2) {display:none;}
         #btnBar {display:none;}
         #btnTop {left:auto;right:20px;bottom:20px;border-radius:50%;height:45px;line-height:45px;padding:0;background:linear-gradient(30deg,#825EB2,#368CC4);}
-        #btnTop i{color:#fff;}
+        #btnTop i{color:#fff;position: relative;bottom:2px;}
         #wrapperImg{max-width: 80%;}
     /* nav */
     #pcNav {display:block;margin:0 auto;overflow:hidden;background-color:transparent;width:100%;}
@@ -103,12 +103,16 @@
     .txtBox{overflow: hidden;}
     /* #sec6 */
     .skillContent {margin-bottom:16px;position:relative;}
+    .skillContent h5 {background-color: rgba(54, 139, 196,0.1);}
     .skillLvl{margin-left:auto;}
     .txtBox p.txt {margin:5px 0;}
 /* ----------------------------------------------------- */
     .contentCard{
-        min-height:650px;
+        min-height:650px;width:28%;
+        float:left;margin:0 2.5%;
     }
+    .contentTitle  {
+        margin: 18px 0 42px;}
     .skillBox{
         padding:0;
         margin-bottom:15px;
