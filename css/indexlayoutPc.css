@@ -63,6 +63,7 @@
     .link a             {display:block;clear:both;padding:12px 0;color:#777;width:100%;transition:.5s;}
     .link i             {transition:.3s;}
     .link a.linkSocial  {padding-left:24px;}
+    .linkSocial i       {color:#777;}
     a.headerLink        {float:left;clear:none;position:relative;width:45%;padding:0;margin:12px 5% 0 0;border:none;background:linear-gradient(30deg,#825EB2,#368CC4);border-radius:5px 15px 15px 5px;}
     a.headerLink i      {padding-left:.7em;}
     .headerLinkH5       {text-align:center;}
