@@ -316,23 +316,26 @@ header {
     &:hover i {
       color: $color-white;
     }
-  }
-  .header__linkWrap__linkOnPc:hover {
-    background: $color-mainGradient;
-    color: $color-white;
-    padding-left: 2.5em;
-    transition: 0.3s;
-  }
-  .header__linkWrap__linkOnPc__icon,
-  .header__linkWrap__linkOnPc__txt {
-    float: left;
-    height: 2em;
-    line-height: 2em;
-  }
-  .header__linkWrap__linkOnPc__txt {
-    display: block;
-    margin-left: 1em;
-    @include font-size(16);
+    &:hover {
+      background: $color-mainGradient;
+      color: $color-white;
+      padding-left: 2.5em;
+      transition: 0.3s;
+    }
+    .header__linkWrap__linkOnPc__icon,
+    .header__linkWrap__linkOnPc__txt {
+      float: left;
+      height: 30px;
+      line-height: 30px;
+    }
+    .header__linkWrap__linkOnPc__txt {
+      display: block;
+      margin-left: 1em;
+      @include font-size(16);
+    }
+    .header__linkWrap__linkOnPc__icon {
+      @include font-size(24);
+    }
   }
 }
 
@@ -428,7 +431,7 @@ header {
 
           .header__mobileNav
          nav page only on mobile
-          手機的導航頁__連結文字 
+              手機的導航頁 
 
 \*                                      */
 
@@ -552,9 +555,12 @@ header {
 .header__mobileNav__socialLinkWrap {
   position: absolute;
   left: 15vw;
-  bottom: 21vh;
+  bottom: 30vh;
   padding: 0;
   max-width: 80%;
+  @include pad {
+    bottom: 15vh;
+  }
   @include landscape-beyond1024 {
     bottom: 20vh;
     left: 20px;
@@ -611,7 +617,7 @@ header {
   height: 40px;
   line-height: 40px;
   border-radius: 20px 0 0 20px;
-  padding-left: 8px;
+  padding-left: 12px;
   .fa-times {
     border-radius: 1em;
     width: 1em;
@@ -668,6 +674,7 @@ header {
   margin-bottom: 60px;
   position: relative;
   .section__titleWrap__title {
+    margin: 4px 0;
     background: $color-mainGradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -682,12 +689,25 @@ header {
       width: 100%;
       height: 1px;
       position: absolute;
-      bottom: -4px;
+      bottom: 3px;
       left: 0;
       background-color: #aaa;
     }
   }
 }
+// other setting
+.secPhotos {
+  .section__titleWrap__title {
+    background: transparent;
+    color: $color-white;
+    -webkit-text-fill-color: unset;
+  }
+  .section__titleWrap__sectitle:after {
+    background-color: $color-white;
+  }
+}
+
+// section的大圖
 .section__wrapper__banner {
   max-width: 100%;
   height: auto;
@@ -896,11 +916,12 @@ header {
     }
   }
 }
-@include desktop {
-  .secPhotos {
-    .footNote {
-      color: $color-white;
-    }
+
+.secPhotos {
+  .footNote p {
+    color: $color-white;
+  }
+  @include desktop {
     .footNote__num {
       display: none;
     }
@@ -915,11 +936,13 @@ header {
 \*                                      */
 
 .wrapper__imgwrap {
+  line-height: 0;
   font-size: 0;
   .wrapper__imgwrap__wrap {
     display: inline-block;
     width: 33.3%;
     height: 33.3%;
+    margin: 0;
     position: relative;
     z-index: 9;
     @include desktop {
@@ -1101,20 +1124,6 @@ footer {
 // 以下未整理
 // 以下未整理
 // 以下未整理
-
-.secPhotos .section__titleWrap__title {
-  background: transparent;
-  color: $color-white;
-  -webkit-text-fill-color: unset;
-}
-
-.secPhotos .section__titleWrap__sectitle:after {
-  background-color: $color-white;
-}
-
-.section__titleWrap__title {
-  margin: 4px 0;
-}
 
 // 以下未整理
 // 以下未整理

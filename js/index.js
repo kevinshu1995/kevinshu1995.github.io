@@ -18,7 +18,7 @@ $(document).ready(function() {
   $("#js--header__navBarOnPc").addClass("pcNavAni");
   $(".linkSocial").addClass("linkSocialAni");
   $(".header__wrapper__linkWrap").addClass("linkAni");
-  $("a.single_image").fancybox({
+  $(".js--secimg--fancybox").fancybox({
     padding: "0",
     overlayOpacity: 0.7,
     overlayColor: "#000",
@@ -35,7 +35,9 @@ $(document).ready(function() {
     }
   });
   // nav手機禁止捲動
-  $("#js--header__mobileNav,.single_image").on("touchmove", function(event) {
+  $("#js--header__mobileNav,.js--secimg--fancybox").on("touchmove", function(
+    event
+  ) {
     event.preventDefault();
   });
   //  整頁滑動
@@ -144,11 +146,11 @@ $(document).ready(function() {
     }
   });
   // hover 換圖
-  $(".imgContainer img").hover(
+  $(".js--wrapper__imgwrap__wrap img").hover(
     function() {
       var imgIndex =
         $(this)
-          .parents(".imgBox")
+          .parents(".js--wrapper__imgwrap__wrap")
           .index() + 1;
       $(this).attr(
         "src",
@@ -158,7 +160,7 @@ $(document).ready(function() {
     function() {
       var imgIndex =
         $(this)
-          .parents(".imgBox")
+          .parents(".js--wrapper__imgwrap__wrap")
           .index() + 1;
       $(this).attr(
         "src",
