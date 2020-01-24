@@ -1725,8 +1725,104 @@ header .wrapper {
   display: inline-block;
 }
 
-.skillBox {
+/*                                      *\
+
+               skillProgress
+                   技能
+
+\*                                      */
+.skillProgress {
   width: 100%;
+  min-height: 112px;
+  padding: 16px 0;
+  margin-bottom: 8px;
+}
+
+.skillProgress h5 {
+  display: inline-block;
+}
+
+@media (min-width: 1023px) {
+  .skillProgress {
+    padding: 0;
+    margin-bottom: 15px;
+    height: 195px;
+    position: static;
+  }
+  .skillProgress h5 {
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+}
+
+.skillProgress__wrap {
+  display: block;
+  margin: 8px 0;
+}
+
+@media (min-width: 767px) {
+  .skillProgress__wrap {
+    overflow: hidden;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1023px) {
+  .skillProgress__wrap {
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .skillProgress__wrap h5 {
+    background-color: rgba(54, 139, 196, 0.1);
+  }
+}
+
+.skillProgress__wrap__skillwrap {
+  width: 35%;
+  height: 16px;
+  position: relative;
+  float: right;
+  margin: 1px 0;
+  border: 2px solid #368cc4;
+}
+
+.skillProgress__wrap__skillwrap .skillProgress__wrap__skillwrap__progress {
+  height: 8px;
+  margin: 4px;
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  background: linear-gradient(30deg, #825eb2, #368cc4);
+}
+
+@media (min-width: 1023px) {
+  .skillProgress__wrap__skillwrap {
+    width: 100%;
+    margin-left: auto;
+    margin-top: 0;
+    float: none;
+  }
+}
+
+.skillLvlAI {
+  width: 90%;
+}
+
+.skillLvlPS,
+.skillLvlLR,
+.skillLvlXD {
+  width: 80%;
+}
+
+.skillLvlPR,
+.skillLvlAE,
+.skillLvlJQ {
+  width: 50%;
+}
+
+.skillLvlWEB {
+  width: 60%;
 }
 
 .secPhotos .section__titleWrap__title {
@@ -1739,8 +1835,7 @@ header .wrapper {
   background-color: #fff;
 }
 
-.section__titleWrap__title,
-.skillContent {
+.section__titleWrap__title {
   margin: 4px 0;
 }
 
@@ -1965,66 +2060,6 @@ dd {
   display: inline-block;
 }
 
-/* .secSkills ======================================  */
-.skillContent {
-  display: block;
-  margin: 8px 0;
-}
-
-.skillContent h5 {
-  display: inline-block;
-}
-
-.skillLvl {
-  position: relative;
-  float: right;
-  width: 35%;
-  height: 16px;
-  margin: 1px 0;
-  border: 2px solid #368cc4;
-}
-
-.skillLvlEach {
-  position: absolute;
-  left: -2px;
-  bottom: -2px;
-  height: 8px;
-  margin: 4px;
-  background: linear-gradient(30deg, #825eb2, #368cc4);
-}
-
-.skillLvlPS {
-  width: 80%;
-}
-
-.skillLvlAI {
-  width: 90%;
-}
-
-.skillLvlLR {
-  width: 80%;
-}
-
-.skillLvlPR {
-  width: 50%;
-}
-
-.skillLvlAE {
-  width: 50%;
-}
-
-.skillLvlWEB {
-  width: 60%;
-}
-
-.skillLvlJQ {
-  width: 50%;
-}
-
-.skillLvlXD {
-  width: 80%;
-}
-
 /* footer====================================== */
 footer {
   height: 80px;
@@ -2203,12 +2238,6 @@ a.linkSocialAni {
 }
 
 /* --------------------------------------------------------------------------------- */
-.skillBox {
-  height: 112px;
-  padding: 16px 0;
-  margin-bottom: 8px;
-}
-
 .secSkills .col-3-card__titleWrap__title {
   background: linear-gradient(30deg, #825eb2, #368cc4);
 }
@@ -2271,10 +2300,6 @@ a.linkSocialAni {
   }
   .tab h4 {
     padding: 0.1em 3em;
-  }
-  .skillContent {
-    overflow: hidden;
-    margin-top: 0;
   }
 }
 
@@ -2399,35 +2424,6 @@ a.linkSocialAni {
     width: 100%;
     margin-right: 0;
     clear: both;
-  }
-  /* .secPhotos */
-  /* .secSkills */
-  .skillContent {
-    margin-bottom: 16px;
-    position: relative;
-  }
-  .skillContent h5 {
-    background-color: rgba(54, 139, 196, 0.1);
-  }
-  .skillLvl {
-    margin-left: auto;
-  }
-  /* ----------------------------------------------------- */
-  .skillBox {
-    padding: 0;
-    margin-bottom: 15px;
-    height: 195px;
-    position: static;
-  }
-  .skillBox h5 {
-    display: block;
-    position: relative;
-    text-align: center;
-  }
-  .skillLvl {
-    margin-top: 0;
-    float: none;
-    width: 100%;
   }
 }
 
