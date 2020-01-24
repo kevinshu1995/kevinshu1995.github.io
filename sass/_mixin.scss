@@ -1,0 +1,55 @@
+// media
+@mixin mobile {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+@mixin mobileLarge {
+  @media (min-width: 575px) {
+    @content;
+  }
+}
+@mixin pad {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
+@mixin landscape-beyond1024 {
+  @media screen and (orientation: landscape) and (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1023px) {
+    @content;
+  }
+}
+@mixin desktop-xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin desktop-xxl {
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+
+//置中
+@mixin positionMid($position) {
+  position: $position;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@mixin circleEl($widthAndHeight) {
+  width: $widthAndHeight;
+  height: $widthAndHeight;
+  border-radius: 50%;
+}
+@mixin font-size($font-size) {
+  font-size: $font-size + px;
+  font-size: $font-size / $font-size-base + rem;
+}

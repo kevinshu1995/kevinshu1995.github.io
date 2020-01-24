@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
 <html lang="zh-Hans-TW">
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154890967-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154890967-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        
-        gtag('config', 'UA-154890967-1', { 'optimize_id': 'GTM-M33GMRN'});
-    </script>
+
+        gtag('config', 'UA-154890967-1', { 'optimize_id': 'GTM-M33GMRN' });
+    </script> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,98 +24,140 @@
     <meta property="og:url" content="https://kevinshu1995.github.io/images/ogimage.jpg">
     <meta property="og:type" content="website">
     <title>Portfolio of KevinHsu</title>
-    <link rel="preload" href="css/indexlayout.css" as="style" media="only screen" onload="this.rel='stylesheet'">
-    <link rel="stylesheet" href="css/font.css" media="only screen">
-    <link rel="stylesheet" href="css/indexlayoutPc.css" media="only screen and (min-width:1023px)">
+    <link rel="preload" href="css/all.css" as="style" media="only screen" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" media="only screen">
-    <link rel="stylesheet" href="fontawesome-free-5.11.2-web/css/all.min.css" media="only screen">
     <link rel="preconnect" href="https://live.staticflickr.com" crossorigin>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <!-- 側邊欄============================================  -->
-    <div id="loader" class="center"><div class="loader"></div><p class="loaderTxt">載入中...</p></div></div>
-    <header id="home">
-        <nav id="pcNav" class="txt-pcContent">
-            <ul class="navWrapper">
-                <li><a href="#sec2" data-scroll="#sec2" title="Graphic Disign">平面<br>設計</a></li>
-                <li><a href="#sec1" data-scroll="#sec1" title="Industrial Disign">工業<br>設計</a></li>
-                <li><a href="#sec4" data-scroll="#sec4" title="Photograph">攝影<br>作品</a></li>
-                <li><a href="#sec5" data-scroll="#sec5" title="Experience">個人<br>經歷</a></li>
-                <li><a href="#sec6" data-scroll="#sec6" title="Skills">軟體<br>技能</a></li>
+    <div id="js--loader" class="loader">
+        <div class="loader__spinner"></div>
+        <p class="loader__txt">載入中...</p>
+    </div>
+    </div>
+    <header id="js--home">
+        <!-- header__navBar --  only on PC -->
+        <nav id="js--header__navBarOnPc" class="txt-pcContent header__navBarOnPc  clearFix">
+            <ul class="header__navBarOnPc__wrap">
+                <li><a href="#js--secBrandManul" data-scroll="#js--secBrandManul" title="Graphic Disign">平面<br>設計</a></li>
+                <li><a href="#js--secID" data-scroll="#js--secID" title="Industrial Disign">工業<br>設計</a></li>
+                <li><a href="#js--secPhotos" data-scroll="#js--secPhotos" title="Photograph">攝影<br>作品</a></li>
+                <li><a href="#js--secExp" data-scroll="#js--secExp" title="Experience">個人<br>經歷</a></li>
+                <li><a href="#js--secSkills" data-scroll="#js--secSkills" title="Skills">軟體<br>技能</a></li>
             </ul>
         </nav>
-        <div class="headerWrapper">
-            <div class="headerTxt">
-                <h1 class="h1C">許文修</h1>
-                <h1 class="h1E">Wen-Shiu Hsu</h1><br>
-                <h3 class="txt-small">Jun.1995.</h3>
-                <h2 class="txt-SecBig-Mobile">平面設計、<br>網頁設計、攝影<br>是我看世界的方式</h2>
-                <div class="link">
-                    <a class="linkSocial" href="https://line.me/ti/p/4q39M_7Azc" target="_blank" title="LINE"><i class="fab fa-line fontsize25"></i><p>kevin84628</p></a>
-                    <a class="linkSocial" href="https://www.instagram.com/kevinshu/" target="_blank" title="Instagram"><i class="fab fa-instagram fontsize25"></i><p>@kevinshu</p></a>
-                    <a class="linkSocial" href="mailto:kevinshu1995@gmail.com" target="_blank" title="聯絡我_Sent E-mail"><i class="far fa-envelope fontsize20"></i><p>kevinshu1995@gmail.com</p></a>
+        <!-- header inner text -->
+        <div class="header__wrapper">
+            <div class="header__wrapper__txtwrap">
+                <h1 id="js--header__nameZh"  class="header__nameZh  mr16">許文修</h1>
+                <h1 id="js--header__nameEn"  class="header__nameEn">Wen-Shiu Hsu</h1><br>
+                <h3 id="js--header__secondTitle"  class="header__secondTitle">Jun.1995.</h3>
+                <h2 id="js--header__Title"  class="header__title">平面設計、<br>網頁設計、攝影<br>是我看世界的方式</h2>
+                <div class="header__wrapper__linkWrap  clearFix">
+                    <a class="header__linkWrap__linkOnPc" href="https://line.me/ti/p/4q39M_7Azc" target="_blank" title="LINE">
+                        <i class="header__linkWrap__linkOnPc__icon  fab  fa-line"></i>
+                        <p class="header__linkWrap__linkOnPc__txt">kevin84628</p>
+                    </a>
+                    <a class="header__linkWrap__linkOnPc" href="https://www.instagram.com/kevinshu/" target="_blank"
+                        title="Instagram">
+                        <i class="header__linkWrap__linkOnPc__icon  fab  fa-instagram"></i>
+                        <p class="header__linkWrap__linkOnPc__txt">@kevinshu</p>
+                    </a>
+                    <a class="header__linkWrap__linkOnPc" href="mailto:kevinshu1995@gmail.com" target="_blank"
+                        title="聯絡我_Sent E-mail">
+                        <i class="header__linkWrap__linkOnPc__icon  far  fa-envelope"></i>
+                        <p class="header__linkWrap__linkOnPc__txt">kevinshu1995@gmail.com</p>
+                    </a>
                 </div>
-                <div class="link">
-                    <a href="images/resume.jpg" target="_blank" title="我的履歷_My Resume" class="headerLink"><h5 class="txt-small headerLinkH5">我的履歷 <i class="fas fa-arrow-right"></i></h5></a>
-                    <a href="images/profolio.pdf" target="_blank" title="我的履歷_My Portfolio" class="headerLink marginRight0"><h5 class="txt-small headerLinkH5">作品集 <i class="fas fa-arrow-right"></i></h5></a>
+                <div class="header__wrapper__linkWrap  clearFix">
+                    <a href="images/resume.jpg" class="header__linkWrap__linkAllDevice" target="_blank" title="我的履歷_My Resume">
+                        <h5 class="header__linkAllDevice__title">
+                            我的履歷 
+                        </h5>
+                        <i class="header__linkAllDevice__icon  fas fa-arrow-right"></i>
+                    </a>
+                    <a href="images/profolio.pdf" class="header__linkWrap__linkAllDevice  mr0" target="_blank" title="我的履歷_My Portfolio"
+                        >
+                        <h5 class="header__linkAllDevice__title">
+                            作品集 
+                        </h5>
+                        <i class="header__linkAllDevice__icon  fas  fa-arrow-right"></i>
+                    </a>
                 </div>
+                <a href="mailto:kevinshu1995@gmail.com"  class="header__CTA-Btn">聯絡我 !</a>
             </div>
-            
         </div>
-        <a href="mailto:kevinshu1995@gmail.com" class="contactDisplay"><button class="contact">聯絡我 !</button></a>
-         <!-- nav============================================  -->
-        <nav id="asidepage">
-            <div class="wrapper positionRelative">
-                <div class="navName txt-small">
-                    <a href="#home" class="txt-Content navToHome"><i class="fas fa-chevron-up"></i> 回到頂部</a>
-                    <h2><a href="images/resume.jpg" target="_blank" title="我的履歷_My Resume">我的履歷 <i class="fas fa-arrow-right"></i></a></h2>
-                    <h2><a href="images/profolio.pdf" target="_blank" title="我的履歷_My Portfolio">我的作品集 <i class="fas fa-arrow-right"></i></a></h2>
+        <!-- header__nav  --  only on mobile  -->
+        <nav id="js--header__mobileNav" class="header__mobileNav">
+            <div class="wrapper">
+                <div class="header__mobileNav__bar txt-small">
+                    <a href="#js--home" class="txt-Content  header__mobileNav__goTopBtn" id="js--header__mobileNav__goTopBtn"><i class="fas fa-chevron-up"></i> 回到頂部</a>
+                    <h2><a href="images/resume.jpg" target="_blank" title="我的履歷_My Resume">我的履歷 <i
+                                class="fas fa-arrow-right"></i></a></h2>
+                    <h2><a href="images/profolio.pdf" target="_blank" title="我的履歷_My Portfolio">我的作品集 <i
+                                class="fas fa-arrow-right"></i></a></h2>
                 </div>
-                <div class="navLink txt-SecBig-Mobile">
-                    <a href="#sec2" data-scroll="#sec2" title="Graphic Disign_Brand Manual"><h3><p class="txt-small">品牌手冊</p>平面設計</h3></a>
-                    <a href="#sec3" data-scroll="#sec3" title="Graphic Disign_SocilMedia & Direct mail"><h3><p class="txt-small">社群與傳單</p>平面設計</h3></a>
-                    <a href="#sec1" data-scroll="#sec1" title="Industrial Disign"><h3>工業設計</h3></a>
-                    <a href="#sec4" data-scroll="#sec4" title="Photograph"><h3>攝影作品</h3></a>
-                    <a href="#sec5" data-scroll="#sec5" title="Experience"><h3>個人經歷</h3></a>
-                    <a href="#sec6" data-scroll="#sec6" title="Skills"><h3>軟體技能</h3></a>
+                <div class="header__mobileNav__linkWrap  txt-SecBig-Mobile"  id="js--header__mobileNav__linkWrap">
+                    <a href="#js--secBrandManul" data-scroll="#js--secBrandManul" title="Graphic Disign_Brand Manual">
+                        <h3>
+                            <p class="txt-small">品牌手冊</p>平面設計
+                        </h3>
+                    </a>
+                    <a href="#js--secSocialandDM" data-scroll="#js--secSocialandDM" title="Graphic Disign_SocilMedia & Direct mail">
+                        <h3>
+                            <p class="txt-small">社群與傳單</p>平面設計
+                        </h3>
+                    </a>
+                    <a href="#js--secID" data-scroll="#js--secID" title="Industrial Disign">
+                        <h3>工業設計</h3>
+                    </a>
+                    <a href="#js--secPhotos" data-scroll="#js--secPhotos" title="Photograph">
+                        <h3>攝影作品</h3>
+                    </a>
+                    <a href="#js--secExp" data-scroll="#js--secExp" title="Experience">
+                        <h3>個人經歷</h3>
+                    </a>
+                    <a href="#js--secSkills" data-scroll="#js--secSkills" title="Skills">
+                        <h3>軟體技能</h3>
+                    </a>
                 </div>
-                <div class="container">
-                    <div class="social txt-small">
+                <div class="header__mobileNav__socialLinkWrap">
+                    <div class="header__mobileNav__socialLinkWrap__link  txt-small">
                         <a href="https://line.me/ti/p/4q39M_7Azc" target="_blank" title="加入我的LINE">
-                            <i class="fab fa-line fontsize20"></i>
+                            <i class="fab fa-line "></i>
                             <h3>kevin84628</h3>
                         </a>
                     </div>
-                    <div class="social txt-small">
+                    <div class="header__mobileNav__socialLinkWrap__link  txt-small">
                         <a href="https://www.instagram.com/kevinshu/" target="_blank" title="Instagram">
-                            <i class="fab fa-instagram fontsize20"></i>
+                            <i class="fab fa-instagram "></i>
                             <h3>#kevinshu</h3>
                         </a>
                     </div>
-                    <div class="social txt-small">
+                    <div class="header__mobileNav__socialLinkWrap__link  txt-small">
                         <a href="mailto:kevinshu1995@gmail.com" target="_blank" title="聯絡我_Sent E-mail">
-                            <i class="far fa-envelope fontsize20"></i>
+                            <i class="far fa-envelope "></i>
                             <h3>kevinshu1995@gmail.com</h3>
                         </a>
                     </div>
                 </div>
             </div>
         </nav>
-        <button id="btnBar"><i class="fas fa-bars "></i></button>
-        <button id="btnTop"><a href="#home" title="Go top"><i class="fas fa-chevron-up"></i></a></button>
+        <button id="js--header__navbarToggleBtn" class="header__navbarToggleBtn"><i class="fas fa-bars "></i></button>
+        <button id="js--header__goTopBtn" class="header__goTopBtn"><a href="#js--home" title="Go top"><i class="fas fa-chevron-up"></i></a></button>
     </header>
-    <a id="inline" href="#data"></a>
-    <div style="display:none"></div>
     <!-- 平面設計1============================================  -->
-    <div id="sec2" class="scrollspy">
-        <div class="wrapper colorTxt">
+    <div id="js--secBrandManul" class="secBrandManul  scrollspy">
+        <div class="wrapper colorContentTxt">
             <div class="secTitle">
                 <h2 class="txt-small">平面設計 GRAPHIC DESIGN</h2>
                 <h3 class="txt-SecBig-Mobile">品牌手冊設計</h3>
                 <h3 class="txt-small">SwingSwing 搖擺酸酸</h3>
             </div>
-            <img id="wrapperImg" src="images/swingswing/brand.jpg" alt="品牌手冊封面_Brand Manual Cover"title="品牌手冊封面_Brand Manual Cover">
+            <img id="wrapperImg" src="images/swingswing/brand.jpg" alt="品牌手冊封面_Brand Manual Cover"
+                title="品牌手冊封面_Brand Manual Cover">
             <div class="tab">
                 <h3 class="colorTxtFirstColor contentSecTitle1">搖擺酸酸</h3>
                 <h4>SwingSwing</h4>
@@ -137,7 +180,8 @@
                 </div>
                 <h3 class="colorTxtFirstColor contentSecTitle2">品牌手冊規劃</h3>
                 <h4>Brand Manual</h4>
-                <p class="tabTtitleP">手冊用於業務推廣，因此電子檔為主要表現方式，規劃頁面方式與簡報相似。<mark>排版與顏色規劃依據品牌特色偏向極簡風</mark>，希望讀者可以著重內容的描述。</p>
+                <p class="tabTtitleP">手冊用於業務推廣，因此電子檔為主要表現方式，規劃頁面方式與簡報相似。<mark>排版與顏色規劃依據品牌特色偏向極簡風</mark>，希望讀者可以著重內容的描述。
+                </p>
                 <div class="tabBtnBox">
                     <button class="tabBtn tabBtnActive tabBtn2">1. 顏色</button>
                     <button class="tabBtn tabBtn2">2. 字型</button>
@@ -164,36 +208,42 @@
                     <div class="tabContentInsideBox">
                         <div class="brandTxt">
                             <p>中文字型｜Adobe 繁黑體 Std B</p>
-                            <img src="images/swingswing/brandTxtB1.png" alt="品牌手冊中文字型展示_Brand Manual Chinese font display">
+                            <img src="images/swingswing/brandTxtB1.png"
+                                alt="品牌手冊中文字型展示_Brand Manual Chinese font display">
                         </div>
                         <div class="brandTxt">
                             <p>英文字型｜Franklin Gothic Demi</p>
-                            <img src="images/swingswing/brandTxtB2.png" alt="品牌手冊英文字型展示_Brand Manual English font display">
+                            <img src="images/swingswing/brandTxtB2.png"
+                                alt="品牌手冊英文字型展示_Brand Manual English font display">
                         </div>
                     </div>
                 </div>
                 <div class="tabContentBox tabNone">
                     <div class="tabContentInsideBox tabContentImg tabContentActive">
-                        <div class="tabImgBg"><a href="images/profolio.pdf" target="_blank" title="連結至作品集" class="tabPortBtn">去作品集看其他作品 <i class="fas fa-arrow-right tabPortBtnArrow"></i></a></div>
+                        <div class="tabImgBg"><a href="images/profolio.pdf" target="_blank" title="連結至作品集"
+                                class="tabPortBtn">去作品集看其他作品 <i class="fas fa-arrow-right tabPortBtnArrow"></i></a>
+                        </div>
                         <img class="tab100Img" src="images/swingswing/brand_2.jpg" alt="品牌手冊展示_Brand Manual display">
                     </div>
                 </div>
             </div>
             <div class="footNote txt-small">
                 <p>平面設計 | 2019.04</p>
-                <p>01</p>
+                <p class="footNote__num">01</p>
             </div>
         </div>
     </div>
     <!-- 平面設計2============================================  -->
-    <div id="sec3" class="scrollspy">
-        <div class="wrapper colorTxt">
+    <div id="js--secSocialandDM" class="secSocialandDM  scrollspy">
+        <div class="wrapper colorContentTxt">
             <div class="secTitle">
                 <h2 class="txt-small">平面設計 GRAPHIC DESIGN</h2>
                 <h3 class="txt-SecBig-Mobile">社群貼文與傳單設計</h3>
                 <h3 class="txt-small">SwingSwing 搖擺酸酸</h3>
             </div>
-            <img id="wrapperImg" data-src="images/swingswing/social-media.jpg" alt="社群貼文與傳單設計展示_SocilMedia & Direct mail_Graphic Disign"title="社群貼文與傳單設計展示_SocilMedia & Direct mail_Graphic Disign"class="lazy">
+            <img id="wrapperImg" data-src="images/swingswing/social-media.jpg"
+                alt="社群貼文與傳單設計展示_SocilMedia & Direct mail_Graphic Disign"
+                title="社群貼文與傳單設計展示_SocilMedia & Direct mail_Graphic Disign" class="lazy">
             <div class="tab">
                 <h3 class="colorTxtFirstColor contentSecTitle1">搖擺酸酸</h3>
                 <h4>SwingSwing</h4>
@@ -226,19 +276,26 @@
                         <p>
                             以豐富顏色的飲料為主體，配色除了<mark>黃色的品牌色</mark>之外，因為客群多為上班族女性，也會<mark>選用較亮的粉色與大量的留白</mark>。畫面使用與產品系列相關的元素搭配，例如氣泡飲品背景使用泡泡作點綴，能夠與產品做相呼應的效果。
                         </p>
-                        <img class="tabImgBox tabImgMT24" src="images/swingswing/social.png" alt="社群貼文設計_Social media post design" title="Facebook 社群貼文設計">
+                        <img class="tabImgBox tabImgMT24" src="images/swingswing/social.png"
+                            alt="社群貼文設計_Social media post design" title="Facebook 社群貼文設計">
                     </div>
                     <div class="tabContentInsideBox">
                         <p>
                             <mark>文案內容多以產品本身發想，或以時事話題出發</mark>。圖中可以看到一個品牌IP，個性設定用賤話來砥礪人心。因此會加入此IP的形象，並添加一些逗趣的文字，增加"笑"果。
                         </p>
                         <div class="tabImgBox tabImgMT24">
-                        <a class="sec3ImgInsidePc50Mo100" href="https://www.facebook.com/swingswing.cc/posts/372150116712066" target="_blank">
-                            <img src="images/swingswing/swingswingPost_1.png" alt="社群貼文設計 Facebook連結_Social media post design" title="社群貼文設計 Facebook連結_Social media post design">
-                        </a>
-                        <a class="sec3ImgInsidePc50Mo100 marginRight0" href="https://www.facebook.com/swingswing.cc/posts/405940849999659" target="_blank">
-                            <img src="images/swingswing/swingswingPost_2.png" alt="社群貼文設計 Facebook連結_Social media post design" title="社群貼文設計 Facebook連結_Social media post design">
-                        </a>
+                            <a class="sec3ImgInsidePc50Mo100"
+                                href="https://www.facebook.com/swingswing.cc/posts/372150116712066" target="_blank">
+                                <img src="images/swingswing/swingswingPost_1.png"
+                                    alt="社群貼文設計 Facebook連結_Social media post design"
+                                    title="社群貼文設計 Facebook連結_Social media post design">
+                            </a>
+                            <a class="sec3ImgInsidePc50Mo100 mr0"
+                                href="https://www.facebook.com/swingswing.cc/posts/405940849999659" target="_blank">
+                                <img src="images/swingswing/swingswingPost_2.png"
+                                    alt="社群貼文設計 Facebook連結_Social media post design"
+                                    title="社群貼文設計 Facebook連結_Social media post design">
+                            </a>
                         </div>
                     </div>
                     <div class="tabContentInsideBox">
@@ -246,18 +303,23 @@
                             利用<mark> Facebook 圖文編排樣版版面固定的特性</mark>，使消費者第一眼看到的圖片文字內容充滿正面能量，但點擊圖片後的內文是反面的意思，試圖讓貼文更有趣味感。
                         </p>
                         <div class="tabImgBox tabImgMT24">
-                            <a href="https://www.facebook.com/swingswing.cc/posts/399741067286304" target="_blank" class="sec3ImgMo100PcAuto sec3ImgPc40 paddingBottom8">
-                                <img class="tabImgBox" src="images/swingswing/socialPost.jpg" alt="特殊貼文編排展示" title="特殊貼文編排展示">
+                            <a href="https://www.facebook.com/swingswing.cc/posts/399741067286304" target="_blank"
+                                class="sec3ImgMo100PcAuto sec3ImgPc40 paddingBottom8">
+                                <img class="tabImgBox" src="images/swingswing/socialPost.jpg" alt="特殊貼文編排展示"
+                                    title="特殊貼文編排展示">
                             </a>
                             <div class="sec3ImgMo100PcAuto sec3ImgPc60 paddingBottom8">
                                 <a href="https://www.facebook.com/swingswing.cc/posts/399741067286304" target="_blank">
-                                    <img class="tabImgBox tabImgMB8" src="images/swingswing/socialPost-1.jpg" alt="貼文展開示意圖-1" title="貼文展開示意圖-1">
+                                    <img class="tabImgBox tabImgMB8" src="images/swingswing/socialPost-1.jpg"
+                                        alt="貼文展開示意圖-1" title="貼文展開示意圖-1">
                                 </a>
                                 <a href="https://www.facebook.com/swingswing.cc/posts/399741067286304" target="_blank">
-                                    <img class="tabImgBox tabImgMB8" src="images/swingswing/socialPost-2.jpg" alt="貼文展開示意圖-2" title="貼文展開示意圖-2">
+                                    <img class="tabImgBox tabImgMB8" src="images/swingswing/socialPost-2.jpg"
+                                        alt="貼文展開示意圖-2" title="貼文展開示意圖-2">
                                 </a>
                                 <a href="https://www.facebook.com/swingswing.cc/posts/399741067286304" target="_blank">
-                                    <img class="tabImgBox" src="images/swingswing/socialPost-3.jpg" alt="貼文展開示意圖-3" title="貼文展開示意圖-3">
+                                    <img class="tabImgBox" src="images/swingswing/socialPost-3.jpg" alt="貼文展開示意圖-3"
+                                        title="貼文展開示意圖-3">
                                 </a>
                             </div>
                         </div>
@@ -270,25 +332,28 @@
                         <p>
                             根據品牌色<mark>粉黃、粉綠、粉紫作為主色</mark>，漸層色塊做標題，讓消費者可以明確了解主從關係，用品牌LOGO標註推薦品項，再<mark>加入品牌IP作點綴增加趣味感</mark>。<br>菜單設計包含店面電視螢幕菜單、酷卡菜單、燈片菜單。
                         </p>
-                        <img class="tabImgBox tabImgMT24" src="images/swingswing/menu.png" alt="社群貼文設計展示 Facebook連結_Social media post design display" title="社群貼文設計展示 Facebook連結_Social media post design display">
+                        <img class="tabImgBox tabImgMT24" src="images/swingswing/menu.png"
+                            alt="社群貼文設計展示 Facebook連結_Social media post design display"
+                            title="社群貼文設計展示 Facebook連結_Social media post design display">
                     </div>
                 </div>
             </div>
             <div class="footNote txt-small">
                 <p>平面設計 | 2019.03</p>
-                <p>02</p>
+                <p class="footNote__num">02</p>
             </div>
         </div>
     </div>
     <!-- 工業設計============================================  -->
-    <div id="sec1" class="scrollspy" >
-        <div class="wrapper colorTxt">
+    <div id="js--secID" class="secID scrollspy">
+        <div class="wrapper colorContentTxt">
             <div class="secTitle">
                 <h2 class="txt-small ">工業設計 INDUSTRIAL DESIGN</h2>
                 <h3 class="txt-SecBig-Mobile">輕量、快速組合火爐</h3>
                 <h3 class="txt-small">FireFold</h3>
             </div>
-            <img id="wrapperImg" src="images/firefold/index-firefold.jpg" alt="Firefold_Industrial Design" title="Firefold_Industrial Design">
+            <img id="wrapperImg" src="images/firefold/index-firefold.jpg" alt="Firefold_Industrial Design"
+                title="Firefold_Industrial Design">
             <div class="tab">
                 <h3 class="colorTxtFirstColor contentSecTitle1">設計背景</h3>
                 <h4>Design Background</h4>
@@ -323,10 +388,14 @@
                             也因為瓦楞紙的印刷技術成熟，能根據不同消費族群提供多種外觀風格，甚至<mark>個人化設計。</mark>
                         </p>
                         <div class="tabImgBox tabImgMT24">
-                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-1.jpg" alt="Firefold設計展示_Firefold design display" title="Firefold設計展示_Firefold design display">
-                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-2.jpg" alt="Firefold設計展示_Firefold design display" title="Firefold設計展示_Firefold design display">
-                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-3.jpg" alt="Firefold設計展示_Firefold design display" title="Firefold設計展示_Firefold design display">
-                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-4.jpg" alt="Firefold設計展示_Firefold design display" title="Firefold設計展示_Firefold design display">
+                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-1.jpg"
+                                alt="Firefold設計展示_Firefold design display" title="Firefold設計展示_Firefold design display">
+                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-2.jpg"
+                                alt="Firefold設計展示_Firefold design display" title="Firefold設計展示_Firefold design display">
+                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-3.jpg"
+                                alt="Firefold設計展示_Firefold design display" title="Firefold設計展示_Firefold design display">
+                            <img class="tabImgPc25Mo50" src="images/firefold/firefold-4.jpg"
+                                alt="Firefold設計展示_Firefold design display" title="Firefold設計展示_Firefold design display">
                         </div>
                     </div>
                     <div class="tabContentInsideBox">
@@ -334,8 +403,11 @@
                             為仿造傳統壁爐的火光，使用Arduino板<mark>偵測環境聲音大小</mark>來改變LED燈亮度的變化，讓人在寒冬中彷彿置身在真實的壁爐邊，與家人享受天倫之樂。
                         </p>
                         <div class="tabImgBox tabImgMT24">
-                            <img class="sec3ImgInsidePc50Mo100" src="images/firefold/firefold-arduino.jpg" alt="arduino photo" title="Photo by Harrison Broadbent on Unsplash">
-                            <img class="sec3ImgInsidePc50Mo100 marginRight0" src="images/firefold/firefold-arduino-2.jpg" alt="Firefold產品情境圖_Firefold product image" title="Firefold產品情境圖_Firefold product image">
+                            <img class="sec3ImgInsidePc50Mo100" src="images/firefold/firefold-arduino.jpg"
+                                alt="arduino photo" title="Photo by Harrison Broadbent on Unsplash">
+                            <img class="sec3ImgInsidePc50Mo100 mr0"
+                                src="images/firefold/firefold-arduino-2.jpg" alt="Firefold產品情境圖_Firefold product image"
+                                title="Firefold產品情境圖_Firefold product image">
                         </div>
                     </div>
                     <div class="tabContentInsideBox">
@@ -343,12 +415,24 @@
                             由於使用拼插紙板的方式組合，完全不需要用到任何工具，只要按照說明書的六個步驟，使用者就可以在家獨自快速完成組裝。
                         </p>
                         <div class="tabImgBox tabImgMT24">
-                            <img class="sec3ImgInsidePc33Mo50" src="images/firefold/firefoldStep_01.png" alt="Firefold組裝步驟展示_Firefold assembly display" title="Firefold組裝步驟展示_Firefold assembly display">
-                            <img class="sec3ImgInsidePc33Mo50" src="images/firefold/firefoldStep_02.png" alt="Firefold組裝步驟展示_Firefold assembly display" title="Firefold組裝步驟展示_Firefold assembly display">
-                            <img class="sec3ImgInsidePc33Mo50 marginRightPc0MoAuto" src="images/firefold/firefoldStep_03.png" alt="Firefold組裝步驟展示_Firefold assembly display" title="Firefold組裝步驟展示_Firefold assembly display">
-                            <img class="sec3ImgInsidePc33Mo50" src="images/firefold/firefoldStep_04.png" alt="Firefold組裝步驟展示_Firefold assembly display" title="Firefold組裝步驟展示_Firefold assembly display">
-                            <img class="sec3ImgInsidePc33Mo50" src="images/firefold/firefoldStep_05.png" alt="Firefold組裝步驟展示_Firefold assembly display" title="Firefold組裝步驟展示_Firefold assembly display">
-                            <img class="sec3ImgInsidePc33Mo50 marginRightPc0MoAuto" src="images/firefold/firefoldStep_06.png" alt="Firefold組裝步驟展示_Firefold assembly display" title="Firefold組裝步驟展示_Firefold assembly display">
+                            <img class="sec3ImgInsidePc33Mo50" src="images/firefold/firefoldStep_01.png"
+                                alt="Firefold組裝步驟展示_Firefold assembly display"
+                                title="Firefold組裝步驟展示_Firefold assembly display">
+                            <img class="sec3ImgInsidePc33Mo50" src="images/firefold/firefoldStep_02.png"
+                                alt="Firefold組裝步驟展示_Firefold assembly display"
+                                title="Firefold組裝步驟展示_Firefold assembly display">
+                            <img class="sec3ImgInsidePc33Mo50 mrPc0MoAuto"
+                                src="images/firefold/firefoldStep_03.png" alt="Firefold組裝步驟展示_Firefold assembly display"
+                                title="Firefold組裝步驟展示_Firefold assembly display">
+                            <img class="sec3ImgInsidePc33Mo50" src="images/firefold/firefoldStep_04.png"
+                                alt="Firefold組裝步驟展示_Firefold assembly display"
+                                title="Firefold組裝步驟展示_Firefold assembly display">
+                            <img class="sec3ImgInsidePc33Mo50" src="images/firefold/firefoldStep_05.png"
+                                alt="Firefold組裝步驟展示_Firefold assembly display"
+                                title="Firefold組裝步驟展示_Firefold assembly display">
+                            <img class="sec3ImgInsidePc33Mo50 mrPc0MoAuto"
+                                src="images/firefold/firefoldStep_06.png" alt="Firefold組裝步驟展示_Firefold assembly display"
+                                title="Firefold組裝步驟展示_Firefold assembly display">
                         </div>
                     </div>
                 </div>
@@ -360,13 +444,18 @@
                 </div>
                 <div class="tabContentBox">
                     <div class="tabContentInsideBox tabContentActive">
-                        <img class="sec1TabImg" src="images/firefold/firefoldChart-1.png" alt="出租公寓家戶成長率_FireFold rented apartment return rate Chart" title="出租公寓家戶成長率_FireFold rented apartment return rate Chart">
+                        <img class="sec1TabImg" src="images/firefold/firefoldChart-1.png"
+                            alt="出租公寓家戶成長率_FireFold rented apartment return rate Chart"
+                            title="出租公寓家戶成長率_FireFold rented apartment return rate Chart">
                         <p id="tabPwithImg">
-                            「美國房地産網站Trulia提供的分析數據顯示，<mark>26至34歲群體的租房率接近60%</mark>，相比於2006年上漲11個百分點。Bankrate高級分析師HoldenLewis 表示，年輕人對置業不感興趣並不奇怪，租房可以讓他們的生活更為靈活自由。」
+                            「美國房地産網站Trulia提供的分析數據顯示，<mark>26至34歲群體的租房率接近60%</mark>，相比於2006年上漲11個百分點。Bankrate高級分析師HoldenLewis
+                            表示，年輕人對置業不感興趣並不奇怪，租房可以讓他們的生活更為靈活自由。」
                         </p>
                     </div>
                     <div class="tabContentInsideBox">
-                        <img class="sec1TabImg" src="images/firefold/firefoldChart-2.png" alt="選擇租屋考慮因素_FireFold rented apartment considerations pie Chart" title="選擇租屋考慮因素_FireFold rented apartment considerations pie Chart">
+                        <img class="sec1TabImg" src="images/firefold/firefoldChart-2.png"
+                            alt="選擇租屋考慮因素_FireFold rented apartment considerations pie Chart"
+                            title="選擇租屋考慮因素_FireFold rented apartment considerations pie Chart">
                         <p id="tabPwithImg">
                             居住在城市的租用公寓裡的人數正在增長，這些人的特性是年輕、剛出社會、未婚、在城市工作，他們不會拿錢來買一棟平房，因為<mark>收入、交通、婚姻狀況</mark>等的考慮。<br>這些公寓大樓除非是高級大樓，否則一般未婚年輕人租房的大樓不會有壁爐（電壁爐或瓦斯壁爐），而是設置簡單的暖氣為主。而這些年輕人正是這個瓦楞壁爐的<mark>目標族群</mark>。
                         </p>
@@ -375,51 +464,147 @@
             </div>
             <div class="footNote txt-small">
                 <p>工業設計 | 畢業設計作品 | 2017.05</p>
-                <p>03</p>
+                <p class="footNote__num">03</p>
             </div>
         </div class="sec1Tab2-a">
     </div>
     <!-- 攝影作品============================================  -->
-    <div id="sec4" class="scrollspy">
-        <div class="wrapper colorTxt">
+    <div id="js--secPhotos" class="secPhotos  scrollspy">
+        <div class="wrapper colorContentTxt">
             <div class="secTitle">
                 <h2 class="txt-small">PHOTOGRAPHIC</h2>
                 <h3 class="txt-SecBig-Mobile">攝影作品</h3>
             </div>
             <div class="imgContainer">
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267713356_7b8fb287ba_o.jpg"title="photo in Taipei MRT with iphone SE on Dec.2018"><img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 1.jpg" alt="Photograph"class="lazy"title="photo in Taipei MRT with iphone SE on Dec.2018"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267908172_9c217ec21c_o.jpg"title="photo in Nanggang with iphone SE on July.2019"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 2.jpg" alt="Photograph"class="lazy"title="photo in Nanggang with iphone SE on July.2019"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267906002_55ef1df1ee_o.jpg"title="photo in NTU with Canon 70D on Aug.2019">       <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 3.jpg" alt="Photograph"class="lazy"title="photo in NTU with Canon 70D on Aug.2019"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267714066_3ae9539b78_o.jpg"title="photo in Penghu with Canon 400D on May.2015">   <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 4.jpg" alt="Photograph"class="lazy"title="photo in Penghu with Canon 400D on May.2015"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267713876_f34bb0e564_o.jpg"title="photo in Yunlin with Canon 400D on Feb.2015">   <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 5.jpg" alt="Photograph"class="lazy"title="photo in Yunlin with Canon 400D on Feb.2015"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267251608_4b1d65b8cf_o.jpg"title="photo in Jinshan with iphone SE on July.2018">  <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 6.jpg" alt="Photograph"class="lazy"title="photo in Jinshan with iphone SE on July.2018"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267251533_3e81be9780_o.jpg"title="photo in Nanggang with iphone SE on Aug.2018">  <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 7.jpg" alt="Photograph"class="lazy"title="photo in Nanggang with iphone SE on Aug.2018"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267713176_cd26de540d_o.jpg"title="photo in Ruifang with iphone SE on Sep.2018">   <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 8.jpg" alt="Photograph"class="lazy"title="photo in Ruifang with iphone SE on Sep.2018"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267907062_155624db5b_o.jpg"title="photo in Chiayi with iphone SE on Feb.2019">    <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 9.jpg" alt="Photograph"class="lazy"title="photo in Chiayi with iphone SE on Feb.2019"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267712996_d82ebb7538_o.jpg"title="photo in Changhua with iphone SE on Dec.2017">  <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 10.jpg"alt="Photograph"class="lazy"title="photo in Changhua with iphone SE on Dec.2017"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267712906_df60346bf3_o.jpg"title="photo in Qidu with iphone SE on Aug.2017">      <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 11.jpg"alt="Photograph"class="lazy"title="photo in Qidu with iphone SE on Aug.2017"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267906847_2ea4e87c62_o.jpg"title="photo in Taipei with iphone SE on Jan.2019">    <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 12.jpg"alt="Photograph"class="lazy"title="photo in Taipei with iphone SE on Jan.2019"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267712756_7f4f0e8c59_o.jpg"title="photo in Taipei with iphone SE on Jan.2019">    <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 13.jpg"alt="Photograph"class="lazy"title="photo in Taipei with iphone SE on Jan.2019"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267713641_26ceba874f_o.jpg"title="photo in Osaka with iphone SE on Jun.2017">     <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 14.jpg"alt="Photograph"class="lazy"title="photo in Osaka with iphone SE on Jun.2017"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267713561_2e4dc381ed_o.jpg"title="photo in Okinawa with Canon 50D on Jun.2017">   <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 15.jpg"alt="Photograph"class="lazy"title="photo in Okinawa with Canon 50D on Jun.2017"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267250933_5c2536cbb1_o.jpg"title="photo in Okinawa with Canon 50D on Jun.2017">   <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 16.jpg"alt="Photograph"class="lazy"title="photo in Okinawa with Canon 50D on Jun.2017"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267906517_5920061508_o.jpg"title="photo in Osaka with Canon 50D on Jun.2017">     <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 17.jpg"alt="Photograph"class="lazy"title="photo in Osaka with Canon 50D on Jun.2017"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267713416_9ef426c24f_o.jpg"title="photo in Kyoto with Canon 50D on Jun.2017">     <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 18.jpg"alt="Photograph"class="lazy"title="photo in Kyoto with Canon 50D on Jun.2017"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267712406_959f5c21cb_o.jpg"title="photo in Changhua with iphone SE on Aug.2017">  <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 19.jpg"alt="Photograph"class="lazy"title="photo in Changhua with iphone SE on Aug.2017"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267906312_c895b76431_o.jpg"title="photo in Jinshan with iphone SE on Sep.2018">   <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 20.jpg"alt="Photograph"class="lazy"title="photo in Jinshan with iphone SE on Sep.2018"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267250418_504f9c0bcd_o.jpg"title="photo in Nanggang with Canon 50D on Aug.2019">  <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 21.jpg"alt="Photograph"class="lazy"title="photo in Nanggang with Canon 50D on Aug.2019"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267907492_7edf7d6208_o.jpg"title="photo in Xinzhuang with iphone SE on Dec.2018"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 22.jpg"alt="Photograph"class="lazy"title="photo in Xinzhuang with iphone SE on Dec.2018"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267906187_9f482e60bd_o.jpg"title="photo in Shongshan with iphone SE on Sep.2018"> <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 23.jpg"alt="Photograph"class="lazy"title="photo in Shongshan with iphone SE on Sep.2018"></a></div>
-                <div class="imgBox"><a class="single_image" href="https://live.staticflickr.com/65535/49267250393_2e22dfef3a_o.jpg"title="photo in Hualien with iphone SE on Sep.2018">   <img data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 24.jpg"alt="Photograph"class="lazy"title="photo in Hualien with iphone SE on Sep.2018"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267713356_7b8fb287ba_o.jpg"
+                        title="photo in Taipei MRT with iphone SE on Dec.2018"><img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 1.jpg" alt="Photograph"
+                            class="lazy" title="photo in Taipei MRT with iphone SE on Dec.2018"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267908172_9c217ec21c_o.jpg"
+                        title="photo in Nanggang with iphone SE on July.2019"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 2.jpg" alt="Photograph"
+                            class="lazy" title="photo in Nanggang with iphone SE on July.2019"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267906002_55ef1df1ee_o.jpg"
+                        title="photo in NTU with Canon 70D on Aug.2019"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 3.jpg" alt="Photograph"
+                            class="lazy" title="photo in NTU with Canon 70D on Aug.2019"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267714066_3ae9539b78_o.jpg"
+                        title="photo in Penghu with Canon 400D on May.2015"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 4.jpg" alt="Photograph"
+                            class="lazy" title="photo in Penghu with Canon 400D on May.2015"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267713876_f34bb0e564_o.jpg"
+                        title="photo in Yunlin with Canon 400D on Feb.2015"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 5.jpg" alt="Photograph"
+                            class="lazy" title="photo in Yunlin with Canon 400D on Feb.2015"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267251608_4b1d65b8cf_o.jpg"
+                        title="photo in Jinshan with iphone SE on July.2018"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 6.jpg" alt="Photograph"
+                            class="lazy" title="photo in Jinshan with iphone SE on July.2018"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267251533_3e81be9780_o.jpg"
+                        title="photo in Nanggang with iphone SE on Aug.2018"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 7.jpg" alt="Photograph"
+                            class="lazy" title="photo in Nanggang with iphone SE on Aug.2018"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267713176_cd26de540d_o.jpg"
+                        title="photo in Ruifang with iphone SE on Sep.2018"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 8.jpg" alt="Photograph"
+                            class="lazy" title="photo in Ruifang with iphone SE on Sep.2018"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267907062_155624db5b_o.jpg"
+                        title="photo in Chiayi with iphone SE on Feb.2019"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 9.jpg" alt="Photograph"
+                            class="lazy" title="photo in Chiayi with iphone SE on Feb.2019"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267712996_d82ebb7538_o.jpg"
+                        title="photo in Changhua with iphone SE on Dec.2017"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 10.jpg" alt="Photograph"
+                            class="lazy" title="photo in Changhua with iphone SE on Dec.2017"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267712906_df60346bf3_o.jpg"
+                        title="photo in Qidu with iphone SE on Aug.2017"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 11.jpg" alt="Photograph"
+                            class="lazy" title="photo in Qidu with iphone SE on Aug.2017"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267906847_2ea4e87c62_o.jpg"
+                        title="photo in Taipei with iphone SE on Jan.2019"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 12.jpg" alt="Photograph"
+                            class="lazy" title="photo in Taipei with iphone SE on Jan.2019"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267712756_7f4f0e8c59_o.jpg"
+                        title="photo in Taipei with iphone SE on Jan.2019"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 13.jpg" alt="Photograph"
+                            class="lazy" title="photo in Taipei with iphone SE on Jan.2019"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267713641_26ceba874f_o.jpg"
+                        title="photo in Osaka with iphone SE on Jun.2017"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 14.jpg" alt="Photograph"
+                            class="lazy" title="photo in Osaka with iphone SE on Jun.2017"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267713561_2e4dc381ed_o.jpg"
+                        title="photo in Okinawa with Canon 50D on Jun.2017"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 15.jpg" alt="Photograph"
+                            class="lazy" title="photo in Okinawa with Canon 50D on Jun.2017"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267250933_5c2536cbb1_o.jpg"
+                        title="photo in Okinawa with Canon 50D on Jun.2017"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 16.jpg" alt="Photograph"
+                            class="lazy" title="photo in Okinawa with Canon 50D on Jun.2017"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267906517_5920061508_o.jpg"
+                        title="photo in Osaka with Canon 50D on Jun.2017"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 17.jpg" alt="Photograph"
+                            class="lazy" title="photo in Osaka with Canon 50D on Jun.2017"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267713416_9ef426c24f_o.jpg"
+                        title="photo in Kyoto with Canon 50D on Jun.2017"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 18.jpg" alt="Photograph"
+                            class="lazy" title="photo in Kyoto with Canon 50D on Jun.2017"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267712406_959f5c21cb_o.jpg"
+                        title="photo in Changhua with iphone SE on Aug.2017"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 19.jpg" alt="Photograph"
+                            class="lazy" title="photo in Changhua with iphone SE on Aug.2017"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267906312_c895b76431_o.jpg"
+                        title="photo in Jinshan with iphone SE on Sep.2018"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 20.jpg" alt="Photograph"
+                            class="lazy" title="photo in Jinshan with iphone SE on Sep.2018"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267250418_504f9c0bcd_o.jpg"
+                        title="photo in Nanggang with Canon 50D on Aug.2019"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 21.jpg" alt="Photograph"
+                            class="lazy" title="photo in Nanggang with Canon 50D on Aug.2019"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267907492_7edf7d6208_o.jpg"
+                        title="photo in Xinzhuang with iphone SE on Dec.2018"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 22.jpg" alt="Photograph"
+                            class="lazy" title="photo in Xinzhuang with iphone SE on Dec.2018"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267906187_9f482e60bd_o.jpg"
+                        title="photo in Shongshan with iphone SE on Sep.2018"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 23.jpg" alt="Photograph"
+                            class="lazy" title="photo in Shongshan with iphone SE on Sep.2018"></a></div>
+                <div class="imgBox"><a class="single_image"
+                        href="https://live.staticflickr.com/65535/49267250393_2e22dfef3a_o.jpg"
+                        title="photo in Hualien with iphone SE on Sep.2018"> <img
+                            data-src="images/indexPhoto/indexPhoto500B/indexPhoto500B 24.jpg" alt="Photograph"
+                            class="lazy" title="photo in Hualien with iphone SE on Sep.2018"></a></div>
             </div>
             <div class="footNote txt-small">
                 <p>攝影 | 街頭攝影</p>
-                <p>04</p>
+                <p class="footNote__num">04</p>
             </div>
         </div>
     </div>
     <!-- 個人經歷============================================  -->
-    <div id="sec5" class="scrollspy">
+    <div id="js--secExp" class="secExp scrollspy">
         <div class="wrapper">
             <div class="secTitle">
                 <h2 class="txt-small">EXPERIENCE</h2>
@@ -478,7 +663,7 @@
         </div>
     </div>
     <!-- 技能============================================  -->
-    <div id="sec6" class="scrollspy">
+    <div id="js--secSkills" class="secSkills  scrollspy">
         <div class="wrapper">
             <div class="secTitle">
                 <h2 class="txt-small">SKILLS</h2>
@@ -493,15 +678,21 @@
                     <div class="skillBox">
                         <div class="skillContent">
                             <h5>Photoshop</h5>
-                            <div class="skillLvl"><div class="skillLvlEach skillLvlPS"></div></div>
+                            <div class="skillLvl">
+                                <div class="skillLvlEach skillLvlPS"></div>
+                            </div>
                         </div>
                         <div class="skillContent">
                             <h5>Illustrator</h5>
-                            <div class="skillLvl"><div class="skillLvlEach skillLvlAI"></div></div>
+                            <div class="skillLvl">
+                                <div class="skillLvlEach skillLvlAI"></div>
+                            </div>
                         </div>
                         <div class="skillContent">
                             <h5>Lightroom</h5>
-                            <div class="skillLvl"><div class="skillLvlEach skillLvlLR"></div></div>
+                            <div class="skillLvl">
+                                <div class="skillLvlEach skillLvlLR"></div>
+                            </div>
                         </div>
                     </div>
                     <p class="txt txt-small">擅用平面設計軟體，曾設計飲料店品牌手冊、社群貼文素材、店面菜單、活動DM 、社團海報、商品開版圖、社團團服設計。</p>
@@ -516,11 +707,15 @@
                     <div class="skillBox">
                         <div class="skillContent">
                             <h5>Premiere</h5>
-                            <div class="skillLvl"><div class="skillLvlEach skillLvlPR"></div></div>
+                            <div class="skillLvl">
+                                <div class="skillLvlEach skillLvlPR"></div>
+                            </div>
                         </div>
                         <div class="skillContent">
                             <h5>After Effect</h5>
-                            <div class="skillLvl"><div class="skillLvlEach skillLvlAE"></div></div>
+                            <div class="skillLvl">
+                                <div class="skillLvlEach skillLvlAE"></div>
+                            </div>
                         </div>
                     </div>
                     <p class="txt txt-small">因為喜歡攝影，所以也曾涉獵影像剪輯，對影片產出有基礎的了解，除了課程作業之外，也曾用AE設計音樂會影片 intro 動畫。</p>
@@ -535,15 +730,21 @@
                     <div class="skillBox">
                         <div class="skillContent">
                             <h5>HTML5 + CSS3</h5>
-                            <div class="skillLvl"><div class="skillLvlEach skillLvlWEB"></div></div>
+                            <div class="skillLvl">
+                                <div class="skillLvlEach skillLvlWEB"></div>
+                            </div>
                         </div>
                         <div class="skillContent">
                             <h5>jQuery</h5>
-                            <div class="skillLvl"><div class="skillLvlEach skillLvlJQ"></div></div>
+                            <div class="skillLvl">
+                                <div class="skillLvlEach skillLvlJQ"></div>
+                            </div>
                         </div>
                         <div class="skillContent">
                             <h5>Adobe XD</h5>
-                            <div class="skillLvl"><div class="skillLvlEach skillLvlXD"></div></div>
+                            <div class="skillLvl">
+                                <div class="skillLvlEach skillLvlXD"></div>
+                            </div>
                         </div>
                     </div>
                     <p class="txt txt-small">自學Adobe XD 與UI設計，並且持續學習網頁設計，了解如何切版、套用框架、基礎的 jQuery動畫，目標朝前端工程師發展。</p>
@@ -556,7 +757,9 @@
     </div>
     <img src="images/ogimage.jpg" alt="ogimage.jpg" style="display:none">
     </div>
-    <footer class="txt-small colorTxt"><h6>使用Chorme瀏覽器電腦版以獲得最佳觀賞體驗<br>&copy; 2020 Wen-Shiu Hsu.</h6></footer>
+    <footer class="txt-small colorContentTxt">
+        <h6>使用Chorme瀏覽器電腦版以獲得最佳觀賞體驗<br>&copy; 2020 Wen-Shiu Hsu.</h6>
+    </footer>
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/lazyload.min.js"></script>
     <script src="js/smartScroll.js"></script>
@@ -564,4 +767,5 @@
     <script src="js/jquery.fancybox-1.3.4.pack.js"></script>
     <script src="js/index.js"></script>
 </body>
+
 </html>

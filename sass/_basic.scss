@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: $color-textMark;
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+button,
+.tabPortBtn {
+  background-color: rgba(255, 255, 255, 0.5);
+  outline: none;
+  border: none;
+}
+html {
+  font-size: 16px;
+}
+//tools
+.mr16 {
+  margin-right: 16px !important;
+}
+.mr0 {
+  margin-right: 0 !important;
+}
+.mrPc0MoAuto {
+  margin-right: auto !important;
+  @include desktop {
+    margin-right: 0 !important;
+  }
+}
+.clearFix {
+  overflow: hidden;
+}
+mark {
+  color: $color-textMark;
+  background-color: transparent;
+}
+//
+.wrapper,
+header {
+  font-family: $font-main;
+}
+header {
+  z-index: 99;
+}
+
+.wrapper,
+.header__wrapper {
+  width: 100%;
+  min-width: 320px;
+  min-height: 300px;
+  padding: 50px 20px;
+  overflow: hidden;
+  line-height: 1.5rem;
+}
+.headerTxt,
+.header__wrapper {
+  height: 100vh;
+  width: 100%;
+}
+.wrapper {
+  @include desktop {
+    padding: 130px 0 70px;
+  }
+}

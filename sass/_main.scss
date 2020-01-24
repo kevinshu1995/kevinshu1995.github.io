@@ -1,0 +1,1688 @@
+.txt-SecBig-Mobile {
+  @include font-size(24);
+  // line-height: 1.5em;
+  font-weight: 900;
+}
+
+.txt-Content,
+.txt-Content h2,
+.txt-Content h3,
+.txt-Content h4,
+.txt-Content h5,
+.txt-Content h6,
+.tabPortBtn,
+#tabPwithImg,
+.tab p,
+.loader__txt,
+.tab h3 {
+  @include font-size(16);
+  // line-height: 1.5em;
+  font-weight: normal;
+}
+
+.txt-small,
+.txt-small h2,
+.txt-small h3,
+.txt-small h4,
+.txt-small h5,
+.txt-small h6 {
+  @include font-size(12);
+  // line-height: 1.5em;
+  font-weight: normal;
+}
+
+nav .wrapper,
+.secTitle h2,
+.txt-btnLine,
+.footNote,
+h1,
+header,
+.secID,
+.secBrandManul,
+.secSocialandDM,
+.secPhotos,
+.secExp,
+.secSkills {
+  position: relative;
+}
+
+.footNote p {
+  float: left;
+}
+
+.footNote__num {
+  float: right;
+}
+
+/* colorsetting============================================ */
+.secID,
+.secBrandManul,
+.secSocialandDM,
+.secExp,
+header,
+.secSkills,
+nav {
+  background-color: $color-transparent;
+}
+
+.secPhotos {
+  background: #232526;
+  background: -webkit-linear-gradient(60deg, #414345, #232526);
+  background: linear-gradient(60deg, #414345, #232526);
+}
+
+.secTitle h3 {
+  background: $color-mainGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.secPhotos .secTitle h3 {
+  background: transparent;
+  color: $color-white;
+  -webkit-text-fill-color: unset;
+}
+
+.secPhotos .secTitle,
+.secPhotos .footNote {
+  color: $color-white;
+}
+
+.colorContentTxt {
+  color: $color-contentTxt;
+}
+
+.colorTxtFirstColor {
+  color: $color-black;
+}
+
+/* resetting============================================ */
+/* resetting============================================ */
+/* resetting============================================ */
+/* resetting============================================ */
+/* resetting============================================ */
+
+//  loader
+
+.loader {
+  @include positionMid(fixed);
+  width: 120px;
+  height: 120px;
+  z-index: 9999;
+  .loader__spinner {
+    @include circleEl(60px);
+    border: 7px solid rgba(255, 255, 255, 0.3);
+    border-top: 7px solid rgba(54, 139, 196, 0.9);
+    animation: spin 0.7s ease-out infinite;
+    margin: 20px 30px;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .loader__txt {
+    width: 100%;
+    text-align: center;
+    color: $color-textMark;
+    padding-left: 0.3em;
+  }
+}
+
+//  header
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/headerBg.jpg);
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include desktop {
+    position: fixed;
+    height: 100%;
+    width: 36%;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.16);
+  }
+  .wrapper {
+    padding-left: 37px;
+  }
+}
+.header__wrapper {
+  @include desktop {
+    padding: 17vh 37px;
+  }
+}
+
+//
+//  header__navBarOnPc
+//  電腦版navbar
+//
+
+.header__navBarOnPc {
+  display: none;
+  @include desktop {
+    display: block;
+    position: relative;
+    width: 100%;
+    top: -80px;
+    margin: 0 auto;
+    background-color: transparent;
+    letter-spacing: 0.48px;
+  }
+}
+.header__navBarOnPc__wrap {
+  @include desktop {
+    overflow: hidden;
+    width: 70%;
+    margin: 0 auto;
+    li {
+      float: left;
+      width: 20%;
+    }
+    a {
+      display: block;
+      position: relative;
+      width: 35px;
+      line-height: 1.2em;
+      margin: 0 auto;
+      padding: 15px 0 5px;
+      text-align: center;
+      color: $color-gray;
+      border-top: 5px solid transparent;
+      z-index: 1;
+      transition: 0.3s;
+      &:hover {
+        color: $color-white;
+        transition: 0.3s;
+      }
+      &:hover:after {
+        height: 125%;
+        transition: 0.3s;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -25%;
+        width: 150%;
+        height: 0;
+        z-index: -1;
+        background: $color-mainGradient;
+        transition: 0.3s;
+      }
+    }
+    .js--header__navBarOnPc--active {
+      border-top-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+}
+
+//
+//  header__wrapper__txtwrap
+//  header 個人介紹文字區域
+//
+
+.header__wrapper__txtwrap {
+  text-align: center;
+  height: 50vh;
+  width: 80%;
+  min-width: 256px;
+  @include positionMid(absolute);
+  .header__nameZh {
+    @include font-size(24);
+    font-weight: 900;
+    display: inline;
+    @include landscape-beyond1024 {
+      @include font-size(16);
+    }
+    @include desktop {
+      @include font-size(24);
+      letter-spacing: 3.6px;
+      margin: auto;
+      max-width: 350px;
+    }
+  }
+
+  .header__nameEn {
+    @include font-size(16);
+    font-weight: normal;
+    display: inline;
+  }
+  // birth
+  .header__secondTitle {
+    display: inline-block;
+    margin: 1em auto;
+    padding: 0.2em 5em;
+    @include font-size(16);
+    // line-height: 1.5em;
+    font-weight: normal;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    @include landscape-beyond1024 {
+      display: none;
+    }
+    @include desktop {
+      display: inline-block;
+    }
+  }
+  .header__title {
+    // @include mobile {
+    //   @include font-size(28);
+    // }
+    font-size: 9vw;
+    line-height: 1.5em;
+    font-weight: 900;
+    @include pad {
+      font-size: 6vw;
+    }
+    @include landscape-beyond1024 {
+      font-size: 8vh;
+      margin-top: 0.3em;
+    }
+    @include desktop {
+      font-size: 2.5vw;
+      letter-spacing: 0.1em;
+    }
+    @include desktop-xxl {
+      @include font-size(36);
+    }
+  }
+}
+
+//
+//  .header__wrapper__linkWrap
+//  header__底部連結的容器
+//
+
+.header__wrapper__linkWrap {
+  display: block;
+  margin: 2vh auto;
+  max-width: 100%;
+  @include desktop {
+    max-width: 350px;
+  }
+}
+
+//
+//  .header__wrapper__linkWrap | socialmedia part
+//  電腦版__社群媒體連結
+//
+
+.header__linkWrap__linkOnPc {
+  display: none;
+}
+.header__linkWrap__linkOnPc {
+  @include desktop {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    display: block;
+    padding: 12px 0 12px 1.5em;
+    color: $color-gray;
+    transition: 0.3s;
+    &:hover i {
+      color: $color-white;
+    }
+  }
+  .header__linkWrap__linkOnPc:hover {
+    background: $color-mainGradient;
+    color: $color-white;
+    padding-left: 2.5em;
+    transition: 0.3s;
+  }
+  .header__linkWrap__linkOnPc__icon,
+  .header__linkWrap__linkOnPc__txt {
+    float: left;
+    height: 2em;
+    line-height: 2em;
+  }
+  .header__linkWrap__linkOnPc__txt {
+    display: block;
+    margin-left: 1em;
+    @include font-size(16);
+  }
+}
+
+//
+//  .header__wrapper__linkWrap | portfolio part
+//  作品及、履歷連結
+//
+
+.header__linkWrap__linkAllDevice {
+  display: inline-block;
+  width: 40%;
+  margin: 1em 0.5em;
+  padding: 0.1em 0;
+  // vertical-align: middle;
+  background-color: $color-white;
+  .header__linkAllDevice__icon {
+    margin-left: 0.5em;
+  }
+  @include landscape-beyond1024 {
+    margin: 1vh 2%;
+  }
+
+  @include desktop {
+    width: 45%;
+    margin: 12px 5% 0 0;
+    float: left;
+    border-radius: 5px 15px 15px 5px;
+    background: $color-mainGradient;
+    color: $color-white;
+    &:hover {
+      background: $color-textMark;
+      color: $color-white;
+    }
+  }
+}
+.header__linkAllDevice__title {
+  font-weight: normal;
+}
+.header__linkAllDevice__icon,
+.header__linkAllDevice__title {
+  @include mobile {
+    // @include font-size(18);
+  }
+  display: inline-block;
+  font-size: 4vw;
+  @include pad {
+    font-size: 1.5vw;
+  }
+  @include landscape-beyond1024 {
+    font-size: 4vh;
+  }
+  @include desktop {
+    font-size: 2vh;
+  }
+}
+
+//
+//  .header__CTA-Btn  |  contact button only on mobile
+//  手機的聯絡我
+//
+
+.header__CTA-Btn {
+  display: inline-block;
+  padding: 0.2em 0;
+  width: 50%;
+  background: $color-mainGradient;
+  color: $color-white;
+  border-radius: 50px;
+  font-size: 5vw;
+  text-align: center;
+  @include mobile {
+    @include font-size(16);
+  }
+  @include pad {
+    font-size: 3vw;
+  }
+  @include landscape-beyond1024 {
+    font-size: 3vh;
+    width: 50vh;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+//
+//   .header__mobileNav  | nav page only on mobile
+//    手機的導航頁
+//
+
+.header__mobileNav {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: $color-white;
+  .wrapper {
+    height: 100%;
+    min-height: 568px;
+    padding: 15px 15vw;
+    @include landscape-beyond1024 {
+      min-height: 320px;
+      padding: 0 0 0 50vw;
+    }
+  }
+}
+
+.header__mobileNav__bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  overflow: hidden;
+  padding: 35px 15px 0 15px;
+  background: $color-mainGradient;
+  a {
+    color: $color-white;
+    line-height: 20px;
+    height: 20px;
+  }
+  .header__mobileNav__goTopBtn {
+    color: $color-white;
+    float: left;
+    line-height: 20px;
+    margin-right: 1em;
+    margin-bottom: 10vh;
+    font-weight: 900;
+    border: none;
+    @include landscape-beyond1024 {
+      margin-bottom: 1em;
+      font-size: 6vh;
+    }
+  }
+  @include landscape-beyond1024 {
+    height: 100%;
+    width: 40vw;
+    padding: 20px;
+  }
+}
+.header__mobileNav__bar h2 {
+  margin-right: 1em;
+  float: left;
+  @include landscape-beyond1024 {
+    margin-bottom: 0.5em;
+    font-size: 4vh;
+    clear: both;
+  }
+}
+
+//
+//  header__mobileNav__linkWrap
+//  手機的導航頁__連結文字
+//
+
+.header__mobileNav__linkWrap {
+  margin-top: 18vh;
+  @include landscape-beyond1024 {
+    margin-top: 15vh;
+  }
+  a {
+    display: block;
+    width: 100%;
+    margin-bottom: 3vh;
+    text-align: left;
+    @include landscape-beyond1024 {
+      font-size: 6vh;
+    }
+  }
+  h3 {
+    color: $color-black;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid $color-textMark;
+    font-size: 6.5vw;
+    line-height: 1.2em;
+  }
+  p {
+    margin: auto;
+    min-width: 75px;
+    font-size: 4vw;
+    line-height: 1.5em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateX(110%);
+    color: $color-gray;
+    @include landscape-beyond1024 {
+      font-size: 4vh;
+    }
+    &:after {
+      content: "";
+      bottom: -1px;
+      right: 0;
+      width: 110%;
+      height: 1px;
+      background-color: $color-textMark;
+      position: absolute;
+    }
+  }
+}
+
+.header__mobileNav__socialLinkWrap {
+  position: absolute;
+  left: 15vw;
+  bottom: 21vh;
+  padding: 0;
+  max-width: 80%;
+  @include landscape-beyond1024 {
+    bottom: 20vh;
+    left: 20px;
+  }
+}
+
+.header__mobileNav__socialLinkWrap__link {
+  float: left;
+  margin-right: 15px;
+  @include landscape-beyond1024 {
+    display: block;
+    clear: both;
+    i,
+    h2 {
+      color: $color-white;
+      line-height: 1em;
+    }
+  }
+  a,
+  h3 {
+    color: $color-gray;
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: left;
+  }
+  i {
+    color: $color-gray;
+    line-height: 30px;
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+}
+
+//
+//   header__navbarToggleBtn
+//   手機navbar__漢堡鍵
+//
+
+.header__navbarToggleBtn,
+.header__goTopBtn {
+  font-size: 22px;
+  position: fixed;
+  cursor: pointer;
+  z-index: 999;
+}
+.header__navbarToggleBtn {
+  color: $color-black;
+  right: 0px;
+  top: 25px;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px 0 0 20px;
+  padding-left: 8px;
+  .fa-times {
+    border-radius: 1em;
+    width: 1em;
+    color: $color-white;
+    @include landscape-beyond1024 {
+      color: $color-primary;
+    }
+  }
+  @include desktop {
+    display: none;
+  }
+}
+.header__goTopBtn {
+  right: 0;
+  bottom: 0;
+  width: 45px;
+  height: 40px;
+  padding-top: 5px;
+  border-radius: 25px 10px 0 10px;
+  @include desktop {
+    left: auto;
+    right: 20px;
+    bottom: 20px;
+    line-height: 45px;
+    padding-top: 0;
+    background: $color-mainGradient;
+    @include circleEl(45px);
+    i {
+      color: $color-white;
+      position: relative;
+      bottom: 1px;
+    }
+  }
+}
+
+.js--header__navbarToggleBtn--toggle {
+  border-radius: 0px;
+  padding: 0;
+  background-color: transparent;
+  right: 10px;
+}
+
+.js--navScrollDisable {
+  overflow: hidden !important;
+}
+
+// 以下未整理
+// 以下未整理
+// 以下未整理
+// 以下未整理
+// 以下未整理
+// 以下未整理
+// 以下未整理
+
+/* sec__default====================================== */
+.secTitle {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.secTitle h2 {
+  display: inline-block;
+}
+
+.secTitle h2:after,
+.txt-btnLine:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  background-color: #aaa;
+}
+
+.secPhotos .secTitle h2:after,
+.txt-btnLine:after {
+  background-color: $color-white;
+}
+
+.secTitle h3,
+.skillContent {
+  margin: 4px 0;
+}
+
+.footNote {
+  margin-top: 60px;
+}
+
+#wrapperImg {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.contentTitle {
+  height: 30px;
+  margin: 18px 0 8px;
+  padding-left: 16px;
+  color: $color-black;
+  position: relative;
+}
+
+.contentTitle h4,
+.contentTitle h5 {
+  line-height: 30px;
+}
+
+.txtBox {
+  padding-left: 16px;
+  margin: 16px 0;
+}
+
+.txt p {
+  margin-bottom: 1em;
+}
+
+/* .tab ==============================  */
+dd {
+  margin-inline-start: 0;
+}
+
+.tab {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.tab h3 {
+  margin: 100px 0 5px;
+  font-weight: 900;
+}
+
+.tab h4 {
+  margin-bottom: 15px;
+  padding: 0 1em;
+  text-align: left;
+  display: inline-block;
+  color: $color-white;
+  background: $color-mainGradient;
+}
+
+.tabBtnBox {
+  margin-top: 24px;
+  font-size: 0;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.tabBtn {
+  padding: 0.2em 0.8em;
+  margin: 5px 0;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 16px;
+  position: relative;
+  color: #6d808b;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.tabContentInsideBox {
+  padding: 2em 1em;
+  display: none;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.tabContentImg {
+  position: relative;
+  padding: 0;
+  font-size: 0;
+}
+
+.tab100Img {
+  width: 100%;
+}
+
+.tabImgPc25Mo50 {
+  width: 48%;
+  margin: 0 2% 2% 0;
+}
+
+.sec3ImgInsidePc33Mo50 {
+  width: 49%;
+  margin: 0 1% 1% 0;
+}
+
+.sec1TabImg {
+  float: left;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.tabNone {
+  margin-top: 16px;
+}
+
+#tabPwithImg {
+  margin: 8px 0;
+}
+
+.tabBtnActive {
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.tabBtnActive:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background: $color-mainGradient;
+}
+
+.tabContentActive {
+  display: block;
+}
+
+.tabImgBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(51, 51, 51, 0);
+  transition: 0.3s;
+}
+
+.tabPortBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 9;
+  cursor: pointer;
+  transition: 0.3s;
+  color: $color-white;
+  background: $color-mainGradient;
+  font-size: 16px;
+  width: 230px;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.tabPortBtnArrow {
+  position: relative;
+  left: 0;
+  transition: 0.3s;
+}
+
+/*====== tab-sec2 */
+.brandColorBox {
+  float: left;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.brandColor {
+  width: 100%;
+  height: 24px;
+  margin-bottom: 8px;
+}
+
+.brandColorY {
+  background-color: $color-white;
+}
+
+.brandColorG {
+  background-color: #a9cf52;
+}
+
+.brandColorB {
+  background-color: $color-black;
+}
+
+.brandColorW {
+  background-color: $color-white;
+}
+
+.brandTxt {
+  float: left;
+  margin: 16px 16px 16px 0;
+}
+
+.brandTxt p {
+  border-bottom: 1px solid $color-black;
+  margin-bottom: 16px;
+}
+
+.brandTxt img {
+  width: 100%;
+}
+
+/* ======tab-sec3 */
+.tabImgBox,
+.sec3ImgMT8 {
+  display: block;
+  width: 100%;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.tabImgMT24 {
+  margin-top: 24px;
+}
+
+.tabImgMB8 {
+  margin-bottom: 8px;
+}
+
+.sec3ImgInsidePc50Mo100 {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.sec3ImgInsidePc50Mo100 img {
+  width: 100%;
+}
+
+.sec3ImgMo100PcAuto {
+  width: 100%;
+  display: inline-block;
+}
+
+/* .secPhotos ======================================  */
+.imgContainer {
+  font-size: 0;
+}
+
+.imgContainer .imgBox {
+  display: inline-block;
+  width: 33.3%;
+  height: 33.3%;
+  position: relative;
+  z-index: 9;
+}
+
+.imgContainer img,
+.imgBox a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+/* .secSkills ======================================  */
+.skillContent {
+  display: block;
+  margin: 8px 0;
+}
+
+.skillContent h5 {
+  display: inline-block;
+}
+
+.skillLvl {
+  position: relative;
+  float: right;
+  width: 35%;
+  height: 16px;
+  margin: 1px 0;
+  border: 2px solid $color-primary;
+}
+
+.skillLvlEach {
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  height: 8px;
+  margin: 4px;
+  background: $color-mainGradient;
+}
+
+.skillLvlPS {
+  width: 80%;
+}
+
+.skillLvlAI {
+  width: 90%;
+}
+
+.skillLvlLR {
+  width: 80%;
+}
+
+.skillLvlPR {
+  width: 50%;
+}
+
+.skillLvlAE {
+  width: 50%;
+}
+
+.skillLvlWEB {
+  width: 60%;
+}
+
+.skillLvlJQ {
+  width: 50%;
+}
+
+.skillLvlXD {
+  width: 80%;
+}
+
+/* footer====================================== */
+footer {
+  height: 80px;
+  text-align: center;
+  background-color: $color-black;
+  padding-top: 16px;
+  color: $color-white !important;
+}
+
+footer.txt-small h6 {
+  line-height: 2em;
+}
+
+/* animation */
+.headerTxt h1,
+.headerTxt h2,
+.header__secondTitle,
+a.linkSocial,
+.header__wrapper__linkWrap {
+  left: -900px;
+  position: relative;
+  z-index: 999;
+}
+
+h1.headerTxtAni {
+  animation: headerTxtAni 1.5s forwards;
+}
+
+h3.headerTxtAni {
+  animation: headerTxtAni 1.5s 0.3s forwards;
+}
+
+h2.headerTxtAni {
+  animation: headerTxtAni 1.5s 0.6s forwards;
+}
+
+a.linkSocialAni {
+  animation: headerTxtAni 1.5s 0.9s forwards;
+}
+
+.linkAni {
+  animation: headerTxtAni 1.5s 1.2s forwards;
+}
+
+.pcNavAni {
+  animation: navTxtAni 1s 2s forwards;
+}
+
+.secTitle h2 {
+  left: -50px;
+  opacity: 0;
+  position: relative;
+}
+
+.secTxtAni {
+  animation: secTxtAni 1s forwards;
+  position: relative;
+}
+
+@keyframes headerTxtAni {
+  from {
+    left: -600px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes navTxtAni {
+  from {
+    top: -80px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes secTxtAni {
+  from {
+    left: -50px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* sec6 Ani */
+.skillLvlAni {
+  animation: skillAni 1.5s forwards;
+}
+
+@keyframes skillAni {
+  from {
+    width: 0%;
+  }
+}
+
+/* hover */
+
+/* .tabBtn:hover {background-color:;color:$color-white;transition:.3s;} */
+.tabPortBtn:hover .tabPortBtnArrow {
+  left: 10px;
+  transition: 0.3s;
+}
+
+.tabImgBg:hover {
+  background-color: rgba(51, 51, 51, 0.5);
+  transition: 0.3s;
+}
+
+.tabBtn:before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  bottom: 0px;
+  left: 0;
+  position: absolute;
+  background: $color-mainGradient;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.tabBtn:hover:before {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+/* --------------------------------------------------------------------------------- */
+.contentCard {
+  width: 70%;
+  margin: 0 auto 100px;
+}
+
+.contentTitle {
+  padding: 0;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.contentTitle .txt-Content {
+  @include font-size(24);
+}
+
+.contentTitle .txt-small {
+  @include font-size(16);
+}
+
+.contentSecTitle1,
+.contentSecTitle2,
+.contentSecTitle3 {
+  position: relative;
+}
+
+.contentSecTitle1::after,
+.contentSecTitle2::after,
+.contentSecTitle3::after {
+  height: 0px;
+  width: 60px;
+  top: -55px;
+  left: 0;
+  position: absolute;
+  text-align: right;
+  @include font-size(80);
+  z-index: 9;
+  line-height: 1em;
+  color: rgba(51, 51, 51, 0.1);
+  font-family: $font-main;
+}
+
+.secExp .contentSecTitle1::after,
+.secExp .contentSecTitle2::after,
+.secExp .contentSecTitle3::after {
+  top: -45px;
+  left: 60px;
+}
+
+.contentSecTitle1::after {
+  content: "01";
+}
+
+.contentSecTitle2::after {
+  content: "02";
+}
+
+.contentSecTitle3::after {
+  content: "03";
+}
+
+.secSkills .contentTitle h4 {
+  color: $color-white;
+  text-align: center;
+}
+
+.contentTitle h4,
+.contentTitle h5 {
+  line-height: 1.5em;
+  position: relative;
+  z-index: 1;
+}
+
+.contentTitle h5 {
+  margin-top: 4px;
+  text-align: right;
+}
+
+.txt-btnLine {
+  background: $color-mainGradient;
+  color: $color-white;
+  text-align: center !important;
+}
+
+.txtBox {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.txtBox h4.txt,
+.skillBox {
+  width: 100%;
+}
+
+.txtBox .txt,
+.txtBox p.txt {
+  width: 100%;
+}
+
+.txt {
+  position: relative;
+  z-index: 1;
+}
+
+.txt h5 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.2em;
+  color: #222;
+  padding-top: 0.2em;
+  background-color: rgba(54, 139, 196, 0.1);
+  /* border-bottom:1px solid $color-gray; */
+}
+
+.txt p {
+  margin-bottom: 2.5em;
+  transition: 0.3s;
+  color: $color-gray;
+}
+
+.skillBox {
+  height: 112px;
+  padding: 16px 0;
+  margin-bottom: 8px;
+}
+
+.secSkills .contentTitle h4 {
+  background: $color-mainGradient;
+}
+
+/* tab media */
+@media (min-width: 500px) {
+  .brandColorBox {
+    float: left;
+    width: 45%;
+    margin: 8px 2.5% 0;
+  }
+
+  .brandTxt {
+    width: 45%;
+    min-width: 360px;
+    margin-right: 2.5%;
+  }
+
+  .tabImgPc25Mo50 {
+    width: 24%;
+    margin-right: 1%;
+  }
+
+  .sec3ImgInsidePc100Mo50 {
+    display: inline-block;
+    width: 48%;
+    margin-right: 1%;
+  }
+
+  .sec3ImgInsidePc33Mo50 {
+    width: 32%;
+    margin: 0 1.5% 1% 0;
+  }
+
+  .sec3ImgMo100PcAuto {
+    float: left;
+  }
+
+  .sec3ImgPc60 {
+    width: 60%;
+    height: 100%;
+  }
+
+  .sec3ImgPc40 {
+    width: 37%;
+    margin-right: 2%;
+    height: 100%;
+  }
+
+  .sec3ImgInsidePc50Mo100 {
+    width: 49%;
+    margin-right: 2%;
+  }
+
+  .paddingBottom8 {
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .sec1TabImg {
+    width: 50%;
+    margin-right: 16px;
+  }
+
+  #tabPwithImg {
+    padding-top: 8px;
+    float: left;
+    width: 47%;
+  }
+
+  .tab h4 {
+    padding: 0.1em 3em;
+  }
+
+  .contentCard {
+    width: 28%;
+    min-height: 500px;
+    float: left;
+    margin: 0 2.5%;
+  }
+
+  .contentTitle h4,
+  .contentTitle h5 {
+    width: 100%;
+  }
+
+  .contentTitle h5:nth-last-of-type(1) {
+    @include font-size(12);
+  }
+
+  .contentSecTitle1::after,
+  .contentSecTitle2::after,
+  .contentSecTitle3::after {
+    left: -30px;
+  }
+
+  .secExp .contentSecTitle1::after,
+  .secExp .contentSecTitle2::after,
+  .secExp .contentSecTitle3::after {
+    left: 30px;
+    top: -30px;
+  }
+
+  .skillContent {
+    overflow: hidden;
+    margin-top: 0;
+  }
+}
+
+/* PC ================================================= */
+@media (min-width: 1023px) {
+  /* 字體大小 */
+
+  .txt-pcTitle,
+  h3.txt-SecBig-Mobile {
+    @include font-size(36);
+    line-height: 1.5em;
+    font-weight: 900;
+  }
+
+  .txt-pcSecTitle {
+    @include font-size(24);
+    line-height: 1.5em;
+    font-weight: normal;
+  }
+
+  .txt-pcSecTitleBold,
+  .contentTitle h4,
+  .tab h3,
+  .loader__txt {
+    @include font-size(24);
+    line-height: 1.5em;
+    font-weight: 900;
+  }
+
+  .txt-pcContent,
+  .txt-small,
+  .txtBox,
+  .txtBox h5,
+  .txt h5,
+  .tab p {
+    @include font-size(16);
+    line-height: 1.5em;
+    font-weight: normal;
+  }
+
+  .txt-pcSmall,
+  .footNote p {
+    @include font-size(12);
+    line-height: 1.5em;
+    font-weight: normal;
+  }
+
+  /* 版面調整 */
+  /* 整體調整 */
+
+  .secID .wrapper,
+  .secBrandManul .wrapper,
+  .secSocialandDM .wrapper,
+  .secPhotos .wrapper,
+  .secExp .wrapper,
+  .secSkills .wrapper,
+  footer {
+    padding-left: 42%;
+    padding-right: 6%;
+  }
+
+  /* footNote */
+  .footNote p {
+    float: right;
+  }
+
+  .footNote__num {
+    @include font-size(76);
+    font-weight: 900;
+    line-height: 1em;
+    position: absolute;
+    right: 0;
+    top: -140px;
+  }
+
+  #wrapperImg {
+    max-width: 80%;
+  }
+
+  /* tab */
+  .tab {
+    width: 80%;
+  }
+
+  .tabBtnBox {
+    border-top: 1px solid rgba(200, 200, 200, 0.5);
+  }
+
+  .tabBtn {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    padding: 0.3em 0;
+  }
+
+  .tabBtn3 {
+    width: 33.3%;
+  }
+
+  .tabBtn2 {
+    width: 50%;
+  }
+
+  .tabContentBox {
+    border-bottom: none;
+  }
+
+  .brandColorBox {
+    width: 140px;
+    float: left;
+  }
+
+  .brandTxt {
+    width: 100%;
+  }
+
+  .brandTxt img {
+    width: 350px;
+  }
+
+  .tab100Img {
+    width: 100%;
+  }
+
+  .tabImgPc25Mo50 {
+    width: 24%;
+    margin-right: 1%;
+  }
+
+  .marginRightPc0MoAuto {
+    margin-right: 0 !important;
+  }
+
+  .sec3ImgInsidePc33Mo50 {
+    width: 32%;
+    margin: 0 1.5% 1% 0;
+  }
+
+  .sec3ImgInsidePc50Mo100 {
+    display: inline-block;
+    width: 49%;
+    margin-right: 2%;
+  }
+
+  .sec3ImgMo100PcAuto {
+    float: left;
+  }
+
+  .sec3ImgPc60 {
+    width: 60%;
+  }
+
+  .sec3ImgPc40 {
+    width: 37%;
+    margin-right: 2%;
+  }
+
+  .sec1TabImg,
+  #tabPwithImg {
+    width: 100%;
+    margin-right: 0;
+    clear: both;
+  }
+
+  /* .secPhotos */
+  .imgContainer .imgBox {
+    width: 24%;
+    margin: 0 1% 1% 0;
+  }
+
+  /* sec5,sec6 */
+  .txtBox {
+    overflow: hidden;
+  }
+
+  /* .secSkills */
+  .skillContent {
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .skillContent h5 {
+    background-color: rgba(54, 139, 196, 0.1);
+  }
+
+  .skillLvl {
+    margin-left: auto;
+  }
+
+  .txtBox p.txt {
+    margin: 5px 0;
+  }
+
+  /* ----------------------------------------------------- */
+  .contentCard {
+    min-height: 650px;
+    width: 28%;
+    float: left;
+    margin: 0 2.5%;
+  }
+
+  .contentTitle {
+    margin: 18px 0 42px;
+  }
+
+  .skillBox {
+    padding: 0;
+    margin-bottom: 15px;
+    height: 195px;
+    position: static;
+  }
+
+  .skillBox h5 {
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+
+  .skillLvl {
+    margin-top: 0;
+    float: none;
+    width: 100%;
+  }
+
+  .txtBox p.txt {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .secID::after,
+  .secBrandManul::after,
+  .secSocialandDM::after,
+  .secPhotos::after,
+  .secExp::after,
+  .secSkills::after {
+    text-align: right;
+    position: absolute;
+    width: 45%;
+    height: 46px;
+    line-height: 0.7em;
+    right: 0;
+    top: 110px;
+    z-index: 0;
+    font-family: $font-main;
+    font-weight: 700;
+    @include font-size(60);
+    letter-spacing: -0.05em;
+    padding-right: 10px;
+    color: rgba(11, 127, 190, 0.1);
+    border-right: 60px solid rgba(11, 127, 190, 0.1);
+  }
+
+  .secID::after {
+    content: "INDUSTRIAL DESIGN";
+  }
+
+  .secBrandManul::after {
+    content: "GRAPHIC DESIGN";
+  }
+
+  .secSocialandDM::after {
+    content: "GRAPHIC DESIGN";
+  }
+
+  .secPhotos::after {
+    content: "PHOTOGRAPHIC ";
+    color: rgba(255, 255, 255, 0.1);
+    border-right: 60px solid rgba(255, 255, 255, 0.1);
+    padding-right: 15px;
+  }
+
+  .secExp::after {
+    content: "EXPERIENCE";
+  }
+
+  .secSkills::after {
+    content: "SKILLS";
+  }
+
+  .sec1TabImg {
+    width: 50%;
+    margin-right: 2%;
+    float: left;
+    clear: none;
+  }
+
+  #tabPwithImg {
+    width: 48%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    clear: none;
+  }
+}
