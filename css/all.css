@@ -342,6 +342,50 @@ template {
   display: none;
 }
 
+/* noto-serif-tc-regular - chinese-traditional */
+@font-face {
+  font-family: 'Noto Serif TC';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Noto Serif TC"), local("NotoSerifTC-Regular"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.woff2") format("woff2"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.woff") format("woff"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.svg#NotoSerifTC") format("svg");
+  /* Legacy iOS */
+}
+
+/* noto-serif-tc-900 - chinese-traditional */
+@font-face {
+  font-family: 'Noto Serif TC';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/noto-serif-tc-v6-chinese-traditional-900.eot");
+  /* IE9 Compat Modes */
+  src: local("Noto Serif TC Black"), local("NotoSerifTC-Black"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.woff2") format("woff2"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.woff") format("woff"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.svg#NotoSerifTC") format("svg");
+  /* Legacy iOS */
+}
+
+/* noto-serif-regular - latin */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/noto-serif-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Noto Serif"), local("NotoSerif"), url("../fonts/noto-serif-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-v8-latin-regular.woff2") format("woff2"), url("../fonts/noto-serif-v8-latin-regular.woff") format("woff"), url("../fonts/noto-serif-v8-latin-regular.ttf") format("truetype"), url("../fonts/noto-serif-v8-latin-regular.svg#NotoSerif") format("svg");
+  /* Legacy iOS */
+}
+
+/* noto-serif-700 - latin */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/noto-serif-v8-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Noto Serif Bold"), local("NotoSerif-Bold"), url("../fonts/noto-serif-v8-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-v8-latin-700.woff2") format("woff2"), url("../fonts/noto-serif-v8-latin-700.woff") format("woff"), url("../fonts/noto-serif-v8-latin-700.ttf") format("truetype"), url("../fonts/noto-serif-v8-latin-700.svg#NotoSerif") format("svg");
+  /* Legacy iOS */
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -437,52 +481,8 @@ header {
 
 @media (min-width: 1023px) {
   .wrapper {
-    padding: 130px 0 70px;
+    padding: 100px 0;
   }
-}
-
-/* noto-serif-tc-regular - chinese-traditional */
-@font-face {
-  font-family: 'Noto Serif TC';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.eot");
-  /* IE9 Compat Modes */
-  src: local("Noto Serif TC"), local("NotoSerifTC-Regular"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.woff2") format("woff2"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.woff") format("woff"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.svg#NotoSerifTC") format("svg");
-  /* Legacy iOS */
-}
-
-/* noto-serif-tc-900 - chinese-traditional */
-@font-face {
-  font-family: 'Noto Serif TC';
-  font-style: normal;
-  font-weight: 900;
-  src: url("../fonts/noto-serif-tc-v6-chinese-traditional-900.eot");
-  /* IE9 Compat Modes */
-  src: local("Noto Serif TC Black"), local("NotoSerifTC-Black"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.woff2") format("woff2"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.woff") format("woff"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.svg#NotoSerifTC") format("svg");
-  /* Legacy iOS */
-}
-
-/* noto-serif-regular - latin */
-@font-face {
-  font-family: 'Noto Serif';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/noto-serif-v8-latin-regular.eot");
-  /* IE9 Compat Modes */
-  src: local("Noto Serif"), local("NotoSerif"), url("../fonts/noto-serif-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-v8-latin-regular.woff2") format("woff2"), url("../fonts/noto-serif-v8-latin-regular.woff") format("woff"), url("../fonts/noto-serif-v8-latin-regular.ttf") format("truetype"), url("../fonts/noto-serif-v8-latin-regular.svg#NotoSerif") format("svg");
-  /* Legacy iOS */
-}
-
-/* noto-serif-700 - latin */
-@font-face {
-  font-family: 'Noto Serif';
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/noto-serif-v8-latin-700.eot");
-  /* IE9 Compat Modes */
-  src: local("Noto Serif Bold"), local("NotoSerif-Bold"), url("../fonts/noto-serif-v8-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-v8-latin-700.woff2") format("woff2"), url("../fonts/noto-serif-v8-latin-700.woff") format("woff"), url("../fonts/noto-serif-v8-latin-700.ttf") format("truetype"), url("../fonts/noto-serif-v8-latin-700.svg#NotoSerif") format("svg");
-  /* Legacy iOS */
 }
 
 .fa,
@@ -628,9 +628,7 @@ header {
 }
 
 nav .wrapper,
-.secTitle h2,
-.txt-btnLine,
-.footNote,
+.section__titleWrap__sectitle,
 h1,
 header,
 .secID,
@@ -640,14 +638,6 @@ header,
 .secExp,
 .secSkills {
   position: relative;
-}
-
-.footNote p {
-  float: left;
-}
-
-.footNote__num {
-  float: right;
 }
 
 /* colorsetting============================================ */
@@ -666,20 +656,7 @@ nav {
   background: linear-gradient(60deg, #414345, #232526);
 }
 
-.secTitle h3 {
-  background: linear-gradient(30deg, #825eb2, #368cc4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.secPhotos .secTitle h3 {
-  background: transparent;
-  color: #fff;
-  -webkit-text-fill-color: unset;
-}
-
-.secPhotos .secTitle,
-.secPhotos .footNote {
+.secPhotos .section__titleWrap {
   color: #fff;
 }
 
@@ -696,6 +673,11 @@ nav {
 /* resetting============================================ */
 /* resetting============================================ */
 /* resetting============================================ */
+/*                                      *\
+
+                  loader
+                  
+\*                                      */
 .loader {
   position: fixed;
   top: 0;
@@ -740,6 +722,11 @@ nav {
   padding-left: 0.3em;
 }
 
+/**                                     **\
+
+                * header
+
+\**                                     **/
 header {
   position: relative;
   width: 100%;
@@ -770,6 +757,12 @@ header .wrapper {
   }
 }
 
+/*                                      *\
+
+            header__navBarOnPc
+               電腦版navbar
+
+\*                                      */
 .header__navBarOnPc {
   display: none;
 }
@@ -838,6 +831,12 @@ header .wrapper {
   }
 }
 
+/*                                      *\
+
+        header__wrapper__txtwrap
+         header 個人介紹文字區域
+
+\*                                      */
 .header__wrapper__txtwrap {
   text-align: center;
   height: 50vh;
@@ -938,6 +937,12 @@ header .wrapper {
   }
 }
 
+/*                                      *\
+
+        .header__wrapper__linkWrap
+           header__底部連結的容器
+
+\*                                      */
 .header__wrapper__linkWrap {
   display: block;
   margin: 2vh auto;
@@ -950,6 +955,13 @@ header .wrapper {
   }
 }
 
+/*                                      *\
+
+        .header__wrapper__linkWrap
+            socialmedia part
+            電腦版__社群媒體連結
+
+\*                                      */
 .header__linkWrap__linkOnPc {
   display: none;
 }
@@ -992,6 +1004,13 @@ header .wrapper {
   font-size: 1rem;
 }
 
+/*                                      *\
+
+        .header__wrapper__linkWrap
+              portfolio part
+              作品集、履歷連結
+
+\*                                      */
 .header__linkWrap__linkAllDevice {
   display: inline-block;
   width: 40%;
@@ -1056,6 +1075,13 @@ header .wrapper {
   }
 }
 
+/*                                      *\
+
+          .header__CTA-Btn
+      contact button only on mobile
+            手機的聯絡我
+
+\*                                      */
 .header__CTA-Btn {
   display: inline-block;
   padding: 0.2em 0;
@@ -1093,6 +1119,13 @@ header .wrapper {
   }
 }
 
+/*                                      *\
+
+          .header__mobileNav
+         nav page only on mobile
+          手機的導航頁__連結文字 
+
+\*                                      */
 .header__mobileNav {
   display: none;
   position: fixed;
@@ -1172,6 +1205,12 @@ header .wrapper {
   }
 }
 
+/*                                      *\
+
+      header__mobileNav__linkWrap 
+          手機的導航頁__連結文字 
+
+\*                                      */
 .header__mobileNav__linkWrap {
   margin-top: 18vh;
 }
@@ -1281,6 +1320,12 @@ header .wrapper {
   margin-right: 0.5em;
 }
 
+/*                                      *\
+
+        header__navbarToggleBtn 
+            手機navbar__漢堡鍵 
+
+\*                                      */
 .header__navbarToggleBtn,
 .header__goTopBtn {
   font-size: 22px;
@@ -1357,18 +1402,30 @@ header .wrapper {
   overflow: hidden !important;
 }
 
-/* sec__default====================================== */
-.secTitle {
+/*                                      *\
+
+          section title&img setting
+
+\*                                      */
+.section__titleWrap {
   margin-bottom: 60px;
   position: relative;
 }
 
-.secTitle h2 {
-  display: inline-block;
+.section__titleWrap .section__titleWrap__title {
+  background: linear-gradient(30deg, #825eb2, #368cc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.secTitle h2:after,
-.txt-btnLine:after {
+.section__titleWrap .section__titleWrap__sectitle {
+  display: inline-block;
+  left: -50px;
+  opacity: 0;
+  position: relative;
+}
+
+.section__titleWrap .section__titleWrap__sectitle:after {
   content: "";
   width: 100%;
   height: 1px;
@@ -1378,48 +1435,316 @@ header .wrapper {
   background-color: #aaa;
 }
 
-.secPhotos .secTitle h2:after,
-.txt-btnLine:after {
-  background-color: #fff;
-}
-
-.secTitle h3,
-.skillContent {
-  margin: 4px 0;
-}
-
-.footNote {
-  margin-top: 60px;
-}
-
-#wrapperImg {
+.section__wrapper__banner {
   max-width: 100%;
   height: auto;
   margin-top: 10px;
 }
 
-.contentTitle {
-  height: 30px;
-  margin: 18px 0 8px;
-  padding-left: 16px;
+@media (min-width: 1023px) {
+  .section__wrapper__banner {
+    max-width: 80%;
+  }
+}
+
+/*                                      *\
+
+                col-3-card 
+                三欄的card 
+          column 3 on desktop & pad
+          column 1 on mobile
+
+\*                                      */
+.col-3-card {
+  width: 70%;
+  margin: 0 auto 100px;
+}
+
+@media (min-width: 767px) {
+  .col-3-card {
+    width: 28%;
+    min-height: 500px;
+    float: left;
+    margin: 0 2.5%;
+  }
+}
+
+@media (min-width: 1023px) {
+  .col-3-card {
+    min-height: 650px;
+  }
+}
+
+.col-3-card__titleWrap {
+  margin: 18px 0 24px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
   color: #333;
+}
+
+@media (min-width: 1023px) {
+  .col-3-card__titleWrap {
+    margin: 18px 0 42px;
+  }
+}
+
+.col-3-card__titleWrap h5 {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.col-3-card__titleWrap .col-3-card__titleWrap__thirdtitle {
+  text-align: right;
+}
+
+.col-3-card__titleWrap .col-3-card__titleWrap__title,
+.col-3-card__titleWrap .col-3-card__titleWrap__sectitle,
+.col-3-card__titleWrap .col-3-card__titleWrap__thirdtitle {
+  line-height: 30px;
+  line-height: 1.5em;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 767px) {
+  .col-3-card__titleWrap .col-3-card__titleWrap__title,
+  .col-3-card__titleWrap .col-3-card__titleWrap__sectitle,
+  .col-3-card__titleWrap .col-3-card__titleWrap__thirdtitle {
+    width: 100%;
+  }
+}
+
+.col-3-card__titleWrap .col-3-card__titleWrap__title {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.col-3-card__titleWrap__sectitle {
+  margin-top: 4px;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(30deg, #825eb2, #368cc4);
+  color: #fff;
+}
+
+.col-3-card__titleWrap__sectitle:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  background-color: #aaa;
+  background-color: #fff;
+}
+
+@media (min-width: 767px) {
+  .col-3-card__titleWrap__sectitle:nth-last-of-type(1) {
+    font-size: 12px;
+    font-size: 0.75rem;
+  }
+}
+
+.col-3-card__contentWrap {
+  width: 100%;
+}
+
+@media (min-width: 1023px) {
+  .col-3-card__contentWrap {
+    overflow: hidden;
+  }
+}
+
+.col-3-card__contentWrap__content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.col-3-card__contentWrap__content .col-3-card__contentWrap__content__title {
+  text-align: center;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.2em;
+  color: #222;
+  padding-top: 0.2em;
+  background-color: rgba(54, 139, 196, 0.1);
+  /* border-bottom:1px solid $color-gray; */
+}
+
+.col-3-card__contentWrap__content p {
+  margin-bottom: 1em;
+  margin-bottom: 2.5em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #777;
+}
+
+.secSkills .col-3-card__titleWrap__title {
+  color: #fff;
+  text-align: center;
+}
+
+/*                                      *\
+
+                numForTitle
+                裝飾用數字標題
+
+\*                                      */
+.numForTitle-01,
+.numForTitle-02,
+.numForTitle-03 {
   position: relative;
 }
 
-.contentTitle h4,
-.contentTitle h5 {
-  line-height: 30px;
+.numForTitle-01:after,
+.numForTitle-02:after,
+.numForTitle-03:after {
+  height: 0px;
+  width: 60px;
+  top: -55px;
+  left: 0;
+  position: absolute;
+  text-align: right;
+  font-size: 80px;
+  font-size: 5rem;
+  z-index: 9;
+  line-height: 1em;
+  color: rgba(51, 51, 51, 0.1);
+  font-family: "Noto Serif TC", "微軟正黑體", "Noto Serif", serif;
 }
 
-.txtBox {
-  padding-left: 16px;
-  margin: 16px 0;
+@media (min-width: 767px) {
+  .numForTitle-01:after,
+  .numForTitle-02:after,
+  .numForTitle-03:after {
+    left: -30px;
+  }
 }
 
-.txt p {
-  margin-bottom: 1em;
+.numForTitle-01::after {
+  content: "01";
 }
 
+.numForTitle-02::after {
+  content: "02";
+}
+
+.numForTitle-03::after {
+  content: "03";
+}
+
+.secExp .numForTitle-01::after,
+.secExp .numForTitle-02::after,
+.secExp .numForTitle-03::after {
+  top: -45px;
+  left: 60px;
+}
+
+@media (min-width: 767px) {
+  .secExp .numForTitle-01::after,
+  .secExp .numForTitle-02::after,
+  .secExp .numForTitle-03::after {
+    left: 30px;
+    top: -30px;
+  }
+}
+
+/*                                      *\
+
+                footnote
+                  頁尾
+
+\*                                      */
+.footNote {
+  position: relative;
+  margin-top: 60px;
+}
+
+.footNote p {
+  float: left;
+}
+
+.footNote .footNote__num {
+  float: right;
+}
+
+@media (min-width: 1023px) {
+  .footNote p {
+    float: right;
+  }
+  .footNote .footNote__num {
+    font-size: 76px;
+    font-size: 4.75rem;
+    font-weight: 900;
+    line-height: 1em;
+    position: absolute;
+    right: 0;
+    top: -140px;
+  }
+}
+
+@media (min-width: 1023px) {
+  .secPhotos .footNote {
+    color: #fff;
+  }
+  .secPhotos .footNote__num {
+    display: none;
+  }
+}
+
+/*                                      *\
+
+            section photography
+                攝影作品排版
+
+\*                                      */
+.wrapper__imgwrap {
+  font-size: 0;
+}
+
+.wrapper__imgwrap .wrapper__imgwrap__wrap {
+  display: inline-block;
+  width: 33.3%;
+  height: 33.3%;
+  position: relative;
+  z-index: 9;
+}
+
+@media (min-width: 1023px) {
+  .wrapper__imgwrap .wrapper__imgwrap__wrap {
+    width: 24%;
+    margin: 0 1% 1% 0;
+  }
+}
+
+.wrapper__imgwrap img,
+.wrapper__imgwrap .wrapper__imgwrap__wrap a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.skillBox {
+  width: 100%;
+}
+
+.secPhotos .section__titleWrap__title {
+  background: transparent;
+  color: #fff;
+  -webkit-text-fill-color: unset;
+}
+
+.secPhotos .section__titleWrap__sectitle:after {
+  background-color: #fff;
+}
+
+.section__titleWrap__title,
+.skillContent {
+  margin: 4px 0;
+}
+
+/* sec__default====================================== */
 /* .tab ==============================  */
 dd {
   -webkit-margin-start: 0;
@@ -1640,26 +1965,6 @@ dd {
   display: inline-block;
 }
 
-/* .secPhotos ======================================  */
-.imgContainer {
-  font-size: 0;
-}
-
-.imgContainer .imgBox {
-  display: inline-block;
-  width: 33.3%;
-  height: 33.3%;
-  position: relative;
-  z-index: 9;
-}
-
-.imgContainer img,
-.imgBox a {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-}
-
 /* .secSkills ======================================  */
 .skillContent {
   display: block;
@@ -1772,12 +2077,6 @@ a.linkSocialAni {
 .pcNavAni {
   -webkit-animation: navTxtAni 1s 2s forwards;
           animation: navTxtAni 1s 2s forwards;
-}
-
-.secTitle h2 {
-  left: -50px;
-  opacity: 0;
-  position: relative;
 }
 
 .secTxtAni {
@@ -1904,138 +2203,13 @@ a.linkSocialAni {
 }
 
 /* --------------------------------------------------------------------------------- */
-.contentCard {
-  width: 70%;
-  margin: 0 auto 100px;
-}
-
-.contentTitle {
-  padding: 0;
-  height: auto;
-  overflow: hidden;
-  margin-bottom: 24px;
-}
-
-.contentTitle .txt-Content {
-  font-size: 24px;
-  font-size: 1.5rem;
-}
-
-.contentTitle .txt-small {
-  font-size: 16px;
-  font-size: 1rem;
-}
-
-.contentSecTitle1,
-.contentSecTitle2,
-.contentSecTitle3 {
-  position: relative;
-}
-
-.contentSecTitle1::after,
-.contentSecTitle2::after,
-.contentSecTitle3::after {
-  height: 0px;
-  width: 60px;
-  top: -55px;
-  left: 0;
-  position: absolute;
-  text-align: right;
-  font-size: 80px;
-  font-size: 5rem;
-  z-index: 9;
-  line-height: 1em;
-  color: rgba(51, 51, 51, 0.1);
-  font-family: "Noto Serif TC", "微軟正黑體", "Noto Serif", serif;
-}
-
-.secExp .contentSecTitle1::after,
-.secExp .contentSecTitle2::after,
-.secExp .contentSecTitle3::after {
-  top: -45px;
-  left: 60px;
-}
-
-.contentSecTitle1::after {
-  content: "01";
-}
-
-.contentSecTitle2::after {
-  content: "02";
-}
-
-.contentSecTitle3::after {
-  content: "03";
-}
-
-.secSkills .contentTitle h4 {
-  color: #fff;
-  text-align: center;
-}
-
-.contentTitle h4,
-.contentTitle h5 {
-  line-height: 1.5em;
-  position: relative;
-  z-index: 1;
-}
-
-.contentTitle h5 {
-  margin-top: 4px;
-  text-align: right;
-}
-
-.txt-btnLine {
-  background: linear-gradient(30deg, #825eb2, #368cc4);
-  color: #fff;
-  text-align: center !important;
-}
-
-.txtBox {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.txtBox h4.txt,
-.skillBox {
-  width: 100%;
-}
-
-.txtBox .txt,
-.txtBox p.txt {
-  width: 100%;
-}
-
-.txt {
-  position: relative;
-  z-index: 1;
-}
-
-.txt h5 {
-  text-align: center;
-  margin-bottom: 0.5em;
-  padding-bottom: 0.2em;
-  color: #222;
-  padding-top: 0.2em;
-  background-color: rgba(54, 139, 196, 0.1);
-  /* border-bottom:1px solid $color-gray; */
-}
-
-.txt p {
-  margin-bottom: 2.5em;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  color: #777;
-}
-
 .skillBox {
   height: 112px;
   padding: 16px 0;
   margin-bottom: 8px;
 }
 
-.secSkills .contentTitle h4 {
+.secSkills .col-3-card__titleWrap__title {
   background: linear-gradient(30deg, #825eb2, #368cc4);
 }
 
@@ -2098,31 +2272,6 @@ a.linkSocialAni {
   .tab h4 {
     padding: 0.1em 3em;
   }
-  .contentCard {
-    width: 28%;
-    min-height: 500px;
-    float: left;
-    margin: 0 2.5%;
-  }
-  .contentTitle h4,
-  .contentTitle h5 {
-    width: 100%;
-  }
-  .contentTitle h5:nth-last-of-type(1) {
-    font-size: 12px;
-    font-size: 0.75rem;
-  }
-  .contentSecTitle1::after,
-  .contentSecTitle2::after,
-  .contentSecTitle3::after {
-    left: -30px;
-  }
-  .secExp .contentSecTitle1::after,
-  .secExp .contentSecTitle2::after,
-  .secExp .contentSecTitle3::after {
-    left: 30px;
-    top: -30px;
-  }
   .skillContent {
     overflow: hidden;
     margin-top: 0;
@@ -2146,7 +2295,7 @@ a.linkSocialAni {
     font-weight: normal;
   }
   .txt-pcSecTitleBold,
-  .contentTitle h4,
+  .col-3-card__titleWrap__title,
   .tab h3,
   .loader__txt {
     font-size: 24px;
@@ -2183,22 +2332,6 @@ a.linkSocialAni {
   footer {
     padding-left: 42%;
     padding-right: 6%;
-  }
-  /* footNote */
-  .footNote p {
-    float: right;
-  }
-  .footNote__num {
-    font-size: 76px;
-    font-size: 4.75rem;
-    font-weight: 900;
-    line-height: 1em;
-    position: absolute;
-    right: 0;
-    top: -140px;
-  }
-  #wrapperImg {
-    max-width: 80%;
   }
   /* tab */
   .tab {
@@ -2268,14 +2401,6 @@ a.linkSocialAni {
     clear: both;
   }
   /* .secPhotos */
-  .imgContainer .imgBox {
-    width: 24%;
-    margin: 0 1% 1% 0;
-  }
-  /* sec5,sec6 */
-  .txtBox {
-    overflow: hidden;
-  }
   /* .secSkills */
   .skillContent {
     margin-bottom: 16px;
@@ -2287,19 +2412,7 @@ a.linkSocialAni {
   .skillLvl {
     margin-left: auto;
   }
-  .txtBox p.txt {
-    margin: 5px 0;
-  }
   /* ----------------------------------------------------- */
-  .contentCard {
-    min-height: 650px;
-    width: 28%;
-    float: left;
-    margin: 0 2.5%;
-  }
-  .contentTitle {
-    margin: 18px 0 42px;
-  }
   .skillBox {
     padding: 0;
     margin-bottom: 15px;
@@ -2315,9 +2428,6 @@ a.linkSocialAni {
     margin-top: 0;
     float: none;
     width: 100%;
-  }
-  .txtBox p.txt {
-    padding-left: 0;
   }
 }
 

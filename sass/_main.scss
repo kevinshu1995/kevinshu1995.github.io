@@ -1,6 +1,5 @@
 .txt-SecBig-Mobile {
   @include font-size(24);
-  // line-height: 1.5em;
   font-weight: 900;
 }
 
@@ -16,7 +15,6 @@
 .loader__txt,
 .tab h3 {
   @include font-size(16);
-  // line-height: 1.5em;
   font-weight: normal;
 }
 
@@ -27,14 +25,11 @@
 .txt-small h5,
 .txt-small h6 {
   @include font-size(12);
-  // line-height: 1.5em;
   font-weight: normal;
 }
 
 nav .wrapper,
-.secTitle h2,
-.txt-btnLine,
-.footNote,
+.section__titleWrap__sectitle,
 h1,
 header,
 .secID,
@@ -44,14 +39,6 @@ header,
 .secExp,
 .secSkills {
   position: relative;
-}
-
-.footNote p {
-  float: left;
-}
-
-.footNote__num {
-  float: right;
 }
 
 /* colorsetting============================================ */
@@ -71,20 +58,7 @@ nav {
   background: linear-gradient(60deg, #414345, #232526);
 }
 
-.secTitle h3 {
-  background: $color-mainGradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.secPhotos .secTitle h3 {
-  background: transparent;
-  color: $color-white;
-  -webkit-text-fill-color: unset;
-}
-
-.secPhotos .secTitle,
-.secPhotos .footNote {
+.secPhotos .section__titleWrap {
   color: $color-white;
 }
 
@@ -102,7 +76,11 @@ nav {
 /* resetting============================================ */
 /* resetting============================================ */
 
-//  loader
+/*                                      *\
+
+                  loader
+                  
+\*                                      */
 
 .loader {
   @include positionMid(fixed);
@@ -129,7 +107,11 @@ nav {
   }
 }
 
-//  header
+/**                                     **\
+
+                * header
+
+\**                                     **/
 
 header {
   position: relative;
@@ -155,10 +137,12 @@ header {
   }
 }
 
-//
-//  header__navBarOnPc
-//  電腦版navbar
-//
+/*                                      *\
+
+            header__navBarOnPc
+               電腦版navbar
+
+\*                                      */
 
 .header__navBarOnPc {
   display: none;
@@ -220,10 +204,12 @@ header {
   }
 }
 
-//
-//  header__wrapper__txtwrap
-//  header 個人介紹文字區域
-//
+/*                                      *\
+
+        header__wrapper__txtwrap
+         header 個人介紹文字區域
+
+\*                                      */
 
 .header__wrapper__txtwrap {
   text-align: center;
@@ -257,7 +243,6 @@ header {
     margin: 1em auto;
     padding: 0.2em 5em;
     @include font-size(16);
-    // line-height: 1.5em;
     font-weight: normal;
     color: $color-primary;
     border: 1px solid $color-primary;
@@ -292,10 +277,12 @@ header {
   }
 }
 
-//
-//  .header__wrapper__linkWrap
-//  header__底部連結的容器
-//
+/*                                      *\
+
+        .header__wrapper__linkWrap
+           header__底部連結的容器
+
+\*                                      */
 
 .header__wrapper__linkWrap {
   display: block;
@@ -306,10 +293,13 @@ header {
   }
 }
 
-//
-//  .header__wrapper__linkWrap | socialmedia part
-//  電腦版__社群媒體連結
-//
+/*                                      *\
+
+        .header__wrapper__linkWrap
+            socialmedia part
+            電腦版__社群媒體連結
+
+\*                                      */
 
 .header__linkWrap__linkOnPc {
   display: none;
@@ -346,10 +336,13 @@ header {
   }
 }
 
-//
-//  .header__wrapper__linkWrap | portfolio part
-//  作品及、履歷連結
-//
+/*                                      *\
+
+        .header__wrapper__linkWrap
+              portfolio part
+              作品集、履歷連結
+
+\*                                      */
 
 .header__linkWrap__linkAllDevice {
   display: inline-block;
@@ -399,10 +392,13 @@ header {
   }
 }
 
-//
-//  .header__CTA-Btn  |  contact button only on mobile
-//  手機的聯絡我
-//
+/*                                      *\
+
+          .header__CTA-Btn
+      contact button only on mobile
+            手機的聯絡我
+
+\*                                      */
 
 .header__CTA-Btn {
   display: inline-block;
@@ -428,10 +424,13 @@ header {
   }
 }
 
-//
-//   .header__mobileNav  | nav page only on mobile
-//    手機的導航頁
-//
+/*                                      *\
+
+          .header__mobileNav
+         nav page only on mobile
+          手機的導航頁__連結文字 
+
+\*                                      */
 
 .header__mobileNav {
   display: none;
@@ -496,10 +495,12 @@ header {
   }
 }
 
-//
-//  header__mobileNav__linkWrap
-//  手機的導航頁__連結文字
-//
+/*                                      *\
+
+      header__mobileNav__linkWrap 
+          手機的導航頁__連結文字 
+
+\*                                      */
 
 .header__mobileNav__linkWrap {
   margin-top: 18vh;
@@ -588,10 +589,12 @@ header {
   }
 }
 
-//
-//   header__navbarToggleBtn
-//   手機navbar__漢堡鍵
-//
+/*                                      *\
+
+        header__navbarToggleBtn 
+            手機navbar__漢堡鍵 
+
+\*                                      */
 
 .header__navbarToggleBtn,
 .header__goTopBtn {
@@ -655,76 +658,317 @@ header {
   overflow: hidden !important;
 }
 
+/*                                      *\
+
+          section title&img setting
+
+\*                                      */
+
+.section__titleWrap {
+  margin-bottom: 60px;
+  position: relative;
+  .section__titleWrap__title {
+    background: $color-mainGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .section__titleWrap__sectitle {
+    display: inline-block;
+    left: -50px;
+    opacity: 0;
+    position: relative;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      background-color: #aaa;
+    }
+  }
+}
+.section__wrapper__banner {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  @include desktop {
+    max-width: 80%;
+  }
+}
+
+/*                                      *\
+
+                col-3-card 
+                三欄的card 
+          column 3 on desktop & pad
+          column 1 on mobile
+
+\*                                      */
+
+.col-3-card {
+  width: 70%;
+  margin: 0 auto 100px;
+  @include pad {
+    width: 28%;
+    min-height: 500px;
+    float: left;
+    margin: 0 2.5%;
+  }
+  @include desktop {
+    min-height: 650px;
+  }
+}
+
+//col-3 title
+
+.col-3-card__titleWrap {
+  margin: 18px 0 24px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  color: $color-black;
+  @include desktop {
+    margin: 18px 0 42px;
+  }
+  h5 {
+    @include font-size(12);
+  }
+  .col-3-card__titleWrap__thirdtitle {
+    text-align: right;
+  }
+  .col-3-card__titleWrap__title,
+  .col-3-card__titleWrap__sectitle,
+  .col-3-card__titleWrap__thirdtitle {
+    line-height: 30px;
+    line-height: 1.5em;
+    position: relative;
+    z-index: 1;
+    @include pad {
+      width: 100%;
+    }
+  }
+  .col-3-card__titleWrap__title {
+    @include font-size(24);
+  }
+}
+
+.col-3-card__titleWrap__sectitle {
+  margin-top: 4px;
+  text-align: center;
+  position: relative;
+  background: $color-mainGradient;
+  color: $color-white;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    background-color: #aaa;
+    background-color: $color-white;
+  }
+  &:nth-last-of-type(1) {
+    @include pad {
+      @include font-size(12);
+    }
+  }
+}
+
+// col-3 content
+
+.col-3-card__contentWrap {
+  width: 100%;
+  @include desktop {
+    overflow: hidden;
+  }
+}
+
+.col-3-card__contentWrap__content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  .col-3-card__contentWrap__content__title {
+    text-align: center;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.2em;
+    color: #222;
+    padding-top: 0.2em;
+    background-color: rgba(54, 139, 196, 0.1);
+    /* border-bottom:1px solid $color-gray; */
+  }
+  p {
+    margin-bottom: 1em;
+    margin-bottom: 2.5em;
+    transition: 0.3s;
+    color: $color-gray;
+  }
+}
+
+////// other setting for col-3-card
+
+.secSkills .col-3-card__titleWrap__title {
+  color: $color-white;
+  text-align: center;
+}
+
+/*                                      *\
+
+                numForTitle
+                裝飾用數字標題
+
+\*                                      */
+
+.numForTitle-01,
+.numForTitle-02,
+.numForTitle-03 {
+  position: relative;
+  &:after {
+    height: 0px;
+    width: 60px;
+    top: -55px;
+    left: 0;
+    position: absolute;
+    text-align: right;
+    @include font-size(80);
+    z-index: 9;
+    line-height: 1em;
+    color: rgba(51, 51, 51, 0.1);
+    font-family: $font-main;
+    @include pad {
+      left: -30px;
+    }
+  }
+}
+
+.numForTitle-01::after {
+  content: "01";
+}
+
+.numForTitle-02::after {
+  content: "02";
+}
+
+.numForTitle-03::after {
+  content: "03";
+}
+
+.secExp .numForTitle-01::after,
+.secExp .numForTitle-02::after,
+.secExp .numForTitle-03::after {
+  top: -45px;
+  left: 60px;
+  @include pad {
+    left: 30px;
+    top: -30px;
+  }
+}
+
+/*                                      *\
+
+                footnote
+                  頁尾
+
+\*                                      */
+
+.footNote {
+  position: relative;
+  margin-top: 60px;
+  p {
+    float: left;
+  }
+  .footNote__num {
+    float: right;
+  }
+  @include desktop {
+    p {
+      float: right;
+    }
+    .footNote__num {
+      @include font-size(76);
+      font-weight: 900;
+      line-height: 1em;
+      position: absolute;
+      right: 0;
+      top: -140px;
+    }
+  }
+}
+@include desktop {
+  .secPhotos {
+    .footNote {
+      color: $color-white;
+    }
+    .footNote__num {
+      display: none;
+    }
+  }
+}
+
+/*                                      *\
+
+            section photography
+                攝影作品排版
+
+\*                                      */
+
+.wrapper__imgwrap {
+  font-size: 0;
+  .wrapper__imgwrap__wrap {
+    display: inline-block;
+    width: 33.3%;
+    height: 33.3%;
+    position: relative;
+    z-index: 9;
+    @include desktop {
+      width: 24%;
+      margin: 0 1% 1% 0;
+    }
+  }
+  img,
+  .wrapper__imgwrap__wrap a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
+}
+
+///     暫存區域
+
+.skillBox {
+  width: 100%;
+}
+
 // 以下未整理
 // 以下未整理
 // 以下未整理
+// 以下未整理
+// 以下未整理
+// 以下未整理
+// 以下未整理
+
+.secPhotos .section__titleWrap__title {
+  background: transparent;
+  color: $color-white;
+  -webkit-text-fill-color: unset;
+}
+
+.secPhotos .section__titleWrap__sectitle:after {
+  background-color: $color-white;
+}
+
+.section__titleWrap__title,
+.skillContent {
+  margin: 4px 0;
+}
+
 // 以下未整理
 // 以下未整理
 // 以下未整理
 // 以下未整理
 
 /* sec__default====================================== */
-.secTitle {
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.secTitle h2 {
-  display: inline-block;
-}
-
-.secTitle h2:after,
-.txt-btnLine:after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  background-color: #aaa;
-}
-
-.secPhotos .secTitle h2:after,
-.txt-btnLine:after {
-  background-color: $color-white;
-}
-
-.secTitle h3,
-.skillContent {
-  margin: 4px 0;
-}
-
-.footNote {
-  margin-top: 60px;
-}
-
-#wrapperImg {
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
-}
-
-.contentTitle {
-  height: 30px;
-  margin: 18px 0 8px;
-  padding-left: 16px;
-  color: $color-black;
-  position: relative;
-}
-
-.contentTitle h4,
-.contentTitle h5 {
-  line-height: 30px;
-}
-
-.txtBox {
-  padding-left: 16px;
-  margin: 16px 0;
-}
-
-.txt p {
-  margin-bottom: 1em;
-}
 
 /* .tab ==============================  */
 dd {
@@ -940,26 +1184,6 @@ dd {
   display: inline-block;
 }
 
-/* .secPhotos ======================================  */
-.imgContainer {
-  font-size: 0;
-}
-
-.imgContainer .imgBox {
-  display: inline-block;
-  width: 33.3%;
-  height: 33.3%;
-  position: relative;
-  z-index: 9;
-}
-
-.imgContainer img,
-.imgBox a {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-}
-
 /* .secSkills ======================================  */
 .skillContent {
   display: block;
@@ -1068,12 +1292,6 @@ a.linkSocialAni {
   animation: navTxtAni 1s 2s forwards;
 }
 
-.secTitle h2 {
-  left: -50px;
-  opacity: 0;
-  position: relative;
-}
-
 .secTxtAni {
   animation: secTxtAni 1s forwards;
   position: relative;
@@ -1157,126 +1375,6 @@ a.linkSocialAni {
 }
 
 /* --------------------------------------------------------------------------------- */
-.contentCard {
-  width: 70%;
-  margin: 0 auto 100px;
-}
-
-.contentTitle {
-  padding: 0;
-  height: auto;
-  overflow: hidden;
-  margin-bottom: 24px;
-}
-
-.contentTitle .txt-Content {
-  @include font-size(24);
-}
-
-.contentTitle .txt-small {
-  @include font-size(16);
-}
-
-.contentSecTitle1,
-.contentSecTitle2,
-.contentSecTitle3 {
-  position: relative;
-}
-
-.contentSecTitle1::after,
-.contentSecTitle2::after,
-.contentSecTitle3::after {
-  height: 0px;
-  width: 60px;
-  top: -55px;
-  left: 0;
-  position: absolute;
-  text-align: right;
-  @include font-size(80);
-  z-index: 9;
-  line-height: 1em;
-  color: rgba(51, 51, 51, 0.1);
-  font-family: $font-main;
-}
-
-.secExp .contentSecTitle1::after,
-.secExp .contentSecTitle2::after,
-.secExp .contentSecTitle3::after {
-  top: -45px;
-  left: 60px;
-}
-
-.contentSecTitle1::after {
-  content: "01";
-}
-
-.contentSecTitle2::after {
-  content: "02";
-}
-
-.contentSecTitle3::after {
-  content: "03";
-}
-
-.secSkills .contentTitle h4 {
-  color: $color-white;
-  text-align: center;
-}
-
-.contentTitle h4,
-.contentTitle h5 {
-  line-height: 1.5em;
-  position: relative;
-  z-index: 1;
-}
-
-.contentTitle h5 {
-  margin-top: 4px;
-  text-align: right;
-}
-
-.txt-btnLine {
-  background: $color-mainGradient;
-  color: $color-white;
-  text-align: center !important;
-}
-
-.txtBox {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.txtBox h4.txt,
-.skillBox {
-  width: 100%;
-}
-
-.txtBox .txt,
-.txtBox p.txt {
-  width: 100%;
-}
-
-.txt {
-  position: relative;
-  z-index: 1;
-}
-
-.txt h5 {
-  text-align: center;
-  margin-bottom: 0.5em;
-  padding-bottom: 0.2em;
-  color: #222;
-  padding-top: 0.2em;
-  background-color: rgba(54, 139, 196, 0.1);
-  /* border-bottom:1px solid $color-gray; */
-}
-
-.txt p {
-  margin-bottom: 2.5em;
-  transition: 0.3s;
-  color: $color-gray;
-}
 
 .skillBox {
   height: 112px;
@@ -1284,7 +1382,7 @@ a.linkSocialAni {
   margin-bottom: 8px;
 }
 
-.secSkills .contentTitle h4 {
+.secSkills .col-3-card__titleWrap__title {
   background: $color-mainGradient;
 }
 
@@ -1359,35 +1457,6 @@ a.linkSocialAni {
     padding: 0.1em 3em;
   }
 
-  .contentCard {
-    width: 28%;
-    min-height: 500px;
-    float: left;
-    margin: 0 2.5%;
-  }
-
-  .contentTitle h4,
-  .contentTitle h5 {
-    width: 100%;
-  }
-
-  .contentTitle h5:nth-last-of-type(1) {
-    @include font-size(12);
-  }
-
-  .contentSecTitle1::after,
-  .contentSecTitle2::after,
-  .contentSecTitle3::after {
-    left: -30px;
-  }
-
-  .secExp .contentSecTitle1::after,
-  .secExp .contentSecTitle2::after,
-  .secExp .contentSecTitle3::after {
-    left: 30px;
-    top: -30px;
-  }
-
   .skillContent {
     overflow: hidden;
     margin-top: 0;
@@ -1412,7 +1481,7 @@ a.linkSocialAni {
   }
 
   .txt-pcSecTitleBold,
-  .contentTitle h4,
+  .col-3-card__titleWrap__title,
   .tab h3,
   .loader__txt {
     @include font-size(24);
@@ -1450,24 +1519,6 @@ a.linkSocialAni {
   footer {
     padding-left: 42%;
     padding-right: 6%;
-  }
-
-  /* footNote */
-  .footNote p {
-    float: right;
-  }
-
-  .footNote__num {
-    @include font-size(76);
-    font-weight: 900;
-    line-height: 1em;
-    position: absolute;
-    right: 0;
-    top: -140px;
-  }
-
-  #wrapperImg {
-    max-width: 80%;
   }
 
   /* tab */
@@ -1556,15 +1607,6 @@ a.linkSocialAni {
   }
 
   /* .secPhotos */
-  .imgContainer .imgBox {
-    width: 24%;
-    margin: 0 1% 1% 0;
-  }
-
-  /* sec5,sec6 */
-  .txtBox {
-    overflow: hidden;
-  }
 
   /* .secSkills */
   .skillContent {
@@ -1580,21 +1622,7 @@ a.linkSocialAni {
     margin-left: auto;
   }
 
-  .txtBox p.txt {
-    margin: 5px 0;
-  }
-
   /* ----------------------------------------------------- */
-  .contentCard {
-    min-height: 650px;
-    width: 28%;
-    float: left;
-    margin: 0 2.5%;
-  }
-
-  .contentTitle {
-    margin: 18px 0 42px;
-  }
 
   .skillBox {
     padding: 0;
@@ -1613,10 +1641,6 @@ a.linkSocialAni {
     margin-top: 0;
     float: none;
     width: 100%;
-  }
-
-  .txtBox p.txt {
-    padding-left: 0;
   }
 }
 

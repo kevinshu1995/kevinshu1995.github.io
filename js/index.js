@@ -99,9 +99,9 @@ $(document).ready(function() {
       }
       // else{$(this).removeClass('skillLvlAni');}
     });
-    $(".secTitle h2,.secTitle")
+    $(".js--section__titleWrap h2,.js--section__titleWrap")
       .not(
-        "#js--secID .secTitle h2,#js--secID .secTitle,#js--secBrandManul .secTitle h2,#js--secBrandManul .secTitle"
+        "#js--secID .js--section__titleWrap h2,#js--secID .js--section__titleWrap,#js--secBrandManul .js--section__titleWrap h2,#js--secBrandManul .js--section__titleWrap"
       )
       .each(function() {
         var thisTop = $(this).offset().top - $(window).scrollTop();
@@ -112,7 +112,7 @@ $(document).ready(function() {
       });
     if ($(window).width() < 1024) {
       $(
-        "#js--secID .secTitle h2,#js--secID .secTitle,#js--secBrandManul .secTitle h2,#js--secBrandManul .secTitle"
+        "#js--secID .js--section__titleWrap h2,#js--secID .js--section__titleWrap,#js--secBrandManul .js--section__titleWrap h2,#js--secBrandManul .js--section__titleWrap"
       ).each(function() {
         var thisTop = $(this).offset().top - $(window).scrollTop();
         if (thisTop >= gridTop && thisTop + $(this).height() <= gridBottom) {
@@ -121,7 +121,7 @@ $(document).ready(function() {
       });
     } else {
       $(
-        "#js--secID .secTitle h2,#js--secID .secTitle,#js--secBrandManul .secTitle h2,#js--secBrandManul .secTitle"
+        "#js--secID .js--section__titleWrap h2,#js--secID .js--section__titleWrap,#js--secBrandManul .js--section__titleWrap h2,#js--secBrandManul .js--section__titleWrap"
       ).addClass("secTxtAni");
     }
   });
