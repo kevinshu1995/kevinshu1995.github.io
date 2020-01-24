@@ -811,6 +811,7 @@ header {
 .secSkills .col-3-card__titleWrap__title {
   color: $color-white;
   text-align: center;
+  background: $color-mainGradient;
 }
 
 /*                                      *\
@@ -1018,6 +1019,79 @@ header {
   width: 60%;
 }
 
+/*                                      *\
+
+                  footer
+
+\*                                      */
+
+footer {
+  height: 80px;
+  text-align: center;
+  padding-top: 16px;
+  background-color: $color-black;
+  color: $color-white;
+}
+
+/*                                      *\
+
+            section deco- title 
+                裝飾性標題 
+
+\*                                      */
+
+@include desktop-xl {
+  .secID::after,
+  .secBrandManul::after,
+  .secSocialandDM::after,
+  .secPhotos::after,
+  .secExp::after,
+  .secSkills::after {
+    text-align: right;
+    width: 45%;
+    height: 46px;
+    padding-right: 10px;
+    line-height: 0.7em;
+    position: absolute;
+    right: 0;
+    top: 110px;
+    z-index: 0;
+    font-family: $font-main;
+    font-weight: 700;
+    @include font-size(60);
+    letter-spacing: -0.05em;
+    color: rgba(11, 127, 190, 0.1);
+    border-right: 60px solid rgba(11, 127, 190, 0.1);
+  }
+
+  .secID::after {
+    content: "INDUSTRIAL DESIGN";
+  }
+
+  .secBrandManul::after {
+    content: "GRAPHIC DESIGN";
+  }
+
+  .secSocialandDM::after {
+    content: "GRAPHIC DESIGN";
+  }
+
+  .secPhotos::after {
+    content: "PHOTOGRAPHIC ";
+    color: rgba(255, 255, 255, 0.1);
+    border-right: 60px solid rgba(255, 255, 255, 0.1);
+    padding-right: 15px;
+  }
+
+  .secExp::after {
+    content: "EXPERIENCE";
+  }
+
+  .secSkills::after {
+    content: "SKILLS";
+  }
+}
+
 ///     暫存區域
 
 // 以下未整理
@@ -1047,13 +1121,7 @@ header {
 // 以下未整理
 // 以下未整理
 
-/* sec__default====================================== */
-
 /* .tab ==============================  */
-dd {
-  margin-inline-start: 0;
-}
-
 .tab {
   width: 100%;
   margin-top: 1em;
@@ -1262,18 +1330,6 @@ dd {
   width: 100%;
   display: inline-block;
 }
-/* footer====================================== */
-footer {
-  height: 80px;
-  text-align: center;
-  background-color: $color-black;
-  padding-top: 16px;
-  color: $color-white !important;
-}
-
-footer.txt-small h6 {
-  line-height: 2em;
-}
 
 /* animation */
 .headerTxt h1,
@@ -1362,8 +1418,6 @@ a.linkSocialAni {
   }
 }
 
-/* hover */
-
 /* .tabBtn:hover {background-color:;color:$color-white;transition:.3s;} */
 .tabPortBtn:hover .tabPortBtnArrow {
   left: 10px;
@@ -1390,12 +1444,6 @@ a.linkSocialAni {
 .tabBtn:hover:before {
   opacity: 1;
   transition: 0.3s;
-}
-
-/* --------------------------------------------------------------------------------- */
-
-.secSkills .col-3-card__titleWrap__title {
-  background: $color-mainGradient;
 }
 
 /* tab media */
@@ -1472,6 +1520,8 @@ a.linkSocialAni {
 
 /* PC ================================================= */
 @media (min-width: 1023px) {
+  /* 字體大小 */
+  /* 字體大小 */
   /* 字體大小 */
 
   .txt-pcTitle,
@@ -1615,56 +1665,6 @@ a.linkSocialAni {
 }
 
 @media (min-width: 1280px) {
-  .secID::after,
-  .secBrandManul::after,
-  .secSocialandDM::after,
-  .secPhotos::after,
-  .secExp::after,
-  .secSkills::after {
-    text-align: right;
-    position: absolute;
-    width: 45%;
-    height: 46px;
-    line-height: 0.7em;
-    right: 0;
-    top: 110px;
-    z-index: 0;
-    font-family: $font-main;
-    font-weight: 700;
-    @include font-size(60);
-    letter-spacing: -0.05em;
-    padding-right: 10px;
-    color: rgba(11, 127, 190, 0.1);
-    border-right: 60px solid rgba(11, 127, 190, 0.1);
-  }
-
-  .secID::after {
-    content: "INDUSTRIAL DESIGN";
-  }
-
-  .secBrandManul::after {
-    content: "GRAPHIC DESIGN";
-  }
-
-  .secSocialandDM::after {
-    content: "GRAPHIC DESIGN";
-  }
-
-  .secPhotos::after {
-    content: "PHOTOGRAPHIC ";
-    color: rgba(255, 255, 255, 0.1);
-    border-right: 60px solid rgba(255, 255, 255, 0.1);
-    padding-right: 15px;
-  }
-
-  .secExp::after {
-    content: "EXPERIENCE";
-  }
-
-  .secSkills::after {
-    content: "SKILLS";
-  }
-
   .sec1TabImg {
     width: 50%;
     margin-right: 2%;
