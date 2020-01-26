@@ -14,10 +14,10 @@ var menuSelected = null;
 $(document).ready(function() {
   $(
     "#js--header__nameZh,#js--header__nameEn,#js--header__Title,#js--header__secondTitle"
-  ).addClass("headerTxtAni");
-  $("#js--header__navBarOnPc").addClass("pcNavAni");
-  $(".linkSocial").addClass("linkSocialAni");
-  $(".header__wrapper__linkWrap").addClass("linkAni");
+  ).addClass("headerTxt--Ani");
+  $("#js--header__navBarOnPc").addClass("header__navBarOnPc--Ani");
+  $(".header__linkWrap__linkOnPc").addClass("header__linkWrap__linkOnPc--Ani");
+  $(".header__wrapper__linkWrap").addClass("header__wrapper__linkWrap--Ani");
   $(".js--secimg--fancybox").fancybox({
     padding: "0",
     overlayOpacity: 0.7,
@@ -97,9 +97,8 @@ $(document).ready(function() {
     $(".skillLvlEach").each(function() {
       var thisTop = $(this).offset().top - $(window).scrollTop();
       if (thisTop >= gridTop && thisTop + $(this).height() <= gridBottom) {
-        $(this).addClass("skillLvlAni");
+        $(this).addClass("skillLvl--Ani");
       }
-      // else{$(this).removeClass('skillLvlAni');}
     });
     $(".js--section__titleWrap h2,.js--section__titleWrap")
       .not(
@@ -108,9 +107,8 @@ $(document).ready(function() {
       .each(function() {
         var thisTop = $(this).offset().top - $(window).scrollTop();
         if (thisTop >= gridTop && thisTop + $(this).height() <= gridBottom) {
-          $(this).addClass("secTxtAni");
+          $(this).addClass("section__title--Ani");
         }
-        // else{$(this).removeClass('secTxtAni');}
       });
     if ($(window).width() < 1024) {
       $(
@@ -118,31 +116,33 @@ $(document).ready(function() {
       ).each(function() {
         var thisTop = $(this).offset().top - $(window).scrollTop();
         if (thisTop >= gridTop && thisTop + $(this).height() <= gridBottom) {
-          $(this).addClass("secTxtAni");
-        } // else{$(this).removeClass('secTxtAni');}
+          $(this).addClass("section__title--Ani");
+        }
       });
     } else {
       $(
         "#js--secID .js--section__titleWrap h2,#js--secID .js--section__titleWrap,#js--secBrandManul .js--section__titleWrap h2,#js--secBrandManul .js--section__titleWrap"
-      ).addClass("secTxtAni");
+      ).addClass("section__title--Ani");
     }
   });
   $(window).trigger("scroll");
   // tab
-  $(".tabBtn").click(function() {
-    if ($(this).not(".tabBtnActive")) {
+  $(".js--tab__btnWrap__btn").click(function() {
+    if ($(this).not(".js--tab__btnActive")) {
       var btnIndex = $(this).index();
       var tabContent = $(this)
-        .parent(".tabBtnBox")
-        .next(".tabContentBox")
-        .children(".tabContentInsideBox")
+        .parent(".js--tab__btnWrap")
+        .next(".tab__contentWrap")
+        .children(".tab__contentWrap__content")
         .eq(btnIndex);
-      tabContent.addClass("tabContentActive");
-      tabContent.siblings().removeClass("tabContentActive");
-      $(this).addClass("tabBtnActive");
+      tabContent.addClass("js--tab__contentWrap__content--active");
+      tabContent
+        .siblings()
+        .removeClass("js--tab__contentWrap__content--active");
+      $(this).addClass("js--tab__btnActive");
       $(this)
         .siblings()
-        .removeClass("tabBtnActive");
+        .removeClass("js--tab__btnActive");
     }
   });
   // hover 換圖

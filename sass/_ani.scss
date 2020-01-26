@@ -1,0 +1,87 @@
+/* animation */
+.header__nameZh,
+.header__nameEn,
+.header__title,
+.header__secondTitle,
+.header__linkWrap__linkOnPc,
+.header__wrapper__linkWrap {
+  left: -900px;
+  position: relative;
+  z-index: 999;
+}
+
+h1.headerTxt--Ani {
+  animation: headerTxt--Ani 1.5s forwards;
+}
+
+h3.headerTxt--Ani {
+  animation: headerTxt--Ani 1.5s 0.3s forwards;
+}
+
+h2.headerTxt--Ani {
+  animation: headerTxt--Ani 1.5s 0.6s forwards;
+}
+
+.header__linkWrap__linkOnPc--Ani {
+  animation: headerTxt--Ani 1.5s 0.9s forwards;
+}
+
+.header__wrapper__linkWrap--Ani {
+  animation: headerTxt--Ani 1.5s 1.2s forwards;
+}
+
+.header__navBarOnPc--Ani {
+  animation: header__navBarOnPc--Ani 1s 2s forwards;
+}
+
+.section__title--Ani {
+  animation: section__title--Ani 1s forwards;
+  position: relative;
+}
+
+@keyframes headerTxt--Ani {
+  from {
+    left: -600px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes header__navBarOnPc--Ani {
+  from {
+    top: -80px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes section__title--Ani {
+  from {
+    left: -50px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* sec6 Ani */
+.skillLvl--Ani {
+  animation: skill--Ani 1.5s forwards;
+}
+
+@keyframes skill--Ani {
+  from {
+    width: 0%;
+  }
+}
