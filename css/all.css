@@ -347,9 +347,9 @@ template {
   font-family: "Noto Serif TC";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.eot");
+  src: url("../../fonts/noto-serif-tc-v6-chinese-traditional-regular.eot");
   /* IE9 Compat Modes */
-  src: local("Noto Serif TC"), local("NotoSerifTC-Regular"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.woff2") format("woff2"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.woff") format("woff"), url("../fonts/noto-serif-tc-v6-chinese-traditional-regular.svg#NotoSerifTC") format("svg");
+  src: local("Noto Serif TC"), local("NotoSerifTC-Regular"), url("../../fonts/noto-serif-tc-v6-chinese-traditional-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/noto-serif-tc-v6-chinese-traditional-regular.woff2") format("woff2"), url("../../fonts/noto-serif-tc-v6-chinese-traditional-regular.woff") format("woff"), url("../../fonts/noto-serif-tc-v6-chinese-traditional-regular.svg#NotoSerifTC") format("svg");
   /* Legacy iOS */
 }
 
@@ -358,9 +358,9 @@ template {
   font-family: "Noto Serif TC";
   font-style: normal;
   font-weight: 900;
-  src: url("../fonts/noto-serif-tc-v6-chinese-traditional-900.eot");
+  src: url("../../fonts/noto-serif-tc-v6-chinese-traditional-900.eot");
   /* IE9 Compat Modes */
-  src: local("Noto Serif TC Black"), local("NotoSerifTC-Black"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.woff2") format("woff2"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.woff") format("woff"), url("../fonts/noto-serif-tc-v6-chinese-traditional-900.svg#NotoSerifTC") format("svg");
+  src: local("Noto Serif TC Black"), local("NotoSerifTC-Black"), url("../../fonts/noto-serif-tc-v6-chinese-traditional-900.eot?#iefix") format("embedded-opentype"), url("../../fonts/noto-serif-tc-v6-chinese-traditional-900.woff2") format("woff2"), url("../../fonts/noto-serif-tc-v6-chinese-traditional-900.woff") format("woff"), url("../../fonts/noto-serif-tc-v6-chinese-traditional-900.svg#NotoSerifTC") format("svg");
   /* Legacy iOS */
 }
 
@@ -369,9 +369,9 @@ template {
   font-family: "Noto Serif";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/noto-serif-v8-latin-regular.eot");
+  src: url("../../fonts/noto-serif-v8-latin-regular.eot");
   /* IE9 Compat Modes */
-  src: local("Noto Serif"), local("NotoSerif"), url("../fonts/noto-serif-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-v8-latin-regular.woff2") format("woff2"), url("../fonts/noto-serif-v8-latin-regular.woff") format("woff"), url("../fonts/noto-serif-v8-latin-regular.ttf") format("truetype"), url("../fonts/noto-serif-v8-latin-regular.svg#NotoSerif") format("svg");
+  src: local("Noto Serif"), local("NotoSerif"), url("../../fonts/noto-serif-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/noto-serif-v8-latin-regular.woff2") format("woff2"), url("../../fonts/noto-serif-v8-latin-regular.woff") format("woff"), url("../../fonts/noto-serif-v8-latin-regular.ttf") format("truetype"), url("../../fonts/noto-serif-v8-latin-regular.svg#NotoSerif") format("svg");
   /* Legacy iOS */
 }
 
@@ -380,9 +380,9 @@ template {
   font-family: "Noto Serif";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/noto-serif-v8-latin-700.eot");
+  src: url("../../fonts/noto-serif-v8-latin-700.eot");
   /* IE9 Compat Modes */
-  src: local("Noto Serif Bold"), local("NotoSerif-Bold"), url("../fonts/noto-serif-v8-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-serif-v8-latin-700.woff2") format("woff2"), url("../fonts/noto-serif-v8-latin-700.woff") format("woff"), url("../fonts/noto-serif-v8-latin-700.ttf") format("truetype"), url("../fonts/noto-serif-v8-latin-700.svg#NotoSerif") format("svg");
+  src: local("Noto Serif Bold"), local("NotoSerif-Bold"), url("../../fonts/noto-serif-v8-latin-700.eot?#iefix") format("embedded-opentype"), url("../../fonts/noto-serif-v8-latin-700.woff2") format("woff2"), url("../../fonts/noto-serif-v8-latin-700.woff") format("woff"), url("../../fonts/noto-serif-v8-latin-700.ttf") format("truetype"), url("../../fonts/noto-serif-v8-latin-700.svg#NotoSerif") format("svg");
   /* Legacy iOS */
 }
 
@@ -596,7 +596,7 @@ header {
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left {
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 
 .fa.fa-pull-right,
@@ -604,11 +604,11 @@ header {
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right {
-  margin-left: .3em;
+  margin-left: 0.3em;
 }
 
 .fab {
-  font-family: 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Brands";
 }
 
 .fa-facebook-square:before {
@@ -624,7 +624,7 @@ header {
 }
 
 .far {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 400;
 }
 
@@ -634,7 +634,7 @@ header {
 
 .fa,
 .fas {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
@@ -659,30 +659,30 @@ header {
 }
 
 @font-face {
-  font-family: 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Brands";
   font-style: normal;
   font-weight: normal;
   font-display: auto;
-  src: url("../fontawesome-free-5.11.2-web/webfonts/fa-brands-400.eot");
-  src: url("../fontawesome-free-5.11.2-web/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fontawesome-free-5.11.2-web/webfonts/fa-brands-400.woff") format("woff"), url("../fontawesome-free-5.11.2-web/webfonts/fa-brands-400.ttf") format("truetype"), url("../fontawesome-free-5.11.2-web/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+  src: url("../../fontawesome-free-5.11.2-web/webfonts/fa-brands-400.eot");
+  src: url("../../fontawesome-free-5.11.2-web/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../../fontawesome-free-5.11.2-web/webfonts/fa-brands-400.woff") format("woff"), url("../../fontawesome-free-5.11.2-web/webfonts/fa-brands-400.ttf") format("truetype"), url("../../fontawesome-free-5.11.2-web/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
 
 @font-face {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: url("../fontawesome-free-5.11.2-web/webfonts/fa-regular-400.eot");
-  src: url("../fontawesome-free-5.11.2-web/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fontawesome-free-5.11.2-web/webfonts/fa-regular-400.woff") format("woff"), url("../fontawesome-free-5.11.2-web/webfonts/fa-regular-400.ttf") format("truetype"), url("../fontawesome-free-5.11.2-web/webfonts/fa-regular-400.svg#fontawesome") format("svg");
+  src: url("../../fontawesome-free-5.11.2-web/webfonts/fa-regular-400.eot");
+  src: url("../../fontawesome-free-5.11.2-web/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../../fontawesome-free-5.11.2-web/webfonts/fa-regular-400.woff") format("woff"), url("../../fontawesome-free-5.11.2-web/webfonts/fa-regular-400.ttf") format("truetype"), url("../../fontawesome-free-5.11.2-web/webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 
 @font-face {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-weight: 900;
   font-display: auto;
-  src: url("../fontawesome-free-5.11.2-web/webfonts/fa-solid-900.eot");
-  src: url("../fontawesome-free-5.11.2-web/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fontawesome-free-5.11.2-web/webfonts/fa-solid-900.woff") format("woff"), url("../fontawesome-free-5.11.2-web/webfonts/fa-solid-900.ttf") format("truetype"), url("../fontawesome-free-5.11.2-web/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+  src: url("../../fontawesome-free-5.11.2-web/webfonts/fa-solid-900.eot");
+  src: url("../../fontawesome-free-5.11.2-web/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../../fontawesome-free-5.11.2-web/webfonts/fa-solid-900.woff") format("woff"), url("../../fontawesome-free-5.11.2-web/webfonts/fa-solid-900.ttf") format("truetype"), url("../../fontawesome-free-5.11.2-web/webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
 
 /* background color============================================ */
@@ -759,7 +759,7 @@ header {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(../images/headerBg.jpg);
+  background-image: url(../../images/headerBg.jpg);
   background-position: center 25%;
   background-repeat: no-repeat;
   background-size: cover;
