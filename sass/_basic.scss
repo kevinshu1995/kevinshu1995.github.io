@@ -45,11 +45,21 @@ html {
 .mb8 {
   margin-bottom: 8px;
 }
+.pt16 {
+  padding-top: 16px;
+}
 .mrPc0MoAuto {
   margin-right: auto !important;
   @include desktop {
     margin-right: 0 !important;
   }
+}
+.colorContentTxt {
+  color: $color-contentTxt;
+}
+
+.colorTxtFirstColor {
+  color: $color-black;
 }
 .clearFix {
   overflow: hidden;
@@ -58,7 +68,8 @@ mark {
   color: $color-textMark;
   background-color: transparent;
 }
-//
+
+// layout setting
 .wrapper,
 header {
   font-family: $font-main;
@@ -84,5 +95,18 @@ header {
 .wrapper {
   @include desktop {
     padding: 100px 0;
+  }
+}
+.secID .wrapper,
+.secBrandManul .wrapper,
+.secSocialandDM .wrapper,
+.secPhotos .wrapper,
+.secExp .wrapper,
+.secSkills .wrapper,
+footer {
+  @include desktop {
+    padding-right: 6%;
+    padding-left: 42%;
+    position: relative;
   }
 }

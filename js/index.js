@@ -94,7 +94,7 @@ $(document).ready(function() {
     gridTop = windowHeight * 0.2,
     gridBottom = windowHeight * 0.8;
   $(window).on("scroll", function() {
-    $(".skillLvlEach").each(function() {
+    $(".skillProgress__wrap__skillwrap__progress").each(function() {
       var thisTop = $(this).offset().top - $(window).scrollTop();
       if (thisTop >= gridTop && thisTop + $(this).height() <= gridBottom) {
         $(this).addClass("skillLvl--Ani");
@@ -173,17 +173,12 @@ $(document).ready(function() {
 (function($) {
   "use strict";
   // all parameters are optional
-  smartScroll.init(
-    {
-      speed: 500, // default 500
-      addActive: true, // default true
-      activeClass: "js--header__navBarOnPc--active", // default active
-      offset: 0 // default 100
-    },
-    function() {
-      console.log("callback");
-    }
-  );
+  smartScroll.init({
+    speed: 500, // default 500
+    addActive: true, // default true
+    activeClass: "js--header__navBarOnPc--active", // default active
+    offset: 0 // default 100
+  });
 })(jQuery);
 // img lazy
 document.addEventListener("DOMContentLoaded", function() {

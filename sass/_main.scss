@@ -1,47 +1,4 @@
-.txt-SecBig-Mobile {
-  @include font-size(24);
-  font-weight: 900;
-}
-
-.txt-Content,
-.txt-Content h2,
-.txt-Content h3,
-.txt-Content h4,
-.txt-Content h5,
-.txt-Content h6,
-.tabPortBtn,
-.tabPwithImg,
-.tab p,
-.loader__txt,
-.tab h3 {
-  @include font-size(16);
-  font-weight: normal;
-}
-
-.txt-small,
-.txt-small h2,
-.txt-small h3,
-.txt-small h4,
-.txt-small h5,
-.txt-small h6 {
-  @include font-size(12);
-  font-weight: normal;
-}
-
-nav .wrapper,
-.section__titleWrap__sectitle,
-h1,
-header,
-.secID,
-.secBrandManul,
-.secSocialandDM,
-.secPhotos,
-.secExp,
-.secSkills {
-  position: relative;
-}
-
-/* colorsetting============================================ */
+/* background color============================================ */
 .secID,
 .secBrandManul,
 .secSocialandDM,
@@ -57,24 +14,6 @@ nav {
   background: -webkit-linear-gradient(60deg, #414345, #232526);
   background: linear-gradient(60deg, #414345, #232526);
 }
-
-.secPhotos .section__titleWrap {
-  color: $color-white;
-}
-
-.colorContentTxt {
-  color: $color-contentTxt;
-}
-
-.colorTxtFirstColor {
-  color: $color-black;
-}
-
-/* resetting============================================ */
-/* resetting============================================ */
-/* resetting============================================ */
-/* resetting============================================ */
-/* resetting============================================ */
 
 /*                                      *\
 
@@ -351,7 +290,8 @@ header {
   display: inline-block;
   width: 40%;
   margin: 1em 0.5em;
-  padding: 0.1em 0;
+  padding: 0.3em 0;
+  line-height: 1em;
   // vertical-align: middle;
   background-color: $color-white;
   .header__linkAllDevice__icon {
@@ -379,13 +319,10 @@ header {
 }
 .header__linkAllDevice__icon,
 .header__linkAllDevice__title {
-  @include mobile {
-    // @include font-size(18);
-  }
   display: inline-block;
   font-size: 4vw;
   @include pad {
-    font-size: 1.5vw;
+    font-size: 3vw;
   }
   @include landscape-beyond1024 {
     font-size: 4vh;
@@ -674,6 +611,7 @@ header {
   margin-bottom: 60px;
   position: relative;
   .section__titleWrap__title {
+    line-height: 1.5em;
     margin: 4px 0;
     background: $color-mainGradient;
     -webkit-background-clip: text;
@@ -697,6 +635,7 @@ header {
 }
 // other setting
 .secPhotos {
+  color: $color-white;
   .section__titleWrap__title {
     background: transparent;
     color: $color-white;
@@ -725,13 +664,11 @@ header {
           column 1 on mobile
 
 \*                                      */
-
 .col-3-card {
   width: 70%;
   margin: 0 auto 100px;
   @include pad {
     width: 28%;
-    min-height: 500px;
     float: left;
     margin: 0 2.5%;
   }
@@ -752,7 +689,7 @@ header {
     margin: 18px 0 42px;
   }
   h5 {
-    @include font-size(12);
+    @include font-size(16);
   }
   .col-3-card__titleWrap__thirdtitle {
     text-align: right;
@@ -770,6 +707,7 @@ header {
   }
   .col-3-card__titleWrap__title {
     @include font-size(24);
+    font-weight: 900;
   }
 }
 
@@ -817,13 +755,12 @@ header {
     color: #222;
     padding-top: 0.2em;
     background-color: rgba(54, 139, 196, 0.1);
-    /* border-bottom:1px solid $color-gray; */
+    @include font-size(16);
   }
   p {
     margin-bottom: 1em;
     margin-bottom: 2.5em;
     transition: 0.3s;
-    color: $color-gray;
   }
 }
 
@@ -849,16 +786,18 @@ header {
   &:after {
     height: 0px;
     width: 60px;
-    top: -55px;
-    left: 0;
+    top: -37px;
+    left: 30px;
     position: absolute;
     text-align: right;
-    @include font-size(80);
+    @include font-size(60);
     z-index: 9;
     line-height: 1em;
     color: rgba(51, 51, 51, 0.1);
     font-family: $font-main;
     @include pad {
+      @include font-size(80);
+      top: -55px;
       left: -30px;
     }
   }
@@ -989,6 +928,12 @@ header {
 .skillProgress__wrap {
   display: block;
   margin: 8px 0;
+  @include font-size(16);
+  h5,
+  p {
+    @include font-size(16);
+    font-weight: normal;
+  }
   @include pad {
     overflow: hidden;
     margin-top: 0;
@@ -1129,19 +1074,24 @@ footer {
     width: 80%;
   }
   .tab__firstTtitle {
-    margin: 100px 0 5px;
+    color: $color-gray;
+    margin: 100px 0 0.5em;
     font-weight: 900;
   }
   .tab__secTtitle {
+    display: inline-block;
     margin-bottom: 15px;
     padding: 0 1em;
+    font-weight: normal;
     text-align: left;
-    display: inline-block;
     color: $color-white;
     background: $color-mainGradient;
     @include pad {
       padding: 0.1em 3em;
     }
+  }
+  .tab__describeTtitle {
+    margin-bottom: 36px;
   }
 }
 
@@ -1209,7 +1159,7 @@ footer {
 }
 
 .tab__contentWrap__content {
-  padding: 2em 1em;
+  padding: 1.5em 1em;
   display: none;
   overflow: hidden;
   margin-bottom: 32px;
@@ -1438,63 +1388,5 @@ footer {
     @include desktop {
       width: 350px;
     }
-  }
-}
-
-// 以下未整理
-// 以下未整理
-// 以下未整理
-// 以下未整理
-@media (min-width: 1023px) {
-  /* 字體大小 */
-  .txt-pcTitle,
-  h3.txt-SecBig-Mobile {
-    @include font-size(36);
-    line-height: 1.5em;
-    font-weight: 900;
-  }
-
-  .txt-pcSecTitle {
-    @include font-size(24);
-    line-height: 1.5em;
-    font-weight: normal;
-  }
-
-  .txt-pcSecTitleBold,
-  .col-3-card__titleWrap__title,
-  .tab h3,
-  .loader__txt {
-    @include font-size(24);
-    line-height: 1.5em;
-    font-weight: 900;
-  }
-
-  .txt-pcContent,
-  .txt-small,
-  .txtBox,
-  .txtBox h5,
-  .txt h5,
-  .tab p {
-    @include font-size(16);
-    line-height: 1.5em;
-    font-weight: normal;
-  }
-
-  .txt-pcSmall,
-  .footNote p {
-    @include font-size(12);
-    line-height: 1.5em;
-    font-weight: normal;
-  }
-
-  .secID .wrapper,
-  .secBrandManul .wrapper,
-  .secSocialandDM .wrapper,
-  .secPhotos .wrapper,
-  .secExp .wrapper,
-  .secSkills .wrapper,
-  footer {
-    padding-left: 42%;
-    padding-right: 6%;
   }
 }
