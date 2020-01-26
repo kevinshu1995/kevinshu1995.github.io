@@ -995,9 +995,11 @@ header {
 \*                                      */
 
 footer {
-  height: 80px;
+  // height: 80px;
+  line-height: 1.5em;
   text-align: center;
   padding-top: 16px;
+  padding-bottom: 16px;
   background-color: $color-black;
   color: $color-white;
 }
@@ -1023,7 +1025,7 @@ footer {
     line-height: 0.7em;
     position: absolute;
     right: 0;
-    top: 110px;
+    top: 70px;
     z-index: 0;
     font-family: $font-main;
     font-weight: 700;
@@ -1035,6 +1037,7 @@ footer {
 
   .secID::after {
     content: "INDUSTRIAL DESIGN";
+    line-height: 0.8em;
   }
 
   .secBrandManul::after {

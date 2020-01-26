@@ -562,6 +562,15 @@ header {
   }
 }
 
+.secID,
+.secBrandManul,
+.secSocialandDM,
+.secPhotos,
+.secExp,
+.secSkills {
+  position: relative;
+}
+
 @media (min-width: 1023px) {
   .secID .wrapper,
   .secBrandManul .wrapper,
@@ -1900,9 +1909,10 @@ header .wrapper {
 
 \*                                      */
 footer {
-  height: 80px;
+  line-height: 1.5em;
   text-align: center;
   padding-top: 16px;
+  padding-bottom: 16px;
   background-color: #333;
   color: #fff;
 }
@@ -1927,7 +1937,7 @@ footer {
     line-height: 0.7em;
     position: absolute;
     right: 0;
-    top: 110px;
+    top: 70px;
     z-index: 0;
     font-family: "Noto Serif TC", "微軟正黑體", "Noto Serif", serif;
     font-weight: 700;
@@ -1939,6 +1949,7 @@ footer {
   }
   .secID::after {
     content: "INDUSTRIAL DESIGN";
+    line-height: 0.8em;
   }
   .secBrandManul::after {
     content: "GRAPHIC DESIGN";
