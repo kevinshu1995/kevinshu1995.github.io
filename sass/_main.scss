@@ -490,11 +490,9 @@ header {
 }
 
 .header__mobileNav__socialLinkWrap {
-  position: absolute;
-  left: 15vw;
-  bottom: 25vh;
+  overflow: hidden;
   padding: 0;
-  max-width: 80%;
+  max-width: 100%;
   @include pad {
     bottom: 15vh;
   }
