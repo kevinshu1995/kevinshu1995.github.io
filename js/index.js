@@ -1,5 +1,5 @@
 // js--loader
-document.onreadystatechange = function() {
+document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
     document.querySelector("body").style.visibility = "hidden";
     document.querySelector("body").style.overflow = "hidden";
@@ -11,7 +11,7 @@ document.onreadystatechange = function() {
   }
 };
 var menuSelected = null;
-$(document).ready(function() {
+$(document).ready(function () {
   $(
     "#js--header__nameZh,#js--header__nameEn,#js--header__Title,#js--header__secondTitle"
   ).addClass("headerTxt--Ani");
@@ -27,21 +27,21 @@ $(document).ready(function() {
     autoScale: true,
     titleShow: true,
     titlePosition: "outside",
-    onStart: function() {
+    onStart: function () {
       $("body").toggleClass("js--navScrollDisable");
     },
-    onClosed: function() {
+    onClosed: function () {
       $("body").toggleClass("js--navScrollDisable");
     }
   });
   // nav手機禁止捲動
-  $("#js--header__mobileNav,.js--secimg--fancybox").on("touchmove", function(
+  $("#js--header__mobileNav,.js--secimg--fancybox").on("touchmove", function (
     event
   ) {
     event.preventDefault();
   });
   //  整頁滑動
-  $("#js--header__goTopBtn>a").click(function() {
+  $("#js--header__goTopBtn>a").click(function () {
     if ($(window).width() > 1024) {
       $("#js--header__goTopBtn>a").attr("href", "#js--secBrandManul");
     } else {
@@ -53,7 +53,7 @@ $(document).ready(function() {
   });
   $(
     "#js--header__mobileNav__linkWrap a,#js--header__mobileNav__goTopBtn,#js--header__navBarOnPc a"
-  ).click(function() {
+  ).click(function () {
     //偵測對應前往的section的top距離
     targetTop = $($(this).attr("href")).position().top;
     //控制整頁滑動
@@ -63,7 +63,7 @@ $(document).ready(function() {
     }
   });
   //  手機、PC選單切換
-  $("#js--header__navbarToggleBtn").click(function() {
+  $("#js--header__navbarToggleBtn").click(function () {
     $("#js--header__mobileNav,#js--header__goTopBtn").slideToggle(300);
     $("#js--header__navbarToggleBtn>i").toggleClass("fa-times", "fa-bars");
     $("#js--header__navbarToggleBtn").toggleClass(
@@ -71,7 +71,7 @@ $(document).ready(function() {
     );
     $("body").toggleClass("js--navScrollDisable");
   });
-  $(window).resize(function() {
+  $(window).resize(function () {
     if ($("#js--header__navbarToggleBtn").is(":hidden")) {
       $("#js--header__mobileNav").hide();
     } else {
@@ -93,8 +93,8 @@ $(document).ready(function() {
   var windowHeight = window.innerHeight,
     gridTop = windowHeight * 0.2,
     gridBottom = windowHeight * 0.8;
-  $(window).on("scroll", function() {
-    $(".skillProgress__wrap__skillwrap__progress").each(function() {
+  $(window).on("scroll", function () {
+    $(".skillProgress__wrap__skillwrap__progress").each(function () {
       var thisTop = $(this).offset().top - $(window).scrollTop();
       if (thisTop >= gridTop && thisTop + $(this).height() <= gridBottom) {
         $(this).addClass("skillLvl--Ani");
@@ -104,7 +104,7 @@ $(document).ready(function() {
       .not(
         "#js--secID .js--section__titleWrap h2,#js--secID .js--section__titleWrap,#js--secBrandManul .js--section__titleWrap h2,#js--secBrandManul .js--section__titleWrap"
       )
-      .each(function() {
+      .each(function () {
         var thisTop = $(this).offset().top - $(window).scrollTop();
         if (thisTop >= gridTop && thisTop + $(this).height() <= gridBottom) {
           $(this).addClass("section__title--Ani");
@@ -113,7 +113,7 @@ $(document).ready(function() {
     if ($(window).width() < 1024) {
       $(
         "#js--secID .js--section__titleWrap h2,#js--secID .js--section__titleWrap,#js--secBrandManul .js--section__titleWrap h2,#js--secBrandManul .js--section__titleWrap"
-      ).each(function() {
+      ).each(function () {
         var thisTop = $(this).offset().top - $(window).scrollTop();
         if (thisTop >= gridTop && thisTop + $(this).height() <= gridBottom) {
           $(this).addClass("section__title--Ani");
@@ -127,7 +127,7 @@ $(document).ready(function() {
   });
   $(window).trigger("scroll");
   // tab
-  $(".js--tab__btnWrap__btn").click(function() {
+  $(".js--tab__btnWrap__btn").click(function () {
     if ($(this).not(".js--tab__btnActive")) {
       var btnIndex = $(this).index();
       var tabContent = $(this)
@@ -147,7 +147,7 @@ $(document).ready(function() {
   });
   // hover 換圖
   $(".js--wrapper__imgwrap__wrap img").hover(
-    function() {
+    function () {
       var imgIndex =
         $(this)
           .parents(".js--wrapper__imgwrap__wrap")
@@ -157,7 +157,7 @@ $(document).ready(function() {
         "images/indexPhoto/indexPhoto500/indexPhoto500-" + imgIndex + ".jpg"
       );
     },
-    function() {
+    function () {
       var imgIndex =
         $(this)
           .parents(".js--wrapper__imgwrap__wrap")
@@ -170,7 +170,7 @@ $(document).ready(function() {
   );
 });
 //scrollspy
-(function($) {
+(function ($) {
   "use strict";
   // all parameters are optional
   smartScroll.init({
@@ -181,16 +181,16 @@ $(document).ready(function() {
   });
 })(jQuery);
 // img lazy
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var lazyloadImages = document.querySelectorAll("img.lazy");
   var lazyloadThrottleTimeout;
   function lazyload() {
     if (lazyloadThrottleTimeout) {
       clearTimeout(lazyloadThrottleTimeout);
     }
-    lazyloadThrottleTimeout = setTimeout(function() {
+    lazyloadThrottleTimeout = setTimeout(function () {
       var scrollTop = window.pageYOffset;
-      lazyloadImages.forEach(function(img) {
+      lazyloadImages.forEach(function (img) {
         if (img.offsetTop < window.innerHeight + scrollTop) {
           img.src = img.dataset.src;
           img.classList.remove("lazy");
