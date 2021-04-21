@@ -22,7 +22,7 @@ export default {
 			},
 			{
 				property: 'og:title',
-				content: 'Test title',
+				content: 'Home',
 				// following template options are identical
 				// template: '%s - My page',
 				template: (chunk) => `${chunk} - Kevin Hsu`,
