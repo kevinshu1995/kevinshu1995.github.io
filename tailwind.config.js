@@ -26,7 +26,14 @@ module.exports = {
 			black: colors.black,
 			white: colors.white,
 		},
-		extend: {},
+		extend: {
+			spacing: {
+				4.5: '1.125rem',
+			},
+			zIndex: {
+				'-1': '-1',
+			},
+		},
 	},
 	variants: {
 		extend: {},

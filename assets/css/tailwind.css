@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	body {
+		@apply text-gray-800 relative;
+		font-family: 'Noto Sans TC', sans-serif;
+	}
+	body::after {
+		@apply absolute -z-1 left-0 top-0 bg-white opacity-5 w-full h-full;
+		content: '';
+		background-image: linear-gradient(#4c7379 1px, transparent 1px),
+			linear-gradient(to right, #4c7379 1px, #ffffff 1px);
+		background-size: 40px 40px;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold;
+	}
+	h1 {
+		@apply text-4xl;
+	}
+	h2 {
+		@apply text-3xl;
+	}
+	h3 {
+		@apply text-2xl;
+	}
+	h4 {
+		@apply text-xl;
+	}
+	h5 {
+		@apply text-lg;
+	}
+	h6 {
+		@apply text-base;
+	}
+	p {
+		@apply text-base;
+	}
+	a {
+		@apply text-primaryYellow;
+	}
+	.icoMoon {
+		@apply inline-block w-4 h-4;
+		stroke-width: 0;
+		stroke: currentColor;
+		fill: currentColor;
+	}
+}

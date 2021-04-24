@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 export default {
 	// Target: https://go.nuxtjs.dev/config-target
 	target: 'static',
@@ -51,14 +52,28 @@ export default {
 				vmid: 'og:type',
 			},
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+		link: [
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+			{ rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+			{
+				rel: 'stylesheet',
+				href:
+					'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;900&display=swap',
+			},
+		],
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	css: [],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-	plugins: [],
+	plugins: [
+		'~/plugins/lodash.js',
+		{
+			src: '~/plugins/locomotiveScroll.js',
+			mode: 'client',
+		},
+	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
 	components: true,
@@ -84,6 +99,10 @@ export default {
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {},
+
+	alias: {
+		images: resolve(__dirname, './static/images'),
+	},
 
 	googleAnalytics: {
 		id: 'UA-154890967-1',
