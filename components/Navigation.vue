@@ -1,7 +1,7 @@
 <template>
 	<nav
 		id="header"
-		class="fixed w-full z-30 top-0 backdrop-filter backdrop-blur-xl backdrop-grayscale shadow-lg"
+		class="fixed w-full z-30 top-0 bg-white bg-opacity-80 backdrop-filter backdrop-blur shadow-lg"
 	>
 		<div
 			class="relative z-10 w-full flex flex-wrap items-center justify-between"
@@ -35,7 +35,7 @@
 					for="menu-toggle"
 					class="text-gray-700 hover:text-gray-900 hover:bg-gray-100 cursor-pointer block md:hidden p-4"
 				>
-					<iconBurger />
+					<menu2Icon />
 				</label>
 				<input
 					id="menu-toggle"
@@ -61,8 +61,7 @@
 								:link-type="links.linkType"
 								:content="links.textContent"
 								:title="links.title"
-							>
-							</navLink>
+							/>
 						</li>
 					</ul>
 				</nav>
@@ -72,6 +71,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
 	data() {
 		return {
@@ -105,41 +105,70 @@ export default {
 					},
 				},
 			],
-			socialLinks: [
-				{
-					href: '#',
-					title: '前往 - 我的 Github',
-					target: true,
-					linkType: 'icon',
-					icon: 'iconGithub',
-					iconClassAry: ['w-4.5', 'h-4.5'],
-				},
-				{
-					href: '#',
-					title: '前往 - 我的 Blog',
-					target: true,
-					linkType: 'icon',
-					icon: 'iconRss',
-					iconClassAry: ['w-5', 'w-5'],
-				},
-				{
-					href: '#',
-					title: '聯繫我',
-					target: true,
-					linkType: 'icon',
-					icon: 'iconMail',
-					iconClassAry: ['w-5', 'w-5'],
-				},
-			],
+			// socialLinks: [
+			// 	{
+			// 		href: '#',
+			// 		title: '前往 - 我的 Github',
+			// 		target: true,
+			// 		linkType: 'icon',
+			// 		icon: 'brandGithubIcon',
+			// 		iconClassAry: ['w-5', 'h-5'],
+			// 	},
+			// 	{
+			// 		href: '#',
+			// 		title: '前往 - 我的 Blog',
+			// 		target: true,
+			// 		linkType: 'icon',
+			// 		icon: 'rssIcon',
+			// 		iconClassAry: ['w-5', 'w-5'],
+			// 	},
+			// 	{
+			// 		href: '#',
+			// 		title: '聯繫我',
+			// 		target: true,
+			// 		linkType: 'icon',
+			// 		icon: 'mailOpenedIcon',
+			// 		iconClassAry: ['w-5', 'w-5'],
+			// 	},
+			// ],
 		}
 	},
 
 	computed: {
+		...mapGetters(['links/getLink']),
 		navMobileClass() {
 			const result = this.isShowNav
 				? ['hidden', 'md:block']
 				: ['w-full', 'h-full']
 			return result.join(' ')
+		},
+		socialLinks() {
+			return [
+				{
+					href: this['links/getLink']('github', 'href'),
+					title: '前往 - 我的 Github',
+					target: true,
+					linkType: 'icon',
+					icon: this['links/getLink']('github', 'icon'),
+					iconClassAry: ['w-5', 'h-5'],
+				},
+				{
+					href: this['links/getLink']('blog', 'href'),
+					title: '前往 - 我的 Blog',
+					target: true,
+					linkType: 'icon',
+					icon: this['links/getLink']('blog', 'icon'),
+					iconClassAry: ['w-5', 'w-5'],
+				},
+				{
+					href: this['links/getLink']('mail', 'href'),
+					title: '聯繫我',
+					target: true,
+					linkType: 'icon',
+					icon: this['links/getLink']('mail', 'icon'),
+					iconClassAry: ['w-5', 'w-5'],
+				},
+			]
 		},
 	},
 

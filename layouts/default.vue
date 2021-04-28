@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Navigation />
-		<div ref="scrollBody">
+		<div ref="scrollBody" class="relative z-0">
 			<section data-scroll-section>
 				<Nuxt />
 			</section>

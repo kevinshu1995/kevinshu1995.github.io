@@ -70,6 +70,9 @@ export default {
 	plugins: [
 		'~/plugins/lodash.js',
 		{
+			src: '~/plugins/vue-tabler-icons.js',
+		},
+		{
 			src: '~/plugins/locomotiveScroll.js',
 			mode: 'client',
 		},
@@ -98,7 +101,9 @@ export default {
 	axios: {},
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
-	build: {},
+	build: {
+		transpile: ['vue-tabler-icons'],
+	},
 
 	alias: {
 		images: resolve(__dirname, './static/images'),

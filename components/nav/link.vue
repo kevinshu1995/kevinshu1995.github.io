@@ -16,12 +16,7 @@
 			</span>
 		</template>
 		<template v-if="linkType === 'icon' && icon">
-			<span class="inline-block font-medium text-base">
-				<!-- * 就是要你用 svg (XD -->
-				<span :class="iconClass">
-					<span :is="icon"></span>
-				</span>
-			</span>
+			<svg :is="icon" :icon-class-ary="iconClassAry" />
 		</template>
 		<template v-if="linkType === 'head'">
 			<slot />
@@ -32,6 +27,12 @@
 <script>
 export default {
 	props: {
+		aTagClass: {
+			type: Array,
+			default() {
+				return []
+			},
+		},
 		title: {
 			type: String,
 			required: true,
@@ -74,46 +75,49 @@ export default {
 
 	computed: {
 		linkClass() {
-			const defaultClass = [
-				'inline-block',
-				'no-underline',
-				'text-lg',
-				'h-full',
-				'flex',
-				'items-center',
-				'p-4',
-				'transition-all',
-			]
-			switch (this.linkType) {
-				case 'normal':
-					return [
-						...defaultClass,
-						'font-light',
-						'text-gray-700',
-						'hover:bg-gray-100',
-					].join(' ')
-				case 'icon':
-					return [
-						...defaultClass,
-						'font-light',
-						'text-gray-500',
-						'hover:text-primaryBlue',
-					].join(' ')
-				case 'head':
-					return [
-						...defaultClass,
-						'font-bold',
-						'text-primaryBlue',
-						'hover:bg-gray-100',
-					].join(' ')
+			if (this.aTagClass.length > 0) return this.aTagClass
+			else {
+				const defaultClass = [
+					'inline-block',
+					'no-underline',
+					'text-lg',
+					'h-full',
+					'flex',
+					'items-center',
+					'p-4',
+					'transition-all',
+				]
+				switch (this.linkType) {
+					case 'normal':
+						return [
+							...defaultClass,
+							'font-light',
+							'text-gray-700',
+							'hover:bg-gray-100',
+						].join(' ')
+					case 'icon':
+						return [
+							...defaultClass,
+							'font-light',
+							'text-gray-500',
+							'hover:text-primaryBlue',
+						].join(' ')
+					case 'head':
+						return [
+							...defaultClass,
+							'font-bold',
+							'text-primaryBlue',
+							'hover:bg-gray-100',
+						].join(' ')
+				}
+				return ''
 			}
-			return ''
 		},
-		iconClass() {
-			const defaultClass = ['inline-block', 'flex', 'items-center']
-			const result = [...defaultClass, ...this.iconClassAry].join(' ')
-			return result
-		},
+		// iconClass() {
+		// 	const defaultClass = ['inline-block', 'flex', 'items-center']
+		// 	const result = [...defaultClass, ...this.iconClassAry].join(' ')
+		// 	return result
+		// },
 		linkTarget() {
 			return this.target ? '_blank' : ''
 		},

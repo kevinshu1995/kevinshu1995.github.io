@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply text-gray-800 relative;
+		@apply text-dark relative;
 		font-family: 'Noto Sans TC', sans-serif;
 	}
 	body::after {

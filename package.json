@@ -20,7 +20,8 @@
     "core-js": "^3.9.1",
     "locomotive-scroll": "^4.1.1",
     "nuxt": "^2.15.3",
-    "vue-lodash": "^2.1.2"
+    "vue-lodash": "^2.1.2",
+    "vue-tabler-icons": "^1.10.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",

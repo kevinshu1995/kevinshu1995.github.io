@@ -1,5 +1,5 @@
 -   Modal ? => Headless - https://headlessui.dev/vue/dialog
 -   locomotiveScroll => https://github.com/locomotivemtl/locomotive-scroll
 -   gsap =>
--   icon => https://heroicons.com/
+-   icon => https://tabler-icons.io/
 -   lodash
