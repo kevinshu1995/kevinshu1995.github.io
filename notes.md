@@ -3,3 +3,7 @@
 -   gsap =>
 -   icon => https://tabler-icons.io/
 -   lodash
+
+TODO
+
+-   [ ] CI/CD (github page)
