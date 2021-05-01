@@ -3,13 +3,13 @@
 		<!-- landing -->
 		<pageIndexLanding />
 		<div class="container">
-			<div class="row">
+			<div class="row space-y-20 sm:space-y-0">
 				<!-- my photo -->
-				<div class="col w-3/12">
+				<div class="col hidden sm:block sm:w-3/12 px-0 lg:px-8">
 					<img src="~images/me-2.jpg" alt="" />
 				</div>
 				<!-- Content -->
-				<div class="col w-9/12 space-y-20">
+				<div class="col w-full sm:w-9/12 space-y-20">
 					<div class="row space-y-20 lg:space-y-0">
 						<div class="col w-full lg:w-6/12">
 							<Card title-zh="關於我" title-en="About me">
@@ -120,7 +120,9 @@
 								title-zh="工作經歷"
 								title-en="Work Experience"
 							>
-								<ul class="list-connect-noDot space-y-6">
+								<ul
+									class="list-connect-noDot space-y-7 lg:space-y-6"
+								>
 									<li
 										v-for="(
 											experience, index
@@ -141,18 +143,18 @@
 											></div>
 										</div>
 										<p
-											class="whitespace-nowrap col-start-2 col-span-2 row-start-1 font-medium"
+											class="whitespace-nowrap col-start-2 col-span-2 row-start-1 font-medium mb-1 lg:mb-0"
 											:class="
 												index !== 0
-													? 'text-gray-400 group-hover:text-dark transition-all'
-													: ''
+													? 'text-gray-400 group-hover:text-gray-500 transition-all'
+													: 'text-gray-400'
 											"
 										>
 											{{ experience.time.start }} -
 											{{ experience.time.end }}
 										</p>
 										<div
-											class="flex flex-col col-start-4 col-end-13 row-start-1 ml-9 md:ml-0"
+											class="flex flex-col col-start-2 lg:col-start-4 col-end-13 row-start-2 lg:row-start-1"
 											:class="
 												index !== 0
 													? 'text-gray-400 group-hover:text-dark transition-all'
@@ -201,6 +203,16 @@
 								</ul>
 							</Card>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col w-full">
+					<div class="flex flex-col">
+						<h2>Web</h2>
+						<h3>網頁作品</h3>
 					</div>
 				</div>
 			</div>
