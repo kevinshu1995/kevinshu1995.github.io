@@ -11,7 +11,7 @@ export default {
 	props: {
 		icon: {
 			type: String,
-			default: 'iconRss',
+			default: 'rssIcon',
 		},
 		iconClassAry: {
 			type: Array,

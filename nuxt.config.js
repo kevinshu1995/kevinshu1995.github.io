@@ -58,17 +58,21 @@ export default {
 			{
 				rel: 'stylesheet',
 				href:
-					'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;900&display=swap',
+					'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&display=swap',
 			},
 		],
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
-	css: [],
+	css: [{ src: 'swiper/swiper-bundle.css' }],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
 		'~/plugins/lodash.js',
+		{ src: '~/plugins/swiper.js', mode: 'client' },
+		{
+			src: '~/plugins/dayjs.js',
+		},
 		{
 			src: '~/plugins/vue-tabler-icons.js',
 		},

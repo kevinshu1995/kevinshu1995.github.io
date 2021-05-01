@@ -1,100 +1,18 @@
 <template>
 	<div>
 		<!-- landing -->
-		<div
-			class="h-screen grid grid-flow-col grid-cols-12 grid-rows-9 select-none relative"
-		>
-			<div class="absolute left-0 top-0 w-full h-full">
-				<div
-					class="grid grid-flow-col grid-cols-12 grid-rows-9 h-full relative"
-				>
-					<div
-						class="row-start-2 md:row-start-2 row-end-9 md:row-end-9 col-start-1 md:col-start-1 col-end-13 md:col-end-6 lg:col-end-6 xl:col-end-5 flex items-end justify-end z-10"
-					>
-						<div class="h-full md:h-5/6">
-							<img
-								class="h-full w-auto object-cover object-right"
-								src="~images/me.png"
-								alt="Kevin's Picture"
-							/>
-						</div>
-					</div>
-					<div
-						class="row-start-5 row-end-9 col-start-1 col-end-13 relative z-20"
-					>
-						<div
-							class="absolute z-20 left-0 bottom-0 w-full h-full bg-gradient-to-b from-transparent to-primaryBlue bg-opacity-70 md:hidden"
-						></div>
-					</div>
-					<div
-						class="row-start-1 row-end-9 col-start-2 md:col-start-6 lg:col-start-6 xl:col-start-5 col-end-13 flex flex-col items-start justify-end text-white filter drop-shadow space-y-2 md:space-y-4 pl-3 pb-5 z-30"
-					>
-						<h1
-							class="font-black flex flex-col text-8xl xs:text-9xl sm:text-9xl md:text-11xl lg:text-15xl xl:text-18xl 2xl:text-19xl leading-none -ml-1 sm:-ml-2 md:-ml-2.5 lg:-ml-4 xl:-ml-5"
-						>
-							<span
-								class="transform translate-y-3 md:translate-y-5 lg:translate-y-10"
-								>Kevin</span
-							>
-							<span>Hsu</span>
-						</h1>
-						<h2 class="space-x-2">
-							<span class="text-2xl md:text-3xl font-medium"
-								>許文修</span
-							>
-							<span class="text-lg md:text-xl font-thin"
-								>Wen-Shiu Hsu</span
-							>
-						</h2>
-						<p
-							class="font-thin md:text-lg pr-3"
-							style="max-width: 480px"
-						>
-							我是許文修，目前是一名網頁設計師，目前致力研究前端技術，也曾經是平面設計師，畢業於東海大學工業設計學系。
-						</p>
-						<div class="-mx-2">
-							<div class="flex items-center space-x-3">
-								<template v-for="link in landing.socialLinks">
-									<navLink
-										:key="`social-${link.icon}`"
-										:a-tag-class="landing.socialLinkClass"
-										:href="link.href"
-										:link-type="link.linkType"
-										:icon="link.icon"
-										:icon-class-ary="link.linkClassAry"
-										:title="link.title"
-									/>
-								</template>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div
-				class="row-start-1 row-end-9 col-start-1 md:col-end-4 bg-primaryYellow"
-			></div>
-			<div
-				class="row-start-1 row-end-9 col-start-1 md:col-start-4 col-end-13 bg-gradient-to-r to-primaryBlue from-primaryBlue-dark"
-			></div>
-			<!-- <div
-				class="row-start-9 row-end-10 col-start-1 col-end-11 md:col-end-10 bg-gradient-to-r from-primaryYellow to-transparent"
-			></div> -->
-		</div>
+		<pageIndexLanding />
 		<div class="container">
-			<div class="flex -mx-2">
+			<div class="row">
 				<!-- my photo -->
-				<div class="px-2 w-3/12"></div>
+				<div class="col w-3/12">
+					<img src="~images/me-2.jpg" alt="" />
+				</div>
 				<!-- Content -->
-				<div class="px-2 w-9/12">
-					<div class="flex -mx-2">
-						<div class="px-2 w-full lg:w-6/12 space-y-4">
-							<div
-								class="flex items-end space-x-3 text-primaryBlue"
-							>
-								<h3>About me</h3>
-								<p>關於我</p>
-							</div>
-							<div class="flex flex-col space-y-4">
+				<div class="col w-9/12 space-y-20">
+					<div class="row space-y-20 lg:space-y-0">
+						<div class="col w-full lg:w-6/12">
+							<Card title-zh="關於我" title-en="About me">
 								<p>
 									設計系背景，對於美感與使用者體驗有些涉獵。目前著重於研究前端領域，曾參與品牌形象官網、網站後台建置、教師課程管理平台、企業管理平台、計分程式...等的專案開發與頁面設計。
 								</p>
@@ -114,6 +32,7 @@
 										:key="`about-socialLink-${index}`"
 										class="flex items-center space-x-3 hover:text-primaryBlue"
 										:href="link.href"
+										target="_blank"
 									>
 										<iconWrap
 											:icon="link.icon"
@@ -128,7 +47,159 @@
 										}}</span>
 									</a>
 								</template>
-							</div>
+							</Card>
+						</div>
+						<div class="col w-full lg:w-6/12">
+							<Card title-zh="部落格" title-en="Blog">
+								<pageIndexBlogPosts />
+							</Card>
+						</div>
+					</div>
+					<div class="row space-y-20 lg:space-y-0">
+						<div class="col w-full lg:w-6/12">
+							<Card title-zh="技能" title-en="Skills">
+								<ul class="list-connect space-y-4">
+									<li
+										v-for="(skill, index) in skills"
+										:key="`skill-${index}`"
+										class="whitespace-nowrap"
+									>
+										<div
+											class="inline-flex flex-col whitespace-normal"
+										>
+											<h4 class="text-lg font-medium">
+												{{ skill.title }}
+											</h4>
+											<TextsList
+												class="text-base"
+												:text-ary="skill.list"
+											/>
+										</div>
+									</li>
+								</ul>
+							</Card>
+						</div>
+						<div class="col w-full lg:w-6/12">
+							<Card title-zh="特別經歷" title-en="Highlight">
+								<ul class="list-connect space-y-4">
+									<li
+										v-for="(event, index) in highlight"
+										:key="`skill-${index}`"
+										class="whitespace-nowrap"
+									>
+										<a
+											:href="event.href"
+											target="_blank"
+											class="inline-flex items-center space-x-4 whitespace-normal text-current"
+										>
+											<h4
+												class="text-lg font-medium inline"
+											>
+												{{ event.title }}
+											</h4>
+											<Badge
+												v-if="event.status"
+												:content="event.status"
+												:custom-classes="[
+													'px-2.5',
+													'font-normal',
+													'text-sm',
+													'tracking-wider',
+													'rounded-full',
+												]"
+											/>
+										</a>
+									</li>
+								</ul>
+							</Card>
+						</div>
+					</div>
+					<div class="row space-y-20 lg:space-y-0">
+						<div class="col w-full">
+							<Card
+								title-zh="工作經歷"
+								title-en="Work Experience"
+							>
+								<ul class="list-connect-noDot space-y-6">
+									<li
+										v-for="(
+											experience, index
+										) in experiences"
+										:key="`experience-${index}`"
+										class="grid grid-cols-12 items-start relative group"
+									>
+										<div
+											class="dot col-start-1 col-span-1 row-start-1 row-span-2"
+										>
+											<div
+												class="w-6 h-6 bg-white border-4 rounded-full transition-all"
+												:class="
+													index === 0
+														? 'border-primaryYellow-500'
+														: 'border-gray-400 group-hover:border-primaryYellow-300'
+												"
+											></div>
+										</div>
+										<p
+											class="whitespace-nowrap col-start-2 col-span-2 row-start-1 font-medium"
+											:class="
+												index !== 0
+													? 'text-gray-400 group-hover:text-dark transition-all'
+													: ''
+											"
+										>
+											{{ experience.time.start }} -
+											{{ experience.time.end }}
+										</p>
+										<div
+											class="flex flex-col col-start-4 col-end-13 row-start-1 ml-9 md:ml-0"
+											:class="
+												index !== 0
+													? 'text-gray-400 group-hover:text-dark transition-all'
+													: ''
+											"
+										>
+											<h4
+												class="whitespace-nowrap text-lg"
+											>
+												{{ experience.jobTitle }}
+												{{ experience.company }}
+											</h4>
+											<template
+												v-for="(
+													content, descriptionIndex
+												) in experience.description"
+											>
+												<p
+													v-if="
+														typeof content ===
+														'string'
+													"
+													:key="`experience-paraphrase-${descriptionIndex}`"
+												>
+													{{ content }}
+												</p>
+												<ol
+													v-if="
+														typeof content ===
+														'array'
+													"
+													:key="`experience-paraphrase-${descriptionIndex}`"
+												>
+													<li
+														v-for="(
+															list, listIndex
+														) in content"
+														:key="`experience-list-${listIndex}`"
+													>
+														{{ list }}
+													</li>
+												</ol>
+											</template>
+										</div>
+									</li>
+								</ul>
+							</Card>
 						</div>
 					</div>
 				</div>
@@ -141,69 +212,11 @@
 <script>
 export default {
 	name: 'Index',
-	asyncData({ app, params, store }) {
+
+	asyncData({ store }) {
 		const getLinkValue = (name, key) =>
 			store.getters['links/getLink'](name, key)
 		return {
-			landing: {
-				socialLinkClass: [
-					'inline-block',
-					'no-underline',
-					'text-lg',
-					'h-full',
-					'flex',
-					'items-center',
-					'p-2',
-					'transition-all',
-				],
-				socialLinks: [
-					{
-						href: getLinkValue('github', 'href'),
-						title: '前往 - 我的 Github',
-						target: true,
-						linkType: 'icon',
-						icon: getLinkValue('github', 'icon'),
-						linkClassAry: [
-							'text-white',
-							'hover:text-primaryYellow',
-							'w-6',
-							'h-6',
-							'md:w-7',
-							'md:h-7',
-						],
-					},
-					{
-						href: getLinkValue('mail', 'href'),
-						title: '聯繫我',
-						target: true,
-						linkType: 'icon',
-						icon: getLinkValue('mail', 'icon'),
-						linkClassAry: [
-							'text-white',
-							'hover:text-primaryYellow',
-							'w-6',
-							'h-6',
-							'md:w-7',
-							'md:h-7',
-						],
-					},
-					{
-						href: getLinkValue('blog', 'href'),
-						title: '前往 - 我的 Blog',
-						target: true,
-						linkType: 'icon',
-						icon: getLinkValue('blog', 'icon'),
-						linkClassAry: [
-							'text-white',
-							'hover:text-primaryYellow',
-							'w-6',
-							'h-6',
-							'md:w-7',
-							'md:h-7',
-						],
-					},
-				],
-			},
 			about: {
 				socialLinkClass: [
 					'inline-block',
@@ -223,8 +236,8 @@ export default {
 						linkType: 'icon',
 						icon: getLinkValue('mail', 'icon'),
 						linkClassAry: [
-							'text-primaryYellow',
-							'hover:text-primaryYellow',
+							'text-primaryYellow-500',
+							'hover:text-primaryYellow-500',
 							'w-5',
 							'h-5',
 							'md:w-6',
@@ -238,8 +251,8 @@ export default {
 						linkType: 'icon',
 						icon: getLinkValue('github', 'icon'),
 						linkClassAry: [
-							'text-primaryYellow',
-							'hover:text-primaryYellow',
+							'text-primaryYellow-500',
+							'hover:text-primaryYellow-500',
 							'w-5',
 							'h-5',
 							'md:w-6',
@@ -253,8 +266,8 @@ export default {
 						linkType: 'icon',
 						icon: getLinkValue('linkedin', 'icon'),
 						linkClassAry: [
-							'text-primaryYellow',
-							'hover:text-primaryYellow',
+							'text-primaryYellow-500',
+							'hover:text-primaryYellow-500',
 							'w-5',
 							'h-5',
 							'md:w-6',
@@ -263,13 +276,106 @@ export default {
 					},
 				],
 			},
+			skills: [
+				{
+					title: '網頁前端',
+					list: [
+						'HTML',
+						'Pug',
+						'CSS',
+						'SCSS',
+						'Javascript',
+						'Bootstrap4',
+						'Tailwindcss',
+						'Bulma',
+						'Vue.js',
+						'Vuex',
+						'Vue Router',
+						'Gulp',
+						'Webpack',
+						'Webpack',
+						'Git',
+						'Git flow',
+					],
+				},
+				{
+					title: '多媒體設計',
+					list: ['Photoshop', 'illustrator', 'Adobe XD', 'Figma'],
+				},
+			],
+			highlight: [
+				{
+					title: 'Material Design 文件協同翻譯',
+					href: 'https://material-design.hexschool.io/',
+					status: '',
+				},
+				{
+					title: 'Tailwindcss.tw 文件協同翻譯',
+					href: '#',
+					status: '進行中',
+				},
+			],
+			experiences: [
+				{
+					time: {
+						start: '2020',
+						end: 'current',
+					},
+					company: '佳音事業股份有限公司',
+					jobTitle: '網頁設計',
+					description: [
+						'前端切版動畫效果、UI/UX 設計與優化、API串接、Git 協作 / Git flow，專案包含活動網頁製作、後台CMS撰寫、網站維護，部分專案使用 Vue.js 框架開發。',
+					],
+				},
+				{
+					time: {
+						start: '2019',
+						end: '2019',
+					},
+					company: '原聚股份有限公司',
+					jobTitle: '平面設計',
+					description: [
+						'工作內容包含平面與行銷。',
+						[
+							'平面主要執行品牌手冊、店面視覺設定、廣宣，其中包含設計與發包。',
+							'行銷面協助店面行銷活動、網路行銷，包含 Facebook, Instagram, line@, 官方網站...等的管理與維護。',
+							'加盟展擔任公司春季加盟展時主要的對外窗口，處理參展設備、流程、視覺、活動等。',
+						],
+					],
+				},
+				{
+					time: {
+						start: '2016',
+						end: '2017',
+					},
+					company: '原聚股份有限公司',
+					jobTitle: '平面設計',
+					description: [
+						'擔任一年正職設計，使用 Illustrator、Photoshop 製作商品開版圖、商品外觀平面設計。公司商品以布類家飾產品為主，理解工廠製作的限制的同時兼顧視覺效果來製作圖面。後因受主管青睞，與資深業務外派至明尼蘇達州兩周，協助業務開會與市場調查，也藉此見識美式風格與文化薰陶，進而了解商品設計師背後蘊含的深厚文化背景。',
+					],
+				},
+			],
 		}
 	},
 
 	data() {
 		return {
-			landing: {},
-			about: {},
+			about: {
+				socialLinkClass: [
+					'inline-block',
+					'no-underline',
+					'text-lg',
+					'h-full',
+					'flex',
+					'items-center',
+					'p-2',
+					'transition-all',
+				],
+				socialLinks: [],
+			},
+			skills: [],
+			highlight: [],
+			experiences: [],
 		}
 	},
 
@@ -278,5 +384,7 @@ export default {
 			return this.$store.state.links.socialLinks
 		},
 	},
+
+	methods: {},
 }
 </script>

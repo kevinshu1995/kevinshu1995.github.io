@@ -27,6 +27,7 @@
 								:icon="links.icon"
 								:icon-class-ary="links.iconClassAry"
 								:title="links.title"
+								:target="links.target"
 							/>
 						</li>
 					</ul>
@@ -105,32 +106,6 @@ export default {
 					},
 				},
 			],
-			// socialLinks: [
-			// 	{
-			// 		href: '#',
-			// 		title: '前往 - 我的 Github',
-			// 		target: true,
-			// 		linkType: 'icon',
-			// 		icon: 'brandGithubIcon',
-			// 		iconClassAry: ['w-5', 'h-5'],
-			// 	},
-			// 	{
-			// 		href: '#',
-			// 		title: '前往 - 我的 Blog',
-			// 		target: true,
-			// 		linkType: 'icon',
-			// 		icon: 'rssIcon',
-			// 		iconClassAry: ['w-5', 'w-5'],
-			// 	},
-			// 	{
-			// 		href: '#',
-			// 		title: '聯繫我',
-			// 		target: true,
-			// 		linkType: 'icon',
-			// 		icon: 'mailOpenedIcon',
-			// 		iconClassAry: ['w-5', 'w-5'],
-			// 	},
-			// ],
 		}
 	},
 

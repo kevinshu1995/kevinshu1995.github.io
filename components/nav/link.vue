@@ -60,7 +60,7 @@ export default {
 		},
 		icon: {
 			type: String,
-			default: 'iconRss',
+			default: 'rssIcon',
 		},
 		iconClassAry: {
 			type: Array,

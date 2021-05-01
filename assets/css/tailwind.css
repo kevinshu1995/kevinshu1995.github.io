@@ -44,12 +44,58 @@
 		@apply text-base;
 	}
 	a {
-		@apply text-primaryYellow;
+		@apply text-primaryYellow-500;
 	}
-	.icoMoon {
-		@apply inline-block w-4 h-4;
-		stroke-width: 0;
-		stroke: currentColor;
-		fill: currentColor;
+	.container {
+		@apply px-8;
+	}
+	.row {
+		@apply flex flex-wrap -mx-8;
+	}
+	.col {
+		@apply px-8;
+	}
+}
+
+@layer utilities {
+	.custom-hoverGroup:hover .custom-hoverGroup\:hidden {
+		@apply hidden;
+	}
+
+	/* list-connect */
+	.list-connect-noDot {
+		@apply relative;
+	}
+	.list-connect {
+		@apply list-disc list-inside relative;
+	}
+
+	.list-connect li::marker {
+		@apply text-primaryYellow-500;
+	}
+
+	.list-connect-noDot::before,
+	.list-connect::before {
+		@apply absolute left-0.5 top-0 w-0.5 bg-primaryYellow-500;
+		content: '';
+		height: calc(100% - 2em);
+		margin-top: 1em;
+	}
+	.list-connect-noDot::after,
+	.list-connect::after {
+		@apply absolute left-0.5 bottom-0 w-0.5 bg-gradient-to-b from-primaryYellow-500 to-transparent;
+		content: '';
+		height: 1em;
+	}
+	.list-connect-noDot::before {
+		@apply bg-gray-200;
+	}
+	.list-connect-noDot::after {
+		@apply from-gray-200;
+	}
+	.list-connect-noDot::before,
+	.list-connect-noDot::after {
+		@apply -z-1;
+		left: 0.7rem;
 	}
 }
