@@ -1,8 +1,8 @@
 <template>
-	<div class="space-y-52 overflow-x-hidden" data-v-sticky-container>
+	<div class="space-y-0 overflow-x-hidden" data-v-sticky-container>
 		<!-- landing -->
 		<pageIndexLanding />
-		<div id="about" class="container">
+		<div id="about" class="container pt-24">
 			<div class="row space-y-20 sm:space-y-0">
 				<!-- my photo -->
 				<div class="col hidden sm:block sm:w-3/12 px-0 lg:px-8">
@@ -224,7 +224,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="photography" class="pt-24 relative overflow-hidden space-y-20">
+		<div id="photography" class="relative overflow-hidden space-y-20">
 			<div class="container">
 				<div class="row">
 					<div class="col w-full">
