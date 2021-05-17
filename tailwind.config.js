@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-	jit: true,
+	mode: 'jit',
 	purge: {
 		content: [
 			'components/**/*.vue',
@@ -112,6 +112,10 @@ module.exports = {
 		extend: {
 			padding: ['hover'],
 			translate: ['group-hover'],
+			blur: ['group-hover'],
+			display: ['group-hover'],
+			animation: ['group-hover'],
+			grayscale: ['hover'],
 		},
 	},
 	plugins: [require('@tailwindcss/line-clamp')],

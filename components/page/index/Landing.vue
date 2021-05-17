@@ -1,5 +1,6 @@
 <template>
 	<div
+		id="landing"
 		class="h-screen grid grid-flow-col grid-cols-12 grid-rows-9 select-none relative"
 	>
 		<div class="absolute left-0 top-0 w-full h-full">
@@ -25,7 +26,7 @@
 					></div>
 				</div>
 				<div
-					class="row-start-1 row-end-9 col-start-2 md:col-start-6 lg:col-start-6 xl:col-start-5 col-end-13 flex flex-col items-start justify-end text-white filter drop-shadow space-y-2 md:space-y-4 pl-3 pb-5 z-30"
+					class="row-start-1 row-end-9 col-start-2 md:col-start-6 lg:col-start-6 xl:col-start-5 col-end-13 flex flex-col items-start justify-end text-white filter drop-shadow space-y-2 md:space-y-4 pl-3 pb-5 md:pb-16 lg:pb-5 z-30"
 				>
 					<h1
 						class="font-black flex flex-col text-8xl xs:text-9xl sm:text-9xl md:text-11xl lg:text-15xl xl:text-18xl 2xl:text-19xl leading-none -ml-1 sm:-ml-2 md:-ml-2.5 lg:-ml-4 xl:-ml-5"
@@ -69,15 +70,15 @@
 				</div>
 			</div>
 		</div>
-		<div
-			class="row-start-1 row-end-9 col-start-1 md:col-end-4 bg-primaryYellow-500"
-		></div>
-		<div
-			class="row-start-1 row-end-9 col-start-1 md:col-start-4 col-end-13 bg-gradient-to-r to-primaryBlue-500 from-primaryBlue-dark-500"
-		></div>
 		<!-- <div
-				class="row-start-9 row-end-10 col-start-1 col-end-11 md:col-end-10 bg-gradient-to-r from-primaryYellow-500 to-transparent"
-			></div> -->
+			class="row-start-1 row-end-9 col-start-1 md:col-end-4 bg-primaryYellow-500"
+		></div> -->
+		<div
+			class="row-start-1 row-end-9 md:row-end-8 col-start-1 md:col-start-4 col-end-13 bg-gradient-to-r to-primaryBlue-500 from-primaryBlue-dark-500"
+		></div>
+		<div
+			class="row-start-1 md:row-start-9 row-end-9 md:row-end-6 col-start-1 col-end-7 sm:col-end-8 md:col-end-13 lg:col-end-12 bg-gradient-to-l to-primaryYellow-500 from-primaryYellow-400"
+		></div>
 	</div>
 </template>
 
@@ -106,7 +107,7 @@ export default {
 					icon: this.getLinkValue('github', 'icon'),
 					linkClassAry: [
 						'text-white',
-						'hover:text-primaryYellow-500',
+						'hover:text-primaryBlue-500',
 						'w-6',
 						'h-6',
 						'md:w-7',
@@ -121,7 +122,7 @@ export default {
 					icon: this.getLinkValue('mail', 'icon'),
 					linkClassAry: [
 						'text-white',
-						'hover:text-primaryYellow-500',
+						'hover:text-primaryBlue-500',
 						'w-6',
 						'h-6',
 						'md:w-7',
@@ -136,7 +137,7 @@ export default {
 					icon: this.getLinkValue('blog', 'icon'),
 					linkClassAry: [
 						'text-white',
-						'hover:text-primaryYellow-500',
+						'hover:text-primaryBlue-500',
 						'w-6',
 						'h-6',
 						'md:w-7',

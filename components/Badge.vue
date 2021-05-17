@@ -33,6 +33,8 @@ export default {
 			switch (this.variant) {
 				case 'bg-primaryYellow-500':
 					return ['bg-primaryYellow-500', 'text-white']
+				case 'bg-gray-400':
+					return ['bg-gray-400', 'text-white']
 				default:
 					return ['bg-primaryYellow-500', 'text-white']
 			}

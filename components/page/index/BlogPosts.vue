@@ -108,6 +108,7 @@ export default {
 				direction: 'vertical',
 				slidesPerView: 'auto',
 				spaceBetween: 10,
+				autoplay: true,
 				pagination: {
 					clickable: true,
 				},

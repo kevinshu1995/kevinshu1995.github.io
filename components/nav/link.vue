@@ -1,5 +1,11 @@
 <template>
-	<a :class="linkClass" :href="href" :title="title" :target="linkTarget">
+	<button
+		v-scroll-to="scrollTarget"
+		:class="linkClass"
+		:title="title"
+		:target="linkTarget"
+		@click="go"
+	>
 		<template v-if="linkType === 'normal' && content">
 			<span
 				class="flex flex-row items-center md:items-start md:flex-col space-x-4 md:space-x-0 leading-3"
@@ -16,12 +22,12 @@
 			</span>
 		</template>
 		<template v-if="linkType === 'icon' && icon">
-			<svg :is="icon" :icon-class-ary="iconClassAry" />
+			<svg :is="icon" :class="iconClass" />
 		</template>
 		<template v-if="linkType === 'head'">
 			<slot />
 		</template>
-	</a>
+	</button>
 </template>
 
 <script>
@@ -55,7 +61,7 @@ export default {
 			},
 		},
 		href: {
-			type: String,
+			type: [String, Object],
 			default: '#',
 		},
 		icon: {
@@ -74,6 +80,23 @@ export default {
 	},
 
 	computed: {
+		isOuterLink() {
+			const regexUrl = /^(mailto:|http:\/\/|https:\/\/)/
+			return regexUrl.test(this.href)
+		},
+		linkTag() {
+			return this.isOuterLink ? 'a' : 'router-link'
+		},
+		scrollTarget() {
+			const vm = this
+			const hash = vm.href.hash || ''
+			return {
+				el: hash,
+				onStart(element) {
+					vm.$emit('scrollOnStart', element)
+				},
+			}
+		},
 		linkClass() {
 			if (this.aTagClass.length > 0) return this.aTagClass
 			else {
@@ -81,9 +104,11 @@ export default {
 					'inline-block',
 					'no-underline',
 					'text-lg',
-					'h-full',
+					'outline-none',
 					'flex',
+					'self-stretch',
 					'items-center',
+					'w-full',
 					'p-4',
 					'transition-all',
 				]
@@ -100,26 +125,38 @@ export default {
 							...defaultClass,
 							'font-light',
 							'text-gray-500',
-							'hover:text-primaryBlue',
+							'hover:text-primaryBlue-500',
 						].join(' ')
 					case 'head':
 						return [
 							...defaultClass,
 							'font-bold',
-							'text-primaryBlue',
+							'text-primaryBlue-500',
 							'hover:bg-gray-100',
 						].join(' ')
 				}
 				return ''
 			}
 		},
-		// iconClass() {
-		// 	const defaultClass = ['inline-block', 'flex', 'items-center']
-		// 	const result = [...defaultClass, ...this.iconClassAry].join(' ')
-		// 	return result
-		// },
+		iconClass() {
+			const defaultClass = ['inline-block', 'flex', 'items-center']
+			const result = [...defaultClass, ...this.iconClassAry].join(' ')
+			return result
+		},
 		linkTarget() {
 			return this.target ? '_blank' : ''
+		},
+	},
+
+	methods: {
+		go(e) {
+			const vm = this
+			if (!vm.isOuterLink) {
+				vm.$router.push(vm.href)
+			} else {
+				e.preventDefault()
+				window.open(vm.href)
+			}
 		},
 	},
 }

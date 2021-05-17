@@ -1,4 +1,5 @@
 import { resolve } from 'path'
+
 export default {
 	// Target: https://go.nuxtjs.dev/config-target
 	target: 'static',
@@ -56,6 +57,7 @@ export default {
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'preconnect', href: 'https://fonts.gstatic.com' },
 			{
+				// TODO 效能?
 				rel: 'stylesheet',
 				href:
 					'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&display=swap',
@@ -77,7 +79,11 @@ export default {
 			src: '~/plugins/vue-tabler-icons.js',
 		},
 		{
-			src: '~/plugins/locomotiveScroll.js',
+			src: '~/plugins/vue-scrollTo.js',
+			// mode: 'client',
+		},
+		{
+			src: '~/plugins/vue-sticky-directive.js',
 			mode: 'client',
 		},
 	],
@@ -99,6 +105,7 @@ export default {
 	modules: [
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
+		'vue-scrollto/nuxt',
 	],
 
 	// Axios module configuration: https://go.nuxtjs.dev/config-axios

@@ -1,25 +1,28 @@
 <template>
 	<nav
 		id="header"
-		class="fixed w-full z-30 top-0 bg-white bg-opacity-80 backdrop-filter backdrop-blur shadow-lg"
+		class="fixed w-full z-40 top-0 bg-white bg-opacity-80 backdrop-filter backdrop-blur shadow-lg"
 	>
 		<div
-			class="relative z-10 w-full flex flex-wrap items-center justify-between"
+			class="relative z-10 w-full flex flex-wrap items-center justify-between self-stretch"
 		>
-			<h1 class="flex items-center justify-center">
-				<navLink href="#" link-type="head" title="首頁">
+			<h1 class="flex justify-center self-stretch">
+				<navLink
+					:href="{ name: 'index', hash: '#landing' }"
+					link-type="head"
+					title="首頁"
+					@scrollOnStart="scrollOnStart"
+				>
 					Kevin Hsu
 				</navLink>
 			</h1>
-			<div
-				id="menu"
-				class="flex items-center justify-end px-6 order-1 md:order-2"
-			>
-				<nav>
-					<ul class="flex items-center justify-between">
+			<div id="menu" class="flex self-stretch px-6 order-1 md:order-2">
+				<nav class="self-stretch">
+					<ul class="h-full flex items-center justify-between">
 						<li
 							v-for="(links, index) in socialLinks"
 							:key="`socialLinks-${index}`"
+							class="h-full flex items-center"
 						>
 							<navLink
 								:href="links.href"
@@ -28,6 +31,7 @@
 								:icon-class-ary="links.iconClassAry"
 								:title="links.title"
 								:target="links.target"
+								@scrollOnStart="scrollOnStart"
 							/>
 						</li>
 					</ul>
@@ -46,7 +50,7 @@
 				/>
 			</div>
 			<div
-				class="w-full md:w-auto flex items-center justify-between md:justify-start mr-auto md:px-6 order-2 md:order-1 relative"
+				class="h-full w-full md:w-auto flex items-center justify-between md:justify-start mr-auto md:px-6 order-2 md:order-1 relative"
 			>
 				<nav class="w-full md:w-auto" :class="navMobileClass">
 					<ul
@@ -62,6 +66,7 @@
 								:link-type="links.linkType"
 								:content="links.textContent"
 								:title="links.title"
+								@scrollOnStart="scrollOnStart"
 							/>
 						</li>
 					</ul>
@@ -79,7 +84,10 @@ export default {
 			isShowNav: true,
 			siteLinks: [
 				{
-					href: '#',
+					href: {
+						name: 'index',
+						hash: '#web',
+					},
 					title: '前往 - 網頁 Web',
 					linkType: 'normal',
 					textContent: {
@@ -88,7 +96,10 @@ export default {
 					},
 				},
 				{
-					href: '#',
+					href: {
+						name: 'index',
+						hash: '#design',
+					},
 					title: '前往 - 設計 Design',
 					linkType: 'normal',
 					textContent: {
@@ -97,7 +108,10 @@ export default {
 					},
 				},
 				{
-					href: '#',
+					href: {
+						name: 'index',
+						hash: '#photography',
+					},
 					title: '前往 - 攝影 Photography',
 					linkType: 'normal',
 					textContent: {
@@ -164,6 +178,9 @@ export default {
 		},
 		fireWhenResize(event) {
 			this.isShowNav = true
+		},
+		scrollOnStart(element) {
+			return !this.isShowNav ? (this.isShowNav = true) : null
 		},
 	},
 }

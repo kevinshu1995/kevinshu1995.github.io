@@ -1,12 +1,14 @@
 <template>
-	<div>
+	<div class="space-y-52 overflow-x-hidden" data-v-sticky-container>
 		<!-- landing -->
 		<pageIndexLanding />
-		<div class="container">
+		<div id="about" class="container">
 			<div class="row space-y-20 sm:space-y-0">
 				<!-- my photo -->
 				<div class="col hidden sm:block sm:w-3/12 px-0 lg:px-8">
-					<img src="~images/me-2.jpg" alt="" />
+					<div v-sticky="stickyOptions">
+						<img src="~images/me-2.jpg" alt="" />
+					</div>
 				</div>
 				<!-- Content -->
 				<div class="col w-full sm:w-9/12 space-y-20">
@@ -18,7 +20,7 @@
 								</p>
 								<p>
 									主要使用 Vue.js 開發，負責 API
-									串接、畫面動態效果、主題色彩配置、設計稿切版、效能提升...等。
+									串接、畫面動態效果、主題色彩配置、設計稿切版...等。
 								</p>
 								<p>
 									CSS 框架使用過 Bootstrap
@@ -30,7 +32,7 @@
 								>
 									<a
 										:key="`about-socialLink-${index}`"
-										class="flex items-center space-x-3 hover:text-primaryBlue"
+										class="flex items-center space-x-3 group hover:text-primaryBlue-500 transition-all"
 										:href="link.href"
 										target="_blank"
 									>
@@ -42,9 +44,10 @@
 												'h-6',
 											]"
 										/>
-										<span class="text-dark">{{
-											link.title
-										}}</span>
+										<span
+											class="text-dark group-hover:text-primaryBlue-500"
+											>{{ link.title }}</span
+										>
 									</a>
 								</template>
 							</Card>
@@ -58,7 +61,9 @@
 					<div class="row space-y-20 lg:space-y-0">
 						<div class="col w-full lg:w-6/12">
 							<Card title-zh="技能" title-en="Skills">
-								<ul class="list-connect space-y-4">
+								<ul
+									class="list-connect hover-animate space-y-4"
+								>
 									<li
 										v-for="(skill, index) in skills"
 										:key="`skill-${index}`"
@@ -81,7 +86,9 @@
 						</div>
 						<div class="col w-full lg:w-6/12">
 							<Card title-zh="特別經歷" title-en="Highlight">
-								<ul class="list-connect space-y-4">
+								<ul
+									class="list-connect hover-animate space-y-4"
+								>
 									<li
 										v-for="(event, index) in highlight"
 										:key="`skill-${index}`"
@@ -90,24 +97,46 @@
 										<a
 											:href="event.href"
 											target="_blank"
-											class="inline-flex items-center space-x-4 whitespace-normal text-current"
+											class="group inline-flex flex-col space-y-1 whitespace-normal text-current transition-all"
 										>
+											<div class="text-left space-x-4">
+												<span class="text-gray-700">
+													2021
+												</span>
+												<Badge
+													v-if="event.status"
+													:content="
+														event.status.description
+													"
+													:variant="
+														event.status.variant
+													"
+													:custom-classes="[
+														'px-2.5',
+														'font-normal',
+														'text-sm',
+														'tracking-wider',
+														'rounded-full',
+													]"
+												/>
+											</div>
 											<h4
-												class="text-lg font-medium inline"
+												class="flex space-x-2 text-lg font-medium text-gray-900 group-hover:text-primaryBlue-500"
 											>
-												{{ event.title }}
+												<span>
+													{{ event.title }}
+												</span>
+												<span
+													class="relative group-hover:opacity-100 opacity-0 transition-all"
+												>
+													<ArrowUpRightCircleIcon
+														class="relative top-1 animate-ping"
+													/>
+													<ArrowUpRightCircleIcon
+														class="absolute top-1 transition-all"
+													/>
+												</span>
 											</h4>
-											<Badge
-												v-if="event.status"
-												:content="event.status"
-												:custom-classes="[
-													'px-2.5',
-													'font-normal',
-													'text-sm',
-													'tracking-wider',
-													'rounded-full',
-												]"
-											/>
 										</a>
 									</li>
 								</ul>
@@ -120,108 +149,113 @@
 								title-zh="工作經歷"
 								title-en="Work Experience"
 							>
-								<ul
-									class="list-connect-noDot space-y-7 lg:space-y-6"
-								>
-									<li
-										v-for="(
-											experience, index
-										) in experiences"
-										:key="`experience-${index}`"
-										class="grid grid-cols-12 items-start relative group"
-									>
-										<div
-											class="dot col-start-1 col-span-1 row-start-1 row-span-2"
-										>
-											<div
-												class="w-6 h-6 bg-white border-4 rounded-full transition-all"
-												:class="
-													index === 0
-														? 'border-primaryYellow-500'
-														: 'border-gray-400 group-hover:border-primaryYellow-300'
-												"
-											></div>
-										</div>
-										<p
-											class="whitespace-nowrap col-start-2 col-span-2 row-start-1 font-medium mb-1 lg:mb-0"
-											:class="
-												index !== 0
-													? 'text-gray-400 group-hover:text-gray-500 transition-all'
-													: 'text-gray-400'
-											"
-										>
-											{{ experience.time.start }} -
-											{{ experience.time.end }}
-										</p>
-										<div
-											class="flex flex-col col-start-2 lg:col-start-4 col-end-13 row-start-2 lg:row-start-1"
-											:class="
-												index !== 0
-													? 'text-gray-400 group-hover:text-dark transition-all'
-													: ''
-											"
-										>
-											<h4
-												class="whitespace-nowrap text-lg"
-											>
-												{{ experience.jobTitle }}
-												{{ experience.company }}
-											</h4>
-											<template
-												v-for="(
-													content, descriptionIndex
-												) in experience.description"
-											>
-												<p
-													v-if="
-														typeof content ===
-														'string'
-													"
-													:key="`experience-paraphrase-${descriptionIndex}`"
-												>
-													{{ content }}
-												</p>
-												<ol
-													v-if="
-														typeof content ===
-														'array'
-													"
-													:key="`experience-paraphrase-${descriptionIndex}`"
-												>
-													<li
-														v-for="(
-															list, listIndex
-														) in content"
-														:key="`experience-list-${listIndex}`"
-													>
-														{{ list }}
-													</li>
-												</ol>
-											</template>
-										</div>
-									</li>
-								</ul>
+								<PageIndexWorkExperience
+									:contents="experiences"
+								/>
 							</Card>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="row">
+		<div id="web" class="container">
+			<div class="row space-y-14">
 				<div class="col w-full">
-					<div class="flex flex-col">
-						<h2>Web</h2>
-						<h3>網頁作品</h3>
-					</div>
+					<HugeTitle title-zh="網頁作品" title-en="Web" />
+				</div>
+				<div class="col w-full">
+					<client-only>
+						<swiper
+							:options="swiperOptions.webGallery"
+							class="swiper-custom-active"
+							style="overflow: visible"
+						>
+							<swiper-slide
+								v-for="(page, index) in webGallery.pages"
+								:key="`webGallery-${index}`"
+							>
+								<PageIndexWebGallery
+									:key="`webGallery-${index}`"
+									:img-src="
+										getImageUrl(
+											`${webGallery.imageDetails.folderName}/${page.nickname}${webGallery.imageDetails.imageFileExtension}`
+										)
+									"
+									:href="page.url"
+									:index="index + 1"
+									:title="page.title"
+									:content="page.description"
+								/>
+							</swiper-slide>
+						</swiper>
+					</client-only>
 				</div>
 			</div>
 		</div>
-		<div class="pb-96 mb-96">test1</div>
+		<div id="design" class="container">
+			<div class="row space-y-14">
+				<div class="col w-full">
+					<HugeTitle title-zh="設計" title-en="Design" />
+				</div>
+				<div class="col w-full">
+					<client-only>
+						<swiper
+							ref="swiperDesign"
+							:options="swiperOptions.design"
+							class="swiper-custom-active"
+							style="overflow: visible"
+						>
+							<swiper-slide
+								v-for="(work, index) in design"
+								:key="`design-${index}`"
+								style="width: auto"
+							>
+								<PageIndexWebGallery
+									:href="work.href"
+									:index="index + 1"
+									:img-src="work.imgSrc"
+									:badges="work.badges"
+									:img-height="250"
+									:img-full="true"
+								/>
+							</swiper-slide>
+						</swiper>
+					</client-only>
+				</div>
+			</div>
+		</div>
+		<div id="photography" class="pt-24 relative overflow-hidden space-y-20">
+			<div class="container">
+				<div class="row">
+					<div class="col w-full">
+						<HugeTitle title-zh="攝影" title-en="Photography" />
+					</div>
+				</div>
+			</div>
+			<div
+				ref="photography-image"
+				class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 grid-row-4"
+			>
+				<div
+					v-for="(photo, index) in photography.photos"
+					:key="`photo-${index}`"
+					class="h-60 filter grayscale hover:grayscale-0 transition-all"
+				>
+					<img
+						class="w-full h-full object-cover"
+						:src="
+							require(`~/static/images/photography/${photo.fileName}`)
+						"
+						alt="photography by Kevin Hsu"
+					/>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
+import { pages, imageDetails } from '~~/screenshots'
 export default {
 	name: 'Index',
 
@@ -288,90 +322,23 @@ export default {
 					},
 				],
 			},
-			skills: [
-				{
-					title: '網頁前端',
-					list: [
-						'HTML',
-						'Pug',
-						'CSS',
-						'SCSS',
-						'Javascript',
-						'Bootstrap4',
-						'Tailwindcss',
-						'Bulma',
-						'Vue.js',
-						'Vuex',
-						'Vue Router',
-						'Gulp',
-						'Webpack',
-						'Webpack',
-						'Git',
-						'Git flow',
-					],
-				},
-				{
-					title: '多媒體設計',
-					list: ['Photoshop', 'illustrator', 'Adobe XD', 'Figma'],
-				},
-			],
-			highlight: [
-				{
-					title: 'Material Design 文件協同翻譯',
-					href: 'https://material-design.hexschool.io/',
-					status: '',
-				},
-				{
-					title: 'Tailwindcss.tw 文件協同翻譯',
-					href: '#',
-					status: '進行中',
-				},
-			],
-			experiences: [
-				{
-					time: {
-						start: '2020',
-						end: 'current',
-					},
-					company: '佳音事業股份有限公司',
-					jobTitle: '網頁設計',
-					description: [
-						'前端切版動畫效果、UI/UX 設計與優化、API串接、Git 協作 / Git flow，專案包含活動網頁製作、後台CMS撰寫、網站維護，部分專案使用 Vue.js 框架開發。',
-					],
-				},
-				{
-					time: {
-						start: '2019',
-						end: '2019',
-					},
-					company: '原聚股份有限公司',
-					jobTitle: '平面設計',
-					description: [
-						'工作內容包含平面與行銷。',
-						[
-							'平面主要執行品牌手冊、店面視覺設定、廣宣，其中包含設計與發包。',
-							'行銷面協助店面行銷活動、網路行銷，包含 Facebook, Instagram, line@, 官方網站...等的管理與維護。',
-							'加盟展擔任公司春季加盟展時主要的對外窗口，處理參展設備、流程、視覺、活動等。',
-						],
-					],
-				},
-				{
-					time: {
-						start: '2016',
-						end: '2017',
-					},
-					company: '原聚股份有限公司',
-					jobTitle: '平面設計',
-					description: [
-						'擔任一年正職設計，使用 Illustrator、Photoshop 製作商品開版圖、商品外觀平面設計。公司商品以布類家飾產品為主，理解工廠製作的限制的同時兼顧視覺效果來製作圖面。後因受主管青睞，與資深業務外派至明尼蘇達州兩周，協助業務開會與市場調查，也藉此見識美式風格與文化薰陶，進而了解商品設計師背後蘊含的深厚文化背景。',
-					],
-				},
-			],
+			skills: store.state.me.skills,
+			highlight: store.state.me.highlight,
+			experiences: store.state.me.experiences,
+			webGallery: {
+				imageDetails,
+				pages,
+			},
+			design: store.state.me.design,
+			photography: store.state.me.photography,
 		}
 	},
 
 	data() {
 		return {
+			stickyOptions: {
+				topSpacing: 100,
+			},
 			about: {
 				socialLinkClass: [
 					'inline-block',
@@ -388,6 +355,41 @@ export default {
 			skills: [],
 			highlight: [],
 			experiences: [],
+			webGallery: [],
+			design: [],
+			photography: {},
+			swiperOptions: {
+				webGallery: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					autoplay: true,
+					breakpoints: {
+						768: {
+							slidesPerView: 2,
+							spaceBetween: 30,
+						},
+						1200: {
+							slidesPerView: 3,
+							spaceBetween: 50,
+						},
+					},
+				},
+				design: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					autoplay: true,
+					breakpoints: {
+						768: {
+							slidesPerView: 2,
+							spaceBetween: 30,
+						},
+						1200: {
+							slidesPerView: 3,
+							spaceBetween: 50,
+						},
+					},
+				},
+			},
 		}
 	},
 
@@ -395,8 +397,25 @@ export default {
 		socialLinks() {
 			return this.$store.state.links.socialLinks
 		},
+		swiperInstance_Design() {
+			return this.$refs.swiperDesign.$swiper
+		},
 	},
 
-	methods: {},
+	methods: {
+		getImageUrl(url) {
+			return require(`~/static/images/${url}`)
+		},
+	},
 }
 </script>
+
+<style lang="postcss" scoped>
+.is-affixed .inner-wrapper-sticky {
+	@apply lg:ml-8;
+}
+.swiper-custom-active .swiper-slide-active .indexNumber,
+.swiper-custom-active .swiper-slide-active .content {
+	@apply text-primaryYellow-500;
+}
+</style>

@@ -7,13 +7,6 @@
 		@apply text-dark relative;
 		font-family: 'Noto Sans TC', sans-serif;
 	}
-	body::after {
-		@apply absolute -z-1 left-0 top-0 bg-white opacity-5 w-full h-full;
-		content: '';
-		background-image: linear-gradient(#4c7379 1px, transparent 1px),
-			linear-gradient(to right, #4c7379 1px, #ffffff 1px);
-		background-size: 40px 40px;
-	}
 	h1,
 	h2,
 	h3,
@@ -46,6 +39,9 @@
 	a {
 		@apply text-primaryYellow-500;
 	}
+	button:focus {
+		@apply outline-none;
+	}
 	.container {
 		@apply px-8;
 	}
@@ -58,6 +54,10 @@
 }
 
 @layer utilities {
+	.text-shadow-title {
+		/* primaryBlue-200 */
+		text-shadow: -4px -4px #c7d3d5;
+	}
 	.custom-hoverGroup:hover .custom-hoverGroup\:hidden {
 		@apply hidden;
 	}
@@ -67,11 +67,27 @@
 		@apply relative;
 	}
 	.list-connect {
-		@apply list-disc list-inside relative;
+		@apply list-inside relative pl-5;
 	}
 
-	.list-connect li::marker {
-		@apply text-primaryYellow-500;
+	.list-connect.hover-animate li {
+		@apply relative;
+	}
+
+	.list-connect.hover-animate li::before,
+	.list-connect.hover-animate li::after {
+		@apply absolute -left-5 rounded-full bg-primaryYellow-500;
+		content: '';
+		width: 0.4em;
+		height: 0.4em;
+		top: 0.65em;
+	}
+	.list-connect.hover-animate li::after {
+		@apply bg-primaryYellow-700 hidden;
+	}
+
+	.list-connect.hover-animate li:hover::after {
+		@apply animate-ping block;
 	}
 
 	.list-connect-noDot::before,
