@@ -1,0 +1,66 @@
+<template>
+	<div class="row space-y-4">
+		<div class="col w-full space-y-6">
+			<div class="space-y-2">
+				<h2>{{ design.content.title }}</h2>
+				<div class="flex space-x-4">
+					<h3 class="text-gray-500 text-base">
+						{{ design.content.subtitle }}
+					</h3>
+					<div class="flex space-x-2">
+						<template
+							v-for="(badgeTool, badgeToolIndex) in design.tools"
+						>
+							<Badge
+								:key="`badgeTool-${badgeToolIndex}`"
+								:custom-classes="[
+									'px-2',
+									'text-sm',
+									'tracking-wider',
+									'flex',
+									'items-center',
+									'self-center',
+								]"
+								:content="badgeTool"
+							/>
+						</template>
+					</div>
+				</div>
+			</div>
+			<div class="space-y-2">
+				<template v-for="(paragraph, index) in design.content.content">
+					<p :key="`paragraph-${index}`">{{ paragraph }}</p>
+				</template>
+			</div>
+		</div>
+		<div class="col w-full">
+			<nuxt-link to="/" class="inline-flex space-x-2 p-2">
+				<ArrowBackIcon />
+				<span> 回到首頁 </span>
+			</nuxt-link>
+		</div>
+	</div>
+</template>
+
+<script>
+export default {
+	name: 'DesignContentLayout',
+
+	props: {
+		design: {
+			type: Object,
+			required: true,
+		},
+	},
+
+	data() {
+		return {
+			swiperOptions: {
+				slidesPerView: 1,
+				spaceBetween: 20,
+				autoplay: true,
+			},
+		}
+	},
+}
+</script>

@@ -1,9 +1,5 @@
 <template>
-	<a
-		:href="href"
-		:target="linkTarget"
-		class="inline-flex flex-col space-y-4 group"
-	>
+	<div class="inline-flex flex-col space-y-4 group">
 		<div class="p-2 image-border select-none">
 			<div class="relative">
 				<img
@@ -46,14 +42,14 @@
 				/>
 			</template>
 		</div>
-	</a>
+	</div>
 </template>
 
 <script>
 export default {
 	props: {
 		href: {
-			type: String,
+			type: [String, Object],
 			required: true,
 		},
 		target: {

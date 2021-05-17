@@ -5,10 +5,13 @@
 				<client-only>
 					<swiper ref="swiperDesign" :options="swiperOptions">
 						<swiper-slide>
-							<img src="~images/design/banner_1.jpg" alt="" />
+							<img src="~images/design/swing_1.jpg" alt="" />
 						</swiper-slide>
 						<swiper-slide>
-							<img src="~images/design/banner_2.jpg" alt="" />
+							<img src="~images/design/swing_2.jpg" alt="" />
+						</swiper-slide>
+						<swiper-slide>
+							<img src="~images/design/swing_3.jpg" alt="" />
 						</swiper-slide>
 					</swiper>
 				</client-only>
@@ -23,7 +26,7 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-	name: 'DesignBanners',
+	name: 'DesignSwing',
 	layout: 'topSpacing',
 	data() {
 		return {
@@ -31,6 +34,7 @@ export default {
 				slidesPerView: 1,
 				spaceBetween: 20,
 				autoplay: true,
+				autoHeight: true,
 			},
 		}
 	},
@@ -41,7 +45,7 @@ export default {
 		}),
 		banner() {
 			return this.design.find((target) => {
-				return target.id === 2
+				return target.id === 1
 			})
 		},
 	},

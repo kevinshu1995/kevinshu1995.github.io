@@ -174,18 +174,20 @@
 								v-for="(page, index) in webGallery.pages"
 								:key="`webGallery-${index}`"
 							>
-								<PageIndexWebGallery
-									:key="`webGallery-${index}`"
-									:img-src="
-										getImageUrl(
-											`${webGallery.imageDetails.folderName}/${page.nickname}${webGallery.imageDetails.imageFileExtension}`
-										)
-									"
-									:href="page.url"
-									:index="index + 1"
-									:title="page.title"
-									:content="page.description"
-								/>
+								<a href="page.url" target="_blank">
+									<PageIndexWebGallery
+										:key="`webGallery-${index}`"
+										:img-src="
+											getImageUrl(
+												`${webGallery.imageDetails.folderName}/${page.nickname}${webGallery.imageDetails.imageFileExtension}`
+											)
+										"
+										:href="page.url"
+										:index="index + 1"
+										:title="page.title"
+										:content="page.description"
+									/>
+								</a>
 							</swiper-slide>
 						</swiper>
 					</client-only>
@@ -210,14 +212,16 @@
 								:key="`design-${index}`"
 								style="width: auto"
 							>
-								<PageIndexWebGallery
-									:href="work.href"
-									:index="index + 1"
-									:img-src="work.imgSrc"
-									:badges="work.badges"
-									:img-height="250"
-									:img-full="true"
-								/>
+								<nuxt-link :to="work.href">
+									<PageIndexWebGallery
+										:href="work.href"
+										:index="index + 1"
+										:img-src="work.imgSrc"
+										:badges="work.badges"
+										:img-height="250"
+										:img-full="true"
+									/>
+								</nuxt-link>
 							</swiper-slide>
 						</swiper>
 					</client-only>

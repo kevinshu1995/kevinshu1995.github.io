@@ -87,52 +87,114 @@ export const state = () => ({
 	design: [
 		{
 			id: 1,
+			content: {
+				title: '搖擺酸酸',
+				subtitle: 'Swing Swing',
+				content: [
+					'品牌宗旨為人生太苦、飲料太甜、酸甜青澀、盡情搖擺，客群主推年輕女生。風格走向歐美設計，清新活潑而極簡，能夠與市場上手搖品牌有區隔性，顏色以代表檸檬的粉黃色與粉綠色為主色。',
+					'品牌手冊：用於業務推廣，因此電子檔為主要表現方式，規劃頁面方式與簡報相似。排版與顏色規劃依據品牌特色偏向極簡風，希望讀者可以著重於內容描述。',
+					'社群貼文與傳單設計：以豐富顏色的飲料為主體，配色除了黃色的品牌色之外，因為客群多為上班族女性，也會選用較亮的粉色與大量的留白。畫面使用與產品系列相關的元素搭配，例如氣泡飲品背景使用泡泡作點綴，能夠與產品做相呼應的效果。文案內容多以產品本身發想，或以時事話題出發。圖中可以看到一個品牌IP，個性設定用賤話來砥礪人心。因此會加入此IP的形象，並添加一些逗趣的文字，增加"笑"果。',
+				],
+			},
 			href: '#',
 			imgSrc: require('~/static/images/design/swing_1.jpg'),
 			badges: ['Graphic Design'],
+			tools: ['Illustrator', 'Photoshop'],
 		},
 		{
 			id: 2,
-			href: '#',
+			content: {
+				title: '電商平台橫幅設計',
+				subtitle: 'E-commercial Banner Design',
+				content: [
+					'臨摹電商平台的橫幅設計，使用 Photoshop 製作去背及陰影等細節 與 illustrator 排版，考量到中文的橫式閱讀順序是由左至右，因此重要的優惠資訊或標語皆優先置放在左側，製作引導使用者點擊的按鈕於閱讀順序末端，即圖片右下角。',
+				],
+			},
+			href: {
+				path: '/design/banners',
+			},
 			imgSrc: require('~/static/images/design/banner_1.jpg'),
 			badges: ['Graphic Design'],
+			tools: ['Illustrator', 'Photoshop'],
 		},
-		{
-			id: 3,
-			href: '#',
-			imgSrc: require('~/static/images/design/firefold_1.jpg'),
-			badges: ['Industrial Design'],
-		},
+		// {
+		// 	id: 3,
+		// 	content: {
+		// 		title: '輕量、快速組合火爐',
+		// 		subtitle: 'FireFold',
+		// 		content: [
+		// 			'正值寒冬的聖誕節是一年之中最重要一天，趁佳節假期待在家裡圍爐取暖，一起看電視、聚餐......等等的家庭活動幾乎是每一個美國家庭的傳統。然而近年來越來越多的年輕人因為收入、交通、婚姻狀況等的考慮，選擇租借在市區的公寓大廈裡，而這些公寓大廈不會有壁爐設計，取而代之的是暖氣，不過傳統的”圍爐”依然深植美國人心。',
+		// 			'為了簡易提升氣氛，材料選擇瓦楞紙板，透過其便宜、重量輕、加工簡單的特色，使消費者可以花少少的錢，直接從貨架上拿走包裝好的紙壁爐，只需要花費五分鐘，一個人就可以組裝完成。 也因為瓦楞紙的印刷技術成熟，能根據不同消費族群提供多種外觀風格，甚至個人化設計。',
+		// 			'為仿造傳統壁爐的火光，使用Arduino板偵測環境聲音大小來改變LED燈亮度的變化，讓人在寒冬中彷彿置身在真實的壁爐邊，與家人享受天倫之樂。',
+		// 			'由於使用拼插紙板的方式組合，完全不需要用到任何工具，只要按照說明書的六個步驟，使用者就可以在家獨自快速完成組裝。',
+		// 		],
+		// 	},
+		// 	href: '#',
+		// 	imgSrc: require('~/static/images/design/firefold_1.jpg'),
+		// 	badges: ['Industrial Design'],
+		// 	tools: ['Illustrator', 'Photoshop', 'Solid works'],
+		// },
 		{
 			id: 4,
-			href: '#',
+			content: {
+				title: '海報設計 - 東海食科系研究室',
+				subtitle: 'Poster Design',
+				content: [],
+			},
+			href: '',
 			imgSrc: require('~/static/images/design/poster_1.jpg'),
 			badges: ['Graphic Design'],
+			tools: ['Illustrator'],
 		},
 		{
 			id: 5,
-			href: '#',
+			content: {
+				title: '運動會活動海報設計',
+				subtitle: 'Poster Design',
+				content: [],
+			},
+			href: {
+				path: '/design/soarSportPoster',
+			},
 			imgSrc: require('~/static/images/design/poster_2.jpg'),
 			badges: ['Graphic Design'],
+			tools: ['Illustrator'],
 		},
 		{
 			id: 6,
-			href: '#',
+			content: {
+				title: '社團音樂會海報設計',
+				subtitle: 'Poster Design',
+				content: [],
+			},
+			href: {
+				path: '/design/thu-musicPoster',
+			},
 			imgSrc: require('~/static/images/design/poster_3.jpg'),
 			badges: ['Graphic Design'],
+			tools: ['Illustrator', 'Photoshop'],
 		},
 		{
 			id: 7,
-			href: '#',
+			content: {
+				title: '社團活動酷卡設計',
+				subtitle: 'Cool Card Design',
+				content: [],
+			},
+			href: {
+				path: '/design/thu-coolCard',
+			},
 			imgSrc: require('~/static/images/design/poster_4.jpg'),
 			badges: ['Graphic Design'],
+			tools: ['Illustrator'],
 		},
-		{
-			id: 8,
-			href: '#',
-			imgSrc: require('~/static/images/design/poster_5.jpg'),
-			badges: ['Graphic Design'],
-		},
+		// {
+		// 	id: 8,
+		// 	href: '#',
+		// 	imgSrc: require('~/static/images/design/poster_5.jpg'),
+		// 	badges: ['Graphic Design'],
+		// 	tools: ['Illustrator', 'Photoshop'],
+		// },
 	],
 	photography: {
 		imgFolder: 'static/images/photography',
