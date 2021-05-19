@@ -16,7 +16,7 @@
 				</div>
 			</div>
 			<div class="col w-full">
-				<PageDesign :design="formatedDesign.current" />
+				<PageDesignMain :design="formatedDesign.current" />
 			</div>
 			<div class="col w-full">
 				<PageDesignOtherDesign :design="formatedDesign.filtered" />
@@ -26,31 +26,33 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import mixin from '~/plugins/mixins/index'
 export default {
 	name: 'DesignBanners',
 	layout: 'topSpacing',
+	asyncData({ store }) {
+		const designId = 3
+		const filteredDesign = () => {
+			return mixin.mixin_filterArrayById({
+				id: designId,
+				array: store.state.me.design,
+			})
+		}
+		return {
+			designId,
+			formatedDesign: filteredDesign(),
+		}
+	},
 	data() {
 		return {
-			designId: 3,
+			designId: null,
+			formatedDesign: {},
 			swiperOptions: {
 				slidesPerView: 1,
 				spaceBetween: 20,
 				autoplay: true,
 			},
 		}
-	},
-
-	computed: {
-		...mapState({
-			design: (state) => state.me.design,
-		}),
-		formatedDesign() {
-			return this.mixin_filterArrayById({
-				array: this.design,
-				id: this.designId,
-			})
-		},
 	},
 }
 </script>
