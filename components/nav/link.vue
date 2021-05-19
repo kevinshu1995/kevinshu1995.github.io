@@ -109,7 +109,8 @@ export default {
 					'self-stretch',
 					'items-center',
 					'w-full',
-					'p-4',
+					'p-2',
+					'sm:p-4',
 					'transition-all',
 				]
 				switch (this.linkType) {

@@ -26,10 +26,10 @@
 					></div>
 				</div>
 				<div
-					class="row-start-1 row-end-9 col-start-2 md:col-start-6 lg:col-start-6 xl:col-start-5 col-end-13 flex flex-col items-start justify-end text-white filter drop-shadow space-y-2 md:space-y-4 pl-3 pb-5 md:pb-16 lg:pb-5 z-30"
+					class="row-start-1 row-end-9 col-start-2 md:col-start-6 lg:col-start-6 xl:col-start-5 col-end-13 flex flex-col items-start justify-end text-white filter drop-shadow space-y-2 md:space-y-4 pl-3 pb-5 z-30"
 				>
 					<h1
-						class="font-black flex flex-col text-8xl xs:text-9xl sm:text-9xl md:text-11xl lg:text-15xl xl:text-18xl 2xl:text-19xl leading-none -ml-1 sm:-ml-2 md:-ml-2.5 lg:-ml-4 xl:-ml-5"
+						class="font-black flex flex-col text-8xl xs:text-9xl sm:text-9xl md:text-11xl lg:text-15xl 2xl:text-19xl leading-none -ml-1 sm:-ml-2 md:-ml-2.5 lg:-ml-4 xl:-ml-5"
 					>
 						<span
 							class="transform translate-y-3 md:translate-y-5 lg:translate-y-10"
@@ -41,12 +41,10 @@
 						<span class="text-2xl md:text-3xl font-bold"
 							>許文修</span
 						>
-						<span class="text-lg md:text-xl font-medium"
-							>Wen-Shiu Hsu</span
-						>
+						<span class="text-lg font-medium">Wen-Shiu Hsu</span>
 					</h2>
 					<p
-						class="font-thin md:text-lg pr-3"
+						class="font-thin text-base pr-3"
 						style="max-width: 480px"
 					>
 						我是許文修，目前是一名網頁設計師，曾經是平面設計師，目前致力於研究前端技術，寫網頁齁勝！

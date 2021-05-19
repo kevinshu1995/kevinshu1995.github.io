@@ -1,20 +1,25 @@
 <template>
-	<div class="container">
+	<div class="container pt-8">
 		<div class="row space-y-8">
 			<div class="col w-full">
-				<client-only>
-					<swiper ref="swiperDesign" :options="swiperOptions">
-						<swiper-slide>
-							<img src="~images/design/banner_1.jpg" alt="" />
-						</swiper-slide>
-						<swiper-slide>
-							<img src="~images/design/banner_2.jpg" alt="" />
-						</swiper-slide>
-					</swiper>
-				</client-only>
+				<div class="shadow-2xl">
+					<client-only>
+						<swiper ref="swiperDesign" :options="swiperOptions">
+							<swiper-slide>
+								<img src="~images/design/banner_1.jpg" alt="" />
+							</swiper-slide>
+							<swiper-slide>
+								<img src="~images/design/banner_2.jpg" alt="" />
+							</swiper-slide>
+						</swiper>
+					</client-only>
+				</div>
 			</div>
 			<div class="col w-full">
-				<PageDesign :design="banner" />
+				<PageDesign :design="formatedDesign.current" />
+			</div>
+			<div class="col w-full">
+				<PageDesignOtherDesign :design="formatedDesign.filtered" />
 			</div>
 		</div>
 	</div>
@@ -27,6 +32,7 @@ export default {
 	layout: 'topSpacing',
 	data() {
 		return {
+			designId: 3,
 			swiperOptions: {
 				slidesPerView: 1,
 				spaceBetween: 20,
@@ -39,9 +45,10 @@ export default {
 		...mapState({
 			design: (state) => state.me.design,
 		}),
-		banner() {
-			return this.design.find((target) => {
-				return target.id === 2
+		formatedDesign() {
+			return this.mixin_filterArrayById({
+				array: this.design,
+				id: this.designId,
 			})
 		},
 	},

@@ -26,21 +26,23 @@
 				</div>
 			</div>
 		</div>
-		<div
-			v-if="title || content"
-			class="content pl-2 max-w-xs text-primaryBlue-500 group-hover:text-primaryYellow-500 transition-all"
-		>
-			<h4 v-if="title">{{ title }}</h4>
-			<p v-if="content">{{ content }}</p>
-		</div>
-		<div v-if="badges.length > 0" class="flex flex-wrap">
-			<template v-for="(badge, badgeIndex) in badges">
-				<Badge
-					:key="`gallery-${badge}-${badgeIndex}`"
-					:content="badge"
-					:extra-classes="['mr-2', 'mb-1']"
-				/>
-			</template>
+		<div class="space-y-1 pl-2">
+			<div v-if="badges.length > 0" class="flex flex-wrap">
+				<template v-for="(badge, badgeIndex) in badges">
+					<Badge
+						:key="`gallery-${badge}-${badgeIndex}`"
+						:content="badge"
+						:extra-classes="['mr-2', 'mb-1']"
+					/>
+				</template>
+			</div>
+			<div
+				v-if="title || content"
+				class="content max-w-xs text-primaryBlue-500 group-hover:text-primaryYellow-500 transition-all"
+			>
+				<h4 v-if="title">{{ title }}</h4>
+				<p v-if="content">{{ content }}</p>
+			</div>
 		</div>
 	</div>
 </template>

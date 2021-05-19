@@ -16,7 +16,10 @@
 					Kevin Hsu
 				</navLink>
 			</h1>
-			<div id="menu" class="flex self-stretch px-6 order-1 md:order-2">
+			<div
+				id="menu"
+				class="flex self-stretch px-3 sm:px-6 order-1 md:order-2"
+			>
 				<nav class="self-stretch">
 					<ul class="h-full flex items-center justify-between">
 						<li
@@ -38,7 +41,7 @@
 				</nav>
 				<label
 					for="menu-toggle"
-					class="text-gray-700 hover:text-gray-900 hover:bg-gray-100 cursor-pointer block md:hidden p-4"
+					class="text-gray-700 hover:text-gray-900 hover:bg-gray-100 cursor-pointer flex items-center md:hidden p-2 sm:p-4"
 				>
 					<menu2Icon />
 				</label>

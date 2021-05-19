@@ -34,7 +34,10 @@
 			</div>
 		</div>
 		<div class="col w-full">
-			<nuxt-link to="/" class="inline-flex space-x-2 p-2">
+			<nuxt-link
+				to="/"
+				class="inline-flex space-x-2 py-2 pl-2 pr-3 border border-primaryYellow-500 hover:text-white hover:bg-primaryYellow-500 transition-all"
+			>
 				<ArrowBackIcon />
 				<span> 回到首頁 </span>
 			</nuxt-link>
@@ -44,12 +47,18 @@
 
 <script>
 export default {
-	name: 'DesignContentLayout',
+	name: 'PageDesign',
 
 	props: {
 		design: {
 			type: Object,
 			required: true,
+		},
+		allDesign: {
+			type: Array,
+			default() {
+				return []
+			},
 		},
 	},
 

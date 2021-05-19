@@ -42,12 +42,7 @@ export default {
 		classString() {
 			if (this.customClasses.length > 0)
 				return [...this.customClasses, ...this.variants]
-			const defaultClasses = [
-				'px-2',
-				'font-bold',
-				'text-sm',
-				'tracking-wider',
-			]
+			const defaultClasses = ['px-2', 'text-sm', 'tracking-wider']
 			return [...defaultClasses, ...this.extraClasses, ...this.variants]
 		},
 	},

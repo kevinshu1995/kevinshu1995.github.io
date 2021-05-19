@@ -29,6 +29,7 @@ export const state = () => ({
 	highlight: [
 		{
 			title: 'Material Design 文件協同翻譯',
+			time: '2021',
 			href: 'https://material-design.hexschool.io/',
 			status: {
 				variant: 'bg-gray-400',
@@ -37,7 +38,8 @@ export const state = () => ({
 		},
 		{
 			title: 'Tailwindcss.tw 文件協同翻譯',
-			href: '#',
+			time: '2021',
+			href: 'https://github.com/tailwindcss-tw/tailwindcss.com',
 			status: {
 				variant: 'bg-primaryYellow-500',
 				description: '進行中',
@@ -96,13 +98,31 @@ export const state = () => ({
 					'社群貼文與傳單設計：以豐富顏色的飲料為主體，配色除了黃色的品牌色之外，因為客群多為上班族女性，也會選用較亮的粉色與大量的留白。畫面使用與產品系列相關的元素搭配，例如氣泡飲品背景使用泡泡作點綴，能夠與產品做相呼應的效果。文案內容多以產品本身發想，或以時事話題出發。圖中可以看到一個品牌IP，個性設定用賤話來砥礪人心。因此會加入此IP的形象，並添加一些逗趣的文字，增加"笑"果。',
 				],
 			},
-			href: '#',
+			href: {
+				path: '/design/swing',
+			},
 			imgSrc: require('~/static/images/design/swing_1.jpg'),
 			badges: ['Graphic Design'],
 			tools: ['Illustrator', 'Photoshop'],
 		},
 		{
 			id: 2,
+			content: {
+				title: '社團音樂會海報設計',
+				subtitle: 'Poster Design',
+				content: [
+					'2020 年夏季登場的一期一會管樂音樂會海報設計，「Tengo」 在西班牙文代表我們，同時是 「ten」 與 「go」 的組合，象徵 「我們」 一起迎接 「第十年」 並攜手走向下個十年，並取其諧音 Tango 探戈，採用深紅色作為主色，並以襯線的字體營造出高雅的風格，推出各種社群媒體圖片尺寸版本。',
+				],
+			},
+			href: {
+				path: '/design/CzjhTengoPoster',
+			},
+			imgSrc: require('~/static/images/design/cz-poster-final_facebookCover.jpg'),
+			badges: ['Graphic Design'],
+			tools: ['Illustrator', 'Photoshop'],
+		},
+		{
+			id: 3,
 			content: {
 				title: '電商平台橫幅設計',
 				subtitle: 'E-commercial Banner Design',
@@ -117,8 +137,73 @@ export const state = () => ({
 			badges: ['Graphic Design'],
 			tools: ['Illustrator', 'Photoshop'],
 		},
+		{
+			id: 4,
+			content: {
+				title: '海報設計 - 東海食科系研究室',
+				subtitle: 'Poster Design',
+				content: ['歪斜主軸加上明亮的黃色使整體視覺效果更活潑。'],
+			},
+			href: {
+				path: '/design/foodSciencePoster',
+			},
+			imgSrc: require('~/static/images/design/poster_1.jpg'),
+			badges: ['Graphic Design'],
+			tools: ['Illustrator'],
+		},
+		{
+			id: 5,
+			content: {
+				title: '運動會活動海報設計',
+				subtitle: 'Poster Design',
+				content: [
+					'主視覺以不規則的塊狀色塊隨意排列來搭配英文字體的風格，以代表活力的綠色作為主色。',
+				],
+			},
+			href: {
+				path: '/design/soarSportPoster',
+			},
+			imgSrc: require('~/static/images/design/poster_2.jpg'),
+			badges: ['Graphic Design'],
+			tools: ['Illustrator'],
+		},
 		// {
-		// 	id: 3,
+		// 	id: 6,
+		// 	content: {
+		// 		title: '社團音樂會海報設計',
+		// 		subtitle: 'Poster Design',
+		// 		content: [''],
+		// 	},
+		// 	href: {
+		// 		path: '/design/thu-musicPoster',
+		// 	},
+		// 	imgSrc: require('~/static/images/design/poster_3.jpg'),
+		// 	badges: ['Graphic Design'],
+		// 	tools: ['Illustrator', 'Photoshop'],
+		// },
+		{
+			id: 7,
+			content: {
+				title: '社團活動酷卡設計',
+				subtitle: 'Cool Card Design',
+				content: ['幾何圖形的反覆疊加為底，搭配簡潔的文字排版。'],
+			},
+			href: {
+				path: '/design/thuCoolCard',
+			},
+			imgSrc: require('~/static/images/design/poster_4.jpg'),
+			badges: ['Graphic Design'],
+			tools: ['Illustrator'],
+		},
+		// {
+		// 	id: 8,
+		// 	href: '#',
+		// 	imgSrc: require('~/static/images/design/poster_5.jpg'),
+		// 	badges: ['Graphic Design'],
+		// 	tools: ['Illustrator', 'Photoshop'],
+		// },
+		// {
+		// 	id: 9,
 		// 	content: {
 		// 		title: '輕量、快速組合火爐',
 		// 		subtitle: 'FireFold',
@@ -133,67 +218,6 @@ export const state = () => ({
 		// 	imgSrc: require('~/static/images/design/firefold_1.jpg'),
 		// 	badges: ['Industrial Design'],
 		// 	tools: ['Illustrator', 'Photoshop', 'Solid works'],
-		// },
-		{
-			id: 4,
-			content: {
-				title: '海報設計 - 東海食科系研究室',
-				subtitle: 'Poster Design',
-				content: [],
-			},
-			href: '',
-			imgSrc: require('~/static/images/design/poster_1.jpg'),
-			badges: ['Graphic Design'],
-			tools: ['Illustrator'],
-		},
-		{
-			id: 5,
-			content: {
-				title: '運動會活動海報設計',
-				subtitle: 'Poster Design',
-				content: [],
-			},
-			href: {
-				path: '/design/soarSportPoster',
-			},
-			imgSrc: require('~/static/images/design/poster_2.jpg'),
-			badges: ['Graphic Design'],
-			tools: ['Illustrator'],
-		},
-		{
-			id: 6,
-			content: {
-				title: '社團音樂會海報設計',
-				subtitle: 'Poster Design',
-				content: [],
-			},
-			href: {
-				path: '/design/thu-musicPoster',
-			},
-			imgSrc: require('~/static/images/design/poster_3.jpg'),
-			badges: ['Graphic Design'],
-			tools: ['Illustrator', 'Photoshop'],
-		},
-		{
-			id: 7,
-			content: {
-				title: '社團活動酷卡設計',
-				subtitle: 'Cool Card Design',
-				content: [],
-			},
-			href: {
-				path: '/design/thu-coolCard',
-			},
-			imgSrc: require('~/static/images/design/poster_4.jpg'),
-			badges: ['Graphic Design'],
-			tools: ['Illustrator'],
-		},
-		// {
-		// 	id: 8,
-		// 	href: '#',
-		// 	imgSrc: require('~/static/images/design/poster_5.jpg'),
-		// 	badges: ['Graphic Design'],
-		// 	tools: ['Illustrator', 'Photoshop'],
 		// },
 	],
 	photography: {

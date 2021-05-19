@@ -21,7 +21,7 @@
 				></div>
 			</div>
 			<p
-				class="whitespace-nowrap col-start-2 col-span-2 row-start-1 font-medium mb-1 lg:mb-0"
+				class="whitespace-nowrap col-start-3 md:col-start-2 col-span-10 md:col-span-2 row-start-1 font-medium mb-1 lg:mb-0"
 				:class="
 					index !== 0
 						? 'text-gray-400 group-hover:text-gray-500 transition-all'
@@ -32,14 +32,14 @@
 				{{ content.time.end }}
 			</p>
 			<div
-				class="flex flex-col col-start-2 lg:col-start-4 col-end-13 row-start-2 lg:row-start-1"
+				class="flex flex-col col-start-3 md:col-start-2 lg:col-start-4 col-end-13 row-start-2 lg:row-start-1"
 				:class="
 					index !== 0
 						? 'text-gray-400 group-hover:text-dark transition-all'
 						: ''
 				"
 			>
-				<h4 class="whitespace-nowrap text-lg">
+				<h4 class="whitespace-nowrap text-base sm:text-lg">
 					{{ content.jobTitle }}
 					{{ content.company }}
 				</h4>

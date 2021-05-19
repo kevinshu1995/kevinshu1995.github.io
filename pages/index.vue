@@ -1,5 +1,5 @@
 <template>
-	<div class="space-y-0 overflow-x-hidden" data-v-sticky-container>
+	<div class="space-y-0" data-v-sticky-container>
 		<!-- landing -->
 		<pageIndexLanding />
 		<div id="about" class="container pt-24">
@@ -54,7 +54,7 @@
 						</div>
 						<div class="col w-full lg:w-6/12">
 							<Card title-zh="部落格" title-en="Blog">
-								<pageIndexBlogPosts />
+								<PageIndexBlogPosts />
 							</Card>
 						</div>
 					</div>
@@ -86,60 +86,7 @@
 						</div>
 						<div class="col w-full lg:w-6/12">
 							<Card title-zh="特別經歷" title-en="Highlight">
-								<ul
-									class="list-connect hover-animate space-y-4"
-								>
-									<li
-										v-for="(event, index) in highlight"
-										:key="`skill-${index}`"
-										class="whitespace-nowrap"
-									>
-										<a
-											:href="event.href"
-											target="_blank"
-											class="group inline-flex flex-col space-y-1 whitespace-normal text-current transition-all"
-										>
-											<div class="text-left space-x-4">
-												<span class="text-gray-700">
-													2021
-												</span>
-												<Badge
-													v-if="event.status"
-													:content="
-														event.status.description
-													"
-													:variant="
-														event.status.variant
-													"
-													:custom-classes="[
-														'px-2.5',
-														'font-normal',
-														'text-sm',
-														'tracking-wider',
-														'rounded-full',
-													]"
-												/>
-											</div>
-											<h4
-												class="flex space-x-2 text-lg font-medium text-gray-900 group-hover:text-primaryBlue-500"
-											>
-												<span>
-													{{ event.title }}
-												</span>
-												<span
-													class="relative group-hover:opacity-100 opacity-0 transition-all"
-												>
-													<ArrowUpRightCircleIcon
-														class="relative top-1 animate-ping"
-													/>
-													<ArrowUpRightCircleIcon
-														class="absolute top-1 transition-all"
-													/>
-												</span>
-											</h4>
-										</a>
-									</li>
-								</ul>
+								<PageIndexHighLight :highlight="highlight" />
 							</Card>
 						</div>
 					</div>
@@ -164,33 +111,7 @@
 					<HugeTitle title-zh="網頁作品" title-en="Web" />
 				</div>
 				<div class="col w-full">
-					<client-only>
-						<swiper
-							:options="swiperOptions.webGallery"
-							class="swiper-custom-active"
-							style="overflow: visible"
-						>
-							<swiper-slide
-								v-for="(page, index) in webGallery.pages"
-								:key="`webGallery-${index}`"
-							>
-								<a href="page.url" target="_blank">
-									<PageIndexWebGallery
-										:key="`webGallery-${index}`"
-										:img-src="
-											getImageUrl(
-												`${webGallery.imageDetails.folderName}/${page.nickname}${webGallery.imageDetails.imageFileExtension}`
-											)
-										"
-										:href="page.url"
-										:index="index + 1"
-										:title="page.title"
-										:content="page.description"
-									/>
-								</a>
-							</swiper-slide>
-						</swiper>
-					</client-only>
+					<PageIndexSlideWeb :web="webGallery" />
 				</div>
 			</div>
 		</div>
@@ -200,31 +121,7 @@
 					<HugeTitle title-zh="設計" title-en="Design" />
 				</div>
 				<div class="col w-full">
-					<client-only>
-						<swiper
-							ref="swiperDesign"
-							:options="swiperOptions.design"
-							class="swiper-custom-active"
-							style="overflow: visible"
-						>
-							<swiper-slide
-								v-for="(work, index) in design"
-								:key="`design-${index}`"
-								style="width: auto"
-							>
-								<nuxt-link :to="work.href">
-									<PageIndexWebGallery
-										:href="work.href"
-										:index="index + 1"
-										:img-src="work.imgSrc"
-										:badges="work.badges"
-										:img-height="250"
-										:img-full="true"
-									/>
-								</nuxt-link>
-							</swiper-slide>
-						</swiper>
-					</client-only>
+					<PageIndexSlideDesign :design="design" />
 				</div>
 			</div>
 		</div>
@@ -362,38 +259,6 @@ export default {
 			webGallery: [],
 			design: [],
 			photography: {},
-			swiperOptions: {
-				webGallery: {
-					slidesPerView: 1,
-					spaceBetween: 20,
-					autoplay: true,
-					breakpoints: {
-						768: {
-							slidesPerView: 2,
-							spaceBetween: 30,
-						},
-						1200: {
-							slidesPerView: 3,
-							spaceBetween: 50,
-						},
-					},
-				},
-				design: {
-					slidesPerView: 1,
-					spaceBetween: 20,
-					autoplay: true,
-					breakpoints: {
-						768: {
-							slidesPerView: 2,
-							spaceBetween: 30,
-						},
-						1200: {
-							slidesPerView: 3,
-							spaceBetween: 50,
-						},
-					},
-				},
-			},
 		}
 	},
 

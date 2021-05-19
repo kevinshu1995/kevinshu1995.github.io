@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="flex flex-col text-primaryBlue-500 text-shadow-title pt-36 md:pt-24 mt-16"
+		class="flex flex-col text-primaryBlue-500 text-shadow-title pt-10 sm:pt-36 md:pt-24 mt-16"
 	>
 		<h2
 			class="italic font-black text-8xl md:text-10xl lg:text-13xl leading-none"

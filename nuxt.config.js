@@ -68,9 +68,8 @@ export default {
 	router: {
 		extendRoutes(routes, resolve) {
 			routes.push({
-				name: 'blank',
 				path: '*',
-				component: resolve(__dirname, 'pages/blank.vue'),
+				component: resolve(__dirname, 'pages/Blank.vue'),
 			})
 		},
 	},
@@ -80,6 +79,9 @@ export default {
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
+		{
+			src: '~/plugins/mixins/index.js',
+		},
 		'~/plugins/lodash.js',
 		{ src: '~/plugins/swiper.js', mode: 'client' },
 		{

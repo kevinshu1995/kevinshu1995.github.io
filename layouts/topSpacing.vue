@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="overflow-x-hidden">
 		<Navigation />
 		<div class="pt-24">
 			<Nuxt />

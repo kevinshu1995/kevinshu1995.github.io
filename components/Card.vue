@@ -1,6 +1,8 @@
 <template>
 	<div class="space-y-4">
-		<div class="flex items-end space-x-3 text-primaryBlue-500">
+		<div
+			class="flex flex-col sm:flex-row sm:items-end sm:space-x-3 text-primaryBlue-500"
+		>
 			<h3 class="font-black">{{ titleEn }}</h3>
 			<p class="font-bold">{{ titleZh }}</p>
 		</div>

@@ -1,24 +1,12 @@
 <template>
 	<div class="container pt-8">
 		<div class="row space-y-10">
-			<div class="col w-full">
-				<div class="shadow-lg">
-					<client-only>
-						<swiper ref="swiperDesign" :options="swiperOptions">
-							<swiper-slide>
-								<img src="~images/design/swing_1.jpg" alt="" />
-							</swiper-slide>
-							<swiper-slide>
-								<img src="~images/design/swing_2.jpg" alt="" />
-							</swiper-slide>
-							<swiper-slide>
-								<img src="~images/design/swing_3.jpg" alt="" />
-							</swiper-slide>
-						</swiper>
-					</client-only>
+			<div class="col w-full md:w-1/2">
+				<div class="shadow-2xl">
+					<img src="~images/design/poster_4.jpg" alt="" />
 				</div>
 			</div>
-			<div class="col w-full">
+			<div class="col w-full md:w-1/2">
 				<PageDesign :design="formatedDesign.current" />
 			</div>
 			<div class="col w-full">
@@ -31,11 +19,11 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-	name: 'DesignSwing',
+	name: 'DesignThuCoolCard',
 	layout: 'topSpacing',
 	data() {
 		return {
-			designId: 1,
+			designId: 7,
 			swiperOptions: {
 				slidesPerView: 1,
 				spaceBetween: 20,
