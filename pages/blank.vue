@@ -25,5 +25,10 @@
 export default {
 	name: 'Blank',
 	layout: 'topSpacing',
+	methods: {
+		goWeb() {
+			this.$router.push({ name: 'index', hash: '#web' })
+		},
+	},
 }
 </script>
