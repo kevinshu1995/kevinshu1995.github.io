@@ -3,7 +3,7 @@
 		class="flex flex-col text-primaryBlue-500 text-shadow-title pt-10 sm:pt-36 md:pt-24 mt-16"
 	>
 		<h2
-			class="italic font-black text-8xl md:text-10xl lg:text-13xl leading-none"
+			class="italic font-black text-5xl sm:text-8xl md:text-10xl lg:text-13xl leading-none"
 		>
 			{{ titleEn }}
 		</h2>

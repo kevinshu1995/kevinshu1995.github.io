@@ -85,6 +85,10 @@ export default {
 			src: '~/plugins/dayjs.js',
 		},
 		{
+			src: '~/plugins/gsap.js',
+			mode: 'client',
+		},
+		{
 			src: '~/plugins/vue-tabler-icons.js',
 		},
 		{

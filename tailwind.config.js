@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-	mode: 'jit',
+	// mode: 'jit',
 	purge: {
 		content: [
 			'components/**/*.vue',
@@ -64,6 +64,20 @@ module.exports = {
 			white: colors.white,
 		},
 		extend: {
+			keyframes: {
+				fadeDownIn: {
+					'0%': { opacity: '0', transform: 'translateY(100px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+				fadeLeftIn: {
+					'0%': { opacity: '0', transform: 'translateX(-100px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' },
+				},
+			},
+			animation: {
+				fadeDownIn: 'fadeDownIn 0.5s ease-in both',
+				fadeLeftIn: 'fadeLeftIn 0.5s ease-in both',
+			},
 			fontSize: {
 				'10xl': '9rem',
 				'11xl': '10rem',

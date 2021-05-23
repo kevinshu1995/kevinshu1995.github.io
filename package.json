@@ -21,6 +21,7 @@
     "@tailwindcss/line-clamp": "^0.2.0",
     "core-js": "^3.9.1",
     "dayjs": "^1.10.4",
+    "gsap": "^3.6.1",
     "nuxt": "^2.15.3",
     "puppeteer": "^9.0.0",
     "smooth-vuebar": "^1.4.0",

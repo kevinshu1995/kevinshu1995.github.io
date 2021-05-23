@@ -108,28 +108,38 @@
 		<div id="web" class="container">
 			<div class="row space-y-14">
 				<div class="col w-full">
-					<HugeTitle title-zh="網頁作品" title-en="Web" />
+					<div ref="webTitle">
+						<HugeTitle title-zh="網頁作品" title-en="Web" />
+					</div>
 				</div>
 				<div class="col w-full">
-					<PageIndexSlideWeb :web="webGallery" />
+					<div ref="webContent">
+						<PageIndexSlideWeb :web="webGallery" />
+					</div>
 				</div>
 			</div>
 		</div>
 		<div id="design" class="container">
 			<div class="row space-y-14">
 				<div class="col w-full">
-					<HugeTitle title-zh="設計" title-en="Design" />
+					<div ref="designTitle">
+						<HugeTitle title-zh="設計" title-en="Design" />
+					</div>
 				</div>
 				<div class="col w-full">
-					<PageIndexSlideDesign :design="design" />
+					<div ref="designContent">
+						<PageIndexSlideDesign :design="design" />
+					</div>
 				</div>
 			</div>
 		</div>
 		<div id="photography" class="relative overflow-hidden space-y-20">
 			<div class="container">
 				<div class="row">
-					<div class="col w-full">
-						<HugeTitle title-zh="攝影" title-en="Photography" />
+					<div class="col w-full" data-scrollTrigger>
+						<div ref="photographyTitle">
+							<HugeTitle title-zh="攝影" title-en="Photography" />
+						</div>
 					</div>
 				</div>
 			</div>
@@ -259,6 +269,7 @@ export default {
 			webGallery: [],
 			design: [],
 			photography: {},
+			gsap: {},
 		}
 	},
 
@@ -271,9 +282,67 @@ export default {
 		},
 	},
 
+	mounted() {
+		this.gsap = [...this.scrollTrigger()]
+	},
+
+	beforeDestroy() {
+		this.gsap.forEach((gsap) => gsap.kill())
+	},
+
 	methods: {
-		getImageUrl(url) {
-			return require(`~/static/images/${url}`)
+		scrollTrigger() {
+			const el = {
+				titles: [
+					this.$refs.webTitle,
+					this.$refs.designTitle,
+					this.$refs.photographyTitle,
+				],
+				contents: [
+					this.$refs.webContent,
+					this.$refs.designContent,
+					this.$refs['photography-image'],
+				],
+			}
+			const gsapTitles = el.titles.map((title) => {
+				return this.$gsap.from(title, {
+					// xPercent: -30,
+					// autoAlpha: 0,
+					// ease: 'expo.in',
+					scrollTrigger: {
+						once: true,
+						trigger: title,
+						start: 'top 95%',
+						// end: '+=30%',
+						onEnter: () => {
+							title.classList.add('animate-fadeLeftIn')
+						},
+						// toggleActions: 'play none none reset',
+						markers: true,
+						scrub: true,
+					},
+				})
+			})
+			const gsapContents = el.contents.map((content) => {
+				return this.$gsap.from(content, {
+					// yPercent: 30,
+					// autoAlpha: 0,
+					// ease: 'expo.in',
+					scrollTrigger: {
+						once: true,
+						trigger: content,
+						start: 'top 95%',
+						// end: '+=1%',
+						onEnter: () => {
+							content.classList.add('animate-fadeDownIn')
+						},
+						// toggleActions: 'play none none reset',
+						markers: true,
+						scrub: true,
+					},
+				})
+			})
+			return [...gsapTitles, ...gsapContents]
 		},
 	},
 }
