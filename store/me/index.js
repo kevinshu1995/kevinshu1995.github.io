@@ -99,7 +99,7 @@ export const state = () => ({
 				],
 			},
 			href: {
-				path: '/design/swing',
+				path: '/design/Swing',
 			},
 			imgSrc: require('~/static/images/design/swing_1.jpg'),
 			badges: ['Graphic Design'],
@@ -131,7 +131,7 @@ export const state = () => ({
 				],
 			},
 			href: {
-				path: '/design/banners',
+				path: '/design/Banners',
 			},
 			imgSrc: require('~/static/images/design/banner_1.jpg'),
 			badges: ['Graphic Design'],
@@ -161,7 +161,7 @@ export const state = () => ({
 				],
 			},
 			href: {
-				path: '/design/soarSportPoster',
+				path: '/design/SoarSportPoster',
 			},
 			imgSrc: require('~/static/images/design/poster_2.jpg'),
 			badges: ['Graphic Design'],
@@ -189,7 +189,7 @@ export const state = () => ({
 				content: ['幾何圖形的反覆疊加為底，搭配簡潔的文字排版。'],
 			},
 			href: {
-				path: '/design/thuCoolCard',
+				path: '/design/ThuCoolCard',
 			},
 			imgSrc: require('~/static/images/design/poster_4.jpg'),
 			badges: ['Graphic Design'],

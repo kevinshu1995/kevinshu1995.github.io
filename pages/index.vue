@@ -306,38 +306,28 @@ export default {
 			}
 			const gsapTitles = el.titles.map((title) => {
 				return this.$gsap.from(title, {
-					// xPercent: -30,
-					// autoAlpha: 0,
-					// ease: 'expo.in',
 					scrollTrigger: {
 						once: true,
 						trigger: title,
 						start: 'top 95%',
-						// end: '+=30%',
 						onEnter: () => {
 							title.classList.add('animate-fadeLeftIn')
 						},
-						// toggleActions: 'play none none reset',
-						markers: true,
+						// markers: true,
 						scrub: true,
 					},
 				})
 			})
 			const gsapContents = el.contents.map((content) => {
 				return this.$gsap.from(content, {
-					// yPercent: 30,
-					// autoAlpha: 0,
-					// ease: 'expo.in',
 					scrollTrigger: {
 						once: true,
 						trigger: content,
 						start: 'top 95%',
-						// end: '+=1%',
 						onEnter: () => {
 							content.classList.add('animate-fadeDownIn')
 						},
-						// toggleActions: 'play none none reset',
-						markers: true,
+						// markers: true,
 						scrub: true,
 					},
 				})
