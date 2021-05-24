@@ -65,15 +65,6 @@ export default {
 		],
 	},
 
-	router: {
-		extendRoutes(routes, resolve) {
-			routes.push({
-				path: '*',
-				component: resolve(__dirname, 'pages/Blank.vue'),
-			})
-		},
-	},
-
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	css: [{ src: 'swiper/swiper-bundle.css' }],
 
