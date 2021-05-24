@@ -16,8 +16,7 @@
 
 				<swiper
 					:options="swiperOptions"
-					class="divide-y divide-gray-100 -my-3 overflow-y-auto z-10"
-					style="max-height: 50vh"
+					class="divide-y divide-gray-100 -my-3 max-h-screen-2/3 sm:max-h-screen-1/2 overflow-y-auto z-10"
 				>
 					<div slot="pagination" class="swiper-pagination"></div>
 					<swiper-slide
@@ -26,6 +25,7 @@
 					>
 						<a
 							:href="post.link._text"
+							target="_blank"
 							class="card group hover:bg-gray-50 hover:px-2 hover:shadow inline-block py-3 w-full relative transition-all overflow-hidden"
 						>
 							<div class="flex flex-col space-y-1 relative z-0">

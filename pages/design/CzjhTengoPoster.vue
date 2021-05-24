@@ -1,7 +1,7 @@
 <template>
 	<div class="container pt-8">
 		<div class="row space-y-8 md:space-y-0">
-			<div class="col w-full md:w-1/2">
+			<div class="col w-full md:w-1/2 lg:w-1/3">
 				<div class="shadow-2xl">
 					<client-only>
 						<swiper ref="swiperDesign" :options="swiperOptions">
@@ -33,7 +33,7 @@
 					</client-only>
 				</div>
 			</div>
-			<div class="col w-full md:w-1/2">
+			<div class="col w-full md:w-1/2 lg:w-2/3">
 				<PageDesignMain :design="formatedDesign.current" />
 			</div>
 			<div class="col w-full pt-8">

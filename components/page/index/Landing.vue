@@ -30,7 +30,7 @@
 					class="row-start-1 row-end-9 sm:row-end-8 col-start-2 md:col-start-6 lg:col-start-6 xl:col-start-5 col-end-13 flex flex-col items-start justify-end text-white filter drop-shadow space-y-2 md:space-y-4 pl-3 pb-5 z-30"
 				>
 					<h2
-						class="font-black flex flex-col text-7xl xs:text-9xl sm:text-9xl md:text-10xl lg:text-13xl 2xl:text-17xl leading-none -ml-1 sm:-ml-2 md:-ml-2.5 lg:-ml-4 xl:-ml-5"
+						class="font-black flex flex-col text-7xl xs:text-9xl sm:text-9xl md:text-10xl lg:text-13xl 2xl:text-17xl leading-tight sm:leading-none -ml-1 sm:-ml-2 md:-ml-2.5 lg:-ml-4 xl:-ml-5"
 					>
 						<span
 							ref="first-name"

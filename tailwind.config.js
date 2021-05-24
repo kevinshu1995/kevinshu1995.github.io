@@ -114,6 +114,11 @@ module.exports = {
 				12: '12',
 				13: '13',
 			},
+			maxHeight: {
+				'screen-1/2': '50vh',
+				'screen-1/3': '33vh',
+				'screen-2/3': '66vh',
+			},
 			spacing: {
 				4.5: '1.125rem',
 			},

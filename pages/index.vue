@@ -5,7 +5,7 @@
 		<div id="about" class="container pt-24">
 			<div class="row space-y-20 sm:space-y-0">
 				<!-- my photo -->
-				<div class="col hidden sm:block sm:w-3/12 px-0 lg:px-8">
+				<div class="col hidden sm:block sm:w-3/12 pl-8 pr-0 lg:px-8">
 					<div v-sticky="stickyOptions">
 						<img src="~images/me-2.jpg" alt="" />
 					</div>
