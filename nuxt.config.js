@@ -1,8 +1,13 @@
 import { resolve } from 'path'
+import getRoutes from './utils/getRoutes'
 
 export default {
 	// Target: https://go.nuxtjs.dev/config-target
 	target: 'static',
+
+	env: {
+		baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+	},
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
@@ -110,7 +115,16 @@ export default {
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
 		'vue-scrollto/nuxt',
+		'@nuxt/content',
+		'@nuxtjs/sitemap',
 	],
+
+	sitemap: {
+		hostname: 'https://kevinshu1995.github.io/',
+		routes() {
+			return getRoutes()
+		},
+	},
 
 	// Axios module configuration: https://go.nuxtjs.dev/config-axios
 	axios: {},
