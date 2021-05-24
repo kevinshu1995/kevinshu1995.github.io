@@ -1,6 +1,6 @@
 # [個人網頁 Personal Website | 許文修 Wen-Shiu Hsu](https://kevinshu1995.github.io/)
 
-[Imgur - Mine photo](https://i.imgur.com/99z20VP.jpg)
+![Imgur - Mine photo](https://i.imgur.com/99z20VP.jpg)
 
 ## 簡述 - Intro
 此網站展示了我的各種作品，其中包含網頁前端、平面設計、攝影
@@ -19,4 +19,4 @@
 [Linkedin](https://www.linkedin.com/in/kevin-hws/)
 
 
-[Imgur - thanks](https://media.giphy.com/media/l2R0eYcNq9rJUsVAA/giphy.gif)
+![Imgur - thanks](https://media.giphy.com/media/l2R0eYcNq9rJUsVAA/giphy.gif)
