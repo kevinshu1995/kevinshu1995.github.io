@@ -1,0 +1,5 @@
+# robots.txt for https://kevinshu1995.github.io/
+User-agent: *
+Disallow:
+
+sitemap:https://kevinshu1995.github.io/sitemap.xml
