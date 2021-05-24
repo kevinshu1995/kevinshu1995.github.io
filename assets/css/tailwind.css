@@ -117,9 +117,6 @@
 }
 
 @layer components {
-	.index .is-affixed .inner-wrapper-sticky {
-		@apply lg:ml-8;
-	}
 	.index .swiper-custom-active .swiper-slide-active .indexNumber,
 	.index .swiper-custom-active .swiper-slide-active .content {
 		@apply text-primaryYellow-500;
