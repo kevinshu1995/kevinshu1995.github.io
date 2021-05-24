@@ -1,5 +1,5 @@
 <template>
-	<div class="space-y-0" data-v-sticky-container>
+	<div class="space-y-0 index" data-v-sticky-container>
 		<!-- landing -->
 		<pageIndexLanding />
 		<div id="about" class="container pt-24">
@@ -347,13 +347,3 @@ export default {
 	},
 }
 </script>
-
-<style lang="postcss" scoped>
-.is-affixed .inner-wrapper-sticky {
-	@apply lg:ml-8;
-}
-.swiper-custom-active .swiper-slide-active .indexNumber,
-.swiper-custom-active .swiper-slide-active .content {
-	@apply text-primaryYellow-500;
-}
-</style>
