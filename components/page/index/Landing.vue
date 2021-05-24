@@ -159,7 +159,7 @@ export default {
 	},
 
 	mounted() {
-		this.initialAnimation()
+		this.initialAnimation().delay(0.5)
 	},
 
 	methods: {
@@ -180,30 +180,41 @@ export default {
 					this.$refs.socials,
 				],
 			}
-			const tl = this.$gsap.timeline()
-			tl.set(el.texts, { xPercent: 30, autoAlpha: 0 })
-				.set([el['upper-bg'], el['low-bg'], el['photo-me']], {
-					autoAlpha: 0.5,
-				})
-				.set(el['upper-bg'], { xPercent: 30, yPercent: -30 })
-				.set(el['low-bg'], { xPercent: -30, yPercent: 30 })
-				.set([el['photo-me']], { yPercent: 30 })
-				.to([el['upper-bg'], el['low-bg']], {
+			const effect = {
+				final: {
 					xPercent: 0,
 					yPercent: 0,
 					autoAlpha: 1,
 					ease: 'expo.out',
-					duration: 0.7,
-				})
-				.to(
-					[el['photo-me']],
-					{ yPercent: 0, duration: 0.7, autoAlpha: 1 },
+				},
+			}
+			const tl = this.$gsap.timeline()
+			tl.fromTo(
+				el['upper-bg'],
+				0.7,
+				{ xPercent: 30, yPercent: -30, autoAlpha: 0 },
+				effect.final,
+				'<'
+			)
+				.fromTo(
+					el['low-bg'],
+					0.7,
+					{ xPercent: -30, yPercent: 30, autoAlpha: 0 },
+					effect.final,
 					'<'
 				)
-				.to(
+				.fromTo(
+					[el['photo-me']],
+					0.7,
+					{ yPercent: 30, autoAlpha: 0 },
+					effect.final,
+					'<'
+				)
+				.fromTo(
 					el.texts,
-					{ xPercent: 0, autoAlpha: 1, stagger: 0.2, duration: 0.7 },
-					'>'
+					0.7,
+					{ xPercent: 30, autoAlpha: 0 },
+					{ xPercent: 0, autoAlpha: 1, stagger: 0.2 }
 				)
 			return tl
 		},
