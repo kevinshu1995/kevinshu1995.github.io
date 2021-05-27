@@ -33,16 +33,16 @@
 						class="font-black flex flex-col text-7xl xs:text-9xl sm:text-9xl md:text-10xl lg:text-13xl 2xl:text-17xl leading-tight sm:leading-none -ml-1 sm:-ml-2 md:-ml-2.5 lg:-ml-4 xl:-ml-5"
 					>
 						<span
-							ref="first-name"
-							class="transform translate-y-3 md:translate-y-5 lg:translate-y-10"
-							>Kevin</span
+							class="transform translate-y-4 md:translate-y-6 lg:translate-y-10"
 						>
+							<span ref="first-name">Kevin</span>
+						</span>
 						<span ref="last-name">Hsu</span>
 					</h2>
 					<h2 ref="second-name" class="space-x-2">
-						<span class="text-2xl md:text-3xl font-bold"
-							>許文修</span
-						>
+						<span class="text-2xl md:text-3xl font-bold">
+							許文修
+						</span>
 						<span class="text-lg font-medium">Wen-Shiu Hsu</span>
 					</h2>
 					<p
@@ -50,7 +50,7 @@
 						class="font-thin text-base pr-3"
 						style="max-width: 480px"
 					>
-						我是許文修，目前是一名網頁設計師，曾經是平面設計師，目前致力於研究前端技術，寫網頁齁勝！
+						我是許文修，目前是一名網頁設計師，擔任過平面設計師，目前致力於研究前端技術，寫網頁齁勝！
 					</p>
 				</div>
 				<div
@@ -84,6 +84,10 @@
 		<div
 			ref="upper-bg"
 			class="relative z-20 row-start-1 row-end-10 sm:row-end-9 md:row-end-8 col-start-1 md:col-start-4 col-end-13 bg-gradient-to-r to-primaryBlue-500 from-primaryBlue-dark-500"
+		></div>
+		<div
+			ref="upper-bg2"
+			class="relative z-0 row-start-1 row-end-10 sm:row-end-9 md:row-end-8 col-start-1 col-end-4 bg-gradient-to-r to-primaryBlue-600 from-primaryBlue-dark-600"
 		></div>
 		<div
 			ref="low-bg"
@@ -170,6 +174,7 @@ export default {
 		initialAnimation() {
 			const el = {
 				'upper-bg': this.$refs['upper-bg'],
+				'upper-bg2': this.$refs['upper-bg2'],
 				'low-bg': this.$refs['low-bg'],
 				'photo-me': this.$refs['photo-me'],
 				texts: [
@@ -191,28 +196,35 @@ export default {
 			const tl = this.$gsap.timeline()
 			tl.fromTo(
 				el['upper-bg'],
-				0.7,
+				0.5,
 				{ xPercent: 30, yPercent: -30, autoAlpha: 0 },
 				effect.final,
 				'<'
 			)
 				.fromTo(
+					el['upper-bg2'],
+					0.5,
+					{ xPercent: -30, yPercent: -30, autoAlpha: 0 },
+					effect.final,
+					'<+0.1'
+				)
+				.fromTo(
 					el['low-bg'],
-					0.7,
+					0.5,
 					{ xPercent: -30, yPercent: 30, autoAlpha: 0 },
 					effect.final,
-					'<'
+					'<+0.1'
 				)
 				.fromTo(
 					[el['photo-me']],
-					0.7,
+					0.5,
 					{ yPercent: 30, autoAlpha: 0 },
 					effect.final,
-					'<'
+					'<+0.1'
 				)
 				.fromTo(
 					el.texts,
-					0.7,
+					0.5,
 					{ xPercent: 30, autoAlpha: 0 },
 					{ xPercent: 0, autoAlpha: 1, stagger: 0.2 }
 				)
