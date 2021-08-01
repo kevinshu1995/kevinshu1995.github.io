@@ -32,10 +32,15 @@
 						target="_blank"
 						:href="webOutSite.url"
 					>
-						<span>
-							{{ webOutSite.name }}
-						</span>
-						<ArrowUpRightCircleIcon class="w-4" />
+						<OutsiteLink
+							:name="webOutSite.name"
+							:root-class="[
+								'text-base',
+								'underline',
+								'text-yellow-500',
+								'hover:text-yellow-600',
+							]"
+						/>
 					</a>
 				</div>
 			</swiper-slide>

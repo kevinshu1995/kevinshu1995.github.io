@@ -25,23 +25,7 @@
 						]"
 					/>
 				</div>
-				<h4
-					class="flex space-x-2 text-base sm:text-lg text-gray-900 group-hover:text-primaryBlue-500"
-				>
-					<span>
-						{{ event.title }}
-					</span>
-					<span
-						class="relative hidden sm:block group-hover:opacity-100 opacity-0 transition-all"
-					>
-						<ArrowUpRightCircleIcon
-							class="relative top-1 animate-ping"
-						/>
-						<ArrowUpRightCircleIcon
-							class="absolute top-1 transition-all"
-						/>
-					</span>
-				</h4>
+				<OutsiteLink :name="event.title" />
 			</a>
 		</li>
 	</ul>

@@ -88,6 +88,29 @@ export const state = () => ({
 	],
 	design: [
 		{
+			id: 9,
+			content: {
+				title: '個人網站設計',
+				subtitle: 'Personal Website',
+				content: [
+					'此為本個人網站的 Prototype，使用工具為 Figma，請點擊下方連結查看。',
+				],
+				outSiteLinks: [
+					{
+						name: 'Figma prototype Demo',
+						url:
+							'https://www.figma.com/proto/t4aL7iuyUCX05ewZraA95Z/Portfolio?page-id=0%3A1&node-id=2%3A9&viewport=258%2C357%2C0.17152492702007294&scaling=min-zoom',
+					},
+				],
+			},
+			href: {
+				path: '/design/PersonalWebsite',
+			},
+			imgSrc: require('~/static/images/design/personalWebsite.jpg'),
+			badges: ['Graphic Design', 'UI'],
+			tools: ['Figma', 'Illustrator', 'Photoshop'],
+		},
+		{
 			id: 1,
 			content: {
 				title: '搖擺酸酸',

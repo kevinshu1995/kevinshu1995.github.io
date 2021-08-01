@@ -32,6 +32,27 @@
 					<p :key="`paragraph-${index}`">{{ paragraph }}</p>
 				</template>
 			</div>
+			<div v-if="design.content.outSiteLinks" class="pt-3">
+				<div class="flex space-x-2">
+					<a
+						v-for="(extraLink, index) in design.content
+							.outSiteLinks"
+						:key="`designExtraLink-${index}`"
+						:href="extraLink.url"
+						target="_blank"
+					>
+						<OutsiteLink
+							:name="extraLink.name"
+							:root-class="[
+								'text-base',
+								'underline',
+								'text-yellow-500',
+								'hover:text-yellow-600',
+							]"
+						/>
+					</a>
+				</div>
+			</div>
 		</div>
 		<div class="col w-full">
 			<nuxt-link
