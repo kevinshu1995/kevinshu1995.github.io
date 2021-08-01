@@ -8,6 +8,7 @@
 			<swiper-slide
 				v-for="(page, index) in web.pages"
 				:key="`web-${index}`"
+				class="space-y-2"
 			>
 				<a :href="page.url" target="_blank">
 					<PageIndexSlide
@@ -23,6 +24,20 @@
 						:content="page.description"
 					/>
 				</a>
+				<div class="flex text-sm space-x-2">
+					<a
+						v-for="(webOutSite, webOutSiteIndex) in page.links"
+						:key="`web-outSite-${webOutSiteIndex}`"
+						class="px-2 flex items-center space-x-1 hover:text-yellow-700"
+						target="_blank"
+						:href="webOutSite.url"
+					>
+						<span>
+							{{ webOutSite.name }}
+						</span>
+						<ArrowUpRightCircleIcon class="w-4" />
+					</a>
+				</div>
 			</swiper-slide>
 		</swiper>
 	</client-only>

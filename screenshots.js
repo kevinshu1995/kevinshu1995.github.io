@@ -26,5 +26,24 @@ module.exports = {
 			description:
 				'因應 2020 年新冠肺炎&剛學 JS，所以寫了這個網站當作練習。',
 		},
+		{
+			nickname: 'reactTailwind-SignUpForm',
+			url: 'https://react-tailwind-sign-up-form.vercel.app/',
+			title: 'React x Tailwind - Sign up form',
+			description:
+				'My first web application developed with React.js. Submitting on Fronted Mentor.',
+			links: [
+				{
+					name: 'Fronted Mentor',
+					url:
+						'https://www.frontendmentor.io/solutions/react-x-tailwind-sign-up-form-jMzVVUSKr',
+				},
+				{
+					name: 'Source code',
+					url:
+						'https://github.com/kevinshu1995/react-tailwind-sign-up-form',
+				},
+			],
+		},
 	],
 }
