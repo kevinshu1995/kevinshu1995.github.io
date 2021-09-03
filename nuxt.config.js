@@ -44,7 +44,7 @@ export default {
 			{
 				property: 'og:description',
 				content:
-					'嗨!我是許文修，目前是一名網頁設計師，目前致力研究前端技術，也曾經是平面設計師，畢業於東海大學工業設計學系。 Hi! This is Kevin Hsu - a web designer, graphic designer. Commit to Front-end currently.',
+					'嗨！我是許文修，前端工程師，目前致力研究前端技術，目前主攻 Vue、Tailwindcss。曾任平面設計與網頁設計，畢業於東海大學工業設計學系。 Hi! This is Kevin Hsu - a fronted engineer, web designer, graphic designer. Commit to Front-end currently.',
 				vmid: 'og:description',
 			},
 			{
