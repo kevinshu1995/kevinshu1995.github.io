@@ -1,16 +1,16 @@
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "css.validate": false,
-    "editor.quickSuggestions": {
-        "strings": true
-    },
-    "files.associations": {
-        "*.css": "scss"
-    },
-    "tailwindCSS.emmetCompletions": true,
-    "tailwindCSS.lint.invalidTailwindDirective": "ignore",
-    "tailwindCSS.validate": true,
-    "css.customData": ["./.vscode/css_custom_data.json"]
+	// "editor.codeActionsOnSave": {
+	//     "source.fixAll.eslint": true
+	// },
+	"css.validate": false,
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"files.associations": {
+		"*.css": "scss"
+	},
+	"tailwindCSS.emmetCompletions": true,
+	"tailwindCSS.lint.invalidTailwindDirective": "ignore",
+	"tailwindCSS.validate": true,
+	"css.customData": ["./.vscode/css_custom_data.json"]
 }

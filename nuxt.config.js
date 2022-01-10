@@ -62,7 +62,6 @@ export default {
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'preconnect', href: 'https://fonts.gstatic.com' },
 			{
-				// TODO 效能?
 				rel: 'stylesheet',
 				href:
 					'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&display=swap',

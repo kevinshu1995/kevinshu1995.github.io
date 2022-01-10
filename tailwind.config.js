@@ -2,15 +2,13 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
 	mode: 'jit',
-	purge: {
-		content: [
-			'components/**/*.vue',
-			'layouts/**/*.vue',
-			'pages/**/*.vue',
-			'plugins/**/*.js',
-			'nuxt.config.js',
-		],
-	},
+	purge: [
+		'components/**/*.vue',
+		'layouts/**/*.vue',
+		'pages/**/*.vue',
+		'plugins/**/*.js',
+		'nuxt.config.js',
+	],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		container: {
