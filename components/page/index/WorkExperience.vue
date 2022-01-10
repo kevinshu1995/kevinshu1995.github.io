@@ -39,9 +39,13 @@
 						: ''
 				"
 			>
-				<h4 class="whitespace-nowrap text-base sm:text-lg">
-					{{ content.jobTitle }}
-					{{ content.company }}
+				<h4 class="whitespace-nowrap">
+					<span class="text-base sm:text-lg">
+						{{ content.jobTitle }}
+					</span>
+					<span class="text-base">
+						{{ content.company }}
+					</span>
 				</h4>
 				<template
 					v-for="(text, descriptionIndex) in content.description"
@@ -53,11 +57,12 @@
 						{{ text }}
 					</p>
 					<ol
-						v-if="typeof text === 'array'"
+						v-if="Array.isArray(text)"
 						:key="`experience-paraphrase-${descriptionIndex}`"
+						class="list-decimal pl-4"
 					>
 						<li
-							v-for="(list, listIndex) in content"
+							v-for="(list, listIndex) in text"
 							:key="`experience-list-${listIndex}`"
 						>
 							{{ list }}
