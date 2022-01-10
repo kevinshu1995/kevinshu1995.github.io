@@ -49,8 +49,25 @@ export const state = () => ({
 	experiences: [
 		{
 			time: {
+				start: '2021',
+				end: '2021',
+			},
+			company: '讓狂人飛教育股份有限公司',
+			jobTitle: '前端工程師',
+			description: [
+				'主要開發 Joberfly 網站',
+				[
+					'重構該站程式碼 (使用 Nuxt )，製作相關重複元件，包含主題相關表單、按鈕元件，並協助導入 Tailwindcss',
+					'全新版本首頁，包含頁面切版、預覽評測功能...等',
+					'全新版本建立履歷頁面，包含使用 query 判斷目前操作狀態、頁面操作優化、切版、相關功能重構',
+					'團隊使用 Git flow，熟悉在 Github 上使用 issue 與 pull request 之相關操作',
+				],
+			],
+		},
+		{
+			time: {
 				start: '2020',
-				end: 'current',
+				end: '2021',
 			},
 			company: '佳音事業股份有限公司',
 			jobTitle: '網頁設計',
