@@ -1,52 +1,9 @@
 {
-  "name": "kevinshu1995.github.io",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:fix:js": "eslint --fix --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js",
-    "getScreenshots": "node ./plugins/puppeteer.js"
-  },
-  "pre-commit": [
-    "lint:fix:js"
-  ],
-  "dependencies": {
-    "@nuxt/content": "^1.14.0",
-    "@nuxtjs/axios": "^5.13.1",
-    "@nuxtjs/sitemap": "^2.4.0",
-    "@renatodeleao/vue-sticky-directive": "^0.3.0",
-    "@tailwindcss/line-clamp": "^0.2.0",
-    "core-js": "^3.9.1",
-    "dayjs": "^1.10.4",
-    "gsap": "^3.6.1",
-    "nuxt": "^2.15.3",
-    "puppeteer": "^9.0.0",
-    "smooth-vuebar": "^1.4.0",
-    "swiper": "^6.5.8",
-    "vue-awesome-swiper": "^4.1.1",
-    "vue-lodash": "^2.1.2",
-    "vue-scrollto": "^2.20.0",
-    "vue-tabler-icons": "^1.10.1",
-    "xml-js": "^1.6.11"
-  },
-  "devDependencies": {
-    "@nuxtjs/eslint-config": "^6.0.0",
-    "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/google-analytics": "^2.4.0",
-    "@nuxtjs/tailwindcss": "^4.0.1",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.22.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.7.0",
-    "postcss": "^8.2.13",
-    "pre-commit": "^1.2.2",
-    "prettier": "^2.2.1"
-  }
+    "name": "Wen-Hsiu Hsu's portfolio website",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "getScreenshots": "node ./plugins/puppeteer.js"
+    }
 }
+

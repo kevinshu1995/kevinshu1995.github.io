@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer')
-const { pages, imageDetails } = require('./../screenshots')
+const { pages, imageDetails } = require('./screenshots')
 
 ;(async () => {
 	const browser = await puppeteer.launch()
