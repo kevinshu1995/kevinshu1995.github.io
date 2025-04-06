@@ -17,9 +17,15 @@
         "@nuxt/image": "^1.10.0",
         "@nuxt/scripts": "^0.11.5",
         "@unhead/vue": "^2.0.4",
+        "@unocss/reset": "^66.1.0-beta.10",
         "eslint": "^9.24.0",
         "nuxt": "^3.16.2",
         "vue": "^3.5.13",
         "vue-router": "^4.5.0"
+    },
+    "devDependencies": {
+        "@unocss/nuxt": "^66.1.0-beta.10",
+        "@unocss/preset-mini": "^66.1.0-beta.10",
+        "unocss": "^66.1.0-beta.10"
     }
 }

@@ -9,5 +9,6 @@ export default defineNuxtConfig({
         "@nuxt/fonts",
         "@nuxt/icon",
         "@nuxt/scripts",
+        "@unocss/nuxt",
     ],
 })
