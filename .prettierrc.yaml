@@ -1,0 +1,43 @@
+printWidth: 80 # 每行的最大寬度，預設為 80
+
+tabWidth: 4 # 每個縮排層級的空格數，預設為 2
+
+useTabs: false # 是否使用 Tab 縮排，預設為 false（使用空格）
+
+semi: false # 是否在語句末尾加上分號，預設為 true
+
+singleQuote: false # 是否使用單引號，預設為 false（使用雙引號）
+
+quoteProps: as-needed # 對物件屬性引號的處理方式，預設為 "as-needed"
+
+jsxSingleQuote: false # JSX 中是否使用單引號，預設為 false
+
+trailingComma: all # 多行結構中是否添加尾隨逗號，預設為 "all"
+
+bracketSpacing: true # 是否在物件大括號內添加空格，預設為 true
+
+bracketSameLine: false # HTML/JSX 多行標籤的結尾括號是否與最後一行內容同一行，預設為 false
+
+arrowParens: always # 單參數箭頭函數是否加括號，預設為 "always"
+
+requirePragma: false # 是否需要格式化標記，預設為 false
+
+insertPragma: false # 是否插入格式化標記，預設為 false
+
+proseWrap: preserve # Markdown 文本的換行處理方式，預設為 "preserve"
+
+htmlWhitespaceSensitivity: css # HTML 空白敏感度，預設為 "css"
+
+vueIndentScriptAndStyle: false # Vue 文件中 <script> 和 <style> 標籤是否縮排，預設為 false
+
+endOfLine: lf # 行尾符號類型，預設為 "lf"
+
+embeddedLanguageFormatting: auto # 嵌入代碼格式化方式，預設為 "auto"
+
+singleAttributePerLine: false # 是否強制單行一個屬性（HTML、Vue、JSX），預設為 false
+
+experimentalTernaries: false # 實驗性選項，預設為 false
+
+experimentalOperatorPosition: end # 實驗性選項，運算符位置，預設為 "end"
+
+objectWrap: preserve # 實驗性選項，物件換行方式，預設為 "preserve"
