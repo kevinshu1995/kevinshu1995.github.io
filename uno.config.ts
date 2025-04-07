@@ -1,9 +1,9 @@
-import presetMini from "@unocss/preset-mini"
+import presetWind4 from "@unocss/preset-wind4"
 import { defineConfig } from "unocss"
 
 export default defineConfig({
     presets: [
-        presetMini(),
+        presetWind4(),
         // ...other presets
     ],
 })
