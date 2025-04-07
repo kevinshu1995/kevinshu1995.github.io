@@ -1,4 +1,6 @@
 {
-    // https://nuxt.com/docs/guide/concepts/typescript
+    "compilerOptions": {
+        "module": "esnext"
+    },
     "extends": "./.nuxt/tsconfig.json"
 }
