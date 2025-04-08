@@ -10,4 +10,7 @@
 import '@unocss/reset/sanitize/sanitize.css'
 import '@unocss/reset/sanitize/assets.css'
 import 'assets/index.css'
+
+// init state
+useLocale()
 </script>

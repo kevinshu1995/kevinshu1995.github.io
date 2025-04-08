@@ -70,5 +70,5 @@
 import type { Resume } from "@/types/resume"
 const resumeState = useState<{ en: Resume; tw: Resume }>("resume")
 
-const i18n = "tw"
+const i18n = useLocale()
 </script>
