@@ -1,7 +1,9 @@
 <template>
     <div class="container mx-auto px-4">
-        <div class="-mx-4 grid grid-cols-4 gap-4">
-            <div class="col-start-2 grid-col-span-2">
+        <div class="grid grid-cols-5 gap-4 border-x border-neutral-200">
+            <div
+                class="col-start-1 col-end-6 lg:col-start-2 lg:col-end-5 lg:border-x lg:border-neutral-200"
+            >
                 <HomeLanding />
             </div>
         </div>
@@ -11,7 +13,7 @@
 <script setup lang="ts">
 import type { Resume } from "@/types/resume"
 const runtimeConfig = useRuntimeConfig()
-const { en, zh_TW } = runtimeConfig.public.resume
+const { gistId } = runtimeConfig.public.resume
 
 const resumeState = useState<{ [key: string]: Resume | null }>(
     "resume",
@@ -21,13 +23,44 @@ const resumeState = useState<{ [key: string]: Resume | null }>(
     }),
 )
 
-await callOnce(async () => {
-    const { data } = await useFetch<string>(en)
-    if (data.value) resumeState.value.en = JSON.parse(data.value) as Resume
-})
+type Gist = {
+    files: {
+        "resume_en.json": {
+            content: string
+        }
+        "resume_zh_TW.json": {
+            content: string
+        }
+    }
+}
 
 await callOnce(async () => {
-    const { data } = await useFetch<string>(zh_TW)
-    if (data.value) resumeState.value.tw = JSON.parse(data.value) as Resume
+    const { data } = await useFetch<Gist>(
+        `https://api.github.com/gists/${gistId}`,
+    )
+    try {
+        if (data.value) {
+            resumeState.value.en = JSON.parse(
+                data.value.files["resume_en.json"].content,
+            )
+            resumeState.value.tw = JSON.parse(
+                data.value.files["resume_zh_TW.json"].content,
+            )
+        }
+    } catch (error) {
+        console.error("Failed to parse resume data:", error)
+    }
 })
 </script>
+
+<style>
+html {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+    background-size: 16px 16px;
+    background-repeat: repeat;
+}
+</style>

@@ -2,8 +2,7 @@ declare module "nuxt/schema" {
     interface RuntimeConfig {}
     interface PublicRuntimeConfig {
         resume: {
-            en: string
-            zh_TW: string
+            gistId: string
         }
     }
 }
