@@ -5,6 +5,7 @@
                 class="col-start-1 col-end-6 lg:col-start-2 lg:col-end-5 lg:border-x lg:border-neutral-200"
             >
                 <HomeLanding />
+                <HomeWork />
             </div>
         </div>
     </div>
