@@ -1,8 +1,8 @@
 <template>
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-5 gap-4 border-x border-neutral-200">
+        <div class="grid grid-cols-5 gap-4 border-x border-neutral-100">
             <div
-                class="col-start-1 col-end-6 lg:col-start-2 lg:col-end-5 lg:border-x lg:border-neutral-200"
+                class="col-start-1 col-end-6 lg:col-start-2 lg:col-end-5 lg:border-x lg:border-neutral-100"
             >
                 <HomeLanding />
                 <HomeWork />
@@ -60,7 +60,7 @@ html {
     inset: 0;
     height: 100%;
     width: 100%;
-    background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+    background-image: radial-gradient(#f1f1f1 1px, transparent 1px);
     background-size: 16px 16px;
     background-repeat: repeat;
 }
