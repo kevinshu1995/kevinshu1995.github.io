@@ -1,9 +1,7 @@
 <template>
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-5 gap-4 border-x border-neutral-100">
-            <div
-                class="col-start-1 col-end-6 lg:col-start-2 lg:col-end-5 lg:border-x lg:border-neutral-100"
-            >
+        <div class="grid grid-cols-5 gap-4">
+            <div class="col-start-1 col-end-6 lg:col-start-2 lg:col-end-5">
                 <HomeLanding />
                 <HomeWork />
                 <HomeProject class="mt-20" />

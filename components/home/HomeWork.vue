@@ -1,5 +1,5 @@
 <template>
-    <div class="ml-8 pl-8 border-l border-neutral-200">
+    <div class="md:ml-8 md:pl-8 md:border-l md:border-neutral-200">
         <ul class="space-y-12">
             <li
                 v-for="work in currentResume.work"
@@ -7,7 +7,7 @@
                 class="relative"
             >
                 <span
-                    class="size-8 absolute -left-4 top-6 translate-x-[-100%] bg-white border border-neutral-100 rounded-full flex items-center justify-center"
+                    class="size-8 absolute -left-4 top-6 translate-x-[-100%] bg-white border border-neutral-100 rounded-full hidden md:flex items-center justify-center"
                 >
                     <Icon name="mdi:baguette" class="size-4 text-neutral-500" />
                 </span>
@@ -17,7 +17,9 @@
                             {{ work.startDate }} -
                             {{ work.endDate }}
                         </p>
-                        <div class="flex items-end space-x-2">
+                        <div
+                            class="flex flex-col md:flex-row md:items-end space-x-2"
+                        >
                             <h4 class="font-bold text-5 tracking-wider">
                                 {{ work.name }}
                             </h4>
