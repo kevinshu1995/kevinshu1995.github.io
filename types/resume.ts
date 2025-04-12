@@ -1,10 +1,10 @@
-interface Profile {
+export interface Profile {
     network: string
     username: string
     url: string
 }
 
-interface Location {
+export interface Location {
     address: string
     postalCode: string
     city: string
@@ -12,7 +12,7 @@ interface Location {
     region: string
 }
 
-interface Basics {
+export interface Basics {
     name: string
     label: string
     image: string
@@ -24,7 +24,7 @@ interface Basics {
     profiles: Profile[]
 }
 
-interface Work {
+export interface Work {
     name: string
     position: string
     url: string
@@ -34,7 +34,7 @@ interface Work {
     highlights: string[]
 }
 
-interface Volunteer {
+export interface Volunteer {
     organization: string
     position: string
     url: string
@@ -44,7 +44,7 @@ interface Volunteer {
     highlights: string[]
 }
 
-interface Education {
+export interface Education {
     institution: string
     url: string
     area: string
@@ -55,21 +55,21 @@ interface Education {
     courses: string[]
 }
 
-interface Award {
+export interface Award {
     title: string
     date: string
     awarder: string
     summary: string
 }
 
-interface Certificate {
+export interface Certificate {
     name: string
     date: string
     issuer: string
     url: string
 }
 
-interface Publication {
+export interface Publication {
     name: string
     publisher: string
     releaseDate: string
@@ -77,28 +77,28 @@ interface Publication {
     summary: string
 }
 
-interface Skill {
+export interface Skill {
     name: string
     level: string
     keywords: string[]
 }
 
-interface Language {
+export interface Language {
     language: string
     fluency: string
 }
 
-interface Interest {
+export interface Interest {
     name: string
     keywords: string[]
 }
 
-interface Reference {
+export interface Reference {
     name: string
     reference: string
 }
 
-interface Project {
+export interface Project {
     name: string
     startDate: string
     endDate: string
