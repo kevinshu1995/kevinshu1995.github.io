@@ -7,7 +7,7 @@
                 class="space-y-4"
             >
                 <h3 class="font-bold text-5">{{ skill.name }}</h3>
-                <ul class="flex gap-8">
+                <ul class="flex gap-x-8 gap-y-4 flex-wrap">
                     <li
                         v-for="keyword in skill.keywords"
                         class="flex gap-2 items-center"
