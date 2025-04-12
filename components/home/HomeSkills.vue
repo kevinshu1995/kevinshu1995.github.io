@@ -12,11 +12,12 @@
                         v-for="keyword in skill.keywords"
                         class="flex gap-2 items-center"
                     >
-                        <Icon
+                        <div
                             v-if="icon[keyword]"
-                            :name="icon[keyword]"
-                            class="size-7"
-                        />
+                            class="bg-white rounded-full size-8 border border-neutral-200 flex items-center justify-center"
+                        >
+                            <Icon :name="icon[keyword]" class="size-5" />
+                        </div>
                         <span class="line-height-4">{{ keyword }}</span>
                     </li>
                 </ul>
@@ -37,11 +38,11 @@ type Icon = {
 }
 
 const icon: Icon = {
-    "Vue.js": "logos:vue",
-    "Nuxt.js": "logos:nuxt-icon",
+    Vue: "logos:vue",
+    Nuxt: "logos:nuxt-icon",
     React: "logos:react",
     "Tailwind CSS": "logos:tailwindcss-icon",
-    "Bootstrap 4": "logos:bootstrap",
+    Bootstrap: "logos:bootstrap",
     Bulma: "logos:bulma",
     Vite: "logos:vitejs",
     Webpack: "logos:webpack",
@@ -54,7 +55,7 @@ const icon: Icon = {
     Python: "logos:python",
     Figma: "logos:figma",
     "Adobe XD": "logos:adobe-xd",
-    Photoshop: "logos:adobe-photoshop",
-    Illustrator: "logos:adobe-illustrator",
+    "Adobe Photoshop": "logos:adobe-photoshop",
+    "Adobe Illustrator": "logos:adobe-illustrator",
 }
 </script>
