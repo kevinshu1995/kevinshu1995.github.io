@@ -8,6 +8,7 @@
                 <HomeWork />
                 <HomeProject class="mt-20" />
                 <HomeSkills class="mt-20" />
+                <HomeEducation class="mt-20" />
             </div>
         </div>
     </div>
