@@ -6,6 +6,7 @@
             >
                 <HomeLanding />
                 <HomeWork />
+                <HomeSkills class="mt-20" />
             </div>
         </div>
     </div>
