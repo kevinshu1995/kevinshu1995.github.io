@@ -121,3 +121,7 @@ export interface Resume {
     references: Reference[]
     projects: Project[]
 }
+
+export interface Icon {
+    [key: Resume["skills"][number]["keywords"][number]]: string
+}

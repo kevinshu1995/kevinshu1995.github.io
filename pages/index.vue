@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Resume } from "@/types/resume"
+import type { Resume, Icon } from "@/types/resume"
 const runtimeConfig = useRuntimeConfig()
 const { gistId } = runtimeConfig.public.resume
 
@@ -24,6 +24,7 @@ const resumeState = useState<{ [key: string]: Resume | null }>(
         tw: null,
     }),
 )
+const iconState = useState<Icon>("icon", () => ({}))
 
 type Gist = {
     files: {
@@ -31,6 +32,9 @@ type Gist = {
             content: string
         }
         "resume_zh_TW.json": {
+            content: string
+        }
+        "icon.json": {
             content: string
         }
     }
@@ -48,6 +52,7 @@ await callOnce(async () => {
             resumeState.value.tw = JSON.parse(
                 data.value.files["resume_zh_TW.json"].content,
             )
+            iconState.value = JSON.parse(data.value.files["icon.json"].content)
         }
     } catch (error) {
         console.error("Failed to parse resume data:", error)
