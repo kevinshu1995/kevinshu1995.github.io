@@ -16,6 +16,7 @@
         "@nuxt/icon": "^1.11.0",
         "@nuxt/image": "^1.10.0",
         "@nuxt/scripts": "^0.11.5",
+        "@splidejs/splide": "^4.1.4",
         "@unhead/vue": "^2.0.4",
         "@unocss/reset": "^66.1.0-beta.10",
         "eslint": "^9.24.0",
