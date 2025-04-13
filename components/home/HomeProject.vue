@@ -10,7 +10,9 @@
                     <div class="flex flex-col gap-4 h-full">
                         <h3 class="font-bold text-5">{{ slide.name }}</h3>
                         <p class="line-height-6">{{ slide.description }}</p>
-                        <div class="flex items-end justify-between mt-auto">
+                        <div
+                            class="flex flex-col justify-between mt-auto gap-2"
+                        >
                             <ul class="flex flex-col text-3.5 italic">
                                 <li
                                     v-for="highlight in slide.highlights"
@@ -23,7 +25,7 @@
                                 v-if="slide.url"
                                 :href="slide.url"
                                 target="_blank"
-                                class="text-blue-500 hover:underline text-3.5"
+                                class="text-blue-500 hover:underline text-3.5 ml-auto"
                             >
                                 {{ $t("view project") }}
                                 <Icon

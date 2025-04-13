@@ -7,10 +7,17 @@
                 class="space-y-1"
             >
                 <h3 class="font-bold text-5">{{ interest.name }}</h3>
-                <ul class="flex gap-2">
-                    <li v-for="keyword in interest.keywords" :key="keyword">
+                <ul class="flex gap-2 flex-wrap">
+                    <li
+                        v-for="(keyword, index) in interest.keywords"
+                        :key="keyword"
+                    >
                         <p class="italic text-neutral-500">
-                            {{ keyword }}
+                            {{ keyword
+                            }}<span
+                                v-if="index !== interest.keywords.length - 1"
+                                >,</span
+                            >
                         </p>
                     </li>
                 </ul>

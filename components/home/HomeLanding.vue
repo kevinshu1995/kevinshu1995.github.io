@@ -21,7 +21,7 @@
                             {{ resumeState.en.basics.name }}
                         </span>
                     </h1>
-                    <p class="tracking-wider">
+                    <p :class="[locale === 'zh_tw' && 'tracking-wider']">
                         {{ currentBasics.label }}
                     </p>
                     <p class="text-3 flex items-center gap-1 mb-4 -ml-1">
@@ -33,7 +33,7 @@
             </div>
             <div class="col-span-3 md:col-span-2">
                 <div class="grid gap-4 md:-mt-2">
-                    <p class="leading-8">
+                    <p :class="[locale === 'zh_tw' && 'leading-8']">
                         {{ currentBasics.summary }}
                     </p>
                     <ul class="space-y-1">

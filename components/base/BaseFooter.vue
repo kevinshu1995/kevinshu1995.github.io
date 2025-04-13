@@ -3,7 +3,10 @@
         <div class="container mx-auto px-4 h-full pt-10 space-y-20">
             <div class="flex justify-center items-center">
                 <p
-                    class="font-bold text-9 tracking-widest whitespace-pre text-center p-4"
+                    :class="[
+                        'font-bold text-9 whitespace-pre text-center p-4',
+                        locale === 'zh_tw' && 'tracking-widest',
+                    ]"
                 >
                     <span class="text-12">“</span>
                     {{ $t("motto") }}
