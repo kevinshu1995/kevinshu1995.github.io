@@ -27,11 +27,12 @@
 </template>
 
 <script setup lang="ts">
-import type { Resume, Icon } from "@/types/resume"
-const resumeState = useState<{ en: Resume; tw: Resume }>("resume")
-const i18n = useLocale()
+import type { ResumeState } from "@/types/state"
+import type { Icon } from "@/types/resume"
+const resumeState = useState<ResumeState>("resume")
+const { locale } = useI18n()
 
-const currentSkills = computed(() => resumeState.value[i18n.value].skills)
+const currentSkills = computed(() => resumeState.value?.[locale.value]?.skills)
 
 const iconState = useState<Icon>("icon", () => ({}))
 </script>

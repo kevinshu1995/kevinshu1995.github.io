@@ -21,10 +21,11 @@
 </template>
 
 <script setup lang="ts">
-import type { Resume, Icon } from "@/types/resume"
-import { e } from "unocss"
-const resumeState = useState<{ en: Resume; tw: Resume }>("resume")
-const i18n = useLocale()
+import type { ResumeState } from "@/types/state"
+const resumeState = useState<ResumeState>("resume")
+const { locale } = useI18n()
 
-const currentEducation = computed(() => resumeState.value[i18n.value].education)
+const currentEducation = computed(
+    () => resumeState.value?.[locale.value]?.education ?? [],
+)
 </script>

@@ -11,6 +11,14 @@ export default defineNuxtConfig({
         },
     },
 
+    i18n: {
+        defaultLocale: "zh_tw",
+        locales: [
+            { code: "en", name: "English", file: "en.json" },
+            { code: "zh_tw", name: "中文", file: "zh_tw.json" },
+        ],
+    },
+
     modules: [
         "@nuxt/eslint",
         "@nuxt/image",
@@ -18,5 +26,6 @@ export default defineNuxtConfig({
         "@nuxt/icon",
         "@nuxt/scripts",
         "@unocss/nuxt",
+        "@nuxtjs/i18n",
     ],
 })

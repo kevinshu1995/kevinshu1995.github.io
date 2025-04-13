@@ -6,7 +6,7 @@
                     class="font-bold text-9 tracking-widest whitespace-pre text-center p-4"
                 >
                     <span class="text-12">“</span>
-                    {{ motto }}
+                    {{ $t("motto") }}
                     <span class="text-12">”</span>
                 </p>
             </div>
@@ -80,27 +80,23 @@
 
 <script setup lang="ts">
 import { useClipboard } from "@vueuse/core"
-import type { Resume } from "@/types/resume"
-const resumeState = useState<{ en: Resume; tw: Resume }>("resume")
-const i18n = useLocale()
+import type { ResumeState } from "@/types/state"
 
-const currentResume = computed(() => resumeState.value[i18n.value])
+const { locale } = useI18n()
 
-const nameEn = computed(() => `${resumeState.value.en.basics.name}`)
-const nameTw = computed(() => `${resumeState.value.tw.basics.name}`)
+const resumeState = useState<ResumeState>("resume")
 
-const socials = computed(() => currentResume.value.basics.profiles)
+const currentResume = computed(() => resumeState.value[locale.value])
+
+const nameEn = computed(() => `${resumeState.value?.en?.basics?.name ?? ""}`)
+const nameTw = computed(() => `${resumeState.value?.zh_tw?.basics?.name ?? ""}`)
+
+const socials = computed(() => currentResume.value?.basics?.profiles ?? [])
 const email = computed(() => ({
     network: "gmail",
-    username: currentResume.value.basics.email,
-    url: `mailto:${currentResume.value.basics.email}`,
+    username: currentResume.value?.basics?.email,
+    url: `mailto:${currentResume.value?.basics?.email}`,
 }))
-
-const motto = computed(() => {
-    return i18n.value === "en"
-        ? "Programming fills me with anticipation every day,\n making life exciting and fun with every idea."
-        : "寫程式讓我每天都充滿期待，\n生活因每個點子而精彩有趣。"
-})
 
 const { copy } = useClipboard({ source: email.value.username })
 

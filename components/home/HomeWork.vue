@@ -2,7 +2,7 @@
     <div class="md:ml-8 md:pl-8 md:border-l md:border-neutral-200">
         <ul class="space-y-12">
             <li
-                v-for="work in currentResume.work"
+                v-for="work in currentResumeWork"
                 :key="work.name"
                 class="relative"
             >
@@ -46,9 +46,12 @@
 </template>
 
 <script setup lang="ts">
-import type { Resume } from "@/types/resume"
-const resumeState = useState<{ en: Resume; tw: Resume }>("resume")
-const i18n = useLocale()
+import type { ResumeState } from "@/types/state"
+const resumeState = useState<ResumeState>("resume")
 
-const currentResume = computed(() => resumeState.value[i18n.value])
+const { locale } = useI18n()
+
+const currentResumeWork = computed(
+    () => resumeState.value?.[locale.value]?.work ?? [],
+)
 </script>

@@ -25,7 +25,7 @@
                                 target="_blank"
                                 class="text-blue-500 hover:underline text-3.5"
                             >
-                                {{ i18n === "en" ? "View" : "查看" }}
+                                {{ $t("view project") }}
                                 <Icon
                                     name="mdi:arrow-top-right"
                                     class="size-3 translate-y-px"
@@ -40,11 +40,14 @@
 </template>
 
 <script setup lang="ts">
-import type { Resume, Project } from "@/types/resume"
-const resumeState = useState<{ en: Resume; tw: Resume }>("resume")
-const i18n = useLocale()
+import type { ResumeState } from "@/types/state"
+import type { Project } from "@/types/resume"
+const resumeState = useState<ResumeState>("resume")
+const { locale } = useI18n()
 
-const currentProjects = computed(() => resumeState.value[i18n.value].projects)
+const currentProjects = computed(
+    () => resumeState.value?.[locale.value]?.projects ?? [],
+)
 
 const trimSpace: "move" = "move"
 
