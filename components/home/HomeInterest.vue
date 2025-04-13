@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ul class="grid grid-cols-2 gap-2">
+        <ul class="grid md:grid-cols-2 gap-8 md:gap-2">
             <li
                 v-for="interest in currentInterests"
                 :key="interest.name"

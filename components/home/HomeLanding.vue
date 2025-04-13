@@ -1,6 +1,6 @@
 <template>
     <div
-        class="h-svh flex items-center justify-center"
+        class="min-h-svh flex items-center justify-center"
         v-if="currentBasics && resumeState.en && resumeState.zh_tw"
     >
         <div class="grid grid-cols-3 gap-16">
@@ -33,7 +33,12 @@
             </div>
             <div class="col-span-3 md:col-span-2">
                 <div class="grid gap-4 md:-mt-2">
-                    <p :class="[locale === 'zh_tw' && 'leading-8']">
+                    <p
+                        :class="[
+                            locale === 'zh_tw' && 'leading-8',
+                            'hyphens-auto text-pretty',
+                        ]"
+                    >
                         {{ currentBasics.summary }}
                     </p>
                     <ul class="space-y-1">

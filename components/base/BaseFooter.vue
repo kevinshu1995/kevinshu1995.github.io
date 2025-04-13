@@ -4,23 +4,23 @@
             <div class="flex justify-center items-center">
                 <p
                     :class="[
-                        'font-bold text-9 whitespace-pre text-center p-4',
+                        'font-bold text-3 sm:text-5 md:text-6 lg:text-9 whitespace-pre text-center py-4',
                         locale === 'zh_tw' && 'tracking-widest',
                     ]"
                 >
-                    <span class="text-12">“</span>
+                    <span class="text-7 sm:text-8 md:text-9 lg:text-12">“</span>
                     {{ $t("motto") }}
-                    <span class="text-12">”</span>
+                    <span class="text-7 sm:text-8 md:text-9 lg:text-12">”</span>
                 </p>
             </div>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid md:grid-cols-2 gap-4">
                 <div></div>
                 <div class="space-y-8">
                     <div class="flex gap-4 border-b border-b-neutral-200 pb-2">
                         <div class="flex flex-col">
                             <div class="flex justify-end items-end gap-2">
                                 <a
-                                    class="font-bold flex items-center gap-6 hover:underline text-7"
+                                    class="font-bold flex items-center gap-6 hover:underline text-3.5 sm:text-4 md:text-5 lg:text-7"
                                     :href="email.url"
                                 >
                                     <span>{{ email.username }}</span>

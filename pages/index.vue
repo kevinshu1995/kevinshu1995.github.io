@@ -3,7 +3,7 @@
         <div class="grid grid-cols-5 gap-4">
             <div class="col-start-1 col-end-6 lg:col-start-2 lg:col-end-5">
                 <HomeLanding />
-                <HomeWork />
+                <HomeWork class="mt-20 md:mt-0" />
                 <HomeProject class="mt-20" />
                 <HomeSkills class="mt-20" />
                 <HomeEducation class="mt-20" />
