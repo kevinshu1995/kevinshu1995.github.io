@@ -30,7 +30,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 
     try {
         if (hasFetched.value === false) {
-            const { data } = await useFetch<Gist>(
+            const { data, error } = await useFetch<Gist>(
                 `https://api.github.com/gists/${gistId}`,
             )
             if (data.value) {
@@ -47,7 +47,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
                 }
                 hasFetched.value = true
             } else {
-                console.error("Failed to fetch resume data.")
+                console.error("Failed to fetch resume data.", error)
             }
         } else {
             console.log("Resume data already fetched.")
