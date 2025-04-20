@@ -50,35 +50,37 @@ const elSectionEducation = useTemplateRef("sectionEducation")
 const elSectionLanguage = useTemplateRef("sectionLanguage")
 const elSectionInterest = useTemplateRef("sectionInterest")
 
+const { t } = useI18n()
+
 const sectionsForIndicator = computed(() => {
     return [
         {
             ref: elSectionLanding,
-            text: "簡介",
+            text: t("about-me"),
         },
         {
             ref: elSectionWork,
-            text: "經歷",
+            text: t("work-experience"),
         },
         {
             ref: elSectionProject,
-            text: "專案",
+            text: t("projects"),
         },
         {
             ref: elSectionSkills,
-            text: "技能",
+            text: t("tech-stack"),
         },
         {
             ref: elSectionEducation,
-            text: "學歷",
+            text: t("education"),
         },
         {
             ref: elSectionLanguage,
-            text: "語言",
+            text: t("languages"),
         },
         {
             ref: elSectionInterest,
-            text: "興趣",
+            text: t("interests"),
         },
     ]
 })
