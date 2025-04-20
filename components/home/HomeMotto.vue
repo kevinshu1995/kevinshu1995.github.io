@@ -50,7 +50,7 @@ onMounted(() => {
         autoplay: onScroll({
             target: stickyContainer.value,
 
-            leave: "bottom max",
+            leave: "bottom bottom-=30%",
             // debug: true,
             sync: 0.5,
         }),
@@ -75,7 +75,7 @@ onMounted(() => {
         .add(
             mottoTexts.value,
             {
-                filter: () => [`blur(${utils.random(3, 100)}px)`, `blur(0px)`],
+                filter: () => [`blur(${utils.random(1, 10)}px)`, `blur(0px)`],
                 x: () => [`${utils.random(-200, 200)}px`, 0],
                 y: () => [`${utils.random(-200, 200)}px`, 0],
                 scale: () => [`${utils.random(3, 0.1)}`, 1],
