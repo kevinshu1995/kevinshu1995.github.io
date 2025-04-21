@@ -2,7 +2,7 @@
     <div ref="container">
         <div
             :class="[
-                'fixed top-12 h-dvh transition-opacity translate-x-10',
+                'fixed top-12 h-dvh transition-opacity left-0',
                 left === 0 && 'opacity-0',
             ]"
             :style="{

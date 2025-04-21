@@ -27,5 +27,6 @@ export default defineNuxtConfig({
         "@nuxt/scripts",
         "@unocss/nuxt",
         "@nuxtjs/i18n",
+        "radix-vue/nuxt",
     ],
 })

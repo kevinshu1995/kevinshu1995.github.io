@@ -80,7 +80,7 @@ onMounted(() => {
                 scale: () => [`${utils.random(2, 4)}`, 1],
                 opacity: [1, 0],
             },
-            0,
+            30,
         )
         .add(
             mottoTexts.value,
@@ -91,7 +91,7 @@ onMounted(() => {
                 scale: () => [`${utils.random(3, 0.1)}`, 1],
                 opacity: [0, 1],
             },
-            0,
+            30,
         )
         .init()
 })
