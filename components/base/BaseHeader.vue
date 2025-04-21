@@ -29,6 +29,7 @@
                         <PopoverRoot>
                             <PopoverTrigger class="flex items-center">
                                 <Icon name="mdi:language" />
+                                <Icon name="mdi:arrow-down-drop" />
                             </PopoverTrigger>
                             <!-- <PopoverAnchor /> -->
                             <PopoverPortal>
