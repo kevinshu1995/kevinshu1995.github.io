@@ -1,21 +1,31 @@
 <template>
     <div class="container mx-auto px-4">
-        <div class="h-200dvh" ref="stickyContainer">
+        <div class="h-300dvh" ref="stickyContainer">
             <div
                 class="h-dvh sticky top-0 w-full flex justify-center items-center"
             >
                 <p
                     :class="[
-                        'font-bold text-9 md:text-11 lg:text-14 whitespace-pre-line text-center py-4 max-w-xs sm:max-w-full',
+                        'font-bold text-8 md:text-11 lg:text-14 whitespace-pre-line text-center py-4 max-w-xs sm:max-w-4xl',
                         locale === 'zh_tw' && 'tracking-widest',
                     ]"
                 >
-                    <span
-                        v-for="text in '“' + $t('motto') + '”'"
-                        ref="mottoTexts"
-                        class="inline-block"
-                        >{{ text }}</span
-                    >
+                    <template v-if="locale === 'zh_tw'">
+                        <span
+                            v-for="text in '“' + $t('motto') + '”'"
+                            ref="mottoTexts"
+                            class="inline-block"
+                            >{{ text }}</span
+                        >
+                    </template>
+                    <template v-else>
+                        <span
+                            v-for="text in ('“' + $t('motto') + '”').split(' ')"
+                            ref="mottoTexts"
+                            class="inline-block mr-2 md:mr-3 lg:mr-3.5"
+                            >{{ text }}</span
+                        >
+                    </template>
                 </p>
                 <div
                     class="size-15 blur-lg absolute left-[50%] top-[50%] bg-neutral-400 z-50"
