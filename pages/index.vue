@@ -85,15 +85,3 @@ const sectionsForIndicator = computed(() => {
     ]
 })
 </script>
-
-<style>
-html {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    background-image: radial-gradient(#f1f1f1 1px, transparent 1px);
-    background-size: 16px 16px;
-    background-repeat: repeat;
-}
-</style>
