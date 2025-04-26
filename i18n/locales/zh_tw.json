@@ -14,6 +14,10 @@
         "scrollDown": "向下\n捲動",
         "sendEmail": "聯絡我",
         "copy": "複製",
-        "copied": "已複製"
+        "copied": "已複製",
+        "scrollToTop": "👆"
+    },
+    "contact": {
+        "description": "歡迎透過電子信箱或社群媒體聯絡我，\n我會盡快回覆你！"
     }
 }

@@ -14,6 +14,10 @@
         "scrollDown": "Scroll\nDown",
         "sendEmail": "Send\nEmail",
         "copy": "Copy",
-        "copied": "Copied"
+        "copied": "Copied",
+        "scrollToTop": "👆"
+    },
+    "contact": {
+        "description": "Feel free to contact me via email or social media,\nand I'll get back to you as soon as possible!"
     }
 }
