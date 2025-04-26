@@ -47,6 +47,7 @@
                                 :href="profile.url"
                                 class="flex items-center gap-2"
                                 target="_blank"
+                                :data-mouse-event="$t('mouseEvent.openLink')"
                             >
                                 <Icon
                                     :name="`simple-icons:${profile.network}`"

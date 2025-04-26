@@ -5,6 +5,7 @@
             <NuxtPage />
         </NuxtLayout>
         <BaseFooter />
+        <BaseMouseEventPanel />
     </div>
 </template>
 

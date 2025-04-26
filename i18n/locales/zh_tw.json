@@ -8,5 +8,12 @@
     "education": "教育背景",
     "languages": "語言能力",
     "interests": "興趣",
-    "blog": "部落格"
+    "blog": "部落格",
+    "mouseEvent": {
+        "openLink": "開啟\n連結",
+        "scrollDown": "向下\n捲動",
+        "sendEmail": "聯絡我",
+        "copy": "複製",
+        "copied": "已複製"
+    }
 }

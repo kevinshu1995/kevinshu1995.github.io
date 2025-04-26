@@ -10,12 +10,16 @@
                                 <a
                                     class="font-bold flex items-center gap-6 hover:underline text-3.5 sm:text-4 md:text-5 lg:text-7"
                                     :href="email.url"
+                                    :data-mouse-event="
+                                        $t('mouseEvent.sendEmail')
+                                    "
                                 >
                                     <span>{{ email.username }}</span>
                                 </a>
                                 <button
                                     class="size-7 rounded-full cursor-pointer hover:bg-neutral-800 hover:text-white transition"
                                     @click="copyEmail"
+                                    :data-mouse-event="copyEmailMouseEventText"
                                 >
                                     <Icon
                                         name="mdi:content-copy"
@@ -35,6 +39,9 @@
                                     :href="social.url"
                                     class="flex gap-1 items-center h-full w-full hover:underline group"
                                     target="_blank"
+                                    :data-mouse-event="
+                                        $t('mouseEvent.openLink')
+                                    "
                                 >
                                     <span class="flex gap-3 items-center">
                                         <Icon
@@ -70,10 +77,10 @@
 </template>
 
 <script setup lang="ts">
-import { useClipboard } from "@vueuse/core"
+import { useClipboard, useTimeoutFn } from "@vueuse/core"
 import type { ResumeState } from "@/types/state"
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 
 const resumeState = useState<ResumeState>("resume")
 
@@ -91,7 +98,15 @@ const email = computed(() => ({
 
 const { copy } = useClipboard({ source: email.value.username })
 
+const copyEmailMouseEventText = ref(t("mouseEvent.copy"))
+
+const { start, stop } = useTimeoutFn(() => {
+    copyEmailMouseEventText.value = t("mouseEvent.copy")
+}, 3000)
+
 function copyEmail() {
     copy()
+    copyEmailMouseEventText.value = t("mouseEvent.copied")
+    start()
 }
 </script>

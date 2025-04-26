@@ -8,5 +8,12 @@
     "education": "Education",
     "languages": "Languages",
     "interests": "Interests",
-    "blog": "Blog"
+    "blog": "Blog",
+    "mouseEvent": {
+        "openLink": "Open\nLink",
+        "scrollDown": "Scroll\nDown",
+        "sendEmail": "Send\nEmail",
+        "copy": "Copy",
+        "copied": "Copied"
+    }
 }

@@ -26,6 +26,7 @@
                                 :href="slide.url"
                                 target="_blank"
                                 class="text-blue-500 hover:underline text-3.5 ml-auto"
+                                :data-mouse-event="$t('mouseEvent.openLink')"
                             >
                                 {{ $t("view project") }}
                                 <Icon
