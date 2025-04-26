@@ -116,7 +116,13 @@ watch(theElement, updateDataSet)
 
 watch([theElement, theElementDataset], () => {
     const theText = theElementDataset.text
-    if (theElement === null || !theText) {
+    if (
+        theElement === null ||
+        !theText ||
+        theText === "false" ||
+        theText === "null" ||
+        theText === "null"
+    ) {
         panel.text = ""
         panel.class = ""
         panel.isActive = false

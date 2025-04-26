@@ -6,34 +6,49 @@
             class="custom-splide"
         >
             <template #slide="{ slide }: { slide: Project }">
-                <div class="p-4 border border-neutral-200 h-full">
-                    <div class="flex flex-col gap-4 h-full">
-                        <h3 class="font-bold text-5">{{ slide.name }}</h3>
-                        <p class="line-height-6">{{ slide.description }}</p>
+                <div class="py-4 h-full">
+                    <div
+                        class="p-4 border border-neutral-200 h-full cursor-pointer hover:scale-102 transition-transform shadow"
+                    >
                         <div
-                            class="flex flex-col justify-between mt-auto gap-2"
+                            class="flex flex-col gap-8 h-full group"
+                            type="button"
+                            @click="
+                                () =>
+                                    navigateTo(slide.url, {
+                                        open: {
+                                            target: '_blank',
+                                        },
+                                    })
+                            "
+                            :data-mouse-event="
+                                slide.url && $t('mouseEvent.openLink')
+                            "
                         >
-                            <ul class="flex flex-col text-3.5 italic">
-                                <li
-                                    v-for="highlight in slide.highlights"
-                                    :key="highlight"
-                                >
-                                    <span>#{{ highlight }}</span>
-                                </li>
-                            </ul>
-                            <a
-                                v-if="slide.url"
-                                :href="slide.url"
-                                target="_blank"
-                                class="text-blue-500 hover:underline text-3.5 ml-auto"
-                                :data-mouse-event="$t('mouseEvent.openLink')"
+                            <h3 class="font-bold text-5">{{ slide.name }}</h3>
+                            <p class="line-height-6">{{ slide.description }}</p>
+                            <div
+                                class="flex flex-col justify-between mt-auto gap-8"
                             >
-                                {{ $t("view project") }}
-                                <Icon
-                                    name="mdi:arrow-top-right"
-                                    class="size-3 translate-y-px"
-                                />
-                            </a>
+                                <ul class="flex flex-col text-3.5 italic">
+                                    <li
+                                        v-for="highlight in slide.highlights"
+                                        :key="highlight"
+                                    >
+                                        <span>#{{ highlight }}</span>
+                                    </li>
+                                </ul>
+                                <span
+                                    v-if="slide.url"
+                                    class="text-3.5 ml-auto group-hover:opacity-100 opacity-0 transition-opacity underline"
+                                >
+                                    {{ $t("view project") }}
+                                    <Icon
+                                        name="mdi:arrow-top-right"
+                                        class="size-3 translate-y-px"
+                                    />
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
