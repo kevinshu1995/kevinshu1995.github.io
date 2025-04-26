@@ -24,6 +24,7 @@
                                     :data-mouse-event="
                                         $t('mouseEvent.sendEmail')
                                     "
+                                    data-mouse-event-class="bg-black/10 text-white"
                                 >
                                     <span>{{ email.username }}</span>
                                 </a>
@@ -31,6 +32,7 @@
                                     class="size-7 rounded-full cursor-pointer hover:bg-neutral-800 hover:text-white transition"
                                     @click="copyEmail"
                                     :data-mouse-event="copyEmailMouseEventText"
+                                    data-mouse-event-class="bg-black/10 text-white"
                                 >
                                     <Icon
                                         name="mdi:content-copy"
@@ -46,6 +48,7 @@
                         class="flex gap-2 items-center font-bold text-4 group cursor-pointer"
                         @click="scrollToTop"
                         :data-mouse-event="$t('mouseEvent.scrollToTop')"
+                        data-mouse-event-class="bg-black/10 text-white"
                     >
                         <Icon
                             name="mdi:arrow-up-thin"
@@ -68,6 +71,7 @@
                                     :data-mouse-event="
                                         $t('mouseEvent.openLink')
                                     "
+                                    data-mouse-event-class="bg-black/10 text-white"
                                 >
                                     <span class="flex gap-3 items-center">
                                         <Icon
