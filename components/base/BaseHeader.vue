@@ -4,7 +4,7 @@
     >
         <div class="px-4">
             <div class="flex items-center py-2 gap-4">
-                <h1>Hi</h1>
+                <h1>許文修 | Wen-Hsiu Hsu</h1>
 
                 <div class="ml-auto flex gap-4 items-center">
                     <NuxtLink to="https://blog.hsiu.soy" target="_blank">

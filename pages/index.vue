@@ -41,7 +41,18 @@
 </template>
 
 <script setup lang="ts">
-import { utils, animate } from "animejs"
+import type { ResumeState } from "@/types/state"
+import { animate } from "animejs"
+
+const resumeState = useState<ResumeState>("resume")
+const { locale } = useI18n()
+const currentBasics = computed(
+    () => (resumeState.value?.[locale.value]?.basics ?? "") as string,
+)
+useHead({
+    meta: [{ name: "description", content: currentBasics }],
+})
+
 const elContainer = useTemplateRef("container")
 
 const elSectionLanding = useTemplateRef("sectionLanding")
