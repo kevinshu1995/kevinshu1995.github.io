@@ -1,13 +1,13 @@
 <template>
     <div>
         <ul class="space-y-1">
-            <li
-                v-for="language in currentLanguages"
-                :key="language.language"
-                class="flex gap-2 items-end"
-            >
-                <h3 class="font-bold text-4">{{ language.language }}</h3>
-                <p class="italic text-neutral-500">{{ language.fluency }}</p>
+            <li v-for="language in currentLanguages" :key="language.language">
+                <BaseAnimateScrollInView class="flex gap-2 items-end">
+                    <h3 class="font-bold text-4">{{ language.language }}</h3>
+                    <p class="italic text-neutral-500">
+                        {{ language.fluency }}
+                    </p>
+                </BaseAnimateScrollInView>
             </li>
         </ul>
     </div>

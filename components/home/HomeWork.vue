@@ -6,12 +6,17 @@
                 :key="work.name"
                 class="relative"
             >
-                <span
-                    class="size-8 absolute -left-4 top-6 translate-x-[-100%] bg-white border border-neutral-100 rounded-full hidden md:flex items-center justify-center"
-                >
-                    <Icon name="mdi:baguette" class="size-4 text-neutral-500" />
-                </span>
-                <div class="space-y-3">
+                <BaseAnimateScrollInView>
+                    <span
+                        class="size-8 absolute -left-4 top-6 translate-x-[-100%] bg-white border border-neutral-100 rounded-full hidden md:flex items-center justify-center"
+                    >
+                        <Icon
+                            name="mdi:baguette"
+                            class="size-4 text-neutral-500"
+                        />
+                    </span>
+                </BaseAnimateScrollInView>
+                <BaseAnimateScrollInView class="space-y-3">
                     <div class="space-y-0">
                         <p class="italic">
                             {{ work.startDate }} -
@@ -39,7 +44,7 @@
                             {{ highlight }}
                         </li>
                     </ul>
-                </div>
+                </BaseAnimateScrollInView>
             </li>
         </ul>
     </div>

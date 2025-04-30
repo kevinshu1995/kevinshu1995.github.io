@@ -2,18 +2,19 @@
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-5 gap-4">
             <ClientOnly>
-                <HomeIndicator
-                    class="hidden lg:block"
-                    :content-container="elContainer"
-                    :sections="sectionsForIndicator"
-                />
+                <div class="hidden lg:block opacity-0" ref="indicator">
+                    <HomeIndicator
+                        :content-container="elContainer"
+                        :sections="sectionsForIndicator"
+                    />
+                </div>
             </ClientOnly>
             <div
                 class="col-start-1 col-end-6 lg:col-start-2 lg:col-end-5"
                 ref="container"
             >
                 <div ref="sectionLanding">
-                    <HomeLanding />
+                    <HomeLanding @on-animate-end="onLandingAnimateEnd" />
                 </div>
                 <div class="pt-20 md:pt-0" ref="sectionWork">
                     <HomeWork class="py-10" />
@@ -40,6 +41,7 @@
 </template>
 
 <script setup lang="ts">
+import { utils, animate } from "animejs"
 const elContainer = useTemplateRef("container")
 
 const elSectionLanding = useTemplateRef("sectionLanding")
@@ -84,4 +86,14 @@ const sectionsForIndicator = computed(() => {
         },
     ]
 })
+
+const indicator = useTemplateRef("indicator")
+function onLandingAnimateEnd() {
+    if (!indicator.value) return
+    animate(indicator.value, {
+        opacity: 1,
+        duration: 300,
+        ease: "out(3)",
+    })
+}
 </script>

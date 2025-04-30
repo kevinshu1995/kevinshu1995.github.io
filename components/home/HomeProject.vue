@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <BaseAnimateScrollInView>
         <BaseSplide
             :slides="currentProjects"
             :options="slideOption"
@@ -54,7 +54,7 @@
                 </div>
             </template>
         </BaseSplide>
-    </div>
+    </BaseAnimateScrollInView>
 </template>
 
 <script setup lang="ts">
