@@ -31,7 +31,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     try {
         if (hasFetched.value === false) {
             const { data, error } = await useFetch<Gist>(
-                `https://api.github.com/gists/${gistId}`,
+                `/api/github/gists/${gistId}`,
             )
             if (data.value) {
                 if (data.value) {

@@ -46,6 +46,10 @@ export default defineNuxtConfig({
         ],
     },
 
+    routeRules: {
+        "/api/github/**": { proxy: "https://api.github.com/**", swr: 60 * 10 },
+    },
+
     modules: [
         "@nuxt/eslint",
         "@nuxt/image",
