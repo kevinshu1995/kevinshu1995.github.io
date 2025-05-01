@@ -7,7 +7,6 @@ export default defineNuxtConfig({
 
     app: {
         head: {
-            title: "許文修 | Wen-Hsiu Hsu",
             titleTemplate: "%s | 許文修 | Wen-Hsiu Hsu",
             meta: [
                 {
@@ -36,6 +35,15 @@ export default defineNuxtConfig({
                 { rel: "manifest", href: "/site.webmanifest" },
             ],
         },
+    },
+
+    ogImage: {
+        fonts: ["Noto+Serif+TC:400"],
+    },
+
+    site: {
+        url: "https://hsiu.soy",
+        name: "許文修 | Wen-Hsiu Hsu",
     },
 
     schemaOrg: {
@@ -90,5 +98,6 @@ export default defineNuxtConfig({
         "nuxt-gtag",
         "@nuxtjs/sitemap",
         "nuxt-schema-org",
+        "nuxt-og-image",
     ],
 })

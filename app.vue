@@ -26,6 +26,5 @@ const currentBasics = computed(
 useSeoMeta({
     ogTitle: "許文修 | Hsu Wen-Hsiu",
     ogDescription: currentBasics,
-    ogImage: "https://hsiu.soy/avatar.jpg",
 })
 </script>
