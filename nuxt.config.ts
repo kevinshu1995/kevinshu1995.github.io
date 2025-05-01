@@ -1,3 +1,5 @@
+import { definePerson } from "nuxt-schema-org/schema"
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     compatibilityDate: "2024-11-01",
@@ -36,6 +38,22 @@ export default defineNuxtConfig({
         },
     },
 
+    schemaOrg: {
+        identity: definePerson({
+            name: "許文修 | Wen-Hsiu Hsu",
+            image: "/avatar.jpg",
+            jobTitle: "前端工程師 | Frontend Engineer",
+            email: "kevin.hsu.hws@gmail.com",
+            description:
+                "我是一名專注於前端技術的工程師，擅長使用 Vue.js 和 Tailwind CSS 開發高效能的響應式網站。具備設計背景，對美感與用戶體驗有深入理解，能在開發與設計間有效協作。曾參與企業平台、電商網站與後台管理系統的開發，具備 API 串接、程式碼重構及效能優化的實作經驗。熱愛學習新技術並積極參與開源社群，期望持續挑戰自我並創造更具價值的產品。",
+            url: "hsiu.soy",
+            sameAs: [
+                "https://www.threads.net/@hsiu.soy",
+                "https://github.com/kevinshu1995",
+            ],
+        }),
+    },
+
     runtimeConfig: {
         public: {
             resume: {
@@ -70,5 +88,7 @@ export default defineNuxtConfig({
         "@nuxtjs/i18n",
         "radix-vue/nuxt",
         "nuxt-gtag",
+        "@nuxtjs/sitemap",
+        "nuxt-schema-org",
     ],
 })

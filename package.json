@@ -17,6 +17,7 @@
         "@nuxt/image": "^1.10.0",
         "@nuxt/scripts": "^0.11.5",
         "@nuxtjs/i18n": "^9.5.3",
+        "@nuxtjs/sitemap": "^7.2.10",
         "@splidejs/splide": "^4.1.4",
         "@unhead/vue": "^2.0.4",
         "@unocss/reset": "^66.1.0-beta.10",
@@ -25,6 +26,7 @@
         "eslint": "^9.24.0",
         "nuxt": "^3.16.2",
         "nuxt-gtag": "^3.0.2",
+        "nuxt-schema-org": "^5.0.5",
         "radix-vue": "^1.9.17",
         "vue": "^3.5.13",
         "vue-router": "^4.5.0"

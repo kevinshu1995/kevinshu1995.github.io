@@ -1,1 +1,5 @@
+# START nuxt-robots (indexable)
+ User-agent: *
 
+Sitemap: https://nuxtseo.com/sitemap.xml
+# END nuxt-robots
