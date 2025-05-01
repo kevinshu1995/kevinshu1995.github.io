@@ -10,6 +10,9 @@
     "languages": "Languages",
     "interests": "Interests",
     "blog": "Blog",
+    "home": {
+        "ogTitle": "Hello, I'm Wen-Hsiu Hsu!"
+    },
     "resume": {
         "title": "Resume",
         "description": "I am an engineer specializing in front-end technologies. Welcome to my resume page! Here you will find a summary of my professional experience, projects, and skills. If you are interested in my background and capabilities, please feel free to contact me!",

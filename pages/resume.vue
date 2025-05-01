@@ -272,11 +272,8 @@ useHead({
 })
 
 defineOgImageComponent("NuxtSeo", {
-    siteName: "許文修 | Hsu Wen-Hsiu | 個人網站",
     title: t("resume.title"),
     description: t("resume.description"),
-    theme: "#222",
-    colorMode: "dark",
 })
 
 const resumeState = useState<ResumeState>("resume")
