@@ -13,6 +13,10 @@ export default defineNuxtConfig({
                     name: "google-site-verification",
                     content: "b7jPwXcxv5GfnaGK-ps33xfUDwysUMPjpuXPF4gILDM",
                 },
+                {
+                    name: "google-adsense-account",
+                    content: "ca-pub-4332272244289506",
+                },
             ],
             link: [
                 {
