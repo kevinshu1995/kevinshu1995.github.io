@@ -7,6 +7,12 @@ export default defineNuxtConfig({
         head: {
             title: "許文修 | Wen-Hsiu Hsu",
             titleTemplate: "%s | 許文修 | Wen-Hsiu Hsu",
+            meta: [
+                {
+                    name: "google-site-verification",
+                    content: "b7jPwXcxv5GfnaGK-ps33xfUDwysUMPjpuXPF4gILDM",
+                },
+            ],
             link: [
                 {
                     rel: "apple-touch-icon",
