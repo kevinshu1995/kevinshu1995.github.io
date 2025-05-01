@@ -1,4 +1,5 @@
 {
+    "homePage": "Home",
     "motto": "Programming fills me with anticipation every day, making life exciting and fun with every idea.",
     "view project": "View Project",
     "about-me": "About me",
@@ -9,6 +10,11 @@
     "languages": "Languages",
     "interests": "Interests",
     "blog": "Blog",
+    "resume": {
+        "title": "Resume",
+        "description": "I am an engineer specializing in front-end technologies. Welcome to my resume page! Here you will find a summary of my professional experience, projects, and skills. If you are interested in my background and capabilities, please feel free to contact me!",
+        "downloadPdf": "Download PDF"
+    },
     "mouseEvent": {
         "openLink": "Open\nLink",
         "scrollDown": "Scroll\nDown",

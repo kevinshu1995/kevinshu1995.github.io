@@ -1,11 +1,8 @@
 <template>
     <div class="text-neutral-600">
-        <BaseHeader />
         <NuxtLayout>
             <NuxtPage />
         </NuxtLayout>
-        <BaseFooter />
-        <BaseMouseEventPanel />
     </div>
 </template>
 
