@@ -50,6 +50,10 @@ export default defineNuxtConfig({
         "/api/github/**": { proxy: "https://api.github.com/**", swr: 60 * 10 },
     },
 
+    gtag: {
+        id: "G-X0H1DGJMM1",
+    },
+
     modules: [
         "@nuxt/eslint",
         "@nuxt/image",
@@ -59,5 +63,6 @@ export default defineNuxtConfig({
         "@unocss/nuxt",
         "@nuxtjs/i18n",
         "radix-vue/nuxt",
+        "nuxt-gtag",
     ],
 })
