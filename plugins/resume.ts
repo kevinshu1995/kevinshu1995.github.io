@@ -19,8 +19,6 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     const runtimeConfig = useRuntimeConfig()
     const { gistId } = runtimeConfig.public.resume
 
-    const hasFetched = useState("hasFetched", () => false)
-
     const iconState = useState<Icon>("icon", () => ({}))
 
     const resumeState = useState<ResumeState>("resume", () => ({
@@ -28,31 +26,35 @@ export default defineNuxtPlugin(async (nuxtApp) => {
         zh_tw: null,
     }))
 
-    try {
-        if (hasFetched.value === false) {
-            const { data, error } = await useFetch<Gist>(
-                `/api/github/gists/${gistId}`,
-            )
-            if (data.value) {
-                if (data.value) {
-                    resumeState.value.en = JSON.parse(
-                        data.value.files["resume_en.json"].content,
-                    )
-                    resumeState.value.zh_tw = JSON.parse(
-                        data.value.files["resume_zh_TW.json"].content,
-                    )
-                    iconState.value = JSON.parse(
-                        data.value.files["icon.json"].content,
-                    )
+    const { data, error } = await useAsyncData<Gist>(
+        "resume",
+        async () => {
+            return await $fetch(`/api/github/gists/${gistId}`)
+        },
+        {
+            getCachedData: (key) => {
+                const data = nuxtApp.isHydrating
+                    ? nuxtApp.payload.data[key]
+                    : nuxtApp.static.data[key]
+
+                if (!data) {
+                    return
                 }
-                hasFetched.value = true
-            } else {
-                console.error("Failed to fetch resume data.", error)
-            }
-        } else {
-            console.log("Resume data already fetched.")
-        }
-    } catch (error) {
-        console.error("Error fetching resume data:", error)
+
+                return data
+            },
+        },
+    )
+
+    if (data.value) {
+        resumeState.value.en = JSON.parse(
+            data.value.files["resume_en.json"].content,
+        )
+        resumeState.value.zh_tw = JSON.parse(
+            data.value.files["resume_zh_TW.json"].content,
+        )
+        iconState.value = JSON.parse(data.value.files["icon.json"].content)
+    } else {
+        console.error("Failed to fetch resume data.", error)
     }
 })
