@@ -1,47 +1,50 @@
 <template>
-    <div class="w-[1024px] mx-auto py-10">
+    <div class="max-w-[1024px] container mx-auto pb-10 pt-4 px-4">
         <div class="mb-16">
-            <div
-                class="flex items-center gap-8 w-full border-b border-neutral-200 pb-2 relative"
-            >
-                <NuxtLink
-                    class="flex items-center gap-2"
-                    :to="$localePath('/')"
-                >
-                    <Icon name="mdi:arrow-left" />
-                    <span>{{ $t("homePage") }}</span>
-                </NuxtLink>
-                <h1
-                    class="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] font-bold m-0"
-                >
-                    {{ $t("resume.title") }}
-                </h1>
-                <ul class="flex gap-2 ml-auto">
-                    <li
-                        v-for="localeItem in locales.filter(
-                            ({ code }) => code !== locale,
-                        )"
-                        :key="localeItem.code"
+            <div class="border-b border-neutral-200 pb-2">
+                <div class="flex items-center gap-8 w-full relative">
+                    <NuxtLink
+                        class="flex items-center gap-2"
+                        :to="$localePath('/')"
                     >
-                        <NuxtLink
-                            :class="['py-1 px-1 inline-block w-full']"
-                            :to="$switchLocalePath(localeItem.code)"
+                        <Icon name="mdi:arrow-left" />
+                        <span>{{ $t("homePage") }}</span>
+                    </NuxtLink>
+                    <h1
+                        class="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] font-bold m-0"
+                    >
+                        {{ $t("resume.title") }}
+                    </h1>
+                    <ul class="flex gap-2 ml-auto">
+                        <li
+                            v-for="localeItem in locales.filter(
+                                ({ code }) => code !== locale,
+                            )"
+                            :key="localeItem.code"
                         >
-                            {{ localeItem.name }}
-                            <Icon name="mdi:arrow-top-right" class="size-3" />
-                        </NuxtLink>
-                    </li>
-                </ul>
+                            <NuxtLink
+                                :class="['py-1 px-1 inline-block w-full']"
+                                :to="$switchLocalePath(localeItem.code)"
+                            >
+                                {{ localeItem.name }}
+                                <Icon
+                                    name="mdi:arrow-top-right"
+                                    class="size-3"
+                                />
+                            </NuxtLink>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="flex mt-6">
+            <!-- <div class="flex mt-6">
                 <button class="ml-auto flex gap-1 items-center">
                     <span>{{ $t("resume.downloadPdf") }}</span>
                     <Icon name="mdi:arrow-top-right" class="size-3" />
                 </button>
-            </div>
+            </div> -->
         </div>
-        <div class="grid grid-cols-5 gap-16" v-if="resume">
-            <div class="col-span-1">
+        <div class="grid md:grid-cols-[200px_1fr] gap-16" v-if="resume">
+            <div class="">
                 <div class="space-y-4">
                     <img
                         src="/avatar.jpg"
@@ -52,7 +55,12 @@
                         <h2 class="font-bold text-5">
                             {{ resume.basics.name }}
                         </h2>
-                        <p class="tracking-wider italic">
+                        <p
+                            :class="[
+                                locale === 'zh_tw' && 'tracking-wider',
+                                'italic',
+                            ]"
+                        >
                             {{ resume.basics.label }}
                         </p>
                     </div>
@@ -95,15 +103,21 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-span-4">
-                <div class="space-y-6">
+            <div class="">
+                <div class="space-y-8">
                     <div
-                        class="space-y-4 tracking-wider"
+                        :class="[
+                            'space-y-4',
+                            locale === 'zh_tw' && 'tracking-wider',
+                        ]"
                         v-for="section in sections"
                         :key="section.key"
                     >
                         <h2
-                            class="text-5 font-bold tracking-wider border-b border-neutral-200 pb-0"
+                            :class="[
+                                'text-5 font-bold border-b border-neutral-200 pb-0',
+                                locale === 'zh_tw' && 'tracking-wider',
+                            ]"
                         >
                             {{ section.title }}
                         </h2>
@@ -114,10 +128,10 @@
                         </template>
 
                         <template v-if="section.key === 'work'">
-                            <ul class="space-y-4">
+                            <ul class="space-y-8">
                                 <li
                                     v-for="work in resume.work.slice(0, 3)"
-                                    class="space-y-1"
+                                    class="space-y-2"
                                 >
                                     <div>
                                         <p
@@ -126,11 +140,17 @@
                                             {{ work.startDate }} ~
                                             {{ work.endDate }}
                                         </p>
-                                        <div class="flex gap-4">
+                                        <div
+                                            class="flex gap-x-4 flex-col md:flex-row"
+                                        >
                                             <h3 class="font-bold">
                                                 {{ work.name }}
                                             </h3>
-                                            <p>{{ work.position }}</p>
+                                            <p
+                                                class="text-3.5 text-neutral-500"
+                                            >
+                                                {{ work.position }}
+                                            </p>
                                         </div>
                                     </div>
                                     <p>{{ work.summary }}</p>
@@ -156,7 +176,7 @@
                                     </h3>
                                     <p>{{ project.description }}</p>
                                     <ul
-                                        class="flex gap-2 text-3 text-neutral-500"
+                                        class="flex gap-2 text-3 text-neutral-500 flex-wrap"
                                     >
                                         <li
                                             v-for="item in project.highlights"
@@ -182,8 +202,8 @@
                                     :key="item.name"
                                     class="text-neutral-500 space-y-2"
                                 >
-                                    <p>{{ item.name }}</p>
-                                    <ul class="flex gap-4">
+                                    <h3 class="font-bold">{{ item.name }}</h3>
+                                    <ul class="flex gap-2 flex-wrap">
                                         <li
                                             v-for="(
                                                 keyword, keywordIndex
@@ -236,7 +256,7 @@
                             <ul>
                                 <li
                                     v-for="item in resume.languages"
-                                    class="flex gap-2"
+                                    class="flex gap-2 flex-wrap"
                                 >
                                     <h3 class="font-bold">
                                         {{ item.language }}

@@ -3,10 +3,13 @@
         class="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur text-neutral-500"
     >
         <div class="px-4">
-            <div class="flex items-center py-2 gap-4">
-                <h1>許文修 | Wen-Hsiu Hsu</h1>
+            <div class="flex items-center py-6 gap-4">
+                <h1 class="hidden sm:block my-0">許文修 | Wen-Hsiu Hsu</h1>
 
-                <div class="ml-auto flex gap-4 items-center">
+                <div class="ml-auto flex gap-6 items-center">
+                    <NuxtLink :to="$localePath('/resume')" target="_blank">
+                        {{ $t("resume.title") }}
+                    </NuxtLink>
                     <NuxtLink to="https://blog.hsiu.soy" target="_blank">
                         {{ $t("blog") }}
                         <Icon name="mdi:arrow-top-right" class="size-3" />
