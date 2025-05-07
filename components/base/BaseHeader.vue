@@ -3,7 +3,7 @@
         class="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur text-neutral-500"
     >
         <div class="px-4">
-            <div class="flex items-center py-6 gap-4">
+            <div class="flex items-center py-4 sm:py-6 gap-4">
                 <h1 class="hidden sm:block my-0">許文修 | Wen-Hsiu Hsu</h1>
 
                 <div class="ml-auto flex gap-6 items-center">
@@ -15,7 +15,7 @@
                         <Icon name="mdi:arrow-top-right" class="size-3" />
                     </NuxtLink>
 
-                    <ul class="gap-4 flex" v-if="currentBasics">
+                    <ul class="gap-4 hidden sm:flex" v-if="currentBasics">
                         <li v-for="profile in currentBasics.profiles">
                             <a
                                 :href="profile.url"
