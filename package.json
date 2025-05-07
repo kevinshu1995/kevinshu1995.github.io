@@ -24,6 +24,8 @@
         "@vueuse/core": "^13.1.0",
         "animejs": "^4.0.1",
         "eslint": "^9.24.0",
+        "html-to-image": "^1.11.13",
+        "jspdf": "^3.0.1",
         "nuxt": "^3.16.2",
         "nuxt-gtag": "^3.0.2",
         "nuxt-og-image": "^5.1.3",
