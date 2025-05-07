@@ -23,7 +23,9 @@
                             :key="localeItem.code"
                         >
                             <NuxtLink
-                                :class="['py-1 px-1 inline-block w-full']"
+                                :class="[
+                                    'py-1 px-1 inline-flex items-center gap-1 w-full',
+                                ]"
                                 :to="$switchLocalePath(localeItem.code)"
                             >
                                 {{ localeItem.name }}
@@ -260,7 +262,7 @@
                                     </div>
                                     <p>{{ work.summary }}</p>
                                     <ul
-                                        class="list-disc ml-3 pl-4 text-neutral-500 list-none"
+                                        class="list-disc ml-3 pl-4 text-neutral-500 list-disc"
                                     >
                                         <li v-for="item in work.highlights">
                                             {{ item }}
@@ -271,7 +273,7 @@
                         </template>
 
                         <template v-if="section.key === 'projects'">
-                            <ul class="space-y-4 list-none">
+                            <ul class="space-y-4">
                                 <li
                                     v-for="project in resume.projects"
                                     class="space-y-1"
