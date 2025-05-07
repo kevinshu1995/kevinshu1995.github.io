@@ -7,7 +7,7 @@
                 <h1 class="hidden sm:block my-0">許文修 | Wen-Hsiu Hsu</h1>
 
                 <div class="ml-auto flex gap-6 items-center">
-                    <NuxtLink :to="$localePath('/resume')" target="_blank">
+                    <NuxtLink :to="$localePath('/resume')">
                         {{ $t("resume.title") }}
                     </NuxtLink>
                     <NuxtLink to="https://blog.hsiu.soy" target="_blank">
